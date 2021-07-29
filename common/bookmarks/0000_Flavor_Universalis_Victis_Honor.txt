@@ -1,0 +1,12 @@
+bookmark = {
+	name = "FU_VICTIS_HONOR"
+	desc = "FU_VICTIS_HONOR_DESC"
+	date = 1444.11.11
+	
+	center = 266
+	default = yes
+	
+	country = BOH
+	country = SWI
+	
+}

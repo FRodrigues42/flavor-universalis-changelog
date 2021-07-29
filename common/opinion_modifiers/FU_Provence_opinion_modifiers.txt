@@ -1,0 +1,4 @@
+pro_prevented_mad_war_opinion_modifier = {
+	opinion = 50
+	yearly_decay = 5
+}

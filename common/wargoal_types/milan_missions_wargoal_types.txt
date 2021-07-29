@@ -1,0 +1,14 @@
+make_puppet_wargoal = {
+
+	type = take_capital
+	
+	badboy_factor = 0.25
+	prestige_factor = 2
+	peace_cost_factor = 0.5
+	
+	peace_options = {
+		po_become_vassal
+	}
+	
+	war_name = VASSAL_MISSION_WAR_NAME
+}	

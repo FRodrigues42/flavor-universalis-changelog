@@ -1,0 +1,14 @@
+bookmark = {
+	name = "FU_MARE_NOSTRUM"
+	desc = "FU_MARE_NOSTRUM_DESC"
+	date = 1444.11.11
+	
+	center = 104
+	default = yes
+	
+	country = PRO
+	country = ARA
+	
+	easy_country = PRO
+	easy_country = ARA
+}

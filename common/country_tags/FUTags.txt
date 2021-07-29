@@ -1,0 +1,5 @@
+#######Made for Flavor Universalis by Big Boss#######
+
+#### Mare Nostrum Update #### 
+
+FU1 = "countries/LatinEmpireFU.txt"

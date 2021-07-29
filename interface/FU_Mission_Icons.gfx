@@ -1,0 +1,175 @@
+spriteTypes = {
+	spriteType = {
+		name = "proventoaureo"
+		texturefile = "gfx//interface//missions//flavor_universalis//Provence//vento_aureo.dds"
+	}
+	
+	spriteType = {
+		name = "fu_joan_of_arc"
+		texturefile = "gfx//interface//missions//flavor_universalis//Provence//joan_of_arc.dds"
+	}
+	
+	spriteType = {
+		name = "fu_aragonese_artillery"
+		texturefile = "gfx//interface//missions//flavor_universalis//Aragon//aragonese_artillery.dds"
+	}
+	
+	spriteType = {
+		name = "swecaroleaninfantry"
+		texturefile = "gfx//interface//missions//flavor_universalis//Sweden//swecaroleaninfantry.dds"
+	}
+	
+	spriteType = {
+		name = "fu_isabella_icon"
+		texturefile = "gfx//interface//missions//flavor_universalis//Aragon//isabella_icon.dds"
+	}
+	
+	spriteType = {
+		name = "fu_monarch_crowned"
+		texturefile = "gfx//interface//missions//flavor_universalis//Aragon//monarch_crowned.dds"
+	}
+	
+	spriteType = {
+		name = "fu_reyes_catolicos"
+		texturefile = "gfx//interface//missions//flavor_universalis//Aragon//reyes_catolicos.dds"
+	}
+	
+	spriteType = {
+		name = "fu_inquisitor_missionary"
+		texturefile = "gfx//interface//missions//flavor_universalis//Aragon//inquisitor_missionary.dds"
+	}
+	
+	spriteType = {
+		name = "fu_aragon_holy_orders"
+		texturefile = "gfx//interface//missions//flavor_universalis//Aragon//aragon_holy_orders.dds"
+	}
+	
+	spriteType = {
+		name = "fu_vozova_hradba"
+		texturefile = "gfx//interface//missions//flavor_universalis//Bohemia//fu_vozova_hradba.dds"
+	}
+	spriteType = {
+		name = "fu_mining_rights"
+		texturefile = "gfx//interface//missions//flavor_universalis//Bohemia//fu_mining_rights.dds"
+	}
+	spriteType = {
+		name = "fu_iron_golden_king"
+		texturefile = "gfx//interface//missions//flavor_universalis//Bohemia//fu_iron_golden_king.dds"
+	}
+	spriteType = { 
+		name = "fu_gallen_textiles"
+		texturefile = "gfx//interface//missions//flavor_universalis//Switzerland//fu_gallen_textiles.dds"
+	}
+	spriteType = { 
+		name = "fu_caseus_helveticus"
+		texturefile = "gfx//interface//missions//flavor_universalis//Switzerland//fu_caseus_helveticus.dds"
+	}
+	spriteType = { 
+		name = "fu_board_icon"
+		texturefile = "gfx//interface//missions//flavor_universalis//Lubeck//fu_board_icon.dds"
+	}
+	spriteType = { 
+		name = "fu_lubeckian_admiralty"
+		texturefile = "gfx//interface//missions//flavor_universalis//Lubeck//fu_lubeckian_admiralty.dds"
+	}
+	spriteType = { 
+		name = "fu_lubeck_shipwrights"
+		texturefile = "gfx//interface//missions//flavor_universalis//Lubeck//fu_lubeck_shipwrights.dds"
+	}
+	spriteType = { 
+		name = "fu_lubeck_marine_pilots"
+		texturefile = "gfx//interface//missions//flavor_universalis//Lubeck//fu_lubeck_marine_pilots.dds"
+	}
+	spriteType = { 
+		name = "fu_hansa_reform_icon"
+		texturefile = "gfx//interface//missions//flavor_universalis//Lubeck//fu_hansa_reform_icon.dds"
+	}
+	spriteType = { 
+		name = "fu_teutonic_splendor"
+		texturefile = "gfx//interface//missions//flavor_universalis//Lubeck//fu_teutonic_splendor.dds"
+	}
+	spriteType = { 
+		name = "fu_teuton_icon"
+		texturefile = "gfx//interface//missions//flavor_universalis//Lubeck//fu_teuton_icon.dds"
+	}
+	spriteType = { 
+		name = "fu_shadow_of_khan_booo"
+		texturefile = "gfx//interface//missions//flavor_universalis//Japan//fu_shadow_of_khan_booo.dds"
+	}
+	spriteType = { 
+		name = "fu_turtle_ship"
+		texturefile = "gfx//interface//missions//flavor_universalis//Japan//fu_turtle_ship.dds"
+	}
+	spriteType = { 
+		name = "fu_a_crown_to_rule_them_all"
+		texturefile = "gfx//interface//missions//flavor_universalis//Japan//fu_a_crown_to_rule_them_all.dds"
+	}
+	spriteType = { 
+		name = "fu_tanegashima_icon"
+		texturefile = "gfx//interface//missions//flavor_universalis//Japan//fu_tanegashima_icon.dds"
+	}
+	spriteType = { 
+		name = "fu_sejong"
+		texturefile = "gfx//interface//missions//flavor_universalis//Japan//fu_sejong.dds"
+	}
+	spriteType = { 
+		name = "fu_imjin_war"
+		texturefile = "gfx//interface//missions//flavor_universalis//Japan//fu_imjin_war.dds"
+	}
+	spriteType = { 
+		name = "fu_asian_dominance"
+		texturefile = "gfx//interface//missions//flavor_universalis//Japan//fu_asian_dominance.dds"
+	}
+	spriteType = { 
+		name = "fu_inner_china"
+		texturefile = "gfx//interface//missions//flavor_universalis//Japan//fu_inner_china.dds"
+	}
+	spriteType = { 
+		name = "fu_strawhat"
+		texturefile = "gfx//interface//missions//flavor_universalis//Japan//fu_strawhat.dds"
+	}
+	spriteType = { 
+		name = "fu_patriarchate_antioch"
+		texturefile = "gfx//interface//missions//flavor_universalis//Byzantium//fu_patriarchate_antioch.dds"
+	}
+	spriteType = { 
+		name = "fu_prevent_collapse"
+		texturefile = "gfx//interface//missions//flavor_universalis//Byzantium//fu_prevent_collapse.dds"
+	}
+	spriteType = { 
+		name = "fu_neoplatonic_academy"
+		texturefile = "gfx//interface//missions//flavor_universalis//Byzantium//fu_neoplatonic_academy.dds"
+	}
+	spriteType = { 
+		name = "fu_wooden_wall"
+		texturefile = "gfx//interface//missions//flavor_universalis//Byzantium//fu_wooden_wall.dds"
+	} 
+	spriteType = { 
+		name = "fu_nile_breadbasket"
+		texturefile = "gfx//interface//missions//flavor_universalis//Byzantium//fu_nile_breadbasket.dds"
+	}
+	spriteType = { 
+		name = "fu_advent_gunpowder"
+		texturefile = "gfx//interface//missions//flavor_universalis//Byzantium//fu_advent_gunpowder.dds"
+	}
+	spriteType = { 
+		name = "fu_siege_won"
+		texturefile = "gfx//interface//missions//flavor_universalis//Byzantium//fu_siege_won.dds"
+	}
+	spriteType = { 
+		name = "fu_proliferation_musket"
+		texturefile = "gfx//interface//missions//flavor_universalis//Byzantium//fu_proliferation_musket.dds"
+	}
+	spriteType = { 
+		name = "fu_army_of_the_basileus"
+		texturefile = "gfx//interface//missions//flavor_universalis//Byzantium//fu_army_of_the_basileus.dds"
+	}
+	spriteType = { 
+		name = "fu_pentarchy"
+		texturefile = "gfx//interface//missions//flavor_universalis//Byzantium//fu_pentarchy.dds"
+	}
+	spriteType = { 
+		name = "fu_orthodox_priest"
+		texturefile = "gfx//interface//missions//flavor_universalis//Byzantium//fu_orthodox_priest.dds"
+	}
+}

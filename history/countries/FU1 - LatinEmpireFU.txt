@@ -1,0 +1,10 @@
+government = monarchy
+mercantilism = 20
+add_government_reform = feudalism_reform
+primary_culture = aragonese
+add_accepted_culture = catalan
+religion = catholic
+technology_group = western
+capital = 151 # Constantinople
+add_army_professionalism = 0.25
+

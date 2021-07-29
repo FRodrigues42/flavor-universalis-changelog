@@ -1,0 +1,14 @@
+bookmark = {
+	name = "FU_SENGOKU_JIDAI"
+	desc = "FU_SENGOKU_JIDAI_DESC"
+	date = 1444.11.11
+	
+	center = 1020
+	default = yes
+	
+	country = ASK
+	country = YMN
+	country = UES
+	country = SOO
+	
+}

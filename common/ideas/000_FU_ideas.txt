@@ -1,0 +1,172 @@
+LOB_ideas = {
+	start = {
+		development_cost = -0.1
+		infantry_power = 0.1 	
+	}
+	
+	bonus = {
+		administrative_efficiency = 0.05
+	}	
+
+	trigger = {
+		has_country_flag = mlo_formed_lom
+		tag = MLO 
+	}
+	free = yes
+	
+	LOB_restore_edict_of_milan = {
+		no_religion_penalty = yes 
+		tolerance_own = 1 
+	}
+	LOB_milanese_steel = {
+		discipline = 0.05 
+	}
+	LOB_imperial_diplomacy = {
+		ae_impact = -0.2 
+	}
+	LOB_defy_feudalism = {
+		max_absolutism = 5 
+		free_leader_pool = 1 
+	}
+	LOB_italian_industrialisation = {
+		global_trade_goods_size_modifier = 0.15 
+	}
+	LOB_italian_scholars = {
+		technology_cost = -0.1 
+	}
+	LOB_rule_mediterranean = {
+		number_of_cannons_flagship_modifier = 0.50
+		galley_power = 0.2 
+	}
+}
+
+FU1_ideas = {
+	start = {
+		tolerance_own = 3 
+		land_morale = 0.15
+	}
+	
+	bonus = {
+		papal_influence = 2 
+	}
+	
+	trigger = {
+		tag = FU1
+	}
+	free = yes 
+	
+	FU1_roman_claims = {
+		fabricate_claims_cost = -0.5
+		legitimacy = 0.5
+		devotion = 0.5
+		republican_tradition = 0.2
+	}
+	FU1_shield_of_christendom = {
+		global_missionary_strength = 0.02
+		discipline = 0.025
+	}
+	FU1_reclaim_jerusalem = {
+		manpower_recovery_speed = 0.2 
+	}
+	FU1_modernize_administration = {
+		reform_progress_growth = 0.15
+	}
+	FU1_reunite_the_pieces = {
+		province_warscore_cost = -0.1 
+		core_creation = -0.15 
+	}
+	FU1_regulate_marmara = {
+		global_own_trade_power = 0.2
+	}
+	FU1_seek_western_help = {
+		diplomatic_upkeep = 1 
+	}
+}
+
+FU2 = {
+	start = {
+		trade_efficiency = 0.2
+		merchants = 1 
+	}
+	
+	bonus = {
+		trade_steering = 0.2 
+	}
+	
+	trigger = {
+		tag = HSA
+		has_country_flag = hsa_proclaimed_queen_of_the_hansa_flag
+	}
+	free = yes 
+	
+	FU2_foreign_kontors = {
+		global_trade_power = 0.15
+	}
+	FU2_the_handelsmarine = {
+		global_ship_trade_power = 0.25
+		global_ship_cost = -0.05
+	}
+	FU2_reform_queens_army = {
+		discipline = 0.05
+	}
+	FU2_adler_von_lubeck_legacy = {
+		heavy_ship_power = 0.1
+	}
+	FU2_merchants_with_state = {
+		global_trade_goods_size_modifier = 0.1
+		development_cost = -0.05
+	}
+	FU2_spread_the_northern_style = {
+		idea_cost = -0.1
+	}
+	regularised_contribution = {
+		global_prov_trade_power_modifier = 0.20
+	}
+}
+
+BYZ_BASE_ideas = { 
+	start = {
+		tolerance_own = 3 
+		advisor_pool = 1 
+	}
+	
+	bonus = {
+		defensiveness = 0.20 
+	}
+	
+	trigger = {
+		tag = BYZ 
+		has_country_flag = byz_may_change_ideas 
+	}
+	free = yes 
+	
+	BYZ_BASE_restored_roman_rule = {
+		same_culture_advisor_cost = -0.2
+		num_accepted_cultures = 1 
+	}
+	BYZ_BASE_centers_of_scholarly_studies = {
+		idea_cost = -0.1 
+		global_missionary_strength = 0.02 
+	}
+	BYZ_defenders_of_the_city_of_god = {
+		legitimacy = 1 
+		republican_tradition = 0.35 
+		devotion = 1 
+		horde_unity = 1 
+		papal_influence = 2 
+	}
+	BYZ_BASE_velveteen_reform = {
+		discipline = 0.05 
+	}
+	BYZ_BASE_imperial_territories = {
+		administrative_efficiency = 0.05
+	}
+	BYZ_BASE_organize_offices = {
+		possible_adm_policy = 1 
+		free_leader_pool = 1 
+	}
+	BYZ_BASE_byzantine_fire_techniques = {
+		leader_land_fire = 1  
+	}
+}
+

@@ -1,0 +1,692 @@
+namespace = FU_Provence_Events
+
+country_event = { #An Offer of Integration
+	id = FU_Provence_Events.1 
+	title = FU_Provence_Events.1.t 
+	desc = FU_Provence_Events.1.d 
+	picture = monarch_bows_for_crown_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = FU_Provence_Events.1.a 
+		
+		PRO = { inherit = LOR }
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = FU_Provence_Events.1.b 
+		
+		add_mil_power = 50 
+		add_liberty_desire = 20
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { #The Retrial of Joan d' Arc
+	id = FU_Provence_Events.2
+	title = FU_Provence_Events.2.t 
+	desc = FU_Provence_Events.2.d 
+	picture = maid_of_orleans_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Provence_Events.2.a 
+		
+		if = {
+			limit = { religion = catholic } 
+			add_country_modifier = {
+				name = pro_canonization_of_joan_darc_modifier 
+				duration = 7300 
+			}
+			random_owned_province = { add_cardinal = yes }
+		}
+		else = {
+			189 = { 
+				add_base_tax = 2 
+				if = {
+					limit = { 
+						NOT = { has_building = cathedral }
+					}
+					remove_building = temple 
+					add_building = cathedral 
+				}
+			}
+		}
+		if = {
+			limit = { is_excommunicated = yes }
+			excommunicate = ROOT 
+		}
+	}
+}
+
+country_event = { #Université d'Aix-Marseille
+	id = FU_Provence_Events.3 
+	title = FU_Provence_Events.3.t 
+	desc = FU_Provence_Events.3.d 
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Provence_Events.3.a 
+		
+		201 = {
+			change_province_name = "Marseille"
+			rename_capital = "Marseille" 
+			if = {
+				limit = { 
+					NOT = { has_building = university }
+				}
+				add_building = university
+			}
+			add_province_modifier = {
+				name = pro_aix_provence_university_modifier 
+				duration = -1 
+			}
+		}
+	}
+}
+
+country_event = { #The Forgotten Empire
+	id = FU_Provence_Events.4
+	title = FU_Provence_Events.4.t 
+	desc = FU_Provence_Events.4.d 
+	picture = BYZ_BYZANTINE_EAGLE_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Provence_Events.4.a 
+		
+		morea_area = {
+			limit = {
+				NOT = { is_core = BYZ }
+			}
+			add_core = BYZ
+		}
+		northern_greece_area = {
+			limit = {
+				NOT = { is_core = BYZ }
+			}
+			add_core = BYZ
+		}
+		macedonia_area = {
+			limit = {
+				NOT = { is_core = BYZ }
+			}
+			add_core = BYZ
+		}
+		thrace_area = {
+			limit = {
+				NOT = { is_core = BYZ }
+			}
+			add_core = BYZ
+		}
+		hudavendigar_area = {
+			limit = {
+				NOT = { is_core = BYZ }
+			}
+			add_core = BYZ
+		}
+		aydin_area = {
+			limit = {
+				NOT = { is_core = BYZ }
+			}
+			add_core = BYZ
+		}
+		albania_area = {
+			limit = {
+				NOT = { is_core = BYZ }
+			}
+			add_core = BYZ
+		}
+		release = BYZ 
+		BYZ = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			change_religion = orthodox
+			change_government_reform_progress = 100
+		}
+		create_march = BYZ 
+		BYZ = {
+			add_country_modifier = {
+				name = pro_latin_law_modifier
+				duration = -1 
+			}
+		}
+	}
+	
+	option = {
+		name = FU_Provence_Events.4.b 
+		
+		add_mil_power = 100 
+		add_prestige = 25 
+		morea_area = { 
+			change_culture = ROOT
+			change_religion = ROOT 
+		}
+		northern_greece_area = { 
+			change_culture = ROOT
+			change_religion = ROOT 
+		}
+	}
+}
+
+country_event = { #The Capetian Dynasty
+	id = FU_Provence_Events.5 
+	title = FU_Provence_Events.5.t 
+	desc = FU_Provence_Events.5.d 
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Provence_Events.5.a 
+		
+		trigger = { government = monarchy }
+		define_heir = {
+			adm = 3 
+			dip = 3 
+			mil = 3 
+			claim = 100 
+			dynasty = "Capet"
+		}
+		custom_tooltip = pro_capet_dynasty_heir_tt
+	}
+	
+	option = {
+		name = FU_Provence_Events.5.b 
+		 
+		add_adm_power = 100 
+		add_dip_power = 100 
+		add_mil_power = 100 
+	}
+}
+
+country_event = { #The Rade of the Toulon Arsenal
+	id = FU_Provence_Events.6 
+	title = FU_Provence_Events.6.t 
+	desc = FU_Provence_Events.6.d 
+	picture = dockyard_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Provence_Events.6.a 
+		
+		4696 = {
+			add_province_modifier = {
+				name = pro_natural_anchorage_of_the_mediterranean_modifier
+				duration = -1 
+			}
+		}
+		custom_tooltip = pro_upgrade_dock_and_shipyard_if_possible_tt
+		hidden_effect = {
+			4696 = {
+				if = {
+					limit = { has_building = dock }
+					remove_building = dock 
+					add_building = drydock
+				}
+				if = {
+					limit = { has_building = shipyard }
+					remove_building = shipyard
+					add_building = grand_shipyard
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Archbishop Giuliano della Rovere
+	id = FU_Provence_Events.7
+	title = FU_Provence_Events.7.t 
+	desc = FU_Provence_Events.7.d 
+	picture = warrior_pope_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Provence_Events.7.a 
+		
+		202 = {
+			if = {
+				limit = { has_building = fort_17th }
+				remove_building = fort_17th
+				add_building = fort_18th
+			}
+			else_if = {
+				limit = { has_building = fort_16th }
+				remove_building = fort_16th
+				add_building = fort_17th
+			}
+			else_if = {
+				limit = { has_building = fort_15th }
+				remove_building = fort_15th
+				add_building = fort_16th
+			}
+			else_if = {
+				limit = { 
+					NOT = { has_building = fort_15th}
+				}
+				add_building = fort_15th 
+			}
+			add_province_modifier = {
+				name = pro_remodeled_walls_modifier
+				duration = 7300 
+			}
+		}
+	}
+	
+	option = {
+		name = FU_Provence_Events.7.b 
+		
+		define_general = {
+			name = "Giuliano della Rovere"
+			shock = 4
+			fire = 5
+			manuever = 3
+			siege = 3
+		}
+	}
+	
+	option = {
+		name = FU_Provence_Events.7.c 
+		
+		trigger = { religion = catholic }
+		
+		define_advisor = {
+			name = "Giuliano della Rovere"
+			type = julius_archbishop
+			skill = 3
+			cost_multiplier = 0.20 
+			culture = ligurian 
+		}
+		custom_tooltip = pro_militant_bishop_tt
+	}
+}
+
+country_event = { #Mending the Western Schism 
+	id = FU_Provence_Events.8
+	title = FU_Provence_Events.8.t 
+	desc = FU_Provence_Events.8.d 
+	picture = DIPLOMACY_eventPicture 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Provence_Events.8.a 
+		
+		add_stability_or_adm_power = yes 
+		add_reform_desire = -0.05
+		202 = { cede_province = PRO }
+		202 = { remove_core = ROOT }
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = FU_Provence_Events.8.b 
+		
+		add_prestige = -5 
+		add_reform_desire = 0.01
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { 
+	id = FU_Provence_Events.9
+	title = FU_Provence_Events.9.t 
+	desc = FU_Provence_Events.9.d 
+	picture = crusaders_victorious_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Provence_Events.9.a 
+		
+		palestine_area = {
+			limit = {
+				NOT = { is_core = KOJ }
+			}
+			add_core = KOJ
+		}
+		trans_jordan_area = {
+			limit = {
+				NOT = { is_core = KOJ }
+			}
+			add_core = KOJ
+		}
+		syria_area = {
+			limit = {
+				NOT = { is_core = KOJ }
+			}
+			add_core = KOJ
+		}
+		aleppo_area = {
+			limit = {
+				NOT = { is_core = KOJ }
+			}
+			add_core = KOJ
+		}
+		
+		release = KOJ 
+		KOJ = {
+			change_religion = ROOT
+			change_government_reform_progress = 100
+			set_capital = 379 #Jerusalem
+			if = {
+				limit = {
+					NOT = { government = theocracy }
+				}
+				change_government_to_monarchy = yes
+				add_government_reform = holy_state_reform
+				#set_legacy_government = holy_state_legacy
+			}
+			else_if = {
+				limit = {
+					government = theocracy
+				}
+				add_government_reform = holy_state_reform
+				#set_legacy_government = holy_state_theocracy
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+		}
+		create_march = KOJ 
+		KOJ = {
+			add_country_modifier = {
+				name = pro_crusading_state_modifier
+				duration = -1 
+			}
+		}
+	}
+	
+	option = {
+		name = FU_Provence_Events.9.b 
+		
+		add_prestige = 25 
+		change_mil = 1 
+		add_ruler_personality = personality_conqueror
+	}
+}
+		
+#############Gameplay Events#############
+
+country_event = { #The many titles of Rene I de Valois
+	id = FU_Provence_Events.10
+	title = FU_Provence_Events.10.t 
+	desc = FU_Provence_Events.10.d 
+	picture = king_rene_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = PRO 
+		NOT = { is_year = 1500 }
+		mission_completed = pro_reassert_strength
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = FU_Provence_Events.10.a 
+		
+		add_casus_belli = {
+			target = NAP
+			type = cb_make_puppet
+		}
+		add_prestige = 10 
+	}
+	
+	option = {
+		name = FU_Provence_Events.10.b 
+		
+		naples_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				is_empty = no
+			}
+			add_core = ROOT
+		}
+		apulia_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				is_empty = no
+			}
+			add_core = ROOT
+		}
+		calabria_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				is_empty = no
+			}
+			add_core = ROOT
+		}
+		
+		add_prestige = 10 
+	}
+}
+	
+country_event = { #The Gabelle Tax 
+	id = FU_Provence_Events.11
+	title = FU_Provence_Events.11.t
+	desc = FU_Provence_Events.11.d  
+	picture = men_digging_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = PRO 
+		any_owned_province = { trade_goods = salt }
+	}
+	
+	mean_time_to_happen = {
+		months = 120 
+	}
+	
+	option = {
+		name = FU_Provence_Events.11.a 
+		
+		every_owned_province = {
+			limit = { trade_goods = salt }
+			add_base_tax = 1 
+			add_unrest = 2 
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = salt
+			}
+			custom_tooltip = income_from_salt_tt
+		}
+		add_stability = -1 
+	}
+	
+	option = {
+		name = FU_Provence_Events.11.b 
+		
+		add_years_of_income = -0.5 
+		add_stability = 1 
+	}
+}
+
+country_event = { #The Sanseverino Family
+	id = FU_Provence_Events.12
+	title = FU_Provence_Events.12.t 
+	desc = FU_Provence_Events.12.d 
+	picture = CONQUEST_eventPicture 
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = PRO 
+		naples_area = { country_or_non_sovereign_subject_holds = ROOT }
+		has_estate = estate_nobles
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = FU_Provence_Events.12.a 
+		
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10 
+		}
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			desc = pro_sanseverino_family
+			influence = 10
+			duration = 7300
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 5
+		}
+		if = {
+			limit = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 80
+				}
+			}
+			add_country_modifier = {
+				name = pro_sanseverino_family_modifier3
+				duration = 7300
+			}
+		}
+		else_if = {
+			limit = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 50
+				}
+			}
+			add_country_modifier = {
+				name = pro_sanseverino_family_modifier2
+				duration = 7300 
+			}
+		}
+		else = {	
+			add_country_modifier = {
+				name = pro_sanseverino_family_modifier
+				duration = 7300
+			}
+		}
+		custom_tooltip = pro_dynamic_estate_bonus_tt
+	}
+	
+	option = {
+		name = FU_Provence_Events.12.b 
+		
+		add_legitimacy = 5 
+		add_prestige = 10 
+	}
+}
+
+country_event = { #Provençal quilts
+	id = FU_Provence_Events.13
+	title = FU_Provence_Events.13.t 
+	desc = FU_Provence_Events.13.d 
+	picture = textile_industry_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = PRO 
+		num_of_owned_provinces_with = {
+			value = 4 
+			trade_goods = cloth 
+			has_manufactory_trigger = yes 
+		}
+		has_idea = provencal_quilting
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = FU_Provence_Events.13.a 
+		
+		custom_tooltip = pro_every_cloth_wool_gets_production_tt 
+		hidden_effect = {
+			every_owned_province = {
+				limit = { 
+					OR = {
+						trade_goods = cloth 
+						trade_goods = wool 
+					}
+				}
+				add_base_production = 1 
+			}
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 2
+			trigger = {
+				OR = {
+					trade_goods = cloth 
+					trade_goods = wool 
+				}
+			}
+			custom_tooltip = income_from_cloth_wool_tt
+		}
+	}
+}
+
+country_event = { #Le Livre des Tournois
+	id = FU_Provence_Events.14
+	title = FU_Provence_Events.14.t 
+	desc = FU_Provence_Events.14.d 
+	picture = tournament_book_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = PRO
+		is_year = 1450 
+		NOT = { is_year = 1465 }
+	}
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = FU_Provence_Events.14.a 
+		
+		add_army_tradition = 10 
+		add_splendor = 100 
+	}
+}
+	
+	
+	

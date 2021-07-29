@@ -1,0 +1,824 @@
+namespace = ME_Imperial_Favor_Events
+
+country_event = {
+	id = ME_Imperial_Favor_Events.1
+	title = ME_Imperial_Favor_Events.1.t
+	desc = ME_Imperial_Favor_Events.1.d
+	picture = DEATH_OF_HEIR_eventPicture
+	hidden = yes
+	
+	trigger = {
+		has_global_flag = ajuShopActive
+		NOT = { is_month = 1 }
+		OR = {
+			had_global_flag = { flag = janImpFvr	days = 31 }
+			NOT = { has_global_flag = janImpFvr }
+		}
+	}
+	
+	immediate = {
+		clr_global_flag = janImpFvr
+		set_global_flag = janImpFvr
+		
+		AJU = {
+			country_event = { id = ME_Imperial_Favor_Events.2	days =   0 } #January
+			country_event = { id = ME_Imperial_Favor_Events.2	days =  32 } #February
+			country_event = { id = ME_Imperial_Favor_Events.2	days =  60 } #March
+			country_event = { id = ME_Imperial_Favor_Events.2	days =  91 } #April
+			country_event = { id = ME_Imperial_Favor_Events.2	days = 121 } #May
+			country_event = { id = ME_Imperial_Favor_Events.2	days = 152 } #June
+			country_event = { id = ME_Imperial_Favor_Events.2	days = 182 } #July
+			country_event = { id = ME_Imperial_Favor_Events.2	days = 213 } #August
+			country_event = { id = ME_Imperial_Favor_Events.2	days = 244 } #September
+			country_event = { id = ME_Imperial_Favor_Events.2	days = 274 } #October
+			country_event = { id = ME_Imperial_Favor_Events.2	days = 305 } #November
+			country_event = { id = ME_Imperial_Favor_Events.2	days = 335 } #December
+		}
+	}
+	
+	option = {
+		#hidden
+	}
+}
+
+country_event = {
+	id = ME_Imperial_Favor_Events.2
+	title = ME_Imperial_Favor_Events.2.t
+	desc = ME_Imperial_Favor_Events.2.d
+	picture = DEATH_OF_HEIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+		has_global_flag = ajuShopActive
+		exists = yes
+		exists = MNG
+		NOT = { is_rival = MNG }
+		MNG = {
+			NOT = { is_rival = AJU }
+			is_emperor_of_china = yes
+		}
+	}
+	
+	immediate = {
+		#stability
+		trigger_switch = {
+			on_trigger = stability
+			 3 = { change_variable = { mingImperialFavor =  3 } }
+			 2 = { change_variable = { mingImperialFavor =  2 } }
+			 1 = { change_variable = { mingImperialFavor =  1 } }
+			 0 = { }
+			-1 = { change_variable = { mingImperialFavor = -1 } }
+			-2 = { change_variable = { mingImperialFavor = -2 } }
+			-3 = { change_variable = { mingImperialFavor = -3 } }
+		}
+		
+		#opinion
+		MNG = {
+			PREV = {
+				export_to_variable = {
+					which = mngOpn
+					value = opinion
+					who = PREV
+				}
+			}
+		}
+		divide_variable = { mngOpn = 40 }
+		change_variable = {
+			which = mingImperialFavor
+			which = mngOpn
+		}
+		
+		#tributary_state
+		if = {
+			limit = {
+				is_subject_of = MNG
+				is_subject_of_type = tributary_state 
+			}
+			change_variable = { mingImperialFavor = 2 }
+		}
+		
+		#diplomatic_reputation
+		export_to_variable = {
+			which = dipRep
+			value = trigger_value:diplomatic_reputation
+		}
+		divide_variable = { dipRep = 2 }
+		change_variable = {
+			which = mingImperialFavor
+			which = dipRep
+		}
+		
+		#max 2000
+		if = {
+			limit = {
+				check_variable = { mingImperialFavor = 2000 }
+			}
+			set_variable = { mingImperialFavor = 2000 }
+		}
+	}
+	
+	option = {
+		#hidden
+	}
+}
+
+country_event = {
+	id = ME_Imperial_Favor_Events.3
+	title = ME_Imperial_Favor_Events.3.t
+	desc = ME_Imperial_Favor_Events.3.d
+	picture = DEATH_OF_HEIR_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = ME_Imperial_Favor_Events.3.advisor
+		
+		highlight = yes
+		
+		trigger = {
+			check_variable = { mingImperialFavor = 400 }
+		}
+		
+		subtract_variable = { mingImperialFavor = 400 }
+		
+		custom_tooltip = ME_Imperial_Favor_Events.3.advisor.tta
+		hidden_effect = {
+			country_event = { id = ME_Imperial_Favor_Events.4 }
+		}
+		if = {
+			limit = {
+				has_dlc = "Rule Britannia"
+			}
+			change_innovativeness = 1
+		}
+	}
+	
+	option = {
+		name = ME_Imperial_Favor_Events.3.advisorNO
+		
+		trigger = {
+			NOT = { check_variable = { mingImperialFavor = 400 } }
+		}
+		
+		custom_tooltip = ME_Imperial_Favor_Events.3.advisorNO.tta
+		
+		tooltip = {
+			subtract_variable = { mingImperialFavor = 400 }
+			
+			custom_tooltip = ME_Imperial_Favor_Events.3.advisor.tta
+			hidden_effect = {
+				country_event = { id = ME_Imperial_Favor_Events.4 }
+			}
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				change_innovativeness = 1
+			}
+		}
+	}
+	
+	option = {
+		name = ME_Imperial_Favor_Events.3.estates
+		
+		highlight = yes
+		
+		trigger = {
+			check_variable = { mingImperialFavor = 400 }
+		}
+		
+		subtract_variable = { mingImperialFavor = 400 }
+		
+		add_estate_loyalty = {
+			estate = all
+			loyalty = 10
+			short = yes
+		}
+	}
+	
+	option = {
+		name = ME_Imperial_Favor_Events.3.estatesNO
+		
+		trigger = {
+			NOT = { check_variable = { mingImperialFavor = 400 } }
+		}
+		
+		custom_tooltip = ME_Imperial_Favor_Events.3.estatesNO.tta
+		
+		tooltip = {
+			subtract_variable = { mingImperialFavor = 400 }
+			
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 10
+				short = yes
+			}
+		}
+	}
+	
+	option = {
+		name = ME_Imperial_Favor_Events.3.manpower
+		
+		highlight = yes
+		
+		trigger = {
+			check_variable = { mingImperialFavor = 500 }
+		}
+		
+		subtract_variable = { mingImperialFavor = 500 }
+		
+		add_yearly_manpower = 1
+	}
+	
+	option = {
+		name = ME_Imperial_Favor_Events.3.manpowerNO
+		
+		trigger = {
+			NOT = { check_variable = { mingImperialFavor = 500 } }
+		}
+		
+		custom_tooltip = ME_Imperial_Favor_Events.3.manpowerNO.tta
+		
+		tooltip = {
+			subtract_variable = { mingImperialFavor = 500 }
+			
+			add_yearly_manpower = 1
+		}
+	}
+	
+	option = {
+		name = ME_Imperial_Favor_Events.3.legitimacy
+		
+		highlight = yes
+		
+		trigger = {
+			check_variable = { mingImperialFavor = 500 }
+		}
+		
+		subtract_variable = { mingImperialFavor = 500 }
+		
+		add_legitimacy = 10
+		add_devotion = 10 
+		add_republican_tradition = 5
+		add_heir_claim = 25
+	}
+	
+	option = {
+		name = ME_Imperial_Favor_Events.3.legitimacyNO
+		
+		trigger = {
+			NOT = { check_variable = { mingImperialFavor = 500 } }
+		}
+		
+		custom_tooltip = ME_Imperial_Favor_Events.3.legitimacyNO.tta
+		
+		tooltip = {
+			subtract_variable = { mingImperialFavor = 500 }
+			
+			add_legitimacy = 10
+			add_devotion = 10 
+			add_republican_tradition = 5 
+			add_heir_claim = 25
+		}
+	}
+	
+	option = {
+		name = ME_Imperial_Favor_Events.3.trade
+		
+		highlight = yes
+		
+		trigger = {
+			NOT = { has_country_modifier = aju_trade_china }
+			check_variable = { mingImperialFavor = 500 }
+		}
+		
+		subtract_variable = { mingImperialFavor = 500 }
+		
+		add_country_modifier = {
+			name = aju_trade_china
+			duration = 3650 #10 years
+		}
+		
+		add_mercantilism = 1
+	}
+	
+	option = {
+		name = ME_Imperial_Favor_Events.3.tradeNO
+		
+		trigger = {
+			OR = {
+				has_country_modifier = aju_trade_china
+				NOT = { check_variable = { mingImperialFavor = 500 } }
+			}
+		}
+		
+		custom_tooltip = ME_Imperial_Favor_Events.3.tradeNO.tta
+		
+		tooltip = {
+			subtract_variable = { mingImperialFavor = 500 }
+			
+			add_country_modifier = {
+				name = aju_trade_china
+				duration = 3650 #10 years
+			}
+			
+			add_mercantilism = 1
+		}
+	}
+	
+	option = {
+		name = ME_Imperial_Favor_Events.3.back
+		
+		highlight = yes
+		
+		#back
+	}
+}
+
+country_event = {
+	id = ME_Imperial_Favor_Events.4
+	title = ME_Imperial_Favor_Events.4.t
+	desc = ME_Imperial_Favor_Events.4.d
+	picture = DEATH_OF_HEIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = { #adm
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = ME_Imperial_Favor_Events.5
+		}
+	}
+	
+	option = { #dip
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = ME_Imperial_Favor_Events.6
+		}
+	}
+	
+	option = { #mil
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = ME_Imperial_Favor_Events.7
+		}
+	}
+}
+
+country_event = {
+	id = ME_Imperial_Favor_Events.5
+	title = ME_Imperial_Favor_Events.5.t
+	desc = ME_Imperial_Favor_Events.5.d
+	picture = DEATH_OF_HEIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = {
+		MNG = { save_event_target_as = ming }
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = philosopher
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = natural_scientist
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = artist
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = treasurer
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = theologian
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = master_of_mint
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = inquisitor
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+}
+
+country_event = {
+	id = ME_Imperial_Favor_Events.6
+	title = ME_Imperial_Favor_Events.6.t
+	desc = ME_Imperial_Favor_Events.6.d
+	picture = DEATH_OF_HEIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = {
+		MNG = { save_event_target_as = ming }
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = statesman
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		trigger = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = naval_reformer
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = trader
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = spymaster
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		trigger = {
+			num_of_colonists = 1
+		}
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = colonial_governor
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = diplomat
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		trigger = {
+			num_of_colonists = 1
+		}
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = navigator
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+}
+
+country_event = {
+	id = ME_Imperial_Favor_Events.7
+	title = ME_Imperial_Favor_Events.7.t
+	desc = ME_Imperial_Favor_Events.7.d
+	picture = DEATH_OF_HEIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = {
+		MNG = { save_event_target_as = ming }
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = army_reformer
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = army_organiser
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = commandant
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = quartermaster
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = recruitmaster
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = fortification_expert
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		
+		define_advisor = {
+			type = grand_captain
+			skill = 3
+			cost_multiplier = 0.5
+			culture = event_target:ming
+			religion = event_target:ming
+		}
+	}
+}
+
+country_event = {
+	id = ME_Imperial_Favor_Events.8
+	title = ME_Imperial_Favor_Events.8.t
+	desc = ME_Imperial_Favor_Events.8.d
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	trigger = {
+		has_global_flag = ajuShopActive
+		NOT = {
+			AND = {
+				exists = AJU
+				exists = MNG
+				AJU = {
+					NOT = { is_rival = MNG }
+				}
+				MNG = {
+					NOT = { is_rival = AJU }
+					is_emperor_of_china = yes
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = { clr_global_flag = ajuShopActive }
+	}
+	
+	option = {
+		name = ME_Imperial_Favor_Events.8.a
+		
+		#end
+	}
+}
+
+country_event = {
+	id = ME_Imperial_Favor_Events.9
+	title = ME_Imperial_Favor_Events.9.t
+	desc = ME_Imperial_Favor_Events.9.d
+	picture = DEATH_OF_HEIR_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+		variable_arithmetic_trigger = {
+			export_to_variable = {
+				variable_name = tempMonth
+				value = trigger_value:is_month
+			}
+			is_variable_equal = {
+				which = impMonth
+				which = tempMonth
+			}
+		}
+	}
+	
+	immediate = {
+		trigger_switch = {
+			on_trigger = is_month
+			11 = {
+				country_event = { id = ME_Imperial_Favor_Events.2	days =   0 } #December
+			}
+			10 = {
+				country_event = { id = ME_Imperial_Favor_Events.2	days =   0 } #November
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  31 } #December
+			}
+			9 = {
+				country_event = { id = ME_Imperial_Favor_Events.2	days =   0 } #October
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  32 } #November
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  62 } #December
+			}
+			8 = {
+				country_event = { id = ME_Imperial_Favor_Events.2	days =   0 } #September
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  31 } #October
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  62 } #November
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  92 } #December
+			}
+			7 = {
+				country_event = { id = ME_Imperial_Favor_Events.2	days =   0 } #August
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  32 } #September
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  62 } #October
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  93 } #November
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 123 } #December
+			}
+			6 = {
+				country_event = { id = ME_Imperial_Favor_Events.2	days =   0 } #July
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  32 } #August
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  63 } #September
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  93 } #October
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 124 } #November
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 154 } #December
+			}
+			5 = {
+				country_event = { id = ME_Imperial_Favor_Events.2	days =   0 } #June
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  31 } #July
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  62 } #August
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  93 } #September
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 123 } #October
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 154 } #November
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 184 } #December
+			}
+			4 = {
+				country_event = { id = ME_Imperial_Favor_Events.2	days =   0 } #May
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  32 } #June
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  62 } #July
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  93 } #August
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 124 } #September
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 154 } #October
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 185 } #November
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 215 } #December
+			}
+			3 = {
+				country_event = { id = ME_Imperial_Favor_Events.2	days =   0 } #April
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  31 } #May
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  62 } #June
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  92 } #July
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 123 } #August
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 154 } #September
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 184 } #October
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 215 } #November
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 245 } #December
+			}
+			2 = {
+				country_event = { id = ME_Imperial_Favor_Events.2	days =   0 } #March
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  32 } #April
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  62 } #May
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  93 } #June
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 123 } #July
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 154 } #August
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 185 } #September
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 215 } #October
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 246 } #November
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 276 } #December
+			}
+			1 = {
+				country_event = { id = ME_Imperial_Favor_Events.2	days =   0 } #February
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  29 } #March
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  60 } #April
+				country_event = { id = ME_Imperial_Favor_Events.2	days =  90 } #May
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 121 } #June
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 151 } #July
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 182 } #August
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 213 } #September
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 243 } #October
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 274 } #November
+				country_event = { id = ME_Imperial_Favor_Events.2	days = 304 } #December
+			}
+		}
+		
+		set_variable = { impMonth = -1 }
+	}
+	
+	option = {
+		#hidden
+	}
+}

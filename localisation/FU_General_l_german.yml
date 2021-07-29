@@ -1,0 +1,72 @@
+﻿#########
+#Made by Big Boss for Flavor Universalis 
+#########
+
+l_german:
+ add_all_base_estate_loyalty_modifier: "Base Estate Loyalty Equilibrium"
+ 
+ #Monument
+ fu_teatro_alla_scalla: "Teatro alla Scalla"
+ fu_vladislav_hall: "Vladislav Hall"
+ fu_hansehalle: "Hanseatic City Hall"
+ fu_la_scala: "La Scala"
+ fu_escola_de_marina: "Escola de Marina"
+ fu_kinkaku_ji: "Kinkaku Ji Temple"
+ fu_brandenburg_gate: "Brandenburg Gate"
+ fu_venetian_arsenal: "Arsenal of Venice"
+ fu_warsaw_palace: "Royal Castle of Warsaw"
+ fu_belgrade_fortress: "Belgrade Fortress" 
+ fu_arc_of_triumph: "Arc de Triomphe"
+ fu_black_stone: "Kaaba" 
+ #Monument Update May 2021#
+ fu_terracotta_army: "Terracotta Army"
+ fu_great_mosque_djenne: "Great Mosque of Djenne"
+ fu_colossus: "Colossus"
+ fu_pharos_alexandria: "Pharos of Alexandria"
+ fu_porcelain_tower: "Porcelain Tower"
+ fu_red_fort: "Red Fort" 
+ fu_globe_theatre: "Globe Theatre"
+ fu_duomo_di_firenze: "Cathedral of Florence"
+ fu_leaning_tower: "Leaning Tower" 
+ fu_theodosian_walls: "Theodosian Walls" 
+ fu_library_alexandria: "The Great Library" 
+ fu_kasbah_of_tunis: "Kasbah of Tunis" #fu_kasbah_desc_tt: "Originally constructed as a watchtower to safeguard the city's inhabitants and wandering merchants, this Kasbah (desert fortress) stands proudly on top of one of the largest citadels of the Maghreb."
+ fu_winter_palace: "Winter Palace" 
+ 
+ 
+ #Decision 
+ 
+ fu_rename_country_title: "Restore our Name"
+ fu_rename_country_desc: "Have you changed your name or formed a new country with your name getting stuck or static ? Fear not! Click me! \n\nGood luck with your game, I hope you enjoy it! <3"
+ xorme_monuments_highlighter2_title: "Highlight Monuments"
+ xorme_monuments_highlighter2_desc: "Navigate to the '?' button to highlight all visible monuments."
+ 
+ #Shatter the Ming!
+ RELEASE_SUBJECTS_AND_CEDE_CORES_CEDE_CORES_TT: "Every owned non-capital province that is a core of another nation is §Rceded to one of its core countries§!."
+ RELEASE_SUBJECTS_AND_CEDE_CORES_GAIN_UNREST_TT: "Every owned non-capital province that is not a core of another nation gains §R25§! unrest and §R10§! years of nationalism. If any existing country has the province's culture as primary culture, they will gain a §Rcore§! in the province.§!"
+ RELEASE_SUBJECTS_AND_CEDE_CORES_SPAWN_REBELS_TT: "§RNationalist rebels will spawn in the non-capital provinces that were not ceded.§!"
+ 
+ #Leader Personalities
+ fu_ambusher_personality: "Ambusher"
+ fu_absolutist_personality: "Absolutist" 
+ fu_legendary_statesman_personality: "Legendary Statesman"
+ 
+ #Monument Loc
+ fu_djenne_every_province_tt: "Every owned province with a §YMosque§! or a §YGreat Mosque§! gains §G1§! Base Tax"
+ fu_colossus_trait_if_possible_tt: "If possible our ruler will gain the '§YEntrepreneur§!' trait \nor §Y1§! Diplomatic Skill"
+ fu_based_on_the_development_of_the_province_tt: "based on the development of this province"
+ fu_gain_patron_of_arts_personality_tt: "If possible our ruler will gain the unique '§YPatron of Arts§!' trait"
+ fu_if_fort_upgrade_tt: "If a §YFort§! Building exists, it will be upgraded to the next level or gain §YBase Manpower Development§!"
+ byz_every_paper_province_tt: "Every owned province with §YPaper§! and a §YManufactory§! gains §G1§! Base Production Development"
+ fu_if_possible_absolutist_tt: "If possible our ruler will gain the unique §YAbsolutist§! trait"
+ fu_if_possible_leg_stat_tt: "If possible our ruler will gain the unique §YLegendary Statesman§! trait"
+ 
+ #scripted triggers by Gordon Blue
+ 
+ is_ahead_of_time_in_tech_tt_all: "Ahead of time in §YAll§! technologies"
+ is_ahead_of_time_in_tech_tt_any: "Ahead of time in §YAny§! technology"
+ is_ahead_of_time_in_tech_tt_none: "Is NOT ahead of time in §YAny§! technology"
+ is_ahead_of_time_in_tech_tt_adm: "Ahead of time in the £adm£ §YAdministrative§! Technology"
+ is_ahead_of_time_in_tech_tt_dip: "Ahead of time in the £dip£ §YDiplomatic§! Technology"
+ is_ahead_of_time_in_tech_tt_mil: "Ahead of time in the £mil£ §YMilitary§! Technology"
+ 

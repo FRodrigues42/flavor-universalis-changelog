@@ -1,0 +1,12 @@
+bookmark = {
+	name = "FU_ARTIS_ET_FIDEI"
+	desc = "FU_ARTIS_ET_FIDEI_DESC"
+	date = 1444.11.11
+	
+	center = 45
+	default = yes
+	
+	country = HSA
+	country = TEU
+	
+}

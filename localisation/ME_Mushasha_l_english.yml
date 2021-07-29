@@ -1,0 +1,67 @@
+﻿l_english:
+ #Missions
+ mushasha_seize_clerical_holdings_title: "Seize Clerical Holdings" 
+ mushasha_seize_clerical_holdings_desc: "The clergy in our capital has grown far too rich and arrogant for the liking of [Root.Monarch.GetName]. We should confiscate their holding and use their possesions to develop the infastructure of our capital."
+ mushasha_up_the_tigris_river_title: "Up the Tigris River" 
+ mushasha_up_the_tigris_river_desc: "The province of Basrah is an importart trade asset to our country. Many merchants pass throught it to reach the Persian gulf and the Indian ocean. We should develop our trading infastructure to more effectivly impose tolls on trade."
+ mushasha_rekindling_the_islamic_flame_title: "Rekindling the Flame" 
+ mushasha_rekindling_the_islamic_flame_desc: "Baghdad, once the greatest city in the middle east, now lays forgotten. Let us change this. We shall be the rulers of middle east, with our capital in Baghdad. We shall be undefeatable."
+ #this loc is missing a mission
+ mushasha_believers_of_milleniarism_title: "Believers of Milleniarism"
+ mushasha_believers_of_milleniarism_desc: " " 
+ #
+ mushasha_slay_the_black_sheep_title: "Slay the Black Sheep" 
+ mushasha_slay_the_black_sheep_desc: "Qara Qoyunlu, the Black Sheep of the middle east, took control of provinces rightfully belonging to us. We have waited long enough. It is time we take back what is ours by right."
+ mushasha_take_baghdad_title: "Take Baghdad"
+ mushasha_take_baghdad_desc: "The ancient city of Baghdad has significant religious and cultural importance to our nation. It would be wise to take control of it." 
+ mushasha_the_sword_of_islam_title: "The Sword of Islam" 
+ mushasha_the_sword_of_islam_desc: " " 
+ mushasha_secure_the_eastern_passage_title: "Secure the Eastern Passage" 
+ mushasha_secure_the_eastern_passage_desc: "The mountains of Malamir and Yasuj are a natural defensive ridge for our capital. We should conquer them and construct a castle in either of the mountains to capitalize on that." 
+ mushasha_shahrizor_eyalet_title: "Shahrizor Eyalet" 
+ mushasha_shahrizor_eyalet_desc: "" 
+ 
+
+ 
+ #Modifiers
+ mushasha_tigris_euphrates_toll_modifier: "Tigris & Eurphrates Toll" 
+ mushasha_centre_of_shiism_modifier: "Center of Shiism"
+ mushasha_victory_over_jahan_shah_modifier: "Victory over Jahan Shah" 
+ mushasha_sayf_al_islam_modifier: "Sayf al-Islam" 
+ mushasha_islamic_center_of_learning_modifier: "Islamic Center of Learning" 
+ mushasha_guardians_of_the_north_modifier: "Guardians of the Northern Border" 
+ mushasha_passage_modifier: "Eastern Passage Guard Posts"
+ 
+ 
+ 
+ 
+ #Tooltips
+ MSY_HAS_HEART_OF_SHIA_EVENT_FLAG_OR_BAGHDAD_CAPITAL: "Has had the §YHeart of the Shia Faith§! event or §YBaghdad§! is the capital."
+ MSY_ISLAMIC_WARCALL_CT: "We will amass warriors from across the Islamic World, including §RJanissaries§! and famed §GMercenary Companies§! in our capital."
+ MSY_EASTERN_PASSAGE_CT: "§YIf we or one of our subjects control Khorramabad before we complete this mission, Khorramabad will also gain the same modifier.§!"
+ MSY_SEIZE_CLERICAL_HOLDINGS: "Has recently used the §YSeize Clerical Holdinds§! Government Ability."
+ MSY_STRONGEST_FAITH_DEFENDER: "No other country in Asia following our Faith has more Total Development OR Army Size than us." 
+  
+ 
+ #Events
+ ME_Mushasha_Events.1.t: "The House of Wisdom" 
+ ME_Mushasha_Events.1.d: " " 
+ ME_Mushasha_Events.1.a: "Let it shine forever more!" 
+ 
+ ME_Mushasha_Events.2.t: "Shahrizor Eyalet" 
+ ME_Mushasha_Events.2.d: " "
+ ME_Mushasha_Events.2.a: "They shall guard our Northern border." 
+ ME_Mushasha_Events.2.b: "They will bend the knee to me!" 
+ 
+ ME_Mushasha_Events.3.t: "Heart of the Shia Faith" 
+ ME_Mushasha_Events.3.d: " " 
+ ME_Mushasha_Events.3.a: "Baghdad will be the new capital!" 
+ ME_Mushasha_Events.3.b: "Our interests lie with our current arrangement." 
+ 
+ #Merc Company 
+ ME_mushashan_mameluk_muharib: "Mameluk Muharib" 
+ 
+ 
+ 
+ 
+ 

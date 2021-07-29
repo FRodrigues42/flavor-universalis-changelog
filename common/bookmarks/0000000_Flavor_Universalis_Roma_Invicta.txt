@@ -1,0 +1,10 @@
+bookmark = {
+	name = "FU_ROMA_INVICTA"
+	desc = "FU_ROMA_INVICTA_DESC"
+	date = 1444.11.11
+	
+	center = 151
+	default = yes
+	
+	country = BYZ
+}

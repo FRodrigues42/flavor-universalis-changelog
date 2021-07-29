@@ -1,0 +1,110 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 128 0 32 }
+
+historical_council = concilatory
+
+revolutionary_colors = { 15  0  16 }
+
+historical_score = 0
+
+historical_idea_groups = {
+	religious_ideas 
+	offensive_ideas
+	exploration_ideas
+	defensive_ideas	
+	administrative_ideas	
+	maritime_ideas
+	quality_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	french_caracolle
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Ferran #0" = 40
+	"Alfons #4" = 20
+	"Joan #1" = 20
+	"Carles #0" = 10
+	"Pere #4" = 5
+	"Sanη #1" = 5
+	"Enric #0" = 5
+	"Jaume #2" = 5
+	"Martν #0" = 20
+	"Andreu #0" = 0
+	"Antoni #0" = 0
+	"Arnau #0" = 0
+	"Ausiΰs #0" = 0
+	"Bartomeu #0" = 0
+	"Bernat #0" = 0
+	"Cθsar #0" = 0
+	"Domθnec #0" = 0
+	"Felip #0" = 0
+	"Francesc #0" = 0
+	"Frederic #0" = 0
+	"Gaspar #0" = 0
+	"Gil #0" = 0
+	"Gonηal #0" = 0
+	"Guillem #0" = 0
+	"Hug #0" = 0
+	"Ignasi #0" = 0
+	"Ildefons #0" = 0
+	"Jeroni #0" = 0
+	"Jordi #0" = 0
+	"Josep #0" = 0
+	"Llorenη #0" = 0
+	"Lluνs #0" = 0
+	"Pere Lluνs #0" = 0
+	"Ponη #0" = 0
+	"Ramon #0" = 0
+	"Roderic #0" = 0
+	"Simeσ #0" = 0
+	"Tomΰs #0" = 0
+	"Dνdac #0" = 0
+	"Garcνa #0" = 0
+	
+	"Alejandra #0" = -5
+	"Candela #0" = -5
+	"Estrella #0" = -5
+}
+
+leader_names = {
+	"de Alagσn" Amic d'Aragσ Arbuιs d'ΐustria "de Ayerbe"
+	Balaguer Barcelσ "de Belchite" Berguedΰ Bielsa "de Borja" "de Cabrera" Cajal Colom
+	Domθnec d'Empϊries "Fernαndez de Hijar" Ferrer "Folc de Cardona" Franco
+	Galindo "Gil de Biedma" Gisbert "de Guimerΰ" "de Gotor" "de Gurrea" d'Ixer Loaisa "de Luna"
+	Martorell "de Montcada" Monteagudo Muntaner Oliva Ordovαs d'Ors Peρa "Pιrez de Coloma" Piquer
+	"de Requesens" "de la Riba" Ripoll "de Ripperdα" 
+	Sastre d'Urgell Vallθs Veldrαn Vilamarν Villarroya "de Zaporta" 
+}
+
+ship_names = {
+	"Blanca Aurora" "Sant Jacob" Flama Lleona Falcσ "La Bonaventura" "Sant Antoni" 
+	"Sant Miquel" "Sant Bernat" "Sant Francesc" "Santa Αgata" "Santa Eulΰlia" 
+	"Sant Gabriel" "Sant Climent" "Sant Jordi" "La Reial" Trinitat "Santa Creu" 
+	"Santa Maria" "Santa Caterina" "Sant Joan Evangelista" "Santa Bΰrbara" 
+	"Sant Pere de Roma" "La Gasela" "Santa Magdalena" "Sant Vνctor" Magnana 
+	"Santa Ventura" "Santa Coloma" "Sant Ambrσs" "La Garsa"  
+}
+
+army_names = {
+	"Terη de $PROVINCE$"
+}
+}

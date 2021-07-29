@@ -1,0 +1,91 @@
+﻿#########
+#Made by Big Boss for Flavor Universalis 
+#########
+
+l_english:
+ aju_ajuuraani_trade_fleet_title: "Ajuuraani Trade Fleet"
+ aju_ajuuraani_trade_fleet_desc: "Even as an Imamate, we should also expand our trading prowess throughout our coast and beyond! We must build more ships to increase our trading power in the region, and soon in the neighboring Kilwa, further, in Hindustan, and even beyond the uncharted lands and seas!" 
+ aju_the_empire_of_china_title: "The Empire of China" 
+ aju_the_empire_of_china_desc: "Great Imam! Our explorers had found a great empire in the East, beyond the lands of Hindustan! Their royal court is said to be richer than any sultans we have ever known. Let us befriend them for our safety, that this great empire of the far East will not invade us with their mighty fleet!" 
+ aju_institute_kelliyo_title: "Institute Kelliyo"
+ aju_institute_kelliyo_desc: "Now we have monopolized the waters in the nearby rivers of Shebelle and Jubba. We must now cultivate our rich lands for the betterment of the nation's economy. Let us improve our production in agriculture!" 
+ aju_incorporate_mogadishu_title: "Incorporate Mogadishu"
+ aju_incorporate_mogadishu_desc: "The time of Mogadishu's servitude is now over. We must consolidate their nation and rule them directly. They must show direct fealty to the Imam, chosen by the will of the One God, and surrender their lands to us!" 
+ aju_jubba_and_shebelle_title: "Jubba and Shebelle" 
+ aju_jubba_and_shebelle_desc: "Now that we have consolidated our subject, it is time for us to focus on our inner development. Aha! Perhaps we should look towards the two great rivers that provided us life, develop these rivers and claim them as ours!"
+ aju_resist_western_invasions_title: "Resist Western Invasions"
+ aju_resist_western_invasions_desc: "Great Imam! A threat is slowly approaching our holy nation! We must expand hastily before the heathens in the West desecrate our lands. Let us take up the mantle of a great nation and consolidate our neighbors to save them from the impending Western threat!"
+ aju_contest_zanzibar_title: "Contest Zanzibar" 
+ aju_contest_zanzibar_desc: "We are not the only one who are vying for trade dominance in our region, Great Teacher. The Kilwan Sultanate, our southern neighbor is our trade rival. Let us remind them that a teacher of Allah is superior than a mere sultan!" 
+ aju_realm_of_architecture_title: "Realm of Architecture" 
+ aju_realm_of_architecture_desc: "It is an impressive feat that we conquered vast lands for our holy nation. However, we must make our recent subjects happiness and prosperity in their lands, as well as the power to protect such large territory from our neighbors. Let us strengthen our borders and improve the lives of our people!" 
+ aju_seek_military_funding_title: "Seek Military Funding" 
+ aju_seek_military_funding_desc: "Theocratic may our nation is, we must fund our military and claim our neighboring lands to spread Islam. Of course, we must befriend the Mamlukean Sultan in the north. There is no god but Allah, and Muhammad is the messenger of Allah!" 
+ aju_city_of_pate_title: "City of Pate" 
+ aju_city_of_pate_desc: "To commemorate the beginnings of our conquest towards our south, let us re-establish a city of our glory and victory in the empty costline of Pate! May this city bring forth unto us blessings from the Firmament!" 
+ aju_mnara_and_mandhry_title: "Mnara and Mandhry" 
+ aju_mnara_and_mandhry_desc: "It is sad that we conqured lands of which people don't seem to know the mercy and greatness of Allah! As an Imamate, we shall teach these poor beings the words of Allah, that He may grant them mercy." 
+ aju_seize_the_gold_of_africa_title: "The Gold of Africa" 
+ aju_seize_the_gold_of_africa_desc: "Great Imam! How rich are lands that we have conqured! Locals from the lands we subjugated tell stories that lands in the south possess great wealth, among them are gold! Let us conquer these lands for the betterment of our growing nation!" 
+ aju_border_in_the_horn_title: "Border in the Horn" 
+ aju_border_in_the_horn_desc: "We must now look north and claim the lands of those fractured states! Let us consolidate these lands to increase our trade hegemony in the region and to standardize the quality of their life!" 
+ aju_reap_zeila_title: "Reap Zeila" 
+ aju_reap_zeila_desc: "We are now close to monopolizing the trade in the Arabian Sea! Consolidating the remaining Islamic states will take a step closer to our trade hegemony in East Africa. However, we must remind ourselves that we are bordering a nation of heathens. Tread carefully!" 
+ 
+ 
+ 
+ #Custom Tooltips
+ aju_powerful_admiral: "We will gain a §Y50 Tradition Admiral§! with §G+3 Manuever§!"
+ aju_grain_livestock_dev_tt: "Every province with §YLivestock§! or §YGrain§! gains \n§G1 Base Production§!"
+ aju_has_active_shop_tt: "§YEnables the new Ming Delegation mechanic§!"
+ aju_bring_closer_to_ming_tt: "§MThis will bring us closer to the Great Ming§! @MNG"
+ aju_tributary_boons_tt: "As long as we remain a tributary of the §YGreat Ming§! we will get '§YInfluences of the East§!' giving the following effects: \nTrade Efficiency: §G+10%§! \nRuler Diplomatic Skill: §G+1§!"
+ aju_nation_of_merchants_tt: "If we complete the mission while having §Y75%§! of the trade in the §YGulf of Eden§! Ajuuraan gets '§YNation of Merchants§!' until the end of the game, giving the following effects: \nMerchants: §G+1§! \nTrade Power Abroad: §G+15%§! \nMonarch Diplomatic Skill: §G+1§!"
+ 
+ #Modifiers
+ aju_monopolized_water_modifier: "Monopolized Water Sources" 
+ aju_ajuuraani_ingenuity_modifier: "Ajuuraani Ingenuity" 
+ aju_kilwan_wealth_modifier: "Kilwan Wealth" 
+ aju_golden_age_of_architecture_and_art_modifier: "Golden Age of Architecture and Art" 
+ aju_moderated_gold_currency_modifier: "Moderated Gold Currency" 
+ aju_conquest_of_east_africa_modifier: "Conquest of East Africa" 
+ aju_major_porcelain_workshop_modifier: "Major Porcelain Center" 
+ aju_spice_seed_bed_modifier: "Spice Seed Bed" 
+ aju_secret_of_the_silk_worm_modifier: "Silk Worm Farm" 
+ aju_golden_prosperity_of_pate_modifier: "Golden Prosperity of Pate" 
+ aju_confucian_thought_modifier: "Confucian Thought and Teachings"
+ aju_nation_of_merchants_modifier: "Nation of Merchants" 
+ 
+ #Events 
+ ME_Ajuuraan_Events.1.t: "Imports from Asia" 
+ ME_Ajuuraan_Events.1.d: "It has been a while since we found the great Eastern Empire. Our merchants began to establish trade from Malacca to the coasts of China. The newly-established trade system imported exquisite goods from the empire, most especially ceramics with beautiful designs, elegant silks, and strong spices. However, it is not just goods that flowed from the trade. Eunuchs and slaves became part of trading as well. It is not surprising that the slaves are striving for their liberty. The eunuchs, on the other hand, are proved to be useful. They offer service and loyalty to their masters. Chinese traders are rarely flocking to our nation to seek new environments and opportunities for their prestige. " 
+ ME_Ajuuraan_Events.1.a: "We will request their finest celadon wares." 
+ ME_Ajuuraan_Events.1.b: "Let us import Spice, the flavor of life."
+ ME_Ajuuraan_Events.1.c: "Import silk worms to weave the finest of silk fabrics!"
+ ME_Ajuuraan_Events.1.e: "We need not foreign imports in our court."
+ 
+ ME_Ajuuraan_Events.2.t: "Prosperity of Pate" 
+ ME_Ajuuraan_Events.2.d: "Victory! We have consolidated the lands beyond the south! We must celebrate by reestablishing the city of Pate. It had reached such an old and pitiful state after few centuries from its foundation. Its foundation can be traced back approximately 700 years after the Hijra by a group of Omanis. As the destined nation in the south, we must reestablish the city and make its way returning to its former glory! Immigrants and merchants are welcome to inhabit the restored city!" 
+ ME_Ajuuraan_Events.2.a: "Let the city and its inhabitants prosper!" 
+
+ ME_Ajuuraan_Events.3.t: "Mnara and Mandhry Mosques" 
+ ME_Ajuuraan_Events.3.d: "As we slowly conquer our southern neighbors, we realized that even their previous sultans failed to handle their duties. Even a large portion of their citizens don't seem to worship Allah. Instead, they turn to their pantheon of deities who don't provide enlightenment to their people. It is our duty as a nation led by a teacher to teach these infidels the words of the Qur'an. Let us build mosques far grander than their monuments and make them fall to their knees, worshipping only the One True God. Otherwise, we can ignore them for now and practice goodwill towards them and use the money for something else." 
+ ME_Ajuuraan_Events.3.a: "Repair and transform them!"
+ ME_Ajuuraan_Events.3.b: "We will spend our money elsewhere"
+
+ ME_Ajuuraan_Events.4.t: "Influx of Ming Migrants" 
+ ME_Ajuuraan_Events.4.d: "It's been some time that we have established our relationship with the Great Ming. People from their realm migrate to our nation, seeking asylum, finding a better way of life, and pursuing the knowledge we possess. Some of them even got accustomed to our culture and converted to Islam! Perhaps we must make use of these foreigners, let them enter the court, and increase their influence so that they will offer us better service. Otherwise, we must be wary of them and treat them as we treat our citizens." 
+ ME_Ajuuraan_Events.4.a: "They shall be treated as our citizens, equal in merit and opportunity!" 
+ ME_Ajuuraan_Events.4.b: "We would best curve such influences."
+
+ ME_Ajuuraan_Events.5.t: "The Ming Imperial Envoy" 
+ ME_Ajuuraan_Events.5.d: ""Great Imam, An envoy had delivered us a message, directly from the emperor himself!" said one of the Imam's advisors, beside him, the imperial envoy. The advisor announced these words, "The Imperial Majesty demands our submission and swear fealty to him. Tributes must be delivered once a year. Through the Emperor's goodwill, he offers us boons and eternal friendship for the betterment of both our nations. Otherwise, so be it, our budding friendship shall be void. I will only offer you this only once, and I will offer you this opportunity no longer.". A wave of silence swept the room, and moments later, the Imam declared. . ." 
+ ME_Ajuuraan_Events.5.a: "Let us intertwine the legacies and fates of our two countries!" 
+ ME_Ajuuraan_Events.5.b: "Our sovereignty cannot be undermined!" 
+
+ ME_Ajuuraan_Events.6.t: "Confucianism in Ajuuraan" 
+ ME_Ajuuraan_Events.6.d: "As flocks of these Easterners settled in our country, they brought along their culture, and most importantly, their religion. Confucianism showed us a religion centered solely on morality and wisdom. It is a wise choice to introduce this religion and make it ours, bringing stability to our holy state. However, should we abandon the One True God? He who commanded birth to this nation?" 
+ ME_Ajuuraan_Events.6.a: "Confucius is a wise compass, we shall heed his teachings."
+ ME_Ajuuraan_Events.6.b: "This is hubris and blasphemy!"
+  
+ 

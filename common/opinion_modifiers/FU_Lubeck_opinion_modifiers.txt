@@ -1,0 +1,20 @@
+hsa_permitted_kontor_modifier = {
+	opinion = 50 
+	yearly_decay = 2.5 
+}
+hsa_allowed_regional_admin_opinion_modifier = {
+	opinion = 50 
+	yearly_decay = 2.5 
+}
+hsa_treaty_of_danzig_modifier = {
+	opinion = 25 
+	yearly_decay = 2.5 
+}
+hsa_refused_the_treaty_of_danzig_modifier = {
+	opinion = -30 
+	yearly_decay = 3
+}
+hsa_moved_the_staple_port = {
+	opinion = -100
+	yearly_decay = 2
+}

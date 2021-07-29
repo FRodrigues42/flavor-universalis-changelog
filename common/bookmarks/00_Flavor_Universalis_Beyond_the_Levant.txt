@@ -1,0 +1,19 @@
+bookmark = {
+	name = "FU_BEYOND_THE_LEVANT"
+	desc = "FU_BEYOND_THE_LEVANT_DESC"
+	date = 1444.11.11
+	
+	center = 4280
+	default = yes
+	
+	country = AJU
+	country = ETH
+	country = ADA
+	country = RAS
+	country = YEM
+	country = ORM
+	country = MSY
+	
+	easy_country = AJU
+	easy_country = ETH
+}

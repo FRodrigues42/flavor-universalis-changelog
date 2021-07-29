@@ -1,0 +1,8 @@
+fu_constructed_the_florentine_cathedral = {
+	opinion = 25 
+	yearly_decay = 1 
+}
+fu_expanded_the_florentine_cathedral = {
+	opinion = 50 
+	yearly_decay = 2
+}

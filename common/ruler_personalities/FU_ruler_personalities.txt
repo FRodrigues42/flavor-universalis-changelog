@@ -1,0 +1,73 @@
+patron_of_arts_personality = {
+	#personality_events.15
+	ruler_allow = {
+		allow = {
+			always = no 
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	innovativeness_gain = 0.5
+	idea_cost = -0.05 
+	nation_designer_cost = 5
+}
+
+fu_absolutist_personality = {
+	#personality_events.15
+	ruler_allow = {
+		allow = {
+			always = no 
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	administrative_efficiency = 0.05 
+	nation_designer_cost = 10
+}
+
+fu_legendary_statesman_personality = {
+	#personality_events.15
+	ruler_allow = {
+		allow = {
+			always = no 
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	diplomatic_reputation = 2 
+	stability_cost_to_declare_war = -1
+	nation_designer_cost = 10
+}

@@ -1,0 +1,46 @@
+﻿l_french:
+ # Missions:
+ ras_shiite_diplomacy_title: "Shi'ite Diplomacy" 
+ ras_shiite_diplomacy_desc: "Despite our strong faith to Allah and his teachings, it is wise to set up diplomatic channels with neighbors whose interests align with ours, lest we risk falling pray to our many enemies." 
+ ras_breaking_isolation_modifier: "Breaking Isolation"
+ 
+ ras_city_of_mosques_title: "City of Mosques" 
+ ras_city_of_mosques_desc: "For decades our capital has been one of the largest centers for Shia scholars to safely practice and study scriptures. Let us erect new mosques to celebrate our glorious belief." 
+ ras_home_of_imams: "Home of Rassidi Imams"
+ 
+ ras_cities_of_yemen_title: "Cities of Yemen" 
+ ras_cities_of_yemen_desc: "Wealth and afluence flow abundantly around the cities of our prestigious Sultanate. Displaying it properly shall allow new sources of income and revenue to be utilized across our nation!" 
+ ras_metropolitan_yemen_modifier: "Metropolitan Yemen" 
+ 
+ ras_a_shiite_power_title: "A Shi'ite Power"
+ ras_a_shiite_power_desc: "For no longer shall we cower in the shadow of stronger neighbors. We shall rise and tower above them, smite them with our god-given right all across Arabia!" 
+ ras_ways_of_abi_talib_modifier: "Ways of Abi Talib" 
+ 
+ ras_port_of_mokha_title: "Port of Mokha" 
+ ras_port_of_mokha_desc: "The province of Mokha, known for its extremely essential and unique production for coffea arabica, holds a very vital geographic position for incoming and oncoming ships across the red sea and the markets of Aden. To develop it and create a vibrant mercantile city would directly translate to increased profits for us." 
+ ras_gateway_to_africa_modifier: "Toll of Africa" 
+ 
+ ras_ending_the_rasulids_title: "Ending the Rasulids" 
+ ras_ending_the_rasulids_desc: "The Rasulid dynasty once administrated the entirety of our local region. Storm their strongholds of power in the West and liberate the populace under their bond.Ending their decrepit court would only spare them of the embarrassement they've decayed in."
+ 
+ ras_end_the_feuds_title: "End the Feuds"
+ ras_end_the_feuds_desc: "Having fallen from grace and favor with Allah, the Rasulid dynasty has forgone its provinces across southwestern Arabia. Plunged into anarchy these lands are now ruled by unstable local warlords. It's up to us reunite the territories and protect the people!"
+ ras_convert_yem_shiite: "If we choose to form §YYemen§! after completing this mission, all our §Rcored§! provinces will be converted to our State Religion"
+ 
+ ras_wrestle_control_title: "Wrestle Control" 
+ ras_wrestle_control_desc: "The accursed rebels spearheaded by al-Hadi I shall not cease until they give their horrid master the crown. We mustn't take this threat lightly! Raise arms, tackle the threat and strike the snake at its heart to protect and preserve our rule!" 
+ ras_primary_naval_base_modifier: "Primary Naval Base" 
+ 
+ ras_mines_of_sanaa_title: "Mines of San'a" 
+ ras_mines_of_sanaa_desc: "The mines of San' a are rich in valuable minerals if only we were able to fund and develop the quarries tasked with extracting them." 
+ ras_divine_gold: "Divine Gold"
+ 
+ ras_rule_the_red_sea_title: "Rule the Red Sea" 
+ ras_rule_the_red_sea_desc: "The Red Sea beacons for a new master! In order to cultivate our faith and enrich our royal treasuries we must take full advantage of the marketplaces around the Horn of Africa and Arabia." 
+ ras_aggressive_conversion_modifier: "Aggressive Conversion" 
+ 
+ ras_the_gulf_of_aden_title: "The Gulf of Aden" 
+ ras_the_gulf_of_aden_desc: "The Gulf of Aden is home to abundant amounts of seafaring trade. In order to tame this new dynamic, we must develop the port of Adan and elevate it to a regional shipyard." 
+
+ ras_great_mosque_and_tax_tt: "Every owned province with a  §YMosque§! will gain a §YGreat Mosque§! as well as §G1 Base Tax Development"
+ 

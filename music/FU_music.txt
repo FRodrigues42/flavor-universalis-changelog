@@ -1,0 +1,32 @@
+song = {
+	name = "The Rising Phoenix"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					tag = ROM 
+					tag = BYZ 
+				}
+			}
+		}
+		modifier = {
+			factor = 1 
+			OR = {
+				tag = ROM 
+				tag = BYZ 
+				tag = FU1
+			}
+		}
+		modifier = {
+			factor = 2 
+			AND = {
+				war_with = TUR 
+				NOT = { is_year = 1453 }
+			}
+		}
+	}
+}

@@ -1,0 +1,103 @@
+add_all_base_estate_loyalty_modifier = {
+	custom_tooltip = fu_add_all_base_estate_loyalty_modifier_tt
+	hidden_effect = {
+		church_loyalty_modifier = $value$
+		nobles_loyalty_modifier = $value$ 
+		burgher_loyalty_modifier = $value$ 
+	}
+}
+
+release_subjects_and_cede_cores = {
+	[[release_subjects]
+		if = {
+			limit = {
+				always = $release_subjects$
+			}
+			release_all_subjects = yes
+		}
+	]
+	custom_tooltip = RELEASE_SUBJECTS_AND_CEDE_CORES_CEDE_CORES_TT
+	hidden_effect = {
+		every_owned_province = {
+			limit = {
+				is_capital = no
+				any_core_country = {
+					NOT = { tag = $who$ }
+				}
+			}
+			random_core_country = {
+				limit = {
+					NOT = { tag = $who$ }
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							exists = no
+						}
+						set_country_flag = core_country_not_exists
+					}
+				}
+				PREV = { cede_province = PREV }
+				hidden_effect = {
+					if = {
+						limit = {
+							has_country_flag = core_country_not_exists
+						}
+						clr_country_flag = core_country_not_exists
+						change_government = monarchy
+						add_government_reform = feudalism_reform
+					}
+				}
+			}
+		}
+	}
+	custom_tooltip = RELEASE_SUBJECTS_AND_CEDE_CORES_GAIN_UNREST_TT
+	hidden_effect = {
+		every_owned_province = {
+			limit = {
+				OR = {
+					is_capital = yes
+					NOT = {
+						any_core_country = {
+							NOT = { tag = $who$ }
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						NOT = { tag = $who$ }
+						primary_culture = PREV
+					}
+				}
+				random_country = {
+					limit = {
+						NOT = { tag = $who$ }
+						primary_culture = PREV
+					}
+					PREV = { add_core = PREV }
+				}
+			}
+			add_unrest = 25
+			add_nationalism = 10
+			[[rebels]
+				if = {
+					limit = {
+						always = $rebels$
+						is_capital = no
+					}
+					nationalist_rebels = 1
+				}
+			]
+		}
+	}
+	[[rebels]
+		if = {
+			limit = {
+				always = $rebels$
+			}
+			custom_tooltip = RELEASE_SUBJECTS_AND_CEDE_CORES_SPAWN_REBELS_TT
+		}
+	]
+}

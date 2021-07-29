@@ -1,0 +1,17 @@
+country_decisions = {
+	fu_rename_country = {
+		major = yes 
+		potential = {
+			ai = no
+			if = {
+				limit = { has_global_flag = missions_expanded_mod_active }
+				NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+			}
+		}
+		allow = {
+		}
+		effect = {
+			restore_country_name = yes
+		}
+	}
+}

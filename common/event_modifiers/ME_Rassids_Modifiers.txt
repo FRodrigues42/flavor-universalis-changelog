@@ -1,0 +1,35 @@
+ras_breaking_isolation_modifier = {
+	diplomatic_reputation = 1 
+	ae_impact = -0.15
+}
+ras_metropolitan_yemen_modifier = {
+	global_tax_modifier = 0.15 
+}
+ras_ways_of_abi_talib_modifier = {
+	missionary_maintenance_cost = -0.25 
+    warscore_cost_vs_other_religion = -0.10
+	tolerance_own = 1
+}	
+ras_gateway_to_africa_modifier = {
+	province_trade_power_value = 15
+}	
+ras_ending_the_succession_crisis_modifier = {
+	global_autonomy = -0.05
+	global_unrest = -1
+}
+ras_primary_naval_base_modifier = {
+	local_ship_cost = -0.10
+	local_ship_repair = 0.25
+	ship_recruit_speed = -0.2
+}
+ras_divine_gold = {
+	inflation_reduction = 0.10	 
+}
+ras_aggressive_conversion_modifier = {
+	global_missionary_strength = 0.03 
+	missionaries = 1
+}
+ras_home_of_imams = {
+	church_loyalty_modifier = 0.05 
+	local_tax_modifier = 0.20 
+}

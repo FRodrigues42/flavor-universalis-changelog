@@ -1,0 +1,9 @@
+#Basically a simple vassalization CB but with much less AE to account for Italy
+cb_make_puppet = {
+	valid_for_subject = no
+
+	is_triggered_only = yes 
+	months = 240
+
+	war_goal = make_puppet_wargoal 
+}

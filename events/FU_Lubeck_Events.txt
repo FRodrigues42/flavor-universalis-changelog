@@ -1,0 +1,921 @@
+namespace = FU_Lubeck_Events 
+
+country_event = { #Novgorod Kontor Event
+	id = FU_Lubeck_Events.1
+	title = FU_Lubeck_Events.1.t 
+	desc = FU_Lubeck_Events.1.d 
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Lubeck_Events.1.a 
+		
+		310 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 9125
+				power = 50
+				key = hsa_peterhof_depot_modifier
+			}
+		}
+		if = {
+			limit = {
+				310 = { 
+					owner = { alliance_with = ROOT }
+				}
+			}
+			310 = {
+				owner = {
+					add_opinion = {
+						who = ROOT  
+						modifier = hsa_permitted_kontor_modifier 
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Herring Currents of the Lubeckbothe
+	id = FU_Lubeck_Events.2
+	title = FU_Lubeck_Events.2.t 
+	desc = FU_Lubeck_Events.2.d 
+	picture = fish_herring_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Lubeck_Events.2.a 
+		
+		45 = {
+			change_trade_goods = fish 
+			add_province_modifier = {
+				name = hsa_lubeck_herring_market_modifier 
+				duration = -1 
+			}
+		}
+		ai_chance = { factor = 5 }
+	}
+	option = {
+		name = FU_Lubeck_Events.2.b 
+		
+		if = {
+			limit = {
+				45 = {
+					has_manufactory_trigger = no 
+				}
+			}
+			45 = { add_building = wharf } 
+		}
+		else = { add_adm_power = 50 }
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.2.c 
+		
+		trigger = {
+			any_owned_province = {
+				trade_goods = salt 
+				base_production = 6 
+			}
+		}
+		highlight = yes 
+		45 = {
+			change_trade_goods = fish 
+			add_province_modifier = {
+				name = hsa_lubeck_herring_market_modifier2 
+				duration = -1 
+			}
+		}
+		ai_chance = { factor = 90 }
+	}
+}
+
+country_event = { #Docks & Wharfs of Bryggen
+	id = FU_Lubeck_Events.3
+	title = FU_Lubeck_Events.3.t 
+	desc = FU_Lubeck_Events.3.d 
+	picture = port_town_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Lubeck_Events.3.a 
+		
+		1975 = { #North Sea
+			add_trade_modifier = {
+				who = ROOT
+				duration = -1
+				power = 30
+				key = hsa_bryggen_kontor_modifier
+			}
+		}
+		custom_tooltip = hsa_every_league_member_gains_mercantilism_and_dev_tt
+		hidden_effect = {
+			every_country = {
+				limit = { is_in_trade_league_with = ROOT }
+				add_mercantilism = 1 
+				capital_scope = {
+					random_list = {
+						50 = {
+							add_base_tax = 1 
+						}
+						25 = {
+							add_base_production = 1 
+						}
+						25 = {
+							add_base_manpower = 1 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Hanseatic Town of Visby
+	id = FU_Lubeck_Events.4
+	title = FU_Lubeck_Events.4.t 
+	desc = FU_Lubeck_Events.4.d 
+	picture = SHIP_SAILING_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Lubeck_Events.4.a 
+		
+		25 = {
+			add_province_modifier = {
+				name = hsa_visby_warehouse_modifier 
+				duration = -1 
+			}
+		}
+		custom_tooltip = hsa_league_wealth_tt
+		hidden_effect = {
+			every_country = {
+				limit = { is_in_trade_league_with = ROOT }
+				add_treasury = 100
+			}
+		}
+	}
+}
+
+country_event = { #The Danzig Confederation
+	id = FU_Lubeck_Events.5
+	title = FU_Lubeck_Events.5.t 
+	desc = FU_Lubeck_Events.5.d 
+	picture = DIPLOMACY_eventPicture 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Lubeck_Events.5.a 
+		add_country_modifier = {
+			name = hsa_danzig_merchants_in_league_modifier
+			duration = 7300 
+		}
+		add_mercantilism = 2 
+	}
+	option = {
+		name = FU_Lubeck_Events.5.b 
+		add_ruler_personality = righteous_personality 
+		add_republican_tradition = 5 
+		add_legitimacy = 10 
+		add_devotion = 10 
+		add_mercantilism = 2 
+	}
+}
+
+country_event = { #Town Hall of Lubeck 
+	id = FU_Lubeck_Events.6
+	title = FU_Lubeck_Events.6.t 
+	desc = FU_Lubeck_Events.6.d 
+	picture = GREAT_BUILDING_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Lubeck_Events.6.a 
+		
+		add_country_modifier = {
+			name = hsa_republican_modus_operandi_modifier
+			duration = 9125
+		}
+		change_innovativeness = 3 
+	}
+}
+
+country_event = { #The City Gates of Lubeck 
+	id = FU_Lubeck_Events.7
+	title = FU_Lubeck_Events.7.t 
+	desc = FU_Lubeck_Events.7.d 
+	picture = SIEGE_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Lubeck_Events.7.a 
+		
+		45 = {
+			add_province_modifier = {
+				name = hsa_holstentor_burgtor_modifier 
+				duration = -1 
+			}
+		}
+	}
+}
+
+country_event = { #Theory of Mercantilism
+	id = FU_Lubeck_Events.8
+	title = FU_Lubeck_Events.8.t 
+	desc = FU_Lubeck_Events.8.d 
+	picture = TRADEGOODS_eventPicture 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Lubeck_Events.8.a 
+		
+		add_country_modifier = {
+			name = hsa_theory_of_mercantilism_modifier
+			duration = -1 
+		}
+	}
+}
+
+country_event = { #The Hanseatic Cog
+	id = FU_Lubeck_Events.9
+	title = FU_Lubeck_Events.9.t 
+	desc = FU_Lubeck_Events.9.d 
+	picture = fu_hansa_cog_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Lubeck_Events.9.a 
+		
+		add_country_modifier = {
+			name = hsa_hanseatic_merchant_cogs_modifier 
+			duration = 10950
+		}
+		add_sailors = 2000
+	}
+}
+
+country_event = { #Adler von Lubeck 
+	id = FU_Lubeck_Events.10
+	title = FU_Lubeck_Events.10.t 
+	desc = FU_Lubeck_Events.10.d 
+	picture = fu_adler_von_lubeck_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Lubeck_Events.10.a 
+		
+		add_country_modifier = {
+			name = hsa_pride_eagle_of_the_fleet_modifier
+			duration = -1 
+			desc = hsa_till_it_gets_sunk_desc 
+		}
+		add_navy_tradition = 25 
+	}
+}
+
+country_event = { #Remove above modifier 
+	id = FU_Lubeck_Events.11
+	title = FU_Lubeck_Events.11.t 
+	desc = FU_Lubeck_Events.11.t 
+	picture = fu_adler_von_lubeck_eventPicture
+	
+	trigger = {
+		has_country_modifier = hsa_pride_eagle_of_the_fleet_modifier
+		OR = {
+			has_country_flag = captured_flagship_country_flag
+			has_country_flag = sunk_flagship_country_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1 
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.11.a 
+		
+		remove_country_modifier = hsa_pride_eagle_of_the_fleet_modifier 
+	}
+}
+
+country_event = { #Trade Privileges of the Hansa 
+	id = FU_Lubeck_Events.12
+	title = FU_Lubeck_Events.12.t 
+	desc = FU_Lubeck_Events.12.d 
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		OR = {
+			tag = POL 
+			tag = DNZ 
+		}
+		OR = {
+			43 = { owned_by = DNZ }
+			43 = { owned_by = POL }
+		}
+		is_at_war = no 
+		NOT = { is_rival = HSA }
+		HSA = { 
+			treasury = 150
+			is_at_war = no 
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120 
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.12.a 
+		
+		custom_tooltip = hsa_sell_danzig_to_the_hansa_for_250_ducats_and_benefits_tt
+		HSA = { 
+			country_event = { id = FU_Lubeck_Events.13 }
+		}
+		if = {
+			limit = { has_estate = estate_burghers }
+			add_estate_loyalty = {
+				estate = estate_burghers 
+				loyalty = -10 
+			}
+		}
+		else = { add_mercantilism = -1 }
+		
+		ai_chance = { factor = 80 }
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.12.b 
+		
+		if = {
+			limit = { has_estate = estate_burghers }
+			add_estate_loyalty = {
+				estate = estate_burghers 
+				loyalty = 5 
+			}
+		}
+		else = { add_mercantilism = 1 }
+	}
+}
+
+country_event = { #A Royal Offer for Danzig  
+	id = FU_Lubeck_Events.13
+	title = FU_Lubeck_Events.13.t 
+	desc = FU_Lubeck_Events.13.d 
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Lubeck_Events.13.a 
+		
+		add_treasury = -250 
+		43 = {
+			add_core = ROOT 
+			remove_core = POL 
+			remove_core = DNZ 
+			cede_province = ROOT 
+			add_nationalism = -10 
+		}
+		if = {
+			limit = { 43 = { previous_owner = DNZ } }
+			DNZ = {
+				add_treasury = 250 
+				add_country_modifier = {
+					name = hsa_cooperation_with_the_hansa_modifier 
+					duration = 5475 
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = hsa_treaty_of_danzig_modifier 
+				}
+			}
+		}
+		else_if = {
+			limit = { 43 = { previous_owner = POL } }
+			POL = {
+				add_treasury = 250 
+				add_country_modifier = {
+					name = hsa_cooperation_with_the_hansa_modifier 
+					duration = 5475 
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = hsa_treaty_of_danzig_modifier
+				}
+			}
+		}
+		ai_chance = { factor = 80 }
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.13.b 
+		
+		add_prestige = -5 
+		every_country = {
+			limit = { is_in_trade_league_with = ROOT }
+			add_opinion = {
+				who = ROOT
+				modifier = hsa_refused_the_treaty_of_danzig_modifier
+			}
+		}
+		ai_chance = { factor = 20 }
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.13.c
+		
+		trigger = {
+			OR = {
+				ruler_has_personality = greedy_personality
+				ruler_has_personality = charismatic_negotiator_personality
+			}
+		}
+		highlight = yes 
+		add_treasury = -150 
+		43 = {
+			add_core = ROOT 
+			remove_core = POL 
+			remove_core = DNZ 
+			cede_province = ROOT 
+			add_nationalism = -10 
+		}
+		if = {
+			limit = { 43 = { previous_owner = DNZ } }
+			DNZ = {
+				add_treasury = 250 
+				add_country_modifier = {
+					name = hsa_cooperation_with_the_hansa_modifier 
+					duration = 5475 
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = hsa_treaty_of_danzig_modifier 
+				}
+			}
+		}
+		else_if = {
+			limit = { 43 = { previous_owner = POL } }
+			POL = {
+				add_treasury = 250 
+				add_country_modifier = {
+					name = hsa_cooperation_with_the_hansa_modifier 
+					duration = 5475 
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = hsa_treaty_of_danzig_modifier
+				}
+			}
+		}
+		ai_chance = { factor = 250 }
+	}	
+}
+
+country_event = { #The Stalhof Kontor 
+	id = FU_Lubeck_Events.14
+	title = FU_Lubeck_Events.14.t 
+	desc = FU_Lubeck_Events.14.d 
+	picture = fu_london_steelyard_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = HSA
+		OR = {
+			owns = 236 
+			236 = {
+				owner = {
+					NOT = { is_rival = ROOT }
+					has_opinion = {
+						who = ROOT
+						value = 50
+					}
+				}
+			}
+		}
+		is_at_war = no 
+		236 = {
+			owner = { is_at_war = no }
+		}
+		NOT = { is_year = 1500 }
+	}
+	
+	immediate = {
+		set_country_flag = hsa_has_had_stalhof_event_flag
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.14.a 
+		
+		add_country_modifier = {
+			name = hsa_profits_from_the_london_steelyard_modifier
+			duration = 7300 
+		}
+		add_ruler_personality = entrepreneur_personality
+		if = {
+			limit = {
+				236 = {
+					NOT = {	owned_by = ROOT }
+				}
+			}
+			236 = {
+				owner = {
+					country_event = { id = FU_Lubeck_Events.15 }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Coin and Diplomacy 
+	id = FU_Lubeck_Events.15
+	title = FU_Lubeck_Events.15.t 
+	desc = FU_Lubeck_Events.15.d 
+	picture = HARBOUR_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Lubeck_Events.15.a 
+		
+		236 = {
+			add_base_production = 1 
+			add_province_modifier = {
+				name = hsa_mercantile_stronghold_of_the_hansa_modifier
+				duration = 7300 
+			}
+		}
+	}
+}
+
+country_event = { #The Lifeblood of Lubeck 
+	id = FU_Lubeck_Events.16
+	title = FU_Lubeck_Events.16.t 
+	desc = FU_Lubeck_Events.16.d 
+	picture = fu_shipwrights_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = HSA 
+		OR = {
+			production_leader = {
+				trade_goods = naval_supplies 
+			}
+			any_owned_province = {
+				trade_goods = naval_supplies 
+				base_production = 15 
+				has_manufactory_trigger = yes 
+			}
+		}
+		is_at_war = no 
+		stability = 0 
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name =  FU_Lubeck_Events.16.a 
+		
+		add_years_of_owned_provinces_production_income = {
+			years = 5
+			trigger = {
+				trade_goods = naval_supplies
+			}
+			custom_tooltip = hsa_income_from_navy_supplies
+		}
+		random_owned_province = {
+			limit = { trade_goods = naval_supplies }
+			add_province_modifier = {
+				name = hsa_hanseatic_shipwright_guild_modifier 
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = { #George Giese
+	id = FU_Lubeck_Events.17
+	title = FU_Lubeck_Events.17.t 
+	desc = FU_Lubeck_Events.17.d 
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		has_country_flag = hsa_has_had_stalhof_event_flag
+		tag = HSA 
+		is_year = 1500 
+		NOT = { is_year = 1555 }
+		is_at_war = no
+		government = republic
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.17.a 
+		
+		define_ruler = {
+			name = "George Giese" 
+			age = 35
+			adm = 4 
+			dip = 4 
+			mil = 3
+			fixed = yes 
+		}
+		custom_tooltip = hsa_personalities_tt
+		hidden_effect = {
+			add_ruler_personality = entrepreneur_personality 
+			add_ruler_personality = silver_tongue_personality
+		}
+		ai_chance = { factor = 25 }
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.17.b 
+		
+		define_advisor = {
+			name = "George Giese"
+			type = trader 
+			cost_multiplier = 0.5 
+			skill = 3 
+		}
+		add_republican_tradition = 5 
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.17.c 
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = has_advisors_expanded_active
+				has_global_flag = advisors_expanded_mod_active 
+			}
+		}
+		
+		highlight = yes 
+		
+		define_advisor = {
+			name = "George Giese"
+			type = marketeer
+			skill = 3 
+			cost_multiplier = 0.25
+		}
+		add_republican_tradition = 5 
+		ai_chance = { factor = 100 }
+	}
+}
+	
+country_event = { #Albrecht Moldenhauer
+	id = FU_Lubeck_Events.18
+	title = FU_Lubeck_Events.18.t 
+	desc = FU_Lubeck_Events.18.d 
+	picture = fu_merchant_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = HSA 
+		current_age = age_of_discovery
+		is_at_war = no 
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.18.a 
+		
+		define_advisor = {
+			name = "Albrecht Moldenhauer"
+			type = trader 
+			cost_multiplier = 0.5
+		}
+		add_mercantilism = 1
+	}
+}
+
+country_event = { #Grevens Fejde
+	id = FU_Lubeck_Events.19
+	title = FU_Lubeck_Events.19.t 
+	desc = FU_Lubeck_Events.19.d 
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = HSA 
+		DAN = { has_disaster = counts_feud }
+		NOT = { alliance_with = DAN }
+		NOT = { is_subject_of = DAN }
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.19.a 
+		
+		add_years_of_income = -0.5
+		
+		DAN = {
+			random_owned_province = {
+				limit = { controlled_by = DAN }
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 1
+				}
+			}
+			add_opinion = {
+				who = ROOT 
+				modifier = supported_rebels
+			}
+		}
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.19.b 
+		
+		add_prestige = 5 
+		DAN = {
+			add_opinion = {
+				who = ROOT 
+				modifier = opinion_supported_monarch
+			}
+		}
+		ai_chance = { factor = 10 }
+	}
+}
+
+country_event = { #
+	id = FU_Lubeck_Events.20
+	title = FU_Lubeck_Events.20.t 
+	desc = FU_Lubeck_Events.20.d 
+	picture = fu_medieval_fair_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		NOT = { is_year = 1455 }
+		tag = HSA 
+		NOT = {
+			1269 = {
+				trade_share = {
+					country = ROOT 
+					share = 10
+				}
+			}
+		}
+		97 = {
+			owner = {
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}
+		OR = {
+			97 = {
+				NOT = {
+					owner = { is_in_trade_league_with = ROOT }
+				}
+			}
+			97 = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			97 = {
+				NOT = {
+					owner = { alliance_with = ROOT }
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 24 
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.20.a 
+		
+		97 = {
+			owner = {
+				save_event_target_as = fu_owner_of_amsterdam
+			}
+			1269 = {
+				add_trade_modifier = {
+					who = event_target:fu_owner_of_amsterdam 
+					duration = 5475
+					power = 20
+					key = hsa_moved_the_staple_port_key
+				}
+			}
+		}
+		add_opinion = {
+			who = event_target:fu_owner_of_amsterdam
+			modifier = hsa_moved_the_staple_port 
+		}
+		add_casus_belli = {
+			target = event_target:fu_owner_of_amsterdam
+			type = cb_trade_war_triggered
+			months = 120 
+		}
+	}
+}		
+
+country_event = { #Hans Holbein the Younger
+	id = FU_Lubeck_Events.21
+	title = FU_Lubeck_Events.21.t 
+	desc = FU_Lubeck_Events.21.d 
+	picture = fu_hans_holbein_younger_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = HSA 
+		has_country_flag = hsa_has_had_stalhof_event_flag
+		NOT = { is_year = 1560 }
+		is_at_war = no 
+	}
+	
+	mean_time_to_happen = {
+		months = 48 
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.21.a 
+		
+		define_advisor = {
+			name = "Hans Holbein the Younger"
+			type = artist 
+			cost_multiplier = 0.5 
+			skill = 3 
+			culture = swabian
+		}
+		change_innovativeness = 1
+	}
+}
+
+country_event = { #The Crowning of a Queen
+	id = FU_Lubeck_Events.22 
+	title = FU_Lubeck_Events.22.t 
+	desc = FU_Lubeck_Events.22.d 
+	picture = fu_queen_hansa_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Lubeck_Events.22.a 
+		
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						is_part_of_hre = no 
+						NOT = { government_rank = 2 }
+					}
+					AND = {
+						is_elector = yes  
+						NOT = { government_rank = 2 }
+					}
+				}
+			}
+			set_government_rank = 2
+		}		
+		hidden_effect = { set_country_flag = hsa_proclaimed_queen_of_the_hansa_flag }
+		override_country_name = FU2
+		country_event = { id = ideagroups.1 }
+	}
+	
+	option = {
+		name = FU_Lubeck_Events.22.b 
+		
+		change_adm = 1 
+		change_dip = 1
+		change_mil = 1
+		add_mercantilism = 3 
+	}
+}
+
+

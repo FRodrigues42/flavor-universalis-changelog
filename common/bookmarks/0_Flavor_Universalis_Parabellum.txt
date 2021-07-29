@@ -1,0 +1,16 @@
+bookmark = {
+	name = "FU_PARABELLUM"
+	desc = "FU_PARABELLUM_DESC"
+	date = 1444.11.11
+	
+	center = 104
+	default = yes
+	
+	country = SWE
+	country = NOV
+	country = MLO
+	
+	easy_country = SWE
+	easy_country = NOV
+	easy_country = MLO
+}
