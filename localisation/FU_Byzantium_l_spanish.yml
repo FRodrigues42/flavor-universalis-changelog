@@ -550,7 +550,7 @@
  byz_if_egypt_subject_tt: "If @EGYEgypt is our subject, they will receive a §Mreward§!"
  byz_has_sunday_schools: "Has enacted the '§YEstablish Sunday Schools§!' decision"
  byz_gain_wooden_wall_tt: "Grants access to the §YWooden Wall§! Naval Doctrine"
- byz_has_had_proliferation_musket_tt: "Has had the '§YProliferation of the Musket§!' event"
+ byz_has_had_proliferation_musket_tt: "Has had the '§YProliferation of the Musket§!' event which appears after having the '§YElite Regiments§!' modifier granted by the '§YState Firearm Regiments§! National Decision"
  byz_reward_if_parliament: "We will receive additional rewards if we complete the mission while having a §YParliament§! with an §YActive Debate§!"
  byz_every_province_with_courthouse_or_town_hall_tt: "Every province with a §YCourthouse§! or §YTown Hall§! will grant us 5 §YGovernment Reform Progress§!"
  byz_7_provinces_with_criteria_tt: "7 provinces that fullfil the criteria will gain a permanent §YFort Defense§! modifier"

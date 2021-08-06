@@ -323,9 +323,10 @@ country_event = { #Protecting our Independence
 		tag = ALB 
 		NOT = { is_year = 1455 }
 		is_at_war = no 
+		is_subject = no 
 	}
 	mean_time_to_happen = {
-		months = 12 
+		months = 20 
 	}
 	
 	immediate = {

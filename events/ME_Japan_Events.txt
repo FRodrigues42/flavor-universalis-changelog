@@ -2688,8 +2688,8 @@ country_event = { #War! What is it good for!?
 		tag = JAP 
 		is_at_war = yes 
 		1821 = { 
-			NOT = { owned_by = ROOT }
-			controlled_by = ROOT 
+			owned_by = MNG
+			controlled_by = JAP 
 		}
 	}
 	
