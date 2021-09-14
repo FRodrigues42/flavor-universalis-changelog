@@ -17,7 +17,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}	
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
 		has_country_flag = swe_has_had_vasa_flag
@@ -297,7 +304,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_free_or_tributary_trigger = yes
 		OR = {
 			religion = protestant
@@ -333,6 +347,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}		
 		is_year = 1555
 		NOT = { is_year = 1568 }
 		owns = 4		# Bergslagen
@@ -373,7 +392,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1550
 		NOT = { is_year = 1590 }
 		owns = 1		# Uppland
@@ -419,6 +445,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}		
 		is_free_or_tributary_trigger = yes
 		OR = {
 			iron = 1
@@ -468,6 +499,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}
 		is_free_or_tributary_trigger = yes
 		MIL = 5
 	}
@@ -523,6 +559,11 @@ country_event = {
 	
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}		
 		dip_tech = 15
 		1 = {
 			has_construction = navy
@@ -553,6 +594,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}		
 		is_year = 1632
 		NOT = { is_year = 1680 }
 		owns = 1		# Uppland
@@ -595,6 +641,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}		
 		is_year = 1652
 		NOT = { is_year = 1686 }
 		owns = 36		# Estland
@@ -632,6 +683,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}		
 		is_free_or_tributary_trigger = yes
 		adm_tech = 16
 		
@@ -680,6 +736,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}		
 		is_year = 1600
 		is_free_or_tributary_trigger = yes
 		government = monarchy
@@ -718,6 +779,11 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}		
 		is_year = 1613
 		NOT = { is_year = 1654 }
 		owns = 1		# Uppland
@@ -750,6 +816,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}		
 		is_year = 1610
 		NOT = { is_year = 1630 }
 	}
@@ -779,6 +850,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}	
 		has_regency = yes
 		has_consort_regency = no
 		NOT = { is_year = 1670 }
@@ -822,6 +898,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}	
 		ADM = 4
 		average_home_autonomy = 20
 	}
@@ -862,7 +943,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_female = yes
 		has_regency = no
 		
@@ -910,7 +998,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_female = yes
 		religion = protestant
 		has_regency = no
@@ -951,7 +1046,14 @@ country_event = {
 
 
 	trigger = {
-		tag = SWE
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1600
 		has_regency = yes
 		has_consort_regency = no
@@ -990,7 +1092,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		has_regency = no
 		is_year = 1650
 		NOT = { mission_completed = swe_absolutist_state }
@@ -1078,6 +1187,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}		
 		is_year = 1650
 		NOT = { is_year = 1750 }
 	}
@@ -1113,7 +1227,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1700
 		NOT = { is_year = 1800 }
 	}
@@ -1152,6 +1273,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}		
 		is_year = 1710
 		OR = {
 			religion = protestant
@@ -1193,7 +1319,14 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = SWE
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_free_or_tributary_trigger = yes
 		war_with = RUS
 		NOT = { exists = FIN }
@@ -1255,6 +1388,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}		
 		is_year = 1750
 		is_free_or_tributary_trigger = yes
 		NOT = { ADM = 4 }
@@ -1290,6 +1428,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}
 		is_year = 1750
 	}
 
@@ -1336,7 +1479,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1750
 	}
 
@@ -1372,7 +1522,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1700
 	}
 
@@ -1404,7 +1561,14 @@ country_event = {
 	picture = ANGRY_MOB_eventPicture
 	
 	trigger = {
-		tag = SWE
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1700
 		owns = 8		# Dalaskogen
 		NOT = { stability = 0 }
@@ -1446,10 +1610,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = SWE
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		primary_culture = swedish
 		183 = {
-			owned_by = SWE
+			owned_by = ROOT 
 			culture = swedish
 			NOT = { is_capital = yes }
 		}
@@ -1483,6 +1654,11 @@ country_event = {
 	
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}
 		is_year = 1660
 		NOT = { is_year = 1703 }
 	}
@@ -1510,6 +1686,11 @@ country_event = {
 
 	trigger = {
 		tag = SWE
+		AND = {
+			was_tag = SWE
+			NOT = { exists = SWE }
+			tag = SCA
+		}	
 		is_year = 1660
 		NOT = { is_year = 1702 }
 	}
@@ -1536,7 +1717,14 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = SWE
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1718
 		NOT = { is_year = 1772 }
 	}
@@ -1563,7 +1751,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1737
 		NOT = { is_year = 1778 }
 	}
@@ -1601,7 +1796,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1700
 		has_country_modifier = the_absolutism
 		government = monarchy
@@ -1666,7 +1868,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		has_country_flag = swedish_hats
 	}
 
@@ -1700,7 +1909,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		has_country_modifier = age_of_fredom
 		is_year = 1738
 		NOT = { is_year = 1739 }
@@ -1725,7 +1941,7 @@ country_event = {
 		}
 		RUS = {
 			add_casus_belli = {
-				target = SWE
+				target = ROOT
 				type = cb_insult
 				months = 36
 			}
@@ -1744,7 +1960,7 @@ country_event = {
 		}
 		FRA = {
 			add_casus_belli = {
-				target = SWE
+				target = ROOT
 				type = cb_insult
 				months = 36
 			}
@@ -1763,7 +1979,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		has_country_modifier = age_of_fredom
 		is_year = 1746
 		NOT = { is_year = 1747 }
@@ -1789,7 +2012,7 @@ country_event = {
 		}
 		RUS = {
 			add_casus_belli = {
-				target = SWE
+				target = ROOT
 				type = cb_insult
 				months = 36
 			}
@@ -1808,7 +2031,7 @@ country_event = {
 		}
 		FRA = {
 			add_casus_belli = {
-				target = SWE
+				target = ROOT
 				type = cb_insult
 				months = 36
 			}
@@ -1827,7 +2050,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		has_country_modifier = age_of_fredom
 		is_year = 1756
 		NOT = { is_year = 1758 }
@@ -1859,7 +2089,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		tag = ROOT
 		has_country_modifier = age_of_fredom
 		is_year = 1760
 		NOT = { is_year = 1761 }
@@ -1883,7 +2113,7 @@ country_event = {
 		}
 		RUS = {
 			add_casus_belli = {
-				target = SWE
+				target = ROOT
 				type = cb_insult
 				months = 36
 			}
@@ -1902,7 +2132,7 @@ country_event = {
 		}
 		FRA = {
 			add_casus_belli = {
-				target = SWE
+				target = ROOT
 				type = cb_insult
 				months = 36
 			}
@@ -1921,7 +2151,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		has_country_modifier = age_of_fredom
 		is_year = 1765
 		NOT = { is_year = 1766 }
@@ -1944,7 +2181,7 @@ country_event = {
 		}
 		RUS = {
 			add_casus_belli = {
-				target = SWE
+				target = ROOT
 				type = cb_insult
 				months = 36
 			}
@@ -1963,7 +2200,7 @@ country_event = {
 		}
 		FRA = {
 			add_casus_belli = {
-				target = SWE
+				target = ROOT
 				type = cb_insult
 				months = 36
 			}
@@ -1980,7 +2217,14 @@ country_event = {
 	picture = COURT_eventPicture
 
 	trigger = {
-		tag = SWE
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		has_country_modifier = age_of_fredom
 		NOT = { has_reform = celestial_empire }
 		government = monarchy

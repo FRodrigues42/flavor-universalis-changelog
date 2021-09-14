@@ -109,21 +109,29 @@ ASK_missions_1 = {
 			NOT = { development = 35 }
 		}
 		trigger = {
-			OR = {
+			if = {
+				limit = { has_dlc = "Leviathan" }
+				OR = {
+					capital_scope = {
+						development = 35
+					}
+					1020 = { 
+						has_great_project = {
+							type = fu_kinkaku_ji 
+							tier = 2 
+						}
+					}
+					1020 = { 
+						has_great_project = {
+							type = fu_kinkaku_ji 
+							tier = 3 
+						}
+					}
+				}
+			}
+			else = { 
 				capital_scope = {
 					development = 35
-				}
-				1020 = { 
-					has_great_project = {
-						type = fu_kinkaku_ji 
-						tier = 2 
-					}
-				}
-				1020 = { 
-					has_great_project = {
-						type = fu_kinkaku_ji 
-						tier = 3 
-					}
 				}
 			}
 		}

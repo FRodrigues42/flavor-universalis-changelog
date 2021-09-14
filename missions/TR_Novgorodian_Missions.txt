@@ -529,6 +529,13 @@ novgorod_missions_2 = { #Made by Big Boss for Flavor Universalis
 					duration = -1 
 				}
 			}
+			else_if = {
+				limit = {
+					religion = orthodox 
+					has_dlc = "Third Rome"
+				}
+				custom_tooltip = nov_depending_on_icon_reward_tt
+			}
 			capital_scope = {
 				add_scaled_local_adm_power = 3
 				add_scaled_local_dip_power = 3 
@@ -907,7 +914,10 @@ novgorod_missions_4 = { #Made by Big Boss for Flavor Universalis
 			OR = {
 				capital_scope = { has_state_edict = edict_defensive_edict }
 				capital_scope = { has_state_edict = edict_promote_military_recruitment }
-				national_focus = MIL 
+				custom_trigger_tooltip = {
+					tooltip = general_tooltip_mil_focus_tt
+					national_focus = MIL 
+				}
 				has_mil_advisor = yes 
 			}
 		}

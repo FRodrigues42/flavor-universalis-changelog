@@ -1316,8 +1316,8 @@ lubeck_missions_3 = { #Made by Big Boss for Flavor Universalis
 				}
 			}
 		}
-		effect = {
-			country_event = { id = FU_Lubeck_Events.7 }
+		effect = { 
+			country_event = { id = FU_Lubeck_Events.7 } 
 		}
 	}
 	
@@ -1411,6 +1411,50 @@ lubeck_missions_3 = { #Made by Big Boss for Flavor Universalis
 			}
 			custom_tooltip = swi_based_on_the_development_of_our_capital_tt
 			country_event = { id = FU_Lubeck_Events.22 }
+			custom_tooltip = hsa_diplomatic_upkeep_boost_tt
+			hidden_effect = {
+				if = { 
+					limit = { num_of_non_tributary_subjects = 6 }
+					add_country_modifier = {
+						name = hsa_northern_alliance_of_trade_cities6_modifier
+						duration = -1 
+					}
+				}
+				else_if = {
+					limit = { num_of_non_tributary_subjects = 5 }
+					add_country_modifier = {
+						name = hsa_northern_alliance_of_trade_cities5_modifier
+						duration = -1 
+					}
+				}
+				else_if = {
+					limit = { num_of_non_tributary_subjects = 4 }
+					add_country_modifier = {
+						name = hsa_northern_alliance_of_trade_cities4_modifier
+						duration = -1 
+					}
+				}	
+				else_if = {
+					limit = { num_of_non_tributary_subjects = 3 }
+					add_country_modifier = {
+						name = hsa_northern_alliance_of_trade_cities3_modifier
+						duration = -1 
+					}
+				}
+				else_if = {
+					limit = { num_of_non_tributary_subjects = 2 }
+					add_country_modifier = {
+						name = hsa_northern_alliance_of_trade_cities2_modifier
+						duration = -1 
+					}
+				}
+				else = {
+					add_country_modifier = {
+						name = hsa_northern_alliance_of_trade_cities1_modifier
+						duration = -1 
+					}
+				}
+			}
 		}
 	}
 }

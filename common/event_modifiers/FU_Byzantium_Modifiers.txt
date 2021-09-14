@@ -385,8 +385,8 @@ byz_marbled_king_returns_modifier = {
 	prestige = 0.5
 }
 byz_cheron_school_administration_modifier = {	
-	innovativeness_gain = 1 
-	adm_advisor_cost = -0.33
+	innovativeness_gain = 0.5 
+	adm_advisor_cost = -0.25
 }
 byz_romanized_the_timars_modifier = {
 	cavalry_cost = -0.15

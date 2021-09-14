@@ -32,14 +32,14 @@ l_french:
  fu_library_alexandria: "The Great Library" 
  fu_kasbah_of_tunis: "Kasbah of Tunis" #fu_kasbah_desc_tt: "Originally constructed as a watchtower to safeguard the city's inhabitants and wandering merchants, this Kasbah (desert fortress) stands proudly on top of one of the largest citadels of the Maghreb."
  fu_winter_palace: "Winter Palace" 
- 
- 
+ fu_ishtar_gate: "Ishtar Gate"
+ fu_malbork_castle: "Malbork Castle"
+ fu_walls_benin: "Walls of Benin"
+
  #Decision 
  
  fu_rename_country_title: "Restore our Name"
  fu_rename_country_desc: "Have you changed your name or formed a new country with your name getting stuck or static ? Fear not! Click me! \n\nGood luck with your game, I hope you enjoy it! <3"
- xorme_monuments_highlighter2_title: "Highlight Monuments"
- xorme_monuments_highlighter2_desc: "Navigate to the '?' button to highlight all visible monuments."
  
  #Shatter the Ming!
  RELEASE_SUBJECTS_AND_CEDE_CORES_CEDE_CORES_TT: "Every owned non-capital province that is a core of another nation is §Rceded to one of its core countries§!."
@@ -70,3 +70,6 @@ l_french:
  is_ahead_of_time_in_tech_tt_dip: "Ahead of time in the £dip£ §YDiplomatic§! Technology"
  is_ahead_of_time_in_tech_tt_mil: "Ahead of time in the £mil£ §YMilitary§! Technology"
  
+ #General Tooltips
+ 
+ general_tooltip_mil_focus_tt: "Has set National Focus to '§YMilitary§!'"

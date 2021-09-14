@@ -298,7 +298,7 @@ japan_martial_law_modifier = {
 
 japan_great_leap_ahead_decision_modifier = {
 	global_unrest = 2
-	development_cost = -0.05
+	development_cost = -0.15
 }
 
 # Events:

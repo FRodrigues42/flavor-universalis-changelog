@@ -71,3 +71,28 @@ fu_legendary_statesman_personality = {
 	stability_cost_to_declare_war = -1
 	nation_designer_cost = 10
 }
+
+fu_legendary_conqueror_personality = {
+	#personality_events.15
+	ruler_allow = {
+		allow = {
+			always = no 
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	years_of_nationalism = -10
+	land_morale = 0.05
+	nation_designer_cost = 10
+}	

@@ -825,7 +825,15 @@ swiss_missions_4 = {
 				tooltip = swi_prosperous_romandie_tt 
 				capital_scope = { is_prosperous = yes }
 			}
-			has_idea = oasis_of_peace_and_prosperity
+			OR = {
+				has_idea = oasis_of_peace_and_prosperity
+				AND = {
+					NOT = { average_autonomy_above_min = 5 }
+					NOT = { average_unrest = 1 } 
+					has_any_disaster = no 
+					legitimacy_equivalent = 80
+				}
+			}
 		}
 		effect = {
 			add_country_modifier = {

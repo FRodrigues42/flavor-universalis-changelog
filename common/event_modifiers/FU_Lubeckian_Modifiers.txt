@@ -208,3 +208,21 @@ hsa_hanseatic_shipwright_guild_modifier = {
 hsa_expand_the_hansehalle_modifier = {
 	local_great_project_upgrade_cost = -0.15
 }
+hsa_northern_alliance_of_trade_cities6_modifier = {
+	diplomatic_upkeep = 6 
+}
+hsa_northern_alliance_of_trade_cities5_modifier = {
+	diplomatic_upkeep = 5 
+}
+hsa_northern_alliance_of_trade_cities4_modifier = {
+	diplomatic_upkeep = 4 
+}
+hsa_northern_alliance_of_trade_cities3_modifier = {
+	diplomatic_upkeep = 3 
+}
+hsa_northern_alliance_of_trade_cities2_modifier = {
+	diplomatic_upkeep = 2 
+}
+hsa_northern_alliance_of_trade_cities1_modifier = {
+	diplomatic_upkeep = 1 
+}

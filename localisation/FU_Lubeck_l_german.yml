@@ -147,7 +147,12 @@
  hsa_moved_the_staple_port: "Moved the Staple Port to Amsterdam" 
  hsa_holstentor_burgtor_modifier: "Holstentor & Burgtor"
  hsa_expand_the_hansehalle_modifier: "Expand the Hansehalle"
- 
+ hsa_northern_alliance_of_trade_cities6_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities5_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities4_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities3_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities2_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities1_modifier: "Northern Alliance of Trade Cities" 
  
  #Events 
  FU_Lubeck_Events.1.t: "Novgorodian Kontor" 
@@ -182,7 +187,7 @@
  FU_Lubeck_Events.7.a: "May they stagger our enemies!"
  
  FU_Lubeck_Events.8.t: "Theory of Mercantilism"
- FU_Lubeck_Events.8.d: "Mercantilism is an economic theory that advocates government regulation of international trade to generate wealth and strengthen national power. Merchants and the government work together to reduce the trade deficit and create a surplus. Mercantilism, a form of economic nationalism, funds corporate, military, and national growth.﻿﻿ It advocates trade policies that protect domestic industries. In mercantilism, the government strengthens the private owners of the factors of production. \n\nThese four factors of production are: Entrepreneurship, capital goods, natural resources, labor. Mercantilism establishes monopolies, grants tax free status, and grants pensions to favoured industries. It imposes tariffs on imports. It also prohibits the emigration of skilled labor, capital, and tools. It doesn't allow anything that could help foreign companies.﻿﻿ In return, businesses funnel the riches from foreign expansion back to their governments. Its taxes pay for increase national growth and political power."
+ FU_Lubeck_Events.8.d: "Mercantilism is an economic theory that advocates government regulation of international trade to generate wealth and strengthen national power. Merchants and the government work together to reduce the trade deficit and create a surplus. Mercantilism, a form of economic nationalism, funds corporate, military, and national growth.﻿﻿ It advocates trade policies that protect domestic industries. In mercantilism, the government strengthens the private owners of the factors of production. \n\nThese four factors of production are  entrepreneurship, capital goods, natural resources, labor. Mercantilism establishes monopolies, grants tax free status, and grants pensions to favoured industries. It imposes tariffs on imports. It also prohibits the emigration of skilled labor, capital, and tools. It doesn't allow anything that could help foreign companies.﻿﻿ In return, businesses funnel the riches from foreign expansion back to their governments. Its taxes pay for increase national growth and political power." 
  FU_Lubeck_Events.8.a: "Money makes the world go round!"
  
  FU_Lubeck_Events.9.t: "The Hanseatic Cog"
@@ -275,6 +280,7 @@
  hsa_trigger_3_tt: "One of the following must be true: \n§YMecklenburg State§! owned by us or our subjects \nOR We own at least 35 §YDevelopment§! in the §YMecklenburg State§! while §YRostock§! and §YWismar§! are owned by us or our subjects"
  hsa_trigger_4_tt: "Any §YAlly§! has the §YLatin§! culture, §Y125§! opinion and has embraced §YRenaissaince§!"
  hsa_has_built_hansehalle_tt: "Has upgraded the §YHanseatic City Hall§! on tier §Y2§! or §Y3§!"
+ hsa_diplomatic_upkeep_boost_tt: "§MWe will gain a boost to our Diplomatic Relations to cover part of the cost of maintaining our new vassals§!"
  #Advisor
  fu_accountant: "Accountant"
  fu_accountant_desc: "Fra Luca Bartolomeo de Pacioli (c. 1447 – 19 June 1517) was an Italian mathematician, Franciscan friar, collaborator with Leonardo da Vinci, and an early contributor to the field now known as accounting. He is referred to as "The Father of Accounting and Bookkeeping" in Europe and he was the second person to publish a work on the double-entry system of book-keeping on the continent."

@@ -2701,9 +2701,9 @@ country_event = { #War! What is it good for!?
 		name = ME_Japan_Events.42.a 
 		
 		1821 = {
-			add_base_tax = -3 
-			add_base_production = -3 
-			add_base_manpower = -3 
+			add_base_tax = -10 
+			add_base_production = -10 
+			add_base_manpower = -10 
 			add_devastation = 100 
 		}
 		add_years_of_income = 1 

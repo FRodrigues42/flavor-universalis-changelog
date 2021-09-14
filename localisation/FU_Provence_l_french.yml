@@ -20,7 +20,7 @@
   pro_urbanize_communes_desc: "After our ambitious project of renovating the city of Aix, we should aim for a bigger scale. We should support the urbanization of our industrial centers, which will be very benificial to us in the long term." 
  #second column
   pro_reassert_strength_title: "Reassert our Strength"
-  pro_reassert_strength_desc: "The home of Duke Rene is but a mere infant compared to it's cousings in the kingdom of France. We should secure more favourable alliances and muster our forces to as many souls as our population can support." 
+  pro_reassert_strength_desc: "The home of Duke Rene is but a mere infant compared to it's cousins in the kingdom of France. We should secure more favourable alliances and muster our forces to as many souls as our population can support." 
   pro_protect_maine_title: "Protect Maine"
   pro_protect_maine_desc: "The accursed English have yet to return the lands we are owed since the last peace treaty. We shall demand it for the last time and if they dare to refuse, we shall use our military might to make them return it." 
   pro_storm_chateau_rouen_title: "Château de Rouen"
@@ -151,7 +151,7 @@
   FU_Provence_Events.14.a: "An interesting read!" 
  #Custom Tooltips
   pro_prevent_mad_war_tt: "If we complete this mission before §Y1485§! we will successfully prevent the §RMad War§!, granting us increased relations with @FRA France \nas well as '§YPrevented the Mad War§!', for §Y20 Years§!, giving the following effects: \nDiplomatic Reputation: §G+2§!"
-  pro_highest_dev_cap_or_gp_ideas_tt: "§YParis§! is the highest developed province in the §YEuropean Superregion§! OR has completed §YGreat Power Ideas§!"
+  pro_highest_dev_cap_or_gp_ideas_tt: "§YParis§! is the highest developed province in the §YEuropean Superregion§!"
   pro_highest_dev_cap_in_eu_tt: "§YParis§! is the highest developed province in the §YEuropean Superregion§!"
   pro_lorraine_integration_tt: "Lorraine will receive an offer of integration" 
   pro_complete_language_diplomacy_tt: "If we have already completed the §YLanguage of Diplomacy§! mission, we will not suffer an integration malus"

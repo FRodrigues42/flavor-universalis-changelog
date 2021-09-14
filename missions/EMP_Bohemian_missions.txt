@@ -2197,7 +2197,13 @@ bohemian_missions_5 = {
 		position = 14 
 		trigger = {
 			is_emperor = yes 
-			hre_reform_passed = emperor_perpetual_diet
+			if = { 
+				limit = { has_dlc = "Emperor" }
+				hre_reform_passed = emperor_perpetual_diet
+			}
+			else = { 
+				hre_reform_passed = landfriede  
+			}
 			OR = {
 				is_great_power = yes 
 				total_development = 500 

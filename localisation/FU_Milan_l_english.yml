@@ -88,6 +88,8 @@
  mlo_booming_trade_winds: "Booming Trade Winds"
  mlo_seat_of_hre_modifier: "Prestigious Seat of the Roman Empire" 
  mlo_plethora_academic_scholars_modifier: "Plethora of Academic Scholars"
+
+ 
  
  
  #Custom Tooltips
@@ -193,8 +195,8 @@
  #Special CB
  cb_make_puppet: "Make Puppet" 
  cb_make_puppet_desc: "Wargoal is to seize their capital. \n\n§G25%§! Aggressive Expansion, §G200%§! Prestige and §G50%§! Cost for: \n- Enforced Vassalage"
- make_pupper_wargoal: "Seize their capital"
- make_pupper_wargoal_desc: "They are better off under our supervision!"
+ make_pupper: "Seize their capital"
+ make_pupper_desc: "They are better off under our supervision!"
  
  #Lombardy Ideas 
  LOB_ideas_start: "Lombard Traditions"

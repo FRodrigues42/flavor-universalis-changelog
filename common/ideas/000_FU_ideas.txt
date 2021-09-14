@@ -170,3 +170,44 @@ BYZ_BASE_ideas = {
 	}
 }
 
+FU3_ideas = {
+	start = {
+		cavalry_power = 0.2
+		core_creation = -0.25 
+	}
+	
+	bonus = {
+		technology_cost = -0.05
+	}	
+
+	trigger = {
+		has_country_flag = per_blend_with_mug_ideas_flag
+		tag = MUG 
+	}
+	free = yes
+	
+	persian_rug_production = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	mughal_ibadat_khana = {
+		idea_cost = -0.1
+	}
+	FU_encouraged_art = {
+		prestige = 1
+		production_efficiency = 0.1
+	}
+	FU_promotion_of_irrigation = {
+		development_cost = -0.05
+		manpower_recovery_speed = 0.1
+	}
+	FU_the_ghulams = {
+		global_manpower_modifier = 0.1
+		drill_gain_modifier = 0.25
+	}
+	FU_improved_silk_road = {
+		trade_efficiency = 0.1
+	}
+	mansabdari_system = {
+		discipline = 0.05
+	}
+}

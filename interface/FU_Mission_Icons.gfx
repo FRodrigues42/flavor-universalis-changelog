@@ -172,4 +172,128 @@ spriteTypes = {
 		name = "fu_orthodox_priest"
 		texturefile = "gfx//interface//missions//flavor_universalis//Byzantium//fu_orthodox_priest.dds"
 	}
+	spriteType = { 
+		name = "fu_white_sheep"
+		texturefile = "gfx//interface//missions//flavor_universalis//QQ//fu_white_sheep.dds"
+	}
+	spriteType = { 
+		name = "fu_white_era"
+		texturefile = "gfx//interface//missions//flavor_universalis//QQ//fu_white_era.dds"
+	}
+	spriteType = { 
+		name = "fu_georgian_king"
+		texturefile = "gfx//interface//missions//flavor_universalis//QQ//fu_georgian_king.dds"
+	}
+	spriteType = { 
+		name = "fu_deal_copts"
+		texturefile = "gfx//interface//missions//flavor_universalis//QQ//fu_deal_copts.dds"
+	}
+	spriteType = { 
+		name = "fu_pursue_unity"
+		texturefile = "gfx//interface//missions//flavor_universalis//QQ//fu_pursue_unity.dds"
+	}
+	spriteType = { 
+		name = "fu_shia_mosque"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ajam//fu_shia_mosque.dds"
+	}
+	spriteType = { 
+		name = "fu_tamerlane1"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ajam//fu_tamerlane1.dds"
+	}
+	spriteType = { 
+		name = "fu_tamerlane2"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ajam//fu_tamerlane2.dds"
+	}
+	spriteType = { 
+		name = "fu_tamerlane3"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ajam//fu_tamerlane3.dds"
+	}
+	spriteType = { 
+		name = "fu_baaaaa"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ajam//fu_baaaaa.dds"
+	}
+	spriteType = { 
+		name = "fu_shepherd_king"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ardabil//fu_shepherd_king.dds"
+	}
+	spriteType = { 
+		name = "fu_lion_struggle"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ardabil//fu_lion_struggle.dds"
+	}
+	spriteType = {  
+		name = "fu_caucasus"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_caucasus.dds"
+	}
+	spriteType = {  
+		name = "fu_cross_hindus"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_cross_hindus.dds"
+	}
+	spriteType = {  
+		name = "fu_rekindle_flames"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_rekindle_flames.dds"
+	}
+	spriteType = {  
+		name = "fu_restore_mobeds"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_restore_mobeds.dds"
+	}
+	spriteType = {  
+		name = "fu_path_kingship"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_path_kingship.dds"
+	}
+	spriteType = {  
+		name = "fu_ottoman_soldier"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_ottoman_soldier.dds"
+	}
+	spriteType = {  
+		name = "fu_baku_ateshgah"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_baku_ateshgah.dds"
+	}
+	spriteType = {  
+		name = "fu_ishtar_gate_icon"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_ishtar_gate_icon.dds"
+	}
+	spriteType = {  
+		name = "fu_crowning_shah"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_crowning_shah.dds"
+	}
+	spriteType = {  
+		name = "fu_turkmen_tribes"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_turkmen_tribes.dds"
+	}
+	spriteType = {  
+		name = "fu_war_lions"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_war_lions.dds"
+	}
+	spriteType = {  
+		name = "fu_sword_islam"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_sword_islam.dds"
+	}
+	spriteType = {  
+		name = "fu_consolidate_persia"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_consolidate_persia.dds"
+	}
+	spriteType = {  
+		name = "fu_timurid_decay"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_timurid_decay.dds"
+	}
+	spriteType = {  
+		name = "fu_spread_imamiyyah"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_spread_imamiyyah.dds"
+	}
+	spriteType = {  
+		name = "fu_najaf_karbala"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_najaf_karbala.dds"
+	}
+	spriteType = {  
+		name = "fu_unite_islam"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_unite_islam.dds"
+	}
+	spriteType = {  
+		name = "fu_custodians_jerusalem"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_custodians_jerusalem.dds"
+	}
+	spriteType = {  
+		name = "fu_khiva"
+		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_khiva.dds"
+	}
 }

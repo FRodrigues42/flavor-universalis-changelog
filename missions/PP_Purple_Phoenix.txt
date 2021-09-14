@@ -1418,7 +1418,7 @@ byzantine_missions_2 = {
 					AND = {
 						government_reform_progress = 500
 						has_age_ability = ab_autonomy
-						average_autonomy_above_min = 5 
+						NOT = { average_autonomy_above_min = 5 }
 					}
 					AND = {
 						num_of_owned_provinces_with = {
@@ -3427,7 +3427,7 @@ byzantine_missions_4 = {
 		required_missions = { byz_army_of_the_basileus }
 		position = 23 
 		trigger = {
-			mercantilism = 40 
+			mercantilism = 35
 			1320 = { #Sea of Marmara
 				trade_share = {
 					country = ROOT 

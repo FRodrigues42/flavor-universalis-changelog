@@ -31,16 +31,29 @@ l_english:
  fu_theodosian_walls: "Theodosian Walls" 
  fu_library_alexandria: "The Great Library" 
  fu_kasbah_of_tunis: "Kasbah of Tunis" 
- fu_winter_palace: "Winter Palace" 
- 
+ fu_winter_palace: "Winter Palace"
+ fu_blue_mosque: "Blue Mosque"  
+ fu_isfahan_city: "Isfahan City" 
+ fu_white_house: "White House"
+ fu_potala_palace: "Potala Palace" 
+ fu_walls_of_ragusa: "Walls of Dubrovnik" 
+ fu_foreign_quarters: "Foreign Quarters of Canton"
+ fu_lingyin_temple: "Lingyin Temple" 
+ fu_edinburgh_castle: "Edinburgh Castle"
+ fu_axum_obelisk: "Obelisk of Axum"
+ fu_amsterdam_stock_exchange: "Amsterdam Stock Exchange"
+ fu_university_vienna: "University of Vienna" 
+ fu_white_tower: "The White Tower" 
+ fu_ali_qapu: "Ali Qapu Palace"
+ fu_ishtar_gate: "Ishtar Gate"
+ fu_malbork_castle: "Malbork Castle"
+ fu_walls_benin: "Walls of Benin"
  
  #Decision 
  
  fu_rename_country_title: "Restore our Name"
  fu_rename_country_desc: "Have you changed your name or formed a new country with your name getting stuck or static ? Fear not! Click me! \n\nGood luck with your game, I hope you enjoy it! <3"
- xorme_monuments_highlighter2_title: "Highlight Monuments"
- xorme_monuments_highlighter2_desc: "Navigate to the '?' button to highlight all visible monuments."
- 
+  
  #Shatter the Ming!
  RELEASE_SUBJECTS_AND_CEDE_CORES_CEDE_CORES_TT: "Every owned non-capital province that is a core of another nation is §Rceded to one of its core countries§!."
  RELEASE_SUBJECTS_AND_CEDE_CORES_GAIN_UNREST_TT: "Every owned non-capital province that is not a core of another nation gains §R25§! unrest and §R10§! years of nationalism. If any existing country has the province's culture as primary culture, they will gain a §Rcore§! in the province.§!"
@@ -70,4 +83,8 @@ l_english:
  is_ahead_of_time_in_tech_tt_adm: "Ahead of time in the £adm£ §YAdministrative§! Technology"
  is_ahead_of_time_in_tech_tt_dip: "Ahead of time in the £dip£ §YDiplomatic§! Technology"
  is_ahead_of_time_in_tech_tt_mil: "Ahead of time in the £mil£ §YMilitary§! Technology"
+ 
+ #General Tooltips
+ 
+ general_tooltip_mil_focus_tt: "Has set National Focus to '§YMilitary§!'"
  

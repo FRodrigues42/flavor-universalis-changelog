@@ -197,6 +197,8 @@
  #Special CB
  cb_make_puppet: "Make Puppet" 
  cb_make_puppet_desc: "Wargoal is to seize their capital. \n\n§G25%§! Aggressive Expansion, §G200%§! Prestige and §G50%§! Cost for: \n- Enforced Vassalage"
+ make_puppet_wargoal: "Wargoal is to take their capital" 
+ make_puppet_wargoal: "Their feeble head of state is incapable of handling their affairs. Thus, we must alleviate them of such responsibilities."
  
  #Lombardy Ideas 
  LOM_ideas_start: "Lombard Traditions"

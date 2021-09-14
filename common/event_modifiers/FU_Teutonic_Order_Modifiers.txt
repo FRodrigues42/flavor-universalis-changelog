@@ -104,3 +104,4 @@ teu_naval_base_of_the_order_modifier = {
 }
 teu_sambian_amber_production_modifier = {
 	trade_goods_size = 1
+}

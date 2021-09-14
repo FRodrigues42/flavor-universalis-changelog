@@ -158,28 +158,32 @@ provence_missions_1 = {
 			183 = { owned_by = ROOT }
 			if = {
 				limit = { has_global_flag = idea_groups_expanded_mod_active }
-				custom_trigger_tooltip = {
-					tooltip = pro_highest_dev_cap_or_gp_ideas_tt
-					OR = {
+				OR = { 
+					custom_trigger_tooltip = {
+						tooltip = pro_highest_dev_cap_or_gp_ideas_tt
 						NOT = {
 							any_province = {
 								superregion = europe_superregion
 								higher_development_than = 183
-                            }
-                        }
-						full_idea_group = great_power_idea_groups_expanded
+							}
+						}
 					}
+					full_idea_group = great_power_idea_groups_expanded
+					capital_scope = { development = 50 } 
 				}
 			}
 			else = {
-				custom_trigger_tooltip = {
-					tooltip = pro_highest_dev_cap_in_eu_tt
-					NOT = {
-						any_province = {
-							superregion = europe_superregion
-							higher_development_than = 183
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = pro_highest_dev_cap_in_eu_tt
+						NOT = {
+							any_province = {
+								superregion = europe_superregion
+								higher_development_than = 183
+							}
 						}
 					}
+					capital_scope = { development = 50 } 
 				}
 			}
 		}

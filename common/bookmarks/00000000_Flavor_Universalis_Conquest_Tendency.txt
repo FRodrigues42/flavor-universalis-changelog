@@ -1,0 +1,12 @@
+bookmark = {
+	name = "FU_CONQUEST_TENDENCY"
+	desc = "FU_CONQUEST_TENDENCY_DESC"
+	date = 1444.11.11
+	
+	center = 424
+	default = yes
+	
+	country = ARL
+	country = QAR 
+	country = QOM
+}

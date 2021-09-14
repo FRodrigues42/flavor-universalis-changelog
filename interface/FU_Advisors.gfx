@@ -34,6 +34,15 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		loadType = "INGAME"
 	}
+	
+	spriteType = {
+		name = "GFX_advisor_fu_royal_imam"
+		texturefile = "gfx//interface//advisors//theologian.dds"
+		noOfFrames = 1
+
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
 }
 
 

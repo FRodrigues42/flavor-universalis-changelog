@@ -285,7 +285,8 @@
  byz_true_to_tradition_byz: "Stayed True to Tradition"
  byz_religious_schism_opinion: "Religious Schism"
  byz_power_center_of_nobility_modifier: "Power Center of the Nobility"  
- 
+ byz_absolutist_roman_administration_modifier: "Absolutist Roman Administration" 
+ byz_autocratic_roman_administration_modifier: "Autocratic Roman Administration"
  #Events
  
  FU_Byzantium_Events.1.t: "Mending the Schism"
@@ -542,7 +543,7 @@
  byz_20_dip_per_privilege_tt: "Gain §Y20§! Diplomatic Power per §YPrivilege§! granted"
  byz_every_balkan_above_20_tt: "Every province owned by us or a subject in \nthe §MBalkan Region§! with at least §Y20§! Development will randomly gain §Y1§! Development"
  byz_enable_admiralty_decision_tt: "Enables the '§YEstablish the Purple Admiralty§!' decision"
- byz_escola_de_marina_tt: "If we complete the mission while our capital is the home of the §MEscola de Marina§! great project, we will attract a legendary Admiral"
+ byz_escola_de_marina_tt: "If we complete the mission while our capital is the home of the §MEscola de Marina§! great project at any level, we will attract a legendary Admiral"
  byz_general_based_on_nob_influence: "The §YAbility§! of the General will depend on the §YInfluence§! of the §YNobility Estate§! capped at 80"
  byz_boost_production_anatolia_tt: "Every owned province in §YAnatolia§! with at least §G10§! Base Production Development will have its Goods Production amplified"
  byz_replace_market_in_anatolia_tt: "All our §MMarket§! related buildings in Anatolian provinces with level §G3§! Centers of Trade will be upgraded if possible"

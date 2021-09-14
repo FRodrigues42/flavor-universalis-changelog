@@ -149,9 +149,15 @@ country_event = { #An event to clear out the 'until we form another nation' rewa
 	
 	trigger = {
 		OR = {
-			has_country_modifier = teu_five_branch_efficiency_modifier
-			has_country_modifier = teu_defenders_of_christendom_modifier
-			has_province_modifier = teu_residence_of_the_summus_marescalcus_modifier
+			ROOT = {
+				OR = {
+					has_country_modifier = teu_five_branch_efficiency_modifier
+					has_country_modifier = teu_defenders_of_christendom_modifier
+				}
+			}
+			41 = {
+				has_province_modifier = teu_residence_of_the_summus_marescalcus_modifier
+			}
 		}
 		NOT = {	tag = TEU }
 	}

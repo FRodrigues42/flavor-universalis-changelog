@@ -448,7 +448,7 @@ UES_missions_4 = {
 			4190 = {
 				add_province_modifier = {
 					name = uesugi_the_kanto_prefecture_province_modifier
-					duration = 7300
+					duration = 9125
 				}
 			}
 		}
@@ -486,7 +486,7 @@ UES_missions_5 = {
 				owner = {
 					has_opinion = {
 						who = ROOT
-						value = 150
+						value = 100
 					}
 				}
 			}
@@ -510,6 +510,7 @@ UES_missions_5 = {
 				name = uesugi_shogun_relations_modifier
 				duration = 3650
 			}
+			add_adm_power = 50
 		}
 	}
 	
@@ -542,7 +543,7 @@ UES_missions_5 = {
 					limit = {
 						has_spy_network_from = {
 							who = ROOT
-							value = 50
+							value = 35
 						}
 					}
 					add_country_modifier = {
@@ -590,6 +591,8 @@ UES_missions_5 = {
 			else = {
 				add_dip_power = 100
 			}
+			change_adm = 1 
+			change_dip = 1 
 		}
 	}
 	

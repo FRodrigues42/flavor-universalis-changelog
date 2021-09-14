@@ -621,6 +621,13 @@ country_event = { #The Glory of Rome
 			name = byz_roman_melting_pot_administration_modifier
 			duration = -1 
 		}
+		france_region = {
+			limit = { 
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT 
+		}
 	}
 	
 	option = {
@@ -656,6 +663,13 @@ country_event = { #The Glory of Rome
 			name = byz_autocratic_roman_administration_modifier
 			duration = -1 
 		}
+		france_region = {
+			limit = { 
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT 
+		}
 	}
 	
 	option = {
@@ -686,6 +700,13 @@ country_event = { #The Glory of Rome
 			name = byz_absolutist_roman_administration_modifier
 			duration = -1 
 		}
+		france_region = {
+			limit = { 
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT 
+		}
 	}
 	
 	option = {
@@ -694,6 +715,13 @@ country_event = { #The Glory of Rome
 		add_country_modifier = {
 			name = byz_byzantine_concept_of_europe_modifier
 			duration = -1 
+		}
+		france_region = {
+			limit = { 
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_permanent_claim = ROOT 
 		}
 	}
 }
@@ -727,7 +755,7 @@ country_event = { #Grand Library of the House of Wisdom
 				410 = { 
 					OR = {
 						religion = sunni 
-						religion = shia 
+						religion = shiite 
 						religion = ibadi 
 					}
 				}
@@ -1909,10 +1937,25 @@ country_event = { #A Tale of Two Romes
 		}
 		custom_tooltip = byz_if_we_are_victorious_tt
 		set_country_flag = byz_scorch_the_empire_flag 
-		add_casus_belli = {
-			target = HAB
-			type = cb_make_puppet
-			months = 180
+		if = { 
+			limit = { 
+				valid_for_personal_unions_trigger = yes
+				HAB = {
+					valid_for_personal_unions_trigger = yes
+				}
+			}
+			add_casus_belli = {
+				type = cb_restore_personal_union
+				months = 130
+				target = HAB
+			}
+		}
+		else = {
+			add_casus_belli = {
+				target = HAB
+				type = cb_make_puppet
+				months = 180
+			}
 		}
 	}
 	
@@ -2491,7 +2534,6 @@ country_event = { #The Preservation of Old Ideals
 		name = FU_Byzantium_Events.44.a 
 		
 		swap_free_idea_group = yes 
-		custom_tooltip = byz_depended_ideas_tt
 	}
 	
 	option = {

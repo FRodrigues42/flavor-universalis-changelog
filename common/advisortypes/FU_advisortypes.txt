@@ -82,3 +82,20 @@ fu_accountant = {
 		factor = 1
 	}
 }
+
+fu_royal_imam = {
+	monarch_power = ADM
+	
+	# Bonus
+	global_missionary_strength = 0.03 
+
+	skill_scaled_modifier = { church_loyalty_modifier = 0.05 }
+
+	chance = {
+		factor = 0
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

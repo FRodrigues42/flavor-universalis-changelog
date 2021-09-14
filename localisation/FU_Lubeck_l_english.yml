@@ -147,7 +147,12 @@
  hsa_moved_the_staple_port: "Moved the Staple Port to Amsterdam" 
  hsa_holstentor_burgtor_modifier: "Holstentor & Burgtor"
  hsa_expand_the_hansehalle_modifier: "Expand the Hansehalle"
- 
+ hsa_northern_alliance_of_trade_cities6_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities5_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities4_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities3_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities2_modifier: "Northern Alliance of Trade Cities"
+ hsa_northern_alliance_of_trade_cities1_modifier: "Northern Alliance of Trade Cities"
  
  #Events 
  FU_Lubeck_Events.1.t: "Novgorodian Kontor" 
@@ -177,12 +182,12 @@
  FU_Lubeck_Events.6.d: "We were once dubbed the “Queen of the Hanseatic League” and as the President, our Mayor of Lübeck guided the destinies of the medieval Hanseatic League which was never officially founded nor dissolved. Our League houses merchants from all over Europe and they meet annually to make decisions as 43 of the 67 Hanseatic Days (Hansetage) took place in Lübeck, which was positioned geographically favorable. This resulted in us taking the leading role in the Hanseatic League. The hub of power was the Town Hall erected in [GetYear] which serves as the central assembly and deliberation chamber for matters of the League. It is one of the most famous Gothic brickwork structures. With its impressive façade, it resembles a fairytale castle. The shape of the building was defined over three centuries: from 1226 to even today, a succession of new elements were added, and there were conversions and extensions such as the sandstone arcade, the raising of the striking façade with its distinctive circular holes for improved wind resistance as well as the bay window and impressive grand staircase." 
  FU_Lubeck_Events.6.a: "Beide part schal ein richter horen und den ordel"
  
- FU_Lubeck_Events.8.t: "Theory of Mercantilism"
- FU_Lubeck_Events.8.d: "Mercantilism is an economic theory that advocates government regulation of international trade to generate wealth and strengthen national power. Merchants and the government work together to reduce the trade deficit and create a surplus. Mercantilism, a form of economic nationalism, funds corporate, military, and national growth.﻿﻿ It advocates trade policies that protect domestic industries. In mercantilism, the government strengthens the private owners of the factors of production. \n\nThese four factors of production are: Entrepreneurship, capital goods, natural resources, labor. Mercantilism establishes monopolies, grants tax free status, and grants pensions to favoured industries. It imposes tariffs on imports. It also prohibits the emigration of skilled labor, capital, and tools. It doesn't allow anything that could help foreign companies.﻿﻿ In return, businesses funnel the riches from foreign expansion back to their governments. Its taxes pay for increase national growth and political power."
- FU_Lubeck_Events.8.a: "Money makes the world go round!"
+ FU_Lubeck_Events.7.t: "The City Gates of Lubeck" 
+ FU_Lubeck_Events.7.d: "Not many know that the world-famed Holsten  Gate (Holstentor) is not a single gate. It is in fact a series of fortifications added over time to further protect the inhabitants and their riches inside. In particular, the Holstentor is split into 3 layers: the Inner, Middle and Outer Gates. Each was built as a response to the advances of gunpowder and siege equipment, the latest addition of fortifications will surely be adequate and prove to be a sound investment for the safeguard of our wealth. \n\nThe Burgtor is the oldest of the four former gates of the medieval city fortifications of Lübeck. At the end of the Große Burgstraße, located at the northern end of the historic old town of Lübeck, you will find the castle gate, which was built in the late Gothic style. In addition to the more famous Holsten Gate, the Burgtor is the second largest city gate of the Lübeck city fortifications. The Lübeck Castle Gate takes its name from the old Lübeck Castle high above the Trave, which was converted into a castle monastery in 1227." 
+ FU_Lubeck_Events.7.a: "May they stagger our enemies!"
  
  FU_Lubeck_Events.8.t: "Theory of Mercantilism"
- FU_Lubeck_Events.8.d: "Mercantilism is an economic theory that advocates government regulation of international trade to generate wealth and strengthen national power. Merchants and the government work together to reduce the trade deficit and create a surplus. Mercantilism, a form of economic nationalism, funds corporate, military, and national growth.﻿﻿ It advocates trade policies that protect domestic industries. In mercantilism, the government strengthens the private owners of the factors of production. \n\nThese four factors of production are: Entrepreneurship, capital goods, natural resources, labor. Mercantilism establishes monopolies, grants tax free status, and grants pensions to favoured industries. It imposes tariffs on imports. It also prohibits the emigration of skilled labor, capital, and tools. It doesn't allow anything that could help foreign companies.﻿﻿ In return, businesses funnel the riches from foreign expansion back to their governments. Its taxes pay for increase national growth and political power."
+ FU_Lubeck_Events.8.d: "Mercantilism is an economic theory that advocates government regulation of international trade to generate wealth and strengthen national power. Merchants and the government work together to reduce the trade deficit and create a surplus. Mercantilism, a form of economic nationalism, funds corporate, military, and national growth.﻿﻿ It advocates trade policies that protect domestic industries. In mercantilism, the government strengthens the private owners of the factors of production. \n\nThese four factors of production are  entrepreneurship, capital goods, natural resources, labor. Mercantilism establishes monopolies, grants tax free status, and grants pensions to favoured industries. It imposes tariffs on imports. It also prohibits the emigration of skilled labor, capital, and tools. It doesn't allow anything that could help foreign companies.﻿﻿ In return, businesses funnel the riches from foreign expansion back to their governments. Its taxes pay for increase national growth and political power."
  FU_Lubeck_Events.8.a: "Money makes the world go round!"
  
  FU_Lubeck_Events.9.t: "The Hanseatic Cog"
@@ -275,6 +280,10 @@
  hsa_trigger_3_tt: "One of the following must be true: \n§YMecklenburg State§! owned by us or our subjects \nOR We own at least 35 §YDevelopment§! in the §YMecklenburg State§! while §YRostock§! and §YWismar§! are owned by us or our subjects"
  hsa_trigger_4_tt: "Any §YAlly§! has the §YLatin§! culture, §Y125§! opinion and has embraced §YRenaissaince§!"
  hsa_has_built_hansehalle_tt: "Has upgraded the §YHanseatic City Hall§! on tier §Y2§! or §Y3§!"
+ hsa_diplomatic_upkeep_boost_tt: "§MWe will gain a boost to our Diplomatic Relations to cover part of the cost of maintaining our new vassals§!"
+ 
+ 
+ 
  #Advisor
  fu_accountant: "Accountant"
  fu_accountant_desc: "Fra Luca Bartolomeo de Pacioli (c. 1447 – 19 June 1517) was an Italian mathematician, Franciscan friar, collaborator with Leonardo da Vinci, and an early contributor to the field now known as accounting. He is referred to as "The Father of Accounting and Bookkeeping" in Europe and he was the second person to publish a work on the double-entry system of book-keeping on the continent."

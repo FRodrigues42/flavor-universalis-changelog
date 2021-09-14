@@ -339,4 +339,79 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/fu_gemistus_eventPicture.dds"
 		allwaystransparent = yes
 	}
+	spriteType = { 
+		name = "fu_savafid1_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_savafid1_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_savafid2_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_savafid2_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_savafid3_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_savafid3_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_savafid4_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_savafid4_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_savafid5_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_savafid5_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_savafid6_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_savafid6_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_savafid7_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_savafid7_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_savafid8_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_savafid8_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_savafid9_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_savafid9_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_mosque_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_mosque_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_mosque2_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_mosque2_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_mosque3_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_mosque3_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_horses_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_horses_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_persian_garden_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_persian_garden_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_jahan_square_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_jahan_square_eventPicture.dds"
+		allwaystransparent = yes
+	}
 }
