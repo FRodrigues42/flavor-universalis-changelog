@@ -48,6 +48,14 @@ l_english:
  fu_ishtar_gate: "Ishtar Gate"
  fu_malbork_castle: "Malbork Castle"
  fu_walls_benin: "Walls of Benin"
+ #
+ fu_brugge_dike: "Brugge Dike"
+ fu_gent_dike: "Gent Dike"
+ fu_antwerp_dike: "Antwerp Dike"
+ fu_zeeland_dike: "Zeeland Dike"
+ fu_den_haag_dike: "Den Haag Dike"
+ fu_amsterdam_dike: "Amsterdam Dike"
+ fu_admiralty_amsterdam: "Admiralty of Amsterdam" 
  
  #Decision 
  
@@ -63,6 +71,7 @@ l_english:
  fu_ambusher_personality: "Ambusher"
  fu_absolutist_personality: "Absolutist" 
  fu_legendary_statesman_personality: "Legendary Statesman"
+ fu_legendary_entrepreneur_personality: "Legendary Entrepreneur"
  
  #Monument Loc
  fu_djenne_every_province_tt: "Every owned province with a §YMosque§! or a §YGreat Mosque§! gains §G1§! Base Tax"

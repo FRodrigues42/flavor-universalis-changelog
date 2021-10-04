@@ -1,0 +1,94 @@
+country_decisions = {
+
+	ned_unite_two_crowns = {
+		major = yes
+		potential = {
+			has_country_flag = ned_union_of_crowns
+			NOT = { has_country_flag = ned_united_crowns_flag }
+			OR = {
+				senior_union_with = ENG
+				senior_union_with = GBR
+				ENG = { is_subject_of = ROOT }
+				GBR = { is_subject_of = ROOT }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 236	
+				province_id = 237	
+				province_id = 245	
+				province_id = 1860	
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = { 
+			if = {
+				limit = { 
+					ENG = { is_subject_of = ROOT }
+				}
+				ENG = { 
+					NOT = { liberty_desire = 5 }
+					has_opinion = { 
+						who = ROOT 
+						value = 190 
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					GBR = { is_subject_of = ROOT }
+				}
+				GBR = { 
+					NOT = { liberty_desire = 5 }
+					has_opinion = { 
+						who = ROOT 
+						value = 190 
+					}
+				}
+			}
+			236 = { country_or_non_sovereign_subject_holds = ROOT }
+			237 = { country_or_non_sovereign_subject_holds = ROOT }
+			245 = { country_or_non_sovereign_subject_holds = ROOT }
+			1860 = { country_or_non_sovereign_subject_holds = ROOT }
+			adm_tech = 20 
+			legitimacy_equivalent = 90 
+			stability = 3 
+		}
+		effect = { 
+			custom_tooltip = ned_unite_two_crowns_tt 
+			hidden_effect = { override_country_name = FU4 }
+			if = {
+				limit = { 
+					ENG = { is_subject_of = ROOT }
+				}
+				inherit = ENG 
+			}
+			if = { 
+				limit = { 
+					GBR = { is_subject_of = ROOT }
+				}
+				inherit = GBR 
+			}
+			if = {
+				limit = { 
+					NOT = { accepted_culture = english } 
+				}
+				add_accepted_culture = english
+			}
+			if = {
+				limit = { 
+					NOT = { government_rank = 3 } 
+				}
+				set_government_rank = 3
+			}
+			set_country_flag = ned_united_crowns_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}		

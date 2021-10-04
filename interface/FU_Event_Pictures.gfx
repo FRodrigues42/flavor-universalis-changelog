@@ -414,4 +414,59 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/fu_jahan_square_eventPicture.dds"
 		allwaystransparent = yes
 	}
+	spriteType = { 
+		name = "fu_cereal_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_cereal_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_dutch_city_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_dutch_city.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_port_walk_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_port_walk.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_versailles_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_versailles_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_michiel_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_michiel_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_ship_japan_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_ship_japan_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_rembrandt_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_rembrandt_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_willem_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_willem_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_antonie_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_antonie_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_gurl_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_gurl_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_cuisine_hawt_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_cuisine_hawt_eventPicture.dds"
+		allwaystransparent = yes
+	}
 }

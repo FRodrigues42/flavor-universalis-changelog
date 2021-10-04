@@ -324,7 +324,7 @@ byzantine_missions_1 = {
 		effect = {
 			custom_tooltip = byz_steal_subjects_of_iberians_tt
 			hidden_effect = {
-				every_subject_country = {
+				every_country = {
 					limit = {
 						overlord = {
 							culture_group = iberian 
@@ -4010,8 +4010,14 @@ byzantine_missions_5 = {
 		required_missions = { } 
 		position = 19
 		trigger = {
-			any_rival_country = {
-				NOT = { navy_size = ROOT } 
+			OR = { 
+				any_rival_country = {
+					NOT = { navy_size = ROOT } 
+				}
+				AND = { 
+					sailors_percentage = 0.9
+					navy_size = 25 
+				}
 			}
 			naval_forcelimit = 20 
 		}

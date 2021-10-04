@@ -3,3 +3,4 @@
 #### Mare Nostrum Update #### 
 
 FU1 = "countries/LatinEmpireFU.txt"
+VOC = "countries/EastIndiesFU.txt"

@@ -51,6 +51,7 @@ l_spanish:
  fu_ambusher_personality: "Ambusher"
  fu_absolutist_personality: "Absolutist" 
  fu_legendary_statesman_personality: "Legendary Statesman"
+ fu_legendary_entrepreneur_personality: "Legendary Entrepreneur"
  
  #Monument Loc
  fu_djenne_every_province_tt: "Every owned province with a §YMosque§! or a §YGreat Mosque§! gains §G1§! Base Tax"

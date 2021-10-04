@@ -1,0 +1,34 @@
+economic_hegemon = {
+	allow = {
+		OR = { 
+			AND = { 
+				is_great_power = yes
+				monthly_income = 1000
+				NOT = { any_other_great_power = { monthly_income = root } }
+				NOT = { has_country_modifier = lost_hegemony }
+			}
+			custom_trigger_tooltip = { 
+				tooltip = ned_completed_gouden_euew_mission_tt
+				has_country_flag = ned_eco_hegemony_flag
+			}
+		}
+	}
+	
+	base = {
+		war_exhaustion = -0.1
+		global_spy_defence = 0.25
+		mercenary_manpower = 1.0
+	}
+	
+	# At max 100% tickup.
+	scale = {
+		mercenary_discipline = 0.10
+		global_trade_goods_size_modifier = 0.25
+		min_autonomy_in_territories = -0.20
+	}
+	
+	max = {
+		governing_capacity_modifier = 0.20 
+	}
+	
+}

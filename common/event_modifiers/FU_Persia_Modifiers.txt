@@ -444,3 +444,6 @@ per_shirley_reforms_the_army1_modifier = {
 per_shirley_reforms_the_army2_modifier = {
 	army_tradition = 0.1
 }
+per_porcelain_exports_to_the_west_modifier = {
+	trade_efficiency = 0.15
+}

@@ -1,0 +1,80 @@
+namespace = FU_Flanders_Events
+
+#Legendary Entrepreneur
+country_event = { 
+	id = FU_Flanders_Events.1
+	title = FU_Flanders_Events.1.t 
+	desc = FU_Flanders_Events.1.d 
+	picture = WESTERNISATION 
+	hidden = yes 
+	is_triggered_only = yes 
+	
+	immediate = {
+		if = { 
+			limit = { has_dlc = "Rights of Man"}
+			add_ruler_personality = fu_legendary_entrepreneur_personality
+		}
+	}
+	
+	option = {	
+		name = FU_Flanders_Events.1.a 
+	}
+}
+
+country_event = { #The Republican Unification of the Low Countries
+	id = FU_Flanders_Events.2
+	title = FU_Flanders_Events.2.t
+	desc = FU_Flanders_Events.2.d
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		OR = { 
+			tag = HOL 
+			tag = BRB
+		}
+		OR = {
+			NOT = { is_rival = FLA }
+			has_opinion = {
+				who = FLA 
+				value = 0 
+			}
+		}
+		is_at_war = no 
+		is_subject = no 
+		FLA = { grown_by_development = 100 }
+		FLA = { has_country_flag = fla_leader_of_the_low_countries_flag }
+	}
+	
+	mean_time_to_happen = {
+		days = 1 
+	}
+	
+	option = {
+		name = FU_Flanders_Events.2.a
+		FLA = { vassalize = ROOT }
+		FLA = { 
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 15
+			}
+		}
+		add_historical_friend = FLA 
+		FLA = { add_historical_friend = ROOT }
+		add_liberty_desire = -25 
+		
+		ai_chance = { factor = 100 } 
+	}
+	
+	option = {
+		name = FU_Flanders_Events.2.b
+		
+		add_prestige = 10 
+		FLA = {
+			add_opinion = {
+				who = ROOT 
+				modifier = opinion_refused_send_help
+			}
+		}
+		ai_chance = { factor = 0 }
+	}
+}

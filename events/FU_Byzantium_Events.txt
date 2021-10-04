@@ -36,7 +36,7 @@ country_event = { #Downfall of Catholicism
 		name = FU_Byzantium_Events.2.a 
 		
 		ai_chance = {
-			factor = 0.2
+			factor = 0.4
 			
 			modifier = {
 				factor = 0
@@ -85,7 +85,7 @@ country_event = { #Downfall of Catholicism
 		
 		
 		ai_chance = {
-			factor = 0.85
+			factor = 0.6
 			
 			modifier = {
 				factor = 100
@@ -125,7 +125,7 @@ country_event = { #Offer of the Phoenix
 		
 		name = FU_Byzantium_Events.3.a 
 		
-		FROM = {
+		BYZ = {
 			create_subject = {
 				subject_type = colony
 				subject = ROOT 
@@ -456,6 +456,14 @@ country_event = { #Conquest of Egypt
 			}
 		}
 		
+		hidden_effect = {
+			every_owned_province = {
+				limit = { 
+					is_core = MAM 
+				}
+				remove_core = MAM 
+			}
+		}
 		egypt_region = {
 			limit = {
 				owned_by = ROOT
@@ -868,7 +876,7 @@ country_event = { #The Bride of Thermaikos
 country_event = { #Legacy of the Ottoman Order
 	id = FU_Byzantium_Events.15
 	title = FU_Byzantium_Events.15.t 
-	desc = FU_Byzantium_Events.15.d 
+	desc = FU_Byzantium_Events.15.x 
 	picture = ADVISOR_eventPicture
 	is_triggered_only = yes 
 	
@@ -1778,6 +1786,7 @@ country_event = { #Competition in the Aegean
 		151 = { owned_by = BYZ } 
 		is_at_war = no 
 		NOT = { is_rival = VEN }
+		VEN = { exists = yes } 
 	}
 	
 	mean_time_to_happen = {

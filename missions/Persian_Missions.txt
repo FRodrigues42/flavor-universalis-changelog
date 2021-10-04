@@ -2594,6 +2594,13 @@ fu_persia_missions_4 = {
 					}
 					country_event = { id = FU_Persia_Events.16 }
 				}
+				if = {
+					limit = { 
+						religion = zoroastrian
+						has_dlc = "Cossacks"
+					}
+					set_country_flag = general_flag_enable_dhimmi_flag
+				}
 			}
 			add_country_modifier = {
 				name = per_conquest_of_baghdad_modifier

@@ -1,5 +1,5 @@
 patron_of_arts_personality = {
-	#personality_events.15
+	
 	ruler_allow = {
 		allow = {
 			always = no 
@@ -24,7 +24,7 @@ patron_of_arts_personality = {
 }
 
 fu_absolutist_personality = {
-	#personality_events.15
+	
 	ruler_allow = {
 		allow = {
 			always = no 
@@ -48,7 +48,7 @@ fu_absolutist_personality = {
 }
 
 fu_legendary_statesman_personality = {
-	#personality_events.15
+	
 	ruler_allow = {
 		allow = {
 			always = no 
@@ -73,7 +73,7 @@ fu_legendary_statesman_personality = {
 }
 
 fu_legendary_conqueror_personality = {
-	#personality_events.15
+	
 	ruler_allow = {
 		allow = {
 			always = no 
@@ -96,3 +96,28 @@ fu_legendary_conqueror_personality = {
 	land_morale = 0.05
 	nation_designer_cost = 10
 }	
+
+fu_legendary_entrepreneur_personality = {
+	
+	ruler_allow = {
+		allow = {
+			always = no 
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	trade_efficiency = 0.15
+	global_trade_goods_size_modifier = 0.05
+	nation_designer_cost = 10
+}

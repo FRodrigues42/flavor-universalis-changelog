@@ -296,19 +296,22 @@ lubeck_missions_1 = { #Made by Big Boss for Flavor Universalis
 						num_of_subjects = 1 
 					}
 				}
-				all_country = {
-					OR = {
-						NOT = { is_in_trade_league_with = ROOT }
-						has_opinion = {
-							who = ROOT
-							value = 100
+				custom_trigger_tooltip = { 
+					tooltip = hsa_either_trade_or_subject_all_100_tt
+					all_country = {
+						OR = {
+							NOT = { is_in_trade_league_with = ROOT }
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
 						}
-					}
-					OR = {
-						NOT = { is_subject_of = ROOT }
-						has_opinion = {
-							who = ROOT
-							value = 100
+						OR = {
+							NOT = { is_subject_of = ROOT }
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
 						}
 					}
 				}
@@ -1915,6 +1918,7 @@ lubeck_missions_4 = { #Made by Big Boss for Flavor Universalis
 				every_country = {
 					limit = {
 						any_owned_province = { has_port = yes }
+						is_in_trade_league_with = ROOT 
 					}
 					add_country_modifier = {
 						name = hsa_shipwrights_naval_expansion_modifier 

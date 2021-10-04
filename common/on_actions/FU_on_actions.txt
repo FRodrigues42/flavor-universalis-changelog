@@ -1,0 +1,9 @@
+on_mercenary_recruited = {
+	FROM = {
+		if = { 
+			limit = { has_country_flag = ned_french_influences_flag }
+			add_army_professionalism = -0.025
+		}
+		else = { add_army_professionalism = -0.05 }
+	}
+}

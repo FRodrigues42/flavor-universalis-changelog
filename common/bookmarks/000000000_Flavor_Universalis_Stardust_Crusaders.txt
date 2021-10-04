@@ -1,0 +1,12 @@
+bookmark = {
+	name = "FU_STARDUST_EXPLORERS"
+	desc = "FU_STARDUST_EXPLORERS_DESC"
+	date = 1444.11.11
+	
+	center = 97
+	default = yes
+	
+	country = HOL
+	country = FLA 
+	country = DTT
+}

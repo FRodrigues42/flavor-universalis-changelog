@@ -1,7 +1,7 @@
 country_decisions = {
 	ned_hol_found_the_amsterdam_admirality = {
 		potential = {
-			has_country_flag = enable_hol_ned_admirality_decisions
+			tag = NED 
 			NOT = { has_country_flag = ned_hol_found_the_amsterdam_admirality_completed }
 		}
 		provinces_to_highlight = {
@@ -13,15 +13,15 @@ country_decisions = {
 			}
 		}
 		allow = {
-			treasury = 1000
+			treasury = 2000
 			navy_size_percentage = 1
 			owns_core_province = 97
 			97 = {
-				development = 30
+				development = 35
 			}
 		}
 		effect = {
-			add_treasury = -1000
+			add_treasury = -2000
 			97 = {
 				add_province_modifier = {
 					name = ned_hol_found_the_amsterdam_admirality_province_modifier
@@ -46,15 +46,15 @@ country_decisions = {
 			}
 		}
 		allow = {
-			treasury = 1000
+			treasury = 2000
 			navy_size_percentage = 1
 			owns_core_province = 4383
 			4383 = {
-				development = 30
+				development = 35
 			}
 		}
 		effect = {
-			add_treasury = -1000
+			add_treasury = -2000
 			4383 = {
 				add_province_modifier = {
 					name = ned_hol_found_the_den_haag_admirality_province_modifier

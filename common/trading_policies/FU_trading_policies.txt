@@ -1,0 +1,71 @@
+fu_christian_propagate_religion =
+{
+	unique = yes # Only one country can select this in a certain node.
+
+	can_select = {
+		AND = { 
+			tag = NED 
+			mission_completed = ned_bulwark_ideals
+			religion_group = christian
+		}
+		if = {
+			limit = {
+				NOT = { mission_completed = atj_porch_of_mecca }
+			}
+			FROM = {
+				has_trader = ROOT
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		else = {
+			FROM = {
+				has_trader = ROOT
+				trade_share = {
+					country = ROOT
+					share = 35
+				}
+			}
+		}
+	}
+
+	can_maintain = {
+		
+		AND = { 
+			tag = NED 
+			mission_completed = ned_bulwark_ideals
+		}
+		if = {
+			limit = {
+				NOT = { mission_completed = atj_porch_of_mecca }
+			}
+			FROM = {
+				has_trader = ROOT
+				trade_share = {
+					country = ROOT
+					share = 40
+				}
+			}
+		}
+		else = {
+			FROM = {
+				has_trader = ROOT
+				trade_share = {
+					country = ROOT
+					share = 30
+				}
+			}
+		}
+	}
+
+	show_alert = yes
+	center_of_reformation = yes
+	trade_power = {
+		duration = -1
+		power_modifier = 0.05
+		key = maximize_profits
+	}
+	button_gfx = GFX_fu_propagate_christianity_policy
+}

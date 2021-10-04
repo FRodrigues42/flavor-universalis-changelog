@@ -296,4 +296,152 @@ spriteTypes = {
 		name = "fu_khiva"
 		texturefile = "gfx//interface//missions//flavor_universalis//Persia//fu_khiva.dds"
 	}
+	spriteType = {  
+		name = "fu_bishop_needle"
+		texturefile = "gfx//interface//missions//flavor_universalis//Dithmarschen//fu_bishop_needle.dds"
+	}
+	spriteType = {  
+		name = "fu_likedeelers"
+		texturefile = "gfx//interface//missions//flavor_universalis//Dithmarschen//fu_likedeelers.dds"
+	}
+	spriteType = {  
+		name = "fu_black_guard"
+		texturefile = "gfx//interface//missions//flavor_universalis//Dithmarschen//fu_black_guard.dds"
+	}
+	spriteType = {  
+		name = "fu_peasant_leader"
+		texturefile = "gfx//interface//missions//flavor_universalis//Dithmarschen//fu_peasant_leader.dds"
+	}
+	spriteType = {  
+		name = "fu_hemmingsteadt"
+		texturefile = "gfx//interface//missions//flavor_universalis//Dithmarschen//fu_hemmingsteadt.dds"
+	}
+	spriteType = {  
+		name = "fu_old_times_changing"
+		texturefile = "gfx//interface//missions//flavor_universalis//Dithmarschen//fu_old_times_changing.dds"
+	}
+	spriteType = {  
+		name = "fu_estuary"
+		texturefile = "gfx//interface//missions//flavor_universalis//Dithmarschen//fu_estuary.dds"
+	}
+	spriteType = {  
+		name = "fu_peasants_field"
+		texturefile = "gfx//interface//missions//flavor_universalis//Dithmarschen//fu_peasants_field.dds"
+	}
+	spriteType = {  
+		name = "fu_infrastructure"
+		texturefile = "gfx//interface//missions//flavor_universalis//Dithmarschen//fu_infrastructure.dds"
+	}
+	spriteType = {  
+		name = "fu_infrastructure2"
+		texturefile = "gfx//interface//missions//flavor_universalis//Dithmarschen//fu_infrastructure2.dds"
+	}
+	spriteType = {  
+		name = "fu_building_burning"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_building_burning.dds"
+	}
+	spriteType = {  
+		name = "fu_free_slaves"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_free_slaves.dds"
+	}
+	spriteType = {  
+		name = "fu_freed_slaves_hug"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_freed_slaves_hug.dds"
+	}
+	spriteType = {  
+		name = "fu_black_recruit"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_black_recruit.dds"
+	}
+	spriteType = {  
+		name = "fu_compass"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_compass.dds"
+	}
+	spriteType = {  
+		name = "fu_homeless"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_homeless.dds"
+	}
+	spriteType = {  
+		name = "fu_black_liberation"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_black_liberation.dds"
+	}
+	spriteType = {  
+		name = "fu_industry1"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_industry1.dds"
+	}
+	spriteType = {  
+		name = "fu_sea_beggars"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_sea_beggars.dds"
+	}
+	spriteType = {  
+		name = "fu_fund_the_arts1"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_fund_the_arts1.dds"
+	}
+	spriteType = {  
+		name = "fu_reformation"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_reformation.dds"
+	}
+	spriteType = {  
+		name = "fu_amsterdam_port"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_amsterdam_port.dds"
+	}
+	spriteType = {  
+		name = "fu_brabant_lion"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_brabant_lion.dds"
+	}
+	spriteType = {  
+		name = "fu_coat_of_flanders"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_coat_of_flanders.dds"
+	} 
+	spriteType = {  
+		name = "fu_prepare_army"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_prepare_army.dds"
+	} 
+	spriteType = {  
+		name = "fu_port2"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_port2.dds"
+	} 
+	spriteType = {  
+		name = "fu_cloth"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_cloth.dds"
+	} 
+	spriteType = {  
+		name = "fu_flanders_lion"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_flanders_lion.dds"
+	} 
+	spriteType = {  
+		name = "fu_dutch_london"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_dutch_london.dds"
+	} 
+	spriteType = {  
+		name = "fu_dutch_dikes"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_dutch_dikes.dds"
+	} 
+	spriteType = {  
+		name = "fu_dutch_river"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_dutch_river.dds"
+	} 
+	spriteType = {  
+		name = "fu_haven_van_amsterdam"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_haven_van_amsterdam.dds"
+	} 
+	spriteType = {  
+		name = "fu_wilde_kuust"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_wilde_kuust.dds"
+	} 
+	spriteType = {  
+		name = "fu_dutch_grain_trade"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_dutch_grain_trade.dds"
+	} 
+	spriteType = {  
+		name = "fu_silver_empire"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_silver_empire.dds"
+	}
+	spriteType = {  
+		name = "fu_white_horse_company"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_white_horse_company.dds"
+	}
+	spriteType = {  
+		name = "fu_golden_arts"
+		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_golden_arts.dds"
+	}
 }
