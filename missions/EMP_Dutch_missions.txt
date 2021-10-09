@@ -2116,9 +2116,6 @@ fu_netherlands_missions_4 = {
 		}
 		effect = {
 			country_event = { id = FU_Holland_Netherlands_Events.20 }
-			hidden_effect = { 
-				country_event = { id = FU_Holland_Netherlands_Events.47 }
-			}
 			lanka_area = {
 				limit = {
 					NOT = { owned_by = ROOT }

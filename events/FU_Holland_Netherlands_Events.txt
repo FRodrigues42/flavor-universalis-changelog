@@ -1561,13 +1561,17 @@ country_event = { #hidden forcelimit
 	desc = FU_Holland_Netherlands_Events.47.d 
 	picture = WESTERNISATION_eventPicture 
 	hidden = yes 
-	is_triggered_only = yes 
+	trigger = { 
+		tag = VOC 
+		is_subject = yes 
+	}
+	mean_time_to_happen = { months = 1 } 
 	
 	option = { 
 		name = FU_Holland_Netherlands_Events.47.a 
 		1460 = { 
 			add_trade_modifier = {
-				who = ROOT
+				who = VOC
 				duration = -1 
 				power = -1000
 				key = voc_trade_flow_to_channel
@@ -1646,7 +1650,7 @@ country_event = {
 		is_subject = no
 	}
 	
-	mean_time_to_happen = { months = 12 }
+	mean_time_to_happen = { months = 1 }
 	
 	option = { 
 		name = FU_Holland_Netherlands_Events.48.a 
