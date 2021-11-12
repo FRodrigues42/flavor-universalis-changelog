@@ -401,7 +401,7 @@ fu_dithmarschen_missions_2 = {
 		}
 		effect = {
 			custom_tooltip = dtt_more_likely_to_spawn_rev_tt
-			
+			set_country_flag = dtt_unite_masses_flag
 			add_country_modifier = {
 				name = dtt_spread_of_modern_ideas_modifier
 				duration = -1 

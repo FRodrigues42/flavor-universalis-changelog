@@ -633,10 +633,9 @@ country_event = { #George Giese
 		define_ruler = {
 			name = "George Giese" 
 			age = 35
-			adm = 4 
-			dip = 4 
-			mil = 3
-			fixed = yes 
+			change_adm = 1 
+			change_dip = 2 
+			change_mil = 1
 		}
 		custom_tooltip = hsa_personalities_tt
 		hidden_effect = {

@@ -716,19 +716,19 @@ lubeck_missions_2 = { #Made by Big Boss for Flavor Universalis
 			}
 		}
 		trigger = { 
-			OR = { #here , a tooltip that makes it appear nice and neat :3
-				calc_true_if = {
-					all_country = {
-						is_in_trade_league_with = ROOT 
-						subsidised_percent_amount = 0.1
-					}
-					amount = 2
-				}
-				AND = {
+			#OR = { #here , a tooltip that makes it appear nice and neat :3
+				#calc_true_if = {
+					#all_country = {
+						#is_in_trade_league_with = ROOT 
+						#subsidised_percent_amount = 0.1
+					#}
+					#amount = 2
+				#}
+				#AND = {
 					share_of_starting_income = 5
 					grown_by_development = 50
-				}
-			}
+				#}
+			#}
 			all_owned_province = {
 				development = 10 
 				NOT = { unrest = 1 }

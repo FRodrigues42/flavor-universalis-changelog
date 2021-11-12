@@ -2597,7 +2597,7 @@ fu_persia_missions_4 = {
 				if = {
 					limit = { 
 						religion = zoroastrian
-						has_dlc = "Cossacks"
+						has_dlc = "The Cossacks"
 					}
 					set_country_flag = general_flag_enable_dhimmi_flag
 				}

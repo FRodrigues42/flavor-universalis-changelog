@@ -133,3 +133,23 @@ fu_cartographer = {
 		factor = 1
 	}
 }
+
+fu_spymaster_assassin = {
+	monarch_power = DIP
+	
+	# Bonus
+	spy_offence = 1
+
+	skill_scaled_modifier = { 
+		global_rebel_suppression_efficiency = 0.1 
+		global_spy_defence = 0.1
+	}
+
+	chance = {
+		factor = 0
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

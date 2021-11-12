@@ -346,12 +346,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
-		}		
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}
+		}
 		is_year = 1555
 		NOT = { is_year = 1568 }
 		owns = 4		# Bergslagen
@@ -444,11 +446,13 @@ country_event = {
 
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}
 		}		
 		is_free_or_tributary_trigger = yes
 		OR = {
@@ -498,11 +502,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
 		}
 		is_free_or_tributary_trigger = yes
 		MIL = 5
@@ -558,12 +564,14 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
-		}		
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		dip_tech = 15
 		1 = {
 			has_construction = navy
@@ -593,12 +601,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
-		}		
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1632
 		NOT = { is_year = 1680 }
 		owns = 1		# Uppland
@@ -640,12 +650,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
-		}		
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1652
 		NOT = { is_year = 1686 }
 		owns = 36		# Estland
@@ -682,12 +694,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
-		}		
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_free_or_tributary_trigger = yes
 		adm_tech = 16
 		
@@ -735,12 +749,14 @@ country_event = {
 
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
-		}		
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1600
 		is_free_or_tributary_trigger = yes
 		government = monarchy
@@ -778,12 +794,14 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
-		}		
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1613
 		NOT = { is_year = 1654 }
 		owns = 1		# Uppland
@@ -815,12 +833,14 @@ country_event = {
 
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
-		}		
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1610
 		NOT = { is_year = 1630 }
 	}
@@ -849,11 +869,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
 		}	
 		has_regency = yes
 		has_consort_regency = no
@@ -897,12 +919,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
-		}	
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		ADM = 4
 		average_home_autonomy = 20
 	}
@@ -1186,12 +1210,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
-		}		
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1650
 		NOT = { is_year = 1750 }
 	}
@@ -1272,12 +1298,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
-		}		
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1710
 		OR = {
 			religion = protestant
@@ -1387,12 +1415,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
-		}		
+		OR = { 
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1750
 		is_free_or_tributary_trigger = yes
 		NOT = { ADM = 4 }
@@ -1427,11 +1457,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
 		}
 		is_year = 1750
 	}
@@ -1653,11 +1685,13 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
 		}
 		is_year = 1660
 		NOT = { is_year = 1703 }
@@ -1685,12 +1719,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SWE
-		AND = {
-			was_tag = SWE
-			NOT = { exists = SWE }
-			tag = SCA
-		}	
+		OR = {
+			tag = SWE
+			AND = {
+				was_tag = SWE
+				NOT = { exists = SWE }
+				tag = SCA
+			}		
+		}
 		is_year = 1660
 		NOT = { is_year = 1702 }
 	}

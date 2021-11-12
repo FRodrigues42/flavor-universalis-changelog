@@ -62,3 +62,12 @@
  ethiopia_defender_of_the_faith_modifier: "Defender of the Coptic Faith" 
  ethiopia_concessions_to_the_ewostathians_modifier: "Concessions to the Ewostathians" 
  
+ #1.32 additions 
+ eth_complete_with_80_tradition_or_80_army_proff_tt: "\nIf we complete this mission with §Y80§! Army Tradition or Army Professionalism:"
+ 
+ ethiopia_reform_the_military_title: "Reform the Negus' Military"
+ ethiopia_reform_the_military_desc: "Centuries of warfare have shaped our military to be the pride of all of Africa. However, recent developments across our coast have revealed that civilizations exist beyond the horizon that hold unimaginable power, harnessing the likes of cannons and rifles with admirable efficiency. If we are to survive, we must adapt and overcome our foes, wherever they may be."
+ general_tooltip_any_mil_idea_group_completed_tt: "Has fully unlocked §Yany§ Military Idea Group"
+ eth_cawa_elite_modifier: "Cawa Elite"
+ eth_cawa_elite_modifier2: "Cawa Elite" 
+ 

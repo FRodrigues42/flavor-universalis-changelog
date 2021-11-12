@@ -83,3 +83,19 @@ FU_elite_imperial_japanese_guard = {
 		fire_damage_received = -0.05
 	}
 }
+
+FU_iron_regiments = {
+    regiments_per_development = 0.05
+	cost_modifier = 1
+	cavalry_weight = 0
+	artillery_weight = 0
+	cavalry_cap = 12
+	sprites = { westerngfx_sprite_pack }
+    trigger = { 
+		has_country_flag = lan_unlock_italian_royal_guard_flag
+	}
+	modifier = {
+        discipline = 0.05
+		infantry_shock = 0.5
+	}
+}

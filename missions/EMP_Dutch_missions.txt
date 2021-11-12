@@ -1895,7 +1895,6 @@ fu_netherlands_missions_4 = {
 				custom_trigger_tooltip = {
 					tooltip = ned_enacted_admiralty_decision_tt
 					97 = { has_province_modifier = ned_hol_found_the_amsterdam_admirality_province_modifier }
-					4383 = { has_province_modifier = ned_hol_found_the_den_haag_admirality_province_modifier }
 				}
 			}
 			else = { 

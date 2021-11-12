@@ -79,4 +79,215 @@ country_event = {
 			}
 		}
 	}
-}		
+}
+
+#Sail through the Nil
+country_event = {
+	id = ME_Ethiopia_Events.3
+	title = flavor_eth.41.t
+	desc = flavor_eth.41.desc
+	picture = SHIP_SAILING_eventPicture
+	
+	trigger = { 
+		tag = ETH 
+		has_dlc = "Origins" 
+		navy_size_percentage = 0.8 
+	}
+	
+	mean_time_to_happen = { months = 24 } 
+
+	option = {
+		name = flavor_eth.41.a
+
+		eastern_mediterrenean_area = {
+			discover_country = ROOT
+		}
+		if = { 
+			limit = { has_dlc = "Rule Britannia" }
+			change_innovativeness = 1 
+		}
+		else = { add_dip_power = 25 }
+		add_navy_tradition = 10
+
+		hidden_effect = {
+			country_event = {
+				id = flavor_eth.42
+				days = 50	#The actual ingame time needed to reach Rome from Dumyat with galleys
+			}
+		}
+	}
+}
+
+#Alliance with Portugal for Ethiopia
+country_event = {
+	id = ME_Ethiopia_Events.4
+	title = flavor_eth.44.t
+	desc = flavor_eth.44.desc
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = ETH 
+		exists = POR
+		POR = { is_free_or_tributary_trigger = yes }
+		is_year = 1500 
+	}
+	
+	mean_time_to_happen = { months = 48 } 
+
+	option = {	#Let's try it
+		name = flavor_eth.44.a
+		POR = {
+			country_event = {
+				id = flavor_eth.45
+			}
+		}
+
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					is_rival = POR
+					POR = {
+						is_rival = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	option = {	#We are better without them
+		name = flavor_eth.44.b
+		add_dip_power = 100
+
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = { is_rival = POR }
+				POR = {
+					NOT = { is_rival = ROOT }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ME_Ethiopia_Events.5
+	title = flavor_eth.48.t
+	desc = flavor_eth.48.desc
+	picture = MILITARY_CAMP_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_eth.48.a
+		change_technology_group = western
+		change_unit_type = western
+		add_country_modifier = {
+			name = eth_modernized_army
+			duration = 9125
+		}
+		add_mil_power = -200
+	}
+}
+
+#The integration of Damot and Hadiya
+country_event = {
+	id = ME_Ethiopia_Events.6
+	title = flavor_eth.35.t
+	desc = flavor_eth.35.desc
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {	#Integrate the vassals
+		name = flavor_eth.35.a
+		add_country_modifier = {
+			name = eth_better_integration
+			duration = 10950
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {	#Just demand more tribute instead
+		name = flavor_eth.35.b
+		add_country_modifier = {
+			name = eth_better_vassal_handling
+			duration = 10950
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+country_event = { #Liberation of the Copts
+	id = ME_Ethiopia_Events.7
+	title = flavor_eth.37.t
+	desc = flavor_eth.37.desc
+	picture = COPTIC_BISHOP_eventPicture
+	
+	trigger = {
+		tag = ETH 
+		has_dlc = "Origins"
+		owns_or_non_sovereign_subject_of = 1232
+	}
+	
+	mean_time_to_happen = { months = 3 } 
+	
+	option = {
+		name = flavor_eth.37.a
+		1232 = {
+			change_religion = coptic
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 1
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+country_event = { #Reconstruction of Adulis
+	id = ME_Ethiopia_Events.8
+	title = flavor_eth.38.t
+	desc = flavor_eth.38.desc
+	picture = COPTIC_CITY_eventPicture
+	
+	trigger = {
+		culture = amhara
+		owns = 1230
+		1230 = {
+			religion = ROOT
+			num_of_times_improved = 3
+		}
+	}
+	
+	mean_time_to_happen = { months = 3 } 
+	
+	option = {
+		name = flavor_eth.38.a
+		1230 = {
+			change_province_name = "Adulis"
+			rename_capital = "Adulis"
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 2
+			center_of_trade = 2
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}	

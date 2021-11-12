@@ -469,4 +469,19 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/fu_cuisine_hawt_eventPicture.dds"
 		allwaystransparent = yes
 	}
+	spriteType = { 
+		name = "fu_mona_lisa_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_mona_lisa_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_last_supper_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_last_supper_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = { 
+		name = "fu_giraffe_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_giraffe_eventPicture.dds"
+		allwaystransparent = yes
+	}
 }

@@ -1,0 +1,778 @@
+ethiopia_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = ETH
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+	
+	ethiopia_foothold_in_hadiya = {
+		icon = mission_interfaith_relations
+		required_missions = { ethiopia_defender_of_the_coptic_faith }
+		position = 2
+		provinces_to_highlight = {
+			area = hadiya_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = {
+			hadiya_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT
+				has_owner_religion = yes 
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = birthplace_of_eleni_of_ethiopia_modifier
+				duration = 7300 
+			}
+			if = {
+				limit = {
+					NOT = {	has_global_flag = wih_eleniethiopia_flag }
+				}
+				country_event = { id = flavor_eth.27 }
+			}
+		}
+	}
+	
+	ethiopia_conquer_ifat = {
+		icon = mission_subjugate_saurashtra 
+		required_missions = { ethiopia_collapse_of_adal }
+		position = 4
+		provinces_to_highlight = {
+			area = ifat_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = {
+			ifat_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = {
+			1212 = {
+				if = {
+					limit = {
+						has_port = yes
+					}
+					custom_tooltip = ETH_SPAWN_LIGHT_SHIPS
+					hidden_effect = {
+						light_ship = ROOT
+						light_ship = ROOT
+						light_ship = ROOT
+						light_ship = ROOT
+						light_ship = ROOT
+					}
+				}
+			}
+			4346 = {
+				add_trade_modifier = {
+					who = ROOT
+					power = 25
+					duration = 7300
+					key = ethiopia_expansion_in_aden_modifier
+				}
+			}
+		}
+	}
+	
+	ethiopia_terror_of_the_horn = {
+		icon = prester_john
+		required_missions = { ethiopia_conquer_ifat }
+		position = 6
+		trigger = {
+			grown_by_development = 300
+		}
+		effect = {
+			custom_tooltip = ETH_TERROR_OF_THE_HORN
+			hidden_effect = {
+				add_ruler_modifier = {
+					name = eth_ruler_terror_modifier
+					duration = -1 
+				}
+			}
+			custom_tooltip = eth_complete_with_80_tradition_or_80_army_proff_tt
+			tooltip = { 
+				country_event = { id = ME_Ethiopia_Events.5 } 
+			}
+			hidden_effect = { 
+				if = { 
+					limit = { 
+						OR = { 
+							army_professionalism = 0.8 
+							army_tradition = 80 
+						}
+					}
+					country_event = { id = ME_Ethiopia_Events.5 } 
+				}
+			}
+		}
+	}
+}
+
+ethiopia_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ETH
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+	
+	ethiopia_defender_of_the_coptic_faith = {
+		icon = befriend_ethiopia
+		required_missions = { } 
+		position = 1 
+		trigger = {
+			army_size = 15 
+			num_of_generals = 1 
+			custom_trigger_tooltip = {
+				tooltip = ETH_LOW_LIBERTY_SUBJECTS
+				NOT = {
+					any_subject_country = {
+						liberty_desire = 5
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ethiopia_desert_operations_modifier 
+				duration = 5475
+			}
+			horn_of_africa_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							exists = DAM
+							DAM = {
+								is_subject_of = ROOT
+							}
+						}
+						AND = {
+							exists = HDY
+							HDY = {
+								is_subject_of = ROOT
+							}
+						}
+					}
+					has_dlc = "Origins" 
+				}
+				country_event = {
+					id = ME_Ethiopia_Events.6
+				}
+			}
+		}
+	}
+	
+	ethiopia_conquer_kaffa = {
+		icon = mission_zambezi_gold 
+		required_missions = { ethiopia_defender_of_the_coptic_faith }
+		position = 2
+		provinces_to_highlight = {
+			area = southern_ethiopia_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = { 
+			southern_ethiopia_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT  
+			}
+			2757 = {
+				NOT = { local_autonomy = 50 }
+			}
+		}
+		effect = {
+			2757 = {
+				add_province_modifier = {
+					name = eth_gold_of_kaffa_modifier 
+					duration = 7300 
+				}
+			}
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_control_over_the_mint
+			}
+			create_colony_mission_reward = {
+				province = 1217
+			}
+			add_accepted_culture = nubian
+			add_permanent_claim = 1232
+		}
+	}
+	
+	ethiopia_collapse_of_adal = {
+		icon = mission_establish_the_black_guard
+		required_missions = { ethiopia_foothold_in_hadiya ethiopia_conquer_kaffa }
+		position = 3 
+		provinces_to_highlight = {
+			AND = {
+				area = aussa_area 
+				province_id = 1211 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			aussa_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			1211 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			if = { 
+				limit = { has_dlc = "Origins" }
+				custom_tooltip = eth_reform_the_negusa_government_ct
+				hidden_effect = {
+					set_country_flag = unlocked_solomid_empire_reform
+				}
+				country_event = { id = flavor_eth.30 }
+			}
+			else = { 
+				add_power_projection = {
+					type = mission_rewards_power_projection
+					amount = 50
+				}
+			}
+			tihama_al_yemen_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yemen_area = { 
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_yemen_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	ethiopia_consolidate_yemeni_trade = {
+		icon = mission_control_the_barbary_coast 
+		required_missions = { ethiopia_conquer_ifat ethiopia_collapse_of_adal } 
+		position = 5 
+		provinces_to_highlight = {
+			AND = {
+				area = tihama_al_yemen_area 
+				area = yemen_area 
+				area = upper_yemen_area 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			tihama_al_yemen_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT  
+			}
+			upper_yemen_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT  
+			}
+			yemen_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT  
+			}
+		}
+		effect = {
+			if = { 
+				limit = { has_dlc = "Origins" }
+				country_event = { id = flavor_eth.39 } 
+			}
+			add_country_modifier = {
+				name = ethiopia_markets_of_aden
+				duration = 7300 
+			}
+			add_dip_power = 100
+			if = {
+				limit = {
+					has_global_flag = advisors_expanded_mod_active
+				}
+				define_advisor = {
+					type = marketeer
+					skill = 3
+					culture = ROOT 
+					religion = ROOT
+					cost_multiplier = 0.25 
+				}
+			}
+		}
+	}
+}
+
+ethiopia_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ETH
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+	
+	ethiopia_supress_the_house_of_israel = {
+		icon = mission_hands_praying
+		required_missions = { } 
+		position = 1
+		trigger = {
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+		}
+		effect = {
+			add_country_modifier = {
+				name = ethiopia_forced_conversion 
+				duration = 1825 
+			}
+			if = {
+				limit = {
+					NOT = { religion = jewish }
+					has_dlc = "Origins" 
+				}
+				country_event = {
+					id = flavor_eth.40
+				}
+			}
+			else = {
+				add_stability = 1
+			}
+		}
+	}
+	
+	ethiopia_reform_the_military = {
+		icon = mission_son_military_expertise
+		required_missions = { ethiopia_defender_of_the_coptic_faith }
+		position = 2 
+		trigger = { 
+			if = { 
+				limit = { has_dlc = "Origins" }
+				num_of_cawa = 25 
+			}
+			else = { army_tradition = 60 } 
+			custom_trigger_tooltip = {
+				tooltip = general_tooltip_any_mil_idea_group_completed_tt
+				if = {
+					limit = { has_global_flag = idea_groups_expanded_mod_active }
+					OR = { 
+						full_idea_group = offensive_ideas 
+						full_idea_group = defensive_ideas 
+						full_idea_group = aristocratic_ideas 
+						full_idea_group = plutocracy_ideas
+						full_idea_group = naval_ideas
+						full_idea_group = quality_ideas 
+						full_idea_group = standing_army_idea_groups_expanded
+						full_idea_group = military_academy_idea_groups_expanded
+						full_idea_group = mercenary_army_idea_groups_expanded
+						full_idea_group = engineer_idea_groups_expanded
+						full_idea_group = horde_idea_groups_expanded
+					}
+					else = { 
+						OR = { 
+							full_idea_group = offensive_ideas 
+							full_idea_group = defensive_ideas 
+							full_idea_group = aristocratic_ideas 
+							full_idea_group = plutocracy_ideas
+							full_idea_group = naval_ideas
+							full_idea_group = quality_ideas
+						}
+					}
+				}
+			}
+			if = { 
+				limit = { has_dlc = "Cradle of Civilization" } 
+				army_professionalism = 0.5 
+			}
+			else = { mil = 5 } 
+		}
+		effect = { 
+			if = { 
+				limit = { has_dlc = "Origins" } 
+				unlock_estate_privilege = {
+					estate_privilege = estate_nobles_cawa_peace_keepers
+				}
+				unlock_estate_privilege = {
+					estate_privilege = estate_nobles_cawa_offensive_fighters
+				}
+				add_country_modifier = { 
+					name = eth_cawa_elite_modifier
+					duration = -1 
+				}
+			}
+			else = { 
+				add_country_modifier = { 
+					name = eth_cawa_elite_modifier2
+					duration = -1 
+				}
+				add_army_tradition = 20 
+			}
+			if = { 
+				limit = { has_dlc = "Cradle of Civilization" }
+				add_army_professionalism = 0.05 
+			}
+			else = { 
+				create_general = { tradition = 85 } 
+			}
+		}
+	}				
+	
+	ethiopia_promote_coptic_architecture = { 
+		icon = mission_golden_century
+		required_missions = { ethiopia_oust_the_unbelievers } 
+		position = 3 
+		trigger = {
+			capital_scope = {
+				development = 28 
+				OR = {
+					has_building = temple 
+					has_building = cathedral 
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 3
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		effect = { 
+			capital_scope = {
+				add_province_modifier = {
+					name = ethiopia_planting_roots_modifier
+					duration = 5475 
+				}
+				add_next_institution_embracement = 25
+			}
+		}
+	}
+	
+	ethiopia_jewels_of_kaffa = {
+		icon = mission_riches_of_golconda
+		required_missions = { ethiopia_promote_coptic_architecture } 
+		position = 5 
+		provinces_to_highlight = {
+			province_id = 2757
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT 
+					base_production = 12
+				}
+			}
+		}
+		trigger = {
+			2757 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				base_production = 12
+			}
+		}
+		effect = {
+			if = {
+				limit = { has_global_flag = trade_goods_expanded_mod_active }
+				2757 = {
+					change_trade_goods = jewellery
+					add_building = jewellery_workshop
+					add_province_modifier = {
+						name = ethiopia_wealth_of_kaffa2_modifier
+						duration = 7300 
+					}
+				}
+			}
+			else = {
+				2757 = {
+					add_province_modifier = {
+						name = ethiopia_wealth_of_kaffa_modifier
+						duration = 7300 
+					}
+				}
+			}
+		}
+	}
+	
+	ethiopia_scramble_for_africa = {
+		icon = scramble_for_africa
+		required_missions = { ethiopia_consolidate_yemeni_trade ethiopia_jewels_of_kaffa ethiopia_the_patriarchate_of_alexandria }
+		position = 6 
+		trigger = {
+			is_great_power = yes 
+			OR = { 
+				full_idea_group = expansion_ideas 
+				army_size = 100
+			}
+			 
+		}
+		effect = {
+			add_country_modifier = {
+				name = ethiopia_protector_of_africa
+				duration = -1
+			}
+			add_absolutism = 25 
+		}
+	}
+}
+
+ethiopia_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ETH
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+	
+	ethiopia_oust_the_unbelievers = {
+		icon = protectors_of_christendom
+		required_missions = { ethiopia_supress_the_house_of_israel }
+		position = 2 
+		provinces_to_highlight = {
+			any_owned_province = {
+				NOT = { religion = coptic }
+			}
+		}
+		trigger = {
+			religious_unity = 0.8
+		}
+		effect = {
+			define_advisor = {
+				type = inquisitor
+				name = "Ewostatewos III" 
+				cost_multiplier = 0.33 
+				skill = 1 
+			}
+			hidden_effect = {
+				set_country_flag = ETH_EWOSTATEWOS_III_FLAG
+			}
+		}
+	}
+	
+	ethiopia_the_faithful_of_saint_mark = {
+		icon = spread_piety
+		required_missions = { ethiopia_oust_the_unbelievers }
+		position = 3 
+		trigger = {
+			religious_unity = 1 
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+			stability = 1 
+		}
+		effect = { 
+			add_country_modifier = {
+				name = ethiopia_bastion_of_st_mark
+				duration = 9125
+			}
+			if = {
+				limit = {
+					religion_group = christian
+					has_dlc = "Origins"
+				}
+				unlock_estate_privilege = {
+					estate_privilege = estate_church_yakobs_churches
+				}
+			}
+			if = {
+				limit = {
+					religion = jewish
+					has_dlc = "Origins"
+				}
+				add_church_power = 100
+			}
+		}
+	}
+	
+	ethiopia_qasr_ibrim = {
+		icon = a_strong_government
+		required_missions = { ethiopia_the_faithful_of_saint_mark }
+		position = 4
+		provinces_to_highlight = {
+			province_id = 1234
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT 
+					has_owner_religion = yes 
+				}
+			}
+		}
+		trigger = {
+			1234 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				has_owner_religion = yes
+			}
+		}
+		effect = { 
+			1234 = {
+				add_province_modifier = {
+					name = ethiopia_library_of_qasr_ibrim_modifier
+					duration = 7300
+				}
+			}
+			change_innovativeness = 5 
+		}
+	}
+	
+	ethiopia_the_patriarchate_of_alexandria = {
+		icon = mission_conquer_alexandria 
+		required_missions = { ethiopia_qasr_ibrim }
+		position = 5 
+		provinces_to_highlight = {
+			province_id = 358
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT 
+					has_owner_religion = yes 
+				}
+			}
+		}
+		trigger = {
+			358 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				has_owner_religion = yes
+			}
+		}
+		effect = {
+			358 = {
+				add_province_modifier = {
+					name = ethiopia_liberation_of_alexandria_modifier
+					duration = -1 
+				}
+			}
+		}
+	}
+}
+
+ethiopia_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = ETH
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+	
+	ethiopia_niremenkimi_enchristianos = {
+		icon = fund_the_monasteries
+		required_missions = { ethiopia_oust_the_unbelievers }
+		position = 3 
+		provinces_to_highlight = {
+			province_id = 2771 
+			province_id = 2772 
+			province_id = 1213
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				has_owner_religion = yes 
+				OR = {
+					has_building = temple 
+					has_building = cathedral 
+				}
+			}
+		}
+		trigger = {
+			2771 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				has_owner_religion = yes
+				OR = {
+					has_building = temple 
+					has_building = cathedral 
+				}
+			}
+			2772 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				has_owner_religion = yes
+				OR = {
+					has_building = temple 
+					has_building = cathedral 
+				}
+			}
+			1213 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				has_owner_religion = yes
+				OR = {
+					has_building = temple 
+					has_building = cathedral 
+				}
+			}
+		}
+		effect = {
+			2771 = {
+				add_province_modifier = {
+					name = ethiopia_place_of_true_faith_modifier
+					duration = 7300 
+				}
+			}
+			2772 = {
+				add_province_modifier = {
+					name = ethiopia_place_of_true_faith_modifier
+					duration = 7300 
+				}
+			}
+			1213 = {
+				add_province_modifier = {
+					name = ethiopia_place_of_true_faith_modifier
+					duration = 7300 
+				}
+			}
+		}
+	}
+	
+	ethiopia_supremacy_of_faith = {
+		icon = guardians_of_saint_sava 
+		required_missions = { ethiopia_niremenkimi_enchristianos ethiopia_the_patriarchate_of_alexandria }
+		position = 6 
+		trigger = {
+			num_of_active_blessings = 5
+			is_defender_of_faith = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = ethiopia_yezelalemi_t_orineti_modifier 
+				duration = -1 
+			}
+		}
+	}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

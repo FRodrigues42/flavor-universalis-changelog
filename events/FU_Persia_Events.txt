@@ -295,9 +295,21 @@ country_event = { #Religious Affairs of Shah $MONARCH$
 		
 		if = {
 			limit = { 
-				NOT = { religion = shiite }
+				NOT = { religion_group = muslim }
 			}
 			change_religion = shiite 
+			add_country_modifier = {
+				name = per_wave_of_religious_thought_modifier
+				duration = 3650
+			}
+		}
+		if = {
+			limit = { 
+				OR = { 
+					religion = sunni 
+					religion = ibadi
+				}
+			}
 			add_country_modifier = {
 				name = per_wave_of_religious_thought_modifier
 				duration = 3650
@@ -1222,7 +1234,7 @@ country_event = { #Imamzadeh Harun-i Vilayat
 		OR = {
 			has_global_modifier_value = {
 				which = tolerance_heathen 
-				value = 3 
+				value = 1 
 			}
 			religion_group = muslim 
 		} 
@@ -1269,7 +1281,7 @@ country_event = { #Masjid-i Ali
 		OR = {
 			has_global_modifier_value = {
 				which = tolerance_heathen 
-				value = 3 
+				value = 1
 			}
 			religion_group = muslim 
 		}
@@ -1302,7 +1314,7 @@ country_event = { #Tomb of Amin al-Din Jibrail
 		OR = {
 			has_global_modifier_value = {
 				which = tolerance_heathen 
-				value = 3 
+				value = 1 
 			}
 			religion_group = muslim 
 		}
@@ -1338,7 +1350,7 @@ country_event = { #Jannat-sara Mosque
 		OR = {
 			has_global_modifier_value = {
 				which = tolerance_heathen 
-				value = 3 
+				value = 1 
 			}
 			religion_group = muslim 
 		}
@@ -1395,10 +1407,9 @@ country_event = { #Abbas I Safavid
 			dynasty = ROOT 
 			claim = 95 
 			male = yes 
-			adm = 5 
-			dip = 5 
-			mil = 5 
-			fixed = yes 
+			change_adm = 2 
+			change_dip = 2 
+			change_mil = 2 
 			age = 15 
 		}
 		if = {
@@ -1511,7 +1522,7 @@ country_event = { #Naqsh-e Jahan Square
 		OR = {
 			has_global_modifier_value = {
 				which = tolerance_heathen 
-				value = 3 
+				value = 1 
 			}
 			religion_group = muslim 
 		} 
@@ -1548,7 +1559,7 @@ country_event = { #The Shah's Mosque in Isfahan
 		OR = {
 			has_global_modifier_value = {
 				which = tolerance_heathen 
-				value = 3 
+				value = 1 
 			}
 			religion_group = muslim 
 		} 
@@ -1593,7 +1604,7 @@ country_event = { #Madrasa-e Khan
 		OR = {
 			has_global_modifier_value = {
 				which = tolerance_heathen 
-				value = 3 
+				value = 1 
 			}
 			religion_group = muslim 
 		} 
@@ -1642,13 +1653,13 @@ country_event = { #Chehel Sotoun
 	trigger = {
 		tag = PER 
 		OR = {
-			has_country_flag = per_abbas_lives_flag
+			has_ruler_flag = per_abbas_lives_flag
 			mission_completed = per_worthy_capital 
 		}
 		OR = {
 			has_global_modifier_value = {
 				which = tolerance_heathen 
-				value = 3 
+				value = 1 
 			}
 			religion_group = muslim 
 		} 
@@ -1699,7 +1710,7 @@ country_event = { #The Shah's Academy
 		OR = {
 			has_global_modifier_value = {
 				which = tolerance_heathen 
-				value = 3 
+				value = 1 
 			}
 			religion_group = muslim 
 		} 

@@ -70,7 +70,7 @@ country_event = {
 			mil = 1 
 			age = 37 
 		}
-		kill_heir = yes 
+		remove_heir = { }  
 		if = {
 			limit = {
 				has_dlc = "Rights of Man" 

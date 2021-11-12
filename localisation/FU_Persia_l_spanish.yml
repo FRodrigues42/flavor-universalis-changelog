@@ -349,7 +349,7 @@
  per_architecture_events_start_here_tt: "\n\n§MWe will periodically receive events regarding our nation's architectural achievements§!" 
  per_abbas_architectural_visionary_tt: "§YAbbas I§! will gain the §GArchitectural Visionary§! personality trait"
  per_sassanid_legacy_preserved_tt: "\nBecause we chose to preserve the §YSassanid§! legacy in the '§YTaking up the Mantle§!' event:"
- per_if_3_tolerance_heathen_tt: "\nIf we have at least §G3§! Tolerance of Heathens we will also periodically receive Muslim-related events about Mosques, Madrasas and more..."
+ per_if_3_tolerance_heathen_tt: "\nIf we have at least §G1§! Tolerance of Heathens we will also periodically receive Muslim-related events about Mosques, Madrasas and more..."
  per_persian_carpets_key: "Persian Carpets" 
  
  

@@ -281,12 +281,12 @@ country_event = { #The Succession of Jiri z Podebrad
 		add_government_reform = elective_monarchy
 		hidden_effect = {
 			kill_ruler = yes 
-			kill_heir = yes
+			remove_heir = {} 
 		}
 		define_ruler = {
 			dynasty = Jagiellon
-			adm = 1 
-			mil = 1
+			change_adm = 1 
+			change_mil = 1
 			age = 37
 		}
 		if = { 
@@ -397,7 +397,7 @@ country_event = { #The Duchy of Prussia
 		}
 		create_march = PRU
 		
-		ai_chance = { factor = 0.75 } 
+		ai_chance = { factor = 7 } 
 	}
 	
 	option = { 
@@ -411,7 +411,7 @@ country_event = { #The Duchy of Prussia
 		}
 		43 = { add_center_of_trade_level = 1 } 
 		
-		ai_chance = { factor = 0.25 }
+		ai_chance = { factor = 3 }
 	}
 }
 

@@ -353,16 +353,15 @@ country_event = {
 		name = FU_Ardabil_Events.6.a
 		
 		ai_chance = { factor = 10 }
-		remove_heir = yes
+		remove_heir = { }
 		define_heir = { 
 			name = "Ismail I"
 			dynasty = "Safavid"
-			adm = 6
-			dip = 5
-			mil = 4
+			change_adm = 3
+			change_dip = 2
+			change_mil = 2 
 			age = 5
 			claim = 100
-			fixed = yes
 		}
 		add_heir_personality = conqueror_personality
 		add_heir_personality = patron_of_arts_personality

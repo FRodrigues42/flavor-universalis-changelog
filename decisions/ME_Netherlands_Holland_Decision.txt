@@ -34,7 +34,6 @@ country_decisions = {
 	
 	ned_hol_found_the_den_haag_admirality = {
 		potential = {
-			has_country_flag = enable_hol_ned_admirality_decisions
 			NOT = { has_country_flag = ned_hol_found_the_den_haag_admirality_completed }
 		}
 		provinces_to_highlight = {

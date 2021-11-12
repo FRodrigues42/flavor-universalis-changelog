@@ -494,14 +494,13 @@ country_event = { #Gustav I Vasa
 	option = {
 		name = FU_Sweden_Events.14.a #The throne is his!
 		
-		kill_heir = yes 
+		kill_heir = { } 
 		define_ruler = {
 			name = "Gustav Ericsson I"
 			dynasty = Vasa 
-			adm = 5 
-			dip = 3
-			mil = 5 
-			fixed = yes 
+			change_adm = 2 
+			change_dip = 1
+			change_mil = 2
 			age = 27
 			hide_skills = yes 
 		}
@@ -552,7 +551,6 @@ country_event = { #The Lion of the North
 			adm = 6 
 			dip = 6 
 			mil = 6 
-			fixed = yes
 		}
 		if = {
 			limit = {

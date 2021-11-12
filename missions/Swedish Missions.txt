@@ -1000,7 +1000,12 @@ swedish_missions_3 = {
 		required_missions = { swe_found_new_cities }
 		position = 12 
 		trigger = {
-			
+			num_of_heavy_ship = 50 
+			OR = { 	
+				has_flagship = yes 
+				navy_tradition = 50
+			}
+			num_of_admirals = 3 
 		}
 		effect = {
 			custom_tooltip = general_tooltip_dynamic_reward

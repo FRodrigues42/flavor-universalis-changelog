@@ -190,6 +190,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_regency = no 	
 				has_consort = no
 				has_government_attribute = queen
 			}
@@ -242,7 +243,7 @@ country_event = {
 		name = "flavor_spa.EVTOPTA3150"
 		define_advisor = {
 			type = inquisitor
-			name = "Tomás de Torquemada"
+			name = "TomÃ¡s de Torquemada"
 			location = 215 # Castilla La Vieja 
 			discount = yes
 			skill = 1
@@ -366,7 +367,7 @@ country_event = {
 		add_years_of_income = -0.25
 		set_global_flag = columbus_happened
 		define_explorer = {
-			name = "Cristóbal Colón"
+			name = "NAME_CRISTOBAL_COLON"
 			fire = 2
 			shock = 2
 			manuever = 6
@@ -607,7 +608,7 @@ country_event = {
 }
 
 
-# Casa de Contratación
+# Casa de ContrataciÃ³n
 country_event = {
 	id = flavor_spa.1003
 	title = "flavor_spa.EVTNAME1003"
@@ -1414,7 +1415,7 @@ country_event = {
 	}
 }
 
-# Tomás Luis de Victoria
+# TomÃ¡s Luis de Victoria
 country_event = {
 	id = flavor_spa.1101
 	title = "flavor_spa.EVTNAME1101"
@@ -1642,7 +1643,7 @@ country_event = {
 	
 	
 
-	option = {		# Allow Sepúlveda's arguments to shape our policies
+	option = {		# Allow SepÃºlveda's arguments to shape our policies
 		name = "flavor_spa.2.a"
 		ai_chance = {
 			factor = 15
@@ -1766,6 +1767,15 @@ country_event = {
 			}
 		}
 		add_prestige = 10
+		if = { 
+			limit = {
+				has_dlc = "Leviathan"
+			}
+			add_country_modifier = {
+				name = "alhambra_working_force"
+				duration = 3650
+			}
+		}
 	}
 }
 
@@ -1911,7 +1921,7 @@ country_event = {
 	}
 }
 
-# Sólo Madrid es corte
+# SÃ³lo Madrid es corte
 country_event = {
 	id = flavor_spa.6
 	title = "flavor_spa.6.t"

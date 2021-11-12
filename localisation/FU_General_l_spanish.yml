@@ -75,3 +75,4 @@ l_spanish:
  #General Tooltips
  
  general_tooltip_mil_focus_tt: "Has set National Focus to '§YMilitary§!'"
+ general_tooltip_special_reward_tt: "Special reward from a §YFlavor Universalis§! Mission Tree"
