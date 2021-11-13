@@ -1,0 +1,10 @@
+bookmark = {
+	name = "FU_GOLDEN_WIND"
+	desc = "FU_GOLDEN_WIND_DESC"
+	date = 1444.11.11
+	
+	center = 118
+	default = yes
+	
+	country = LAN
+}

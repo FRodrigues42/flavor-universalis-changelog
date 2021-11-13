@@ -3,6 +3,7 @@ country_decisions = {
 		potential = {
 			tag = NED 
 			NOT = { has_country_flag = ned_hol_found_the_amsterdam_admirality_completed }
+			owns = 97 
 		}
 		provinces_to_highlight = {
 			province_id = 97
@@ -35,6 +36,11 @@ country_decisions = {
 	ned_hol_found_the_den_haag_admirality = {
 		potential = {
 			NOT = { has_country_flag = ned_hol_found_the_den_haag_admirality_completed }
+			owns = 4383
+			OR = { 
+				tag = HOL 
+				tag = NED 
+			}
 		}
 		provinces_to_highlight = {
 			province_id = 4383

@@ -3073,7 +3073,7 @@ stpeters_cathedral = {
 	build_cost = 0
 	
 	#can we move it?
-	can_be_moved = no
+	can_be_moved = yes
 	
 	#time to move the project one unit of distance, in days
 	move_days_per_unit_distance = 1

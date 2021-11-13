@@ -291,3 +291,24 @@ country_event = { #Reconstruction of Adulis
 		}
 	}
 }	
+
+country_event = { #Negus in Paris
+	id = ME_Ethiopia_Events.9
+	title = ME_Ethiopia_Events.9.t
+	desc = ME_Ethiopia_Events.9.d 
+	picture = NEGUSA_NAGAST_eventPicture
+	
+	trigger = {
+		tag = ETH 
+		is_subject = no 
+		owns = 183 
+	}
+	
+	mean_time_to_happen = { months = 1 } 
+	
+	option = {
+		name = ME_Ethiopia_Events.9.a 
+		
+		add_splendor = 100 
+	}
+}

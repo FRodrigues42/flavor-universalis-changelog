@@ -11,5 +11,5 @@ tags={
 }
 picture="thumbnail.png"
 name="Flavor Universalis"
-supported_version="1.31.*.*"
+supported_version="1.32.*.*"
 remote_file_id="2372292648"
