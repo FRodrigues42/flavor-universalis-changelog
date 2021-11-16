@@ -87,7 +87,7 @@ country_event = {
 	title = flavor_eth.41.t
 	desc = flavor_eth.41.desc
 	picture = SHIP_SAILING_eventPicture
-	
+	fire_only_once = yes 
 	trigger = { 
 		tag = ETH 
 		has_dlc = "Origins" 
@@ -124,7 +124,7 @@ country_event = {
 	title = flavor_eth.44.t
 	desc = flavor_eth.44.desc
 	picture = DIPLOMACY_eventPicture
-	
+	fire_only_once = yes 
 	trigger = {
 		tag = ETH 
 		exists = POR
@@ -233,7 +233,7 @@ country_event = { #Liberation of the Copts
 	title = flavor_eth.37.t
 	desc = flavor_eth.37.desc
 	picture = COPTIC_BISHOP_eventPicture
-	
+	fire_only_once = yes 
 	trigger = {
 		tag = ETH 
 		has_dlc = "Origins"
@@ -299,7 +299,10 @@ country_event = { #Negus in Paris
 	picture = NEGUSA_NAGAST_eventPicture
 	
 	trigger = {
-		tag = ETH 
+		OR = { 	
+			tag = AKS 
+			tag = ETH 
+		}
 		is_subject = no 
 		owns = 183 
 	}

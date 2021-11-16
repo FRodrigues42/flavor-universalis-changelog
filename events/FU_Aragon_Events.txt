@@ -533,7 +533,6 @@ country_event = { #Hidden event to give the Conqueror trait
 	immediate = { add_ruler_personality = conqueror_personality }
 
 	option = { 
-		name = FU_Aragon_Events.11.a 
-		 
+		name = FU_Aragon_Events.11.a
 	}
 }

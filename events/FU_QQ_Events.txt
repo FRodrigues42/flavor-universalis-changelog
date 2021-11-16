@@ -224,3 +224,18 @@ country_event = { #Grand Library of Baghdad
 		}
 	}
 }
+
+country_event = { #Grand Library of Baghdad 
+	id = FU_QQ_Events.6
+	title = FU_QQ_Events.6.t 
+	desc = FU_QQ_Events.6.d 
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes 
+	hidden = yes
+	
+	option = {
+		name = FU_QQ_Events.6.a 
+		
+		set_country_flag = qq_activate_baku_ateshgah_mission_reward_flag
+	}
+}

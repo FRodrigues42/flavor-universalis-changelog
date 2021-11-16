@@ -526,7 +526,7 @@ florentine_missions_3 = {
 			monthly_adm = 10 
 			custom_trigger_tooltip = { 
 				tooltip = lan_adjusted_city_plans_tt
-				116 = { has_province_modifier = lan_adjusted_city_plans_modifier } 
+				has_country_flag = lan_adjusted_city_plans_flag  
 			}
 		}
 		effect = { 
@@ -607,6 +607,7 @@ florentine_missions_3 = {
 					capital_scope = { add_prosperity = 50 }
 				}
 				set_country_flag = lan_city_planning_flag
+				clr_country_flag = lan_adjusted_city_plans_flag
 			}
 		}
 	}
@@ -1360,22 +1361,15 @@ florentine_missions_5 = {
 				type = all 
 				OR = { 
 					country_or_non_sovereign_subject_holds = ROOT 
-					113 = {
-						if = {
-							limit = { 
-								NOT = { country_or_non_sovereign_subject_holds = ROOT }
-							}
-							owner = { 
-								alliance_with = ROOT 
-								has_opinion = {
-									who = ROOT 
-									value = 150
-								}
-								trust = { 
-									who = ROOT 
-									value = 75 
-								}
-							}
+					owner = { 
+						alliance_with = ROOT 
+						has_opinion = {
+							who = ROOT 
+							value = 150
+						}
+						trust = { 
+							who = ROOT 
+							value = 75 
 						}
 					}
 				}
@@ -1407,6 +1401,7 @@ florentine_missions_5 = {
 					113 = { 
 						owner = { alliance_with = ROOT } 
 					}
+					hre_size = 1 
 				}
 				113 = { 
 					owner = { set_in_empire = yes }

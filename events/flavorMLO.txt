@@ -433,8 +433,7 @@ country_event = {
 			type = natural_scientist
 			name = "Leonardo da Vinci"
 			culture = tuscan
-			location = 104
-			discount = yes
+			cost_multiplier = 0.5
 			skill = 3
 		}
 		add_dip_power = 50

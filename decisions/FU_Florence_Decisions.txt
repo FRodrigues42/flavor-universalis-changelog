@@ -35,6 +35,7 @@ country_decisions = {
 				share = 2.5
 			}
 			set_country_flag = lan_city_planning_flag 
+			set_country_flag = lan_adjusted_city_plans_flag
 		}
 	}
 	
