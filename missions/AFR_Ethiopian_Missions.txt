@@ -753,8 +753,16 @@ ethiopia_missions_5 = {
 		required_missions = { ethiopia_niremenkimi_enchristianos ethiopia_the_patriarchate_of_alexandria }
 		position = 6 
 		trigger = {
-			num_of_active_blessings = 5
-			is_defender_of_faith = yes
+			if = { 
+				limit = { religion = coptic }
+				num_of_active_blessings = 5
+				is_defender_of_faith = yes
+			}
+			else = { 
+				is_defender_of_faith = yes 
+				religious_unity = 1 
+				total_development = 1500
+			}
 		}
 		effect = {
 			add_country_modifier = {

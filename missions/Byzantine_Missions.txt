@@ -372,8 +372,7 @@ noppbyzantine_missions_1 = {
 				}
 				custom_tooltip = byz_if_completed_via_p_authority_tt
 			}
-			if = {
-				limit = { patriarch_authority = 0.2 }
+			else = { 
 				add_patriarch_authority = 0.05 
 			}
 		}

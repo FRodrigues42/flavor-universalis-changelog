@@ -390,7 +390,8 @@ florentine_missions_2 = {
 				}
 				if = { 
 					limit = { 
-						VEN = { alliance_with = ROOT } 
+						VEN = { alliance_with = ROOT }
+						is_part_of_hre = yes 
 					}
 					VEN = { set_in_empire = yes }
 				}
@@ -411,6 +412,7 @@ florentine_missions_2 = {
 				if = { 
 					limit = { 
 						VEN = { alliance_with = ROOT } 
+						is_part_of_hre = yes 
 					}
 					VEN = { set_in_empire = yes }
 				}				
@@ -493,6 +495,7 @@ florentine_missions_2 = {
 				if = { 
 					limit = { 
 						VEN = { alliance_with = ROOT } 
+						is_part_of_hre = yes 
 					}
 					VEN = { set_in_empire = yes }
 				}
@@ -1401,7 +1404,7 @@ florentine_missions_5 = {
 					113 = { 
 						owner = { alliance_with = ROOT } 
 					}
-					hre_size = 1 
+					is_part_of_hre = yes 
 				}
 				113 = { 
 					owner = { set_in_empire = yes }

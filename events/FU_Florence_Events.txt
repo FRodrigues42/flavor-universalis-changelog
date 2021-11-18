@@ -670,7 +670,7 @@ country_event = { #The Debt of Niccolò de' Niccoli
 	picture = OVEREXTENSION_eventPicture
 	fire_only_once = yes 
 	trigger = {
-		has_country_flag = lan_has_cosimo_flag
+		has_ruler_flag = lan_has_cosimo_flag
 	}
 	
 	mean_time_to_happen = { months = 6 } 

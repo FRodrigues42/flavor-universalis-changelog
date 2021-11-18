@@ -15,7 +15,7 @@ byzantine_missions_1 = {
 	}
 	has_country_shield = yes
 	
-	byz_raise_fleet_tax = {
+	ppbyz_raise_fleet_tax = {
 		icon = mission_galleys_in_port
 		required_missions = { } 
 		position = 1 
@@ -79,9 +79,9 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_ducatus_neapolitanus = {
+	ppbyz_ducatus_neapolitanus = {
 		icon = king_of_naples
-		required_missions = { byz_raise_fleet_tax } 
+		required_missions = { ppbyz_raise_fleet_tax } 
 		position = 3 
 		provinces_to_highlight = {
 			OR = {
@@ -162,9 +162,9 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_heart_catholicism = {
+	ppbyz_heart_catholicism = {
 		icon = chivalry_is_not_dead
-		required_missions = { byz_ducatus_neapolitanus }
+		required_missions = { ppbyz_ducatus_neapolitanus }
 		position = 4
 		provinces_to_highlight = {
 			OR = {
@@ -205,9 +205,9 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_latin_basileus = {
+	ppbyz_latin_basileus = {
 		icon = complete_the_risorgimento 
-		required_missions = { byz_heart_catholicism byz_italia_subirbicaria }
+		required_missions = { ppbyz_heart_catholicism ppbyz_italia_subirbicaria }
 		position = 4
 		provinces_to_highlight = {
 			region = italy_region 
@@ -241,9 +241,9 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_citadel_saladin = {
+	ppbyz_citadel_saladin = {
 		icon = mission_rb_seize_alexandria
-		required_missions = { byz_levantine_border }
+		required_missions = { ppbyz_levantine_border }
 		position = 7
 		provinces_to_highlight = {
 			area = bahari_area 
@@ -260,9 +260,9 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_land_atlas = {
+	ppbyz_land_atlas = {
 		icon = mission_moroccan_ports
-		required_missions = { byz_citadel_saladin byz_kasbah_tunis }
+		required_missions = { ppbyz_citadel_saladin ppbyz_kasbah_tunis }
 		position = 9
 		provinces_to_highlight = {
 			region = maghreb_region 
@@ -290,9 +290,9 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_pax_iberica = {
+	ppbyz_pax_iberica = {
 		icon = mission_reclaim_andalucia
-		required_missions = { byz_land_atlas }
+		required_missions = { ppbyz_land_atlas }
 		position = 10
 		provinces_to_highlight = {
 			region = iberia_region 
@@ -345,7 +345,7 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_pursue_religious_ideals = {
+	ppbyz_pursue_religious_ideals = {
 		icon = protectors_of_christendom
 		required_missions = { } 
 		position = 12
@@ -372,16 +372,15 @@ byzantine_missions_1 = {
 				}
 				custom_tooltip = byz_if_completed_via_p_authority_tt
 			}
-			if = {
-				limit = { patriarch_authority = 0.2 }
+			else = { 
 				add_patriarch_authority = 0.05 
 			}
 		}
 	}
 	
-	byz_regulate_state_church = {
+	ppbyz_regulate_state_church = {
 		icon = mission_pf_cross 
-		required_missions = { byz_pursue_religious_ideals byz_demand_crown_allegiance }
+		required_missions = { ppbyz_pursue_religious_ideals ppbyz_demand_crown_allegiance }
 		position = 14
 		trigger = {
 			if = {
@@ -444,9 +443,9 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_haghia_sophia = {
+	ppbyz_haghia_sophia = {
 		icon = end_the_schism 
-		required_missions = { byz_regulate_state_church }
+		required_missions = { ppbyz_regulate_state_church }
 		position = 15
 		trigger = {
 			if = {
@@ -554,9 +553,9 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_patriarchate_antioch = {
+	ppbyz_patriarchate_antioch = {
 		icon = fu_patriarchate_antioch
-		required_missions = { byz_haghia_sophia }
+		required_missions = { ppbyz_haghia_sophia }
 		position = 16
 		provinces_to_highlight = { province_id = 2313 } 
 		trigger = {
@@ -630,9 +629,9 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_patriarchate_alexandria = {
+	ppbyz_patriarchate_alexandria = {
 		icon = guardians_of_saint_sava
-		required_missions = { byz_patriarchate_antioch }
+		required_missions = { ppbyz_patriarchate_antioch }
 		position = 17
 		provinces_to_highlight = { province_id = 358 } 
 		trigger = {
@@ -706,9 +705,9 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_restore_pentarchy = {
+	ppbyz_restore_pentarchy = {
 		icon = fu_pentarchy 
-		required_missions = { byz_patriarchate_alexandria } 
+		required_missions = { ppbyz_patriarchate_alexandria } 
 		position = 18
 		provinces_to_highlight = {
 			OR = { 
@@ -791,7 +790,7 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_restore_themata = {
+	ppbyz_restore_themata = {
 		icon = protect_against_the_turks
 		required_missions = { } 
 		position = 19
@@ -823,9 +822,9 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_advent_gunpowder = {
+	ppbyz_advent_gunpowder = {
 		icon = fu_advent_gunpowder
-		required_missions = { byz_restore_themata }
+		required_missions = { ppbyz_restore_themata }
 		position = 20
 		trigger = {
 			num_of_artillery = 10 
@@ -869,9 +868,9 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_appease_the_domestikoi = {
+	ppbyz_appease_the_domestikoi = {
 		icon = mission_restore_kiev 
-		required_missions = { byz_advent_gunpowder byz_proliferation_musket }
+		required_missions = { ppbyz_advent_gunpowder ppbyz_proliferation_musket }
 		position = 22 
 		trigger = {
 			if = {
@@ -919,9 +918,9 @@ byzantine_missions_1 = {
 		}
 	}
 	
-	byz_enlightened_education = {
+	ppbyz_enlightened_education = {
 		icon = powerhouse_of_the_north
-		required_missions = { byz_appease_the_domestikoi byz_undermine_nobles }
+		required_missions = { ppbyz_appease_the_domestikoi ppbyz_undermine_nobles }
 		position = 24 
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -973,7 +972,7 @@ byzantine_missions_2 = {
 	}
 	has_country_shield = yes
 	
-	byz_prevent_collapse = {
+	ppbyz_prevent_collapse = {
 		icon = fu_prevent_collapse
 		required_missions = { } 
 		position = 1 
@@ -1004,9 +1003,9 @@ byzantine_missions_2 = {
 		}
 	}
 	
-	byz_subjugate_bulgars = {
+	ppbyz_subjugate_bulgars = {
 		icon = take_the_littoral
-		required_missions = { byz_prevent_collapse } 
+		required_missions = { ppbyz_prevent_collapse } 
 		position = 2 
 		provinces_to_highlight = {
 			OR = {
@@ -1040,9 +1039,9 @@ byzantine_missions_2 = {
 		}
 	}
 	
-	byz_italia_subirbicaria = {
+	ppbyz_italia_subirbicaria = {
 		icon = mission_rule_italy
-		required_missions = { byz_ducatus_neapolitanus }
+		required_missions = { ppbyz_ducatus_neapolitanus }
 		position = 4 
 		provinces_to_highlight = {
 			region = italy_region 
@@ -1082,9 +1081,9 @@ byzantine_missions_2 = {
 		}
 	}
 	
-	byz_levantine_border = {
+	ppbyz_levantine_border = {
 		icon = jerusalem
-		required_missions = { byz_safeguard_anatolia }
+		required_missions = { ppbyz_safeguard_anatolia }
 		position = 6
 		provinces_to_highlight = { 
 			OR = {
@@ -1116,9 +1115,9 @@ byzantine_missions_2 = {
 		}
 	}
 	
-	byz_breadbasket_of_zawarudo = {
+	ppbyz_breadbasket_of_zawarudo = {
 		icon = prosperity_for_all 
-		required_missions = { byz_levantine_border }
+		required_missions = { ppbyz_levantine_border }
 		position = 7
 		provinces_to_highlight = {
 			OR = {
@@ -1189,9 +1188,9 @@ byzantine_missions_2 = {
 		}
 	}
 	
-	byz_kasbah_tunis = {
+	ppbyz_kasbah_tunis = {
 		icon = mission_conquer_tunisia
-		required_missions = { byz_breadbasket_of_zawarudo }
+		required_missions = { ppbyz_breadbasket_of_zawarudo }
 		position = 8
 		provinces_to_highlight = {
 			area = tunisia_area 
@@ -1255,7 +1254,7 @@ byzantine_missions_2 = {
 		}
 	}
 	
-	byz_retain_imperial_throne = {
+	ppbyz_retain_imperial_throne = {
 		icon = unite_the_wittelsbachs
 		required_missions = { } 
 		position = 12 
@@ -1280,9 +1279,9 @@ byzantine_missions_2 = {
 		}
 	}
 	
-	byz_demand_crown_allegiance = {
+	ppbyz_demand_crown_allegiance = {
 		icon = empower_the_junkers 
-		required_missions = { byz_retain_imperial_throne }
+		required_missions = { ppbyz_retain_imperial_throne }
 		position = 13 
 		trigger = {
 			crown_land_share = 30 
@@ -1333,9 +1332,9 @@ byzantine_missions_2 = {
 		}
 	}
 	
-	byz_literary_works_alexandria = {
+	ppbyz_literary_works_alexandria = {
 		icon = found_the_vatican_library 
-		required_missions = { byz_patriarchate_antioch byz_golden_imperial_era }
+		required_missions = { ppbyz_patriarchate_antioch ppbyz_golden_imperial_era }
 		position = 17
 		provinces_to_highlight = { province_id = 358 }
 		trigger = {
@@ -1400,9 +1399,9 @@ byzantine_missions_2 = {
 		}
 	}
 	
-	byz_office_of_exarchos = {
+	ppbyz_office_of_exarchos = {
 		icon = regents_contracts
-		required_missions = { byz_restore_themata }
+		required_missions = { ppbyz_restore_themata }
 		position = 20
 		trigger = {
 			if = {
@@ -1531,9 +1530,9 @@ byzantine_missions_2 = {
 		}
 	}
 
-	byz_proliferation_musket = {
+	ppbyz_proliferation_musket = {
 		icon = fu_proliferation_musket
-		required_missions = { byz_advent_gunpowder byz_office_of_exarchos }
+		required_missions = { ppbyz_advent_gunpowder ppbyz_office_of_exarchos }
 		position = 21 
 		trigger = {
 			if = {
@@ -1561,9 +1560,9 @@ byzantine_missions_2 = {
 		}
 	}
 	
-	byz_undermine_nobles = {
+	ppbyz_undermine_nobles = {
 		icon = mission_rb_control_electors
-		required_missions = { byz_army_of_the_basileus }
+		required_missions = { ppbyz_army_of_the_basileus }
 		position = 23 
 		trigger = {
 			OR = {
@@ -1605,9 +1604,9 @@ byzantine_missions_2 = {
 		}
 	}	
 	
-	byz_reform_judicial_code = {
+	ppbyz_reform_judicial_code = {
 		icon = geneva_conventions 
-		required_missions = { byz_enlightened_education byz_concept_absolutism }
+		required_missions = { ppbyz_enlightened_education ppbyz_concept_absolutism }
 		position = 25
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -1672,7 +1671,7 @@ byzantine_missions_3 = {
 	}
 	has_country_shield = yes
 	
-	byz_zupac_rascia = {
+	ppbyz_zupac_rascia = {
 		icon = despot_stefans_legacy 
 		required_missions = { } 
 		position = 2 
@@ -1701,9 +1700,9 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_ensure_balkan_stability = { 
+	ppbyz_ensure_balkan_stability = { 
 		icon = balance_of_power
-		required_missions = { byz_subjugate_bulgars byz_zupac_rascia byz_imperial_bride }
+		required_missions = { ppbyz_subjugate_bulgars ppbyz_zupac_rascia byz_imperial_bride }
 		position = 3 
 		provinces_to_highlight = {
 			region = balkan_region 
@@ -1731,9 +1730,9 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_phoenix_rises = {
+	ppbyz_phoenix_rises = {
 		icon = a_place_among_the_great_powers
-		required_missions = { byz_italia_subirbicaria byz_ensure_balkan_stability byz_house_osman }
+		required_missions = { ppbyz_italia_subirbicaria ppbyz_ensure_balkan_stability byz_house_osman }
 		position = 5
 		trigger = {
 			OR = {
@@ -1767,9 +1766,9 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_city_god = {
+	ppbyz_city_god = {
 		icon = levantine_missions
-		required_missions = { byz_levantine_border }
+		required_missions = { ppbyz_levantine_border }
 		position = 7
 		provinces_to_highlight = { province_id = 379 }
 		trigger = {
@@ -1831,9 +1830,9 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_aegyptus = {
+	ppbyz_aegyptus = {
 		icon = mission_egyptian_mamluk_soldier
-		required_missions = { byz_breadbasket_of_zawarudo byz_city_god }
+		required_missions = { ppbyz_breadbasket_of_zawarudo ppbyz_city_god }
 		position = 8 
 		provinces_to_highlight = {	
 			region = egypt_region 
@@ -1850,9 +1849,9 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_presbyter_johannes = {
+	ppbyz_presbyter_johannes = {
 		icon = prester_john 
-		required_missions = { byz_aegyptus }
+		required_missions = { ppbyz_aegyptus }
 		position = 9
 		provinces_to_highlight = {
 			region = horn_of_africa_region 
@@ -1882,9 +1881,9 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_embrace_encyclopedism = {
+	ppbyz_embrace_encyclopedism = {
 		icon = bibliotheca_corviana
-		required_missions = { byz_retain_imperial_throne }
+		required_missions = { ppbyz_retain_imperial_throne }
 		position = 13 
 		trigger = {
 			is_institution_enabled = renaissance 
@@ -1935,9 +1934,9 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_golden_imperial_era = {
+	ppbyz_golden_imperial_era = {
 		icon = mission_golden_century
-		required_missions = { byz_haghia_sophia byz_embrace_encyclopedism byz_neoplatonic_academy }
+		required_missions = { ppbyz_haghia_sophia ppbyz_embrace_encyclopedism ppbyz_neoplatonic_academy }
 		position = 16 
 		trigger = {
 			OR = {
@@ -1967,9 +1966,9 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_house_wisdom = {
+	ppbyz_house_wisdom = {
 		icon = mission_gawans_madrasar
-		required_missions = { byz_golden_imperial_era }
+		required_missions = { ppbyz_golden_imperial_era }
 		position = 17
 		provinces_to_highlight = { province_id = 410 }
 		trigger = {
@@ -1987,9 +1986,9 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_rose_chamber_reformation = {
+	ppbyz_rose_chamber_reformation = {
 		icon = all_bases_covered 
-		required_missions = { byz_patriarchate_alexandria byz_literary_works_alexandria byz_house_wisdom byz_invest_balkans byz_anatolian_heartland }
+		required_missions = { ppbyz_patriarchate_alexandria ppbyz_literary_works_alexandria ppbyz_house_wisdom ppbyz_invest_balkans ppbyz_anatolian_heartland }
 		position = 18 
 		trigger = {
 			OR = {
@@ -2039,7 +2038,7 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_porta_aurea = {
+	ppbyz_porta_aurea = {
 		icon = the_latin_empire 
 		required_missions = { } 
 		position = 19
@@ -2121,9 +2120,9 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_seven_towers = {	
+	ppbyz_seven_towers = {	
 		icon = mission_city_of_the_world's_desire
-		required_missions = { byz_porta_aurea byz_office_of_exarchos byz_raise_wooden_wall }
+		required_missions = { ppbyz_porta_aurea ppbyz_office_of_exarchos ppbyz_raise_wooden_wall }
 		position = 21 
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -2284,9 +2283,9 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_army_of_the_basileus = {
+	ppbyz_army_of_the_basileus = {
 		icon = army_reforms 
-		required_missions = { byz_seven_towers }
+		required_missions = { ppbyz_seven_towers }
 		position = 22 
 		trigger = {
 			if = {
@@ -2394,9 +2393,9 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_caesaropapism = {
+	ppbyz_caesaropapism = {
 		icon = reform_bergordnung
-		required_missions = { byz_army_of_the_basileus  }
+		required_missions = { ppbyz_army_of_the_basileus  }
 		position = 23
 		trigger = { 
 			AND = {
@@ -2533,9 +2532,9 @@ byzantine_missions_3 = {
 		}
 	}
 	
-	byz_concept_absolutism = {
+	ppbyz_concept_absolutism = {
 		icon = a_real_roman_empire
-		required_missions = { byz_undermine_nobles byz_caesaropapism byz_protocapitalism }
+		required_missions = { ppbyz_undermine_nobles ppbyz_caesaropapism ppbyz_protocapitalism }
 		position = 24
 		trigger = {
 			absolutism = 90
@@ -2580,7 +2579,7 @@ byzantine_missions_4 = {
 	}
 	has_country_shield = yes	
 	
-	byz_secure_hellespont = {
+	ppbyz_secure_hellespont = {
 		icon = mission_coromandel_trade
 		required_missions = { }
 		position = 1 
@@ -2621,9 +2620,9 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_imperial_bride = {
+	ppbyz_imperial_bride = {
 		icon = mission_guilds_of_barcelona 
-		required_missions = { byz_secure_hellespont }
+		required_missions = { ppbyz_secure_hellespont }
 		position = 2 
 		provinces_to_highlight = {
 			OR = {
@@ -2652,9 +2651,9 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_house_osman = {
+	ppbyz_house_osman = {
 		icon = mission_ottoman_diplomacy 
-		required_missions = { byz_recover_asia_minor }
+		required_missions = { ppbyz_recover_asia_minor }
 		position = 4 
 		provinces_to_highlight = { 
 			region = anatolia_region 
@@ -2678,9 +2677,9 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_safeguard_anatolia = {
+	ppbyz_safeguard_anatolia = {
 		icon = anatolian_frontier 
-		required_missions = { byz_house_osman byz_push_eastern_front }
+		required_missions = { ppbyz_house_osman ppbyz_push_eastern_front }
 		position = 5 
 		provinces_to_highlight = { 
 			region = anatolia_region 
@@ -2780,9 +2779,9 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_cradle_civilization = {
+	ppbyz_cradle_civilization = {
 		icon = mission_arabian_fort 
-		required_missions = { byz_safeguard_anatolia }
+		required_missions = { ppbyz_safeguard_anatolia }
 		position = 6 
 		provinces_to_highlight = {
 			OR = {
@@ -2810,9 +2809,9 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_secure_euphrates = {
+	ppbyz_secure_euphrates = {
 		icon = mission_growth_of_surat 
-		required_missions = { byz_cradle_civilization }
+		required_missions = { ppbyz_cradle_civilization }
 		position = 7 
 		provinces_to_highlight = {
 			OR = {
@@ -2903,9 +2902,9 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_heart_of_islam = {
+	ppbyz_heart_of_islam = {
 		icon = mission_mosque
-		required_missions = { byz_city_god byz_secure_euphrates }
+		required_missions = { ppbyz_city_god byz_secure_euphrates }
 		position = 8
 		provinces_to_highlight = { 
 			OR = {
@@ -2942,9 +2941,9 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_roma_invicta_aeterna = {
+	ppbyz_roma_invicta_aeterna = {
 		icon = give_him_back_his_legions
-		required_missions = { byz_pax_iberica byz_heart_of_islam }
+		required_missions = { ppbyz_pax_iberica ppbyz_heart_of_islam }
 		position = 11 
 		provinces_to_highlight = {
 			OR = {
@@ -2997,7 +2996,7 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_trade_bosphorus = {
+	ppbyz_trade_bosphorus = {
 		icon = adriatic_access
 		required_missions = { }
 		position = 12
@@ -3170,9 +3169,9 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_pandidakterion = {
+	ppbyz_pandidakterion = {
 		icon = mission_early_modern_university 
-		required_missions = { byz_embrace_encyclopedism }
+		required_missions = { ppbyz_embrace_encyclopedism }
 		position = 14 
 		trigger = {
 			has_institution = renaissance 
@@ -3201,9 +3200,9 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_neoplatonic_academy = {
+	ppbyz_neoplatonic_academy = {
 		icon = fu_neoplatonic_academy
-		required_missions = { byz_pandidakterion }
+		required_missions = { ppbyz_pandidakterion }
 		position = 15 
 		trigger = {
 			146 = { 
@@ -3286,9 +3285,9 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_invest_balkans = {
+	ppbyz_invest_balkans = {
 		icon = mission_land_of_churches
-		required_missions = { byz_city_world } 
+		required_missions = { ppbyz_city_world } 
 		position = 17
 		provinces_to_highlight = {
 			region = balkan_region 
@@ -3330,9 +3329,9 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_raise_wooden_wall = {
+	ppbyz_raise_wooden_wall = {
 		icon = fu_wooden_wall 
-		required_missions = { byz_reclaim_naval_supremacy }
+		required_missions = { ppbyz_reclaim_naval_supremacy }
 		position = 20
 		trigger = {
 			num_of_galley = 20 
@@ -3362,9 +3361,9 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_admiralty_purple = {
+	ppbyz_admiralty_purple = {
 		icon = connect_further_austria 
-		required_missions = { byz_raise_wooden_wall }
+		required_missions = { ppbyz_raise_wooden_wall }
 		position = 21 
 		trigger = {
 			num_of_admirals = 3 
@@ -3423,9 +3422,9 @@ byzantine_missions_4 = {
 		}
 	}
 	
-	byz_protocapitalism = {
+	ppbyz_protocapitalism = {
 		icon = mission_rb_monopolize_the_channel
-		required_missions = { byz_army_of_the_basileus }
+		required_missions = { ppbyz_army_of_the_basileus }
 		position = 23 
 		trigger = {
 			mercantilism = 35
@@ -3465,7 +3464,7 @@ byzantine_missions_4 = {
 				duration = 10950
 			}
 			if = { 
-				limit = { mission_completed = byz_fund_urban_infrastructure }
+				limit = { mission_completed = ppbyz_fund_urban_infrastructure }
 				add_mercantilism = 5 
 			}
 			else = { custom_tooltip = byz_complete_for_extra_reward }
@@ -3490,7 +3489,7 @@ byzantine_missions_5 = {
 	}
 	has_country_shield = yes	
 	
-	byz_great_allagia = {
+	ppbyz_great_allagia = {
 		icon = the_italian_league 
 		required_missions = { } 
 		position = 1 
@@ -3536,9 +3535,9 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_recover_asia_minor = {
+	ppbyz_recover_asia_minor = {
 		icon = mission_pf_map_table 
-		required_missions = { byz_great_allagia } 
+		required_missions = { ppbyz_great_allagia } 
 		position = 3 
 		provinces_to_highlight = { 
 			OR = {	
@@ -3574,9 +3573,9 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_push_eastern_front = {
+	ppbyz_push_eastern_front = {
 		icon = mission_pf_soldier 
-		required_missions = { byz_recover_asia_minor }
+		required_missions = { ppbyz_recover_asia_minor }
 		position = 4 
 		provinces_to_highlight = {
 			OR = {
@@ -3638,9 +3637,9 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_lost_sheep = {
+	ppbyz_lost_sheep = {
 		icon = friends_in_high_places 
-		required_missions = { byz_safeguard_anatolia }
+		required_missions = { ppbyz_safeguard_anatolia }
 		position = 6
 		provinces_to_highlight = {
 			OR = {
@@ -3665,9 +3664,9 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_rivalries_old = {
+	ppbyz_rivalries_old = {
 		icon = mission_into_persia_1
-		required_missions = { byz_secure_euphrates byz_lost_sheep }
+		required_missions = { ppbyz_secure_euphrates ppbyz_lost_sheep }
 		position = 8 
 		provinces_to_highlight = {
 			OR = {
@@ -3702,9 +3701,9 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_sands_arabia = {
+	ppbyz_sands_arabia = {
 		icon = mission_trade_in_gold_coast 
-		required_missions = { byz_heart_of_islam }
+		required_missions = { ppbyz_heart_of_islam }
 		position = 9		
 		provinces_to_highlight = { 
 			region = arabia_region 
@@ -3727,7 +3726,7 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_compromise_synaxis = {
+	ppbyz_compromise_synaxis = {
 		icon = sway_the_pope 
 		required_missions = { } 
 		position = 12 
@@ -3802,9 +3801,9 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_imperial_maritime_fleets = {
+	ppbyz_imperial_maritime_fleets = {
 		icon = mission_danzig_or_war 
-		required_missions = { byz_trade_bosphorus byz_compromise_synaxis }
+		required_missions = { ppbyz_trade_bosphorus ppbyz_compromise_synaxis }
 		position = 13 
 		trigger = {
 			navy_size_percentage = 1 
@@ -3820,9 +3819,9 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_glass_silk_gems = {
+	ppbyz_glass_silk_gems = {
 		icon = bohemian_crystal
-		required_missions = { byz_imperial_maritime_fleets }
+		required_missions = { ppbyz_imperial_maritime_fleets }
 		position = 14 
 		trigger = {
 			151 = {
@@ -3845,9 +3844,9 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_city_world = {
+	ppbyz_city_world = {
 		icon = take_constantinople
-		required_missions = { byz_glass_silk_gems }
+		required_missions = { ppbyz_glass_silk_gems }
 		position = 16
 		provinces_to_highlight = {
 			higher_development_than = 151 
@@ -3892,9 +3891,9 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_anatolian_heartland = {
+	ppbyz_anatolian_heartland = {
 		icon = take_the_bishoprics 
-		required_missions = { byz_city_world }
+		required_missions = { ppbyz_city_world }
 		position = 17
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -3944,9 +3943,9 @@ byzantine_missions_5 = {
 		}
 	} 
 	
-	byz_nile_breadbasket = {
+	ppbyz_nile_breadbasket = {
 		icon = fu_nile_breadbasket
-		required_missions = { byz_anatolian_heartland }
+		required_missions = { ppbyz_anatolian_heartland }
 		position = 18
 		provinces_to_highlight = {
 			OR = {
@@ -4006,7 +4005,7 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_reclaim_naval_supremacy = {
+	ppbyz_reclaim_naval_supremacy = {
 		icon = overshadow_venice 
 		required_missions = { } 
 		position = 19
@@ -4034,9 +4033,9 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_raise_the_defenses = {
+	ppbyz_raise_the_defenses = {
 		icon = fortify_malta 
-		required_missions = { byz_seven_towers byz_reclaim_naval_supremacy }
+		required_missions = { ppbyz_seven_towers ppbyz_reclaim_naval_supremacy }
 		position = 22 
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -4091,9 +4090,9 @@ byzantine_missions_5 = {
 		}
 	}	
 
-	byz_fund_urban_infrastructure = {
+	ppbyz_fund_urban_infrastructure = {
 		icon = dalmatian_conquest 
-		required_missions = { byz_raise_the_defenses }
+		required_missions = { ppbyz_raise_the_defenses }
 		position = 23
 		trigger = {
 			if = {
@@ -4162,9 +4161,9 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_enforce_nomisma = {
+	ppbyz_enforce_nomisma = {
 		icon = dominant_economy 
-		required_missions = { byz_protocapitalism byz_fund_urban_infrastructure }
+		required_missions = { ppbyz_protocapitalism ppbyz_fund_urban_infrastructure }
 		position = 24
 		trigger = {
 			NOT = { inflation = 1 }
@@ -4197,9 +4196,9 @@ byzantine_missions_5 = {
 		}
 	}
 	
-	byz_promote_byzantine_goods = {	
+	ppbyz_promote_byzantine_goods = {	
 		icon = purely_for_commerce 
-		required_missions = { byz_enforce_nomisma }
+		required_missions = { ppbyz_enforce_nomisma }
 		position = 25
 		trigger = {
 			if = {

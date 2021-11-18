@@ -478,6 +478,10 @@ fu_ardabil_missions_5 = {
 		icon = mission_ahmadabad_paper 
 		required_missions = {  } 
 		position = 1
+		provinces_to_highlight = { 
+			province_id = 417
+			NOT = { owned_by = ROOT }
+		}
 		trigger = {
 			if = {
 				limit = { has_dlc = "Cradle of Civilization" } 
