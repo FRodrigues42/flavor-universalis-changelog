@@ -1702,7 +1702,7 @@ byzantine_missions_3 = {
 	
 	ppbyz_ensure_balkan_stability = { 
 		icon = balance_of_power
-		required_missions = { ppbyz_subjugate_bulgars ppbyz_zupac_rascia byz_imperial_bride }
+		required_missions = { ppbyz_subjugate_bulgars ppbyz_zupac_rascia ppbyz_imperial_bride }
 		position = 3 
 		provinces_to_highlight = {
 			region = balkan_region 
