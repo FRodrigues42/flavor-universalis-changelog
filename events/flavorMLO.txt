@@ -425,6 +425,10 @@ country_event = {
 			factor = 0.01
 			mission_completed = mlo_center_of_fine_arts
 		}
+		modifier = {
+			factor = 0.01
+			mission_completed = lan_renaissance
+		}
 	}
 	
 	option = {

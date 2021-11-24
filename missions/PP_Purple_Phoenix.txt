@@ -1732,7 +1732,7 @@ byzantine_missions_3 = {
 	
 	ppbyz_phoenix_rises = {
 		icon = a_place_among_the_great_powers
-		required_missions = { ppbyz_italia_subirbicaria ppbyz_ensure_balkan_stability byz_house_osman }
+		required_missions = { ppbyz_italia_subirbicaria ppbyz_ensure_balkan_stability ppbyz_house_osman }
 		position = 5
 		trigger = {
 			OR = {

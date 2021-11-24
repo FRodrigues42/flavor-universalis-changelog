@@ -520,7 +520,7 @@ country_event = { #The Gabelle Tax
 			add_unrest = 2 
 		}
 		add_years_of_owned_provinces_production_income = {
-			years = 8
+			years = 20
 			trigger = {
 				trade_goods = salt
 			}
@@ -532,7 +532,7 @@ country_event = { #The Gabelle Tax
 	option = {
 		name = FU_Provence_Events.11.b 
 		
-		add_years_of_income = -0.5 
+		add_years_of_income = -0.3
 		add_stability = 1 
 	}
 }
@@ -560,7 +560,7 @@ country_event = { #The Sanseverino Family
 		
 		add_estate_loyalty = {
 			estate = estate_nobles
-			loyalty = 10 
+			loyalty = 15 
 		}
 		add_estate_influence_modifier = {
 			estate = estate_nobles
@@ -651,7 +651,7 @@ country_event = { #Provençal quilts
 			}
 		}
 		add_years_of_owned_provinces_production_income = {
-			years = 2
+			years = 5
 			trigger = {
 				OR = {
 					trade_goods = cloth 

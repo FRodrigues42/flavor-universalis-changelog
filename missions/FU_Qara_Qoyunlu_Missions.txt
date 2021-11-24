@@ -311,6 +311,9 @@ fu_qara_qoyunlu_missions_2 = {
 					duration = -1 
 				}
 			}
+			hidden_effect = { 
+				country_event = { id = FU_QQ_Events.6 } 
+			}
 		}
 	}
 	
