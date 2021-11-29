@@ -71,6 +71,6 @@
  eth_cawa_elite_modifier: "Cawa Elite"
  eth_cawa_elite_modifier2: "Cawa Elite" 
  ME_Ethiopia_Events.9.t: "Negus in Paris" 
- ME_Ethiopia_Events.9.d: "We're gonna skate to one song and one song only Ball so hard muhfuckas wanna fine me So I ball so hard muhfuckas wanna fine me But first fellas gotta find me What's 50 grand to a muhfucka like me Can you please remind me?"
- ME_Ethiopia_Events.9.a: "What's Louis my killa?"
+ ME_Ethiopia_Events.9.d: "Upon entering the great city of Paris, our lush, prestige and wealth are on full display, much to the envy of Europe's strongest monarchs. Many have called this display of wealth "cray" and have sought to procure fines for such an exhibition of affluence. What's more, many local women throw themselves at [Root.Monarch.GetName]'s feet, asking for his hand at marriage. It is worthy to note, however, their tastes are only elegant to match our Negus, thus only eating fish fillet as a daily diet."
+ ME_Ethiopia_Events.9.a: "It's provocative! Gets the people going!"
  

@@ -315,3 +315,40 @@ country_event = { #Negus in Paris
 		add_splendor = 100 
 	}
 }
+
+country_event = {
+	id = ME_Ethiopia_Events.10
+	title = flavor_eth.40.t
+	desc = flavor_eth.40.desc
+	picture = AFRICAN_BATTLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {	#Try to convert them
+		name = flavor_eth.40.a
+		1227 = {
+			change_religion = ROOT
+			remove_core = BTI
+		}
+		2771 = {
+			change_religion = ROOT
+			remove_core = BTI
+		}
+		2772 = {
+			change_religion = ROOT
+			remove_core = BTI
+		}
+		add_estate_loyalty = { 
+			estate = estate_church
+			loyalty = 15 
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	option = {	#We should not create a bigger rift between our people
+		name = flavor_eth.40.b
+		add_stability = 1
+	}
+}

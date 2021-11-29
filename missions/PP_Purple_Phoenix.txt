@@ -2904,7 +2904,7 @@ byzantine_missions_4 = {
 	
 	ppbyz_heart_of_islam = {
 		icon = mission_mosque
-		required_missions = { ppbyz_city_god byz_secure_euphrates }
+		required_missions = { ppbyz_city_god ppbyz_secure_euphrates }
 		position = 8
 		provinces_to_highlight = { 
 			OR = {

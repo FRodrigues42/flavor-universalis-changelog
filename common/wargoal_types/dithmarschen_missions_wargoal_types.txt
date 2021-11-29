@@ -39,5 +39,5 @@ superiority_dithmarschen_break_chains = {
 		country_desc = ALL_MONARCHIES
 	}	
 	
-	war_name = LIBERATE_THE_PEOPLE_WAR_NAME	
+	war_name = LIBERATE_THE_PEOPLE
 }
