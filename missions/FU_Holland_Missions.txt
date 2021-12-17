@@ -204,13 +204,7 @@ FU_Holland_missions_2 = {
 		required_missions = { hol_overkwartier_van_gelre hol_flemish_decline hol_frisian_freedoms }
 		position = 3 
 		provinces_to_highlight = {
-			OR = {
-				province_id = 97
-				province_id = 4383
-				province_id = 1865
-				province_id = 1744
-				province_id = 92
-			}
+			region = low_countries_region
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {

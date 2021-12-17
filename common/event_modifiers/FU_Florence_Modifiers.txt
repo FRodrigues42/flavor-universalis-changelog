@@ -74,25 +74,25 @@ lan_handing_the_papal_finances_modifier1 = {
 	global_tax_modifier = 0.05
 }
 lan_city_planning_modifier16 = {
-	development_cost = -0.16
+	local_development_cost = -0.16
 }
 lan_city_planning_modifier15 = {
-	development_cost = -0.15
+	local_development_cost = -0.15
 }
 lan_city_planning_modifier14 = {
-	development_cost = -0.14
+	local_development_cost = -0.14
 }
 lan_city_planning_modifier13 = {
-	development_cost = -0.13
+	local_development_cost = -0.13
 }
 lan_city_planning_modifier12 = {
-	development_cost = -0.12
+	local_development_cost = -0.12
 }
 lan_city_planning_modifier11 = {
-	development_cost = -0.11
+	local_development_cost = -0.11
 }
 lan_city_planning_modifier10 = {
-	development_cost = -0.1
+	local_development_cost = -0.1
 }
 lan_taxing_the_church_modifier = {
 	global_tax_modifier = 0.15
