@@ -7720,7 +7720,10 @@ fire_temple_of_ateshgah = {
 				religion = zoroastrian
 				has_owner_religion = yes
 			}
-			mission_completed = qar_khalwati_order
+			custom_trigger_tooltip = {
+				tooltip = general_tt_baku_ateshgah
+				owner = { has_country_flag = qq_activate_baku_ateshgah_mission_reward_flag }
+			}	
 		}
 	}
 
@@ -7731,7 +7734,10 @@ fire_temple_of_ateshgah = {
 				religion = zoroastrian
 				has_owner_religion = yes
 			}
-			mission_completed = qar_khalwati_order
+			custom_trigger_tooltip = {
+				tooltip = general_tt_baku_ateshgah
+				owner = { has_country_flag = qq_activate_baku_ateshgah_mission_reward_flag }
+			}	
 		}
 	}
 
