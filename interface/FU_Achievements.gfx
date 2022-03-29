@@ -1,0 +1,142 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_achievement_500"
+		texturefile = "gfx/interface/achievements/achievement_fu_prevent_collapse.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_501"
+		texturefile = "gfx/interface/achievements/achievement_fu_great_kebabini.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_502"
+		texturefile = "gfx/interface/achievements/achievement_fu_any_more_bright_ideas.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_503"
+		texturefile = "gfx/interface/achievements/achievement_fu_taking_it_in_the_chin.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_504"
+		texturefile = "gfx/interface/achievements/achievement_fu_will_ye_no_come_back.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_505"
+		texturefile = "gfx/interface/achievements/achievement_fu_breadbasket_za_warudo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_506"
+		texturefile = "gfx/interface/achievements/achievement_fu_something_of_a_collector_myself.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_507"
+		texturefile = "gfx/interface/achievements/achievement_fu_fenix_rising.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_508"
+		texturefile = "gfx/interface/achievements/achievement_fu_fenix_rising.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_509"
+		texturefile = "gfx/interface/achievements/achievement_fu_turkish_pizza.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_510"
+		texturefile = "gfx/interface/achievements/achievement_fu_canzoni_preferite.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_511"
+		texturefile = "gfx/interface/achievements/achievement_fu_janitors_assistant.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_512"
+		texturefile = "gfx/interface/achievements/achievement_fu_canoe_with_allah.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_513"
+		texturefile = "gfx/interface/achievements/achievement_fu_dr_zhivago.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_514"
+		texturefile = "gfx/interface/achievements/achievement_fu_lessons_of_design.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_515"
+		texturefile = "gfx/interface/achievements/achievement_fu_nikola_in_the_purple.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_516"
+		texturefile = "gfx/interface/achievements/achievement_fu_never_tell_me_the_odds.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_517"
+		texturefile = "gfx/interface/achievements/achievement_fu_balancing_cope_seethe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_518"
+		texturefile = "gfx/interface/achievements/achievement_fu_we_can_do_it_by_1550.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_519"
+		texturefile = "gfx/interface/achievements/achievement_fu_not_all_doom_and_gloom.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_520"
+		texturefile = "gfx/interface/achievements/achievement_fu_girls_do_get_it_done.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_521"
+		texturefile = "gfx/interface/achievements/achievement_fu_limonen.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_522"
+		texturefile = "gfx/interface/achievements/achievement_fu_negus_in_paris.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_523"
+		texturefile = "gfx/interface/achievements/achievement_fu_le_french_canal.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_524"
+		texturefile = "gfx/interface/achievements/achievement_fu_master_of_melody.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_525"
+		texturefile = "gfx/interface/achievements/achievement_fu_nizaris.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_526"
+		texturefile = "gfx/interface/achievements/achievement_fu_yaas_queen.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_achievement_527"
+		texturefile = "gfx/interface/achievements/achievement_fu_chewy_through_the_pain.dds"
+	}
+}
