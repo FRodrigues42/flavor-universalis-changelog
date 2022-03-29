@@ -1,6 +1,7 @@
 ﻿l_english:
  
  ####Made By Big Boss for Flavor Universalis####
+ ####Edited by Nolegs####
  
  #Missions
  lan_strengthen_republic_title: "Strengthen the Republic"
@@ -20,9 +21,9 @@
  lan_reorganize_city_wards_title: "Reorganize the City Wards" 
  lan_reorganize_city_wards_desc: "The Florentine Administrative Divisions, also known as the City Wards, are a cluster of messes, with random enclaves and exclaves, and undefined boundaries between different wards. We should begin to arrange these wards in a systematic order so that we can make administration easier and remove any redundancies in our administrative system."
  lan_duomo_di_firenze_title: "Duomo di Firenze"
- lan_duomo_di_firenze_desc: "Italy is known for many Cathedrals and marvellous places of worship. However, we must be second to none! The Florentine Dome that adorns our beloved capital shall be the symbol of a vibrant and lively faith!"
+ lan_duomo_di_firenze_desc: "Italy is known for many Cathedrals and marvelous places of worship. However, we must be second to none! The Florentine Dome that adorns our beloved capital shall be the symbol of a vibrant and lively faith!"
  lan_lessons_architecture_title: "Lessons of Architecture" 
- lan_lessons_architecture_desc: "The dawn of the Renaissance had a marvellous impact in all manner of arts and culture in our society. Painting, sculpture and acting plays are but a few of the arts that have fundamentally changed. However, we must embrace and encourage the new architecture pioneers that have arisen amongst our population, giving a breath of new life in the architecture that embellish our domain." 
+ lan_lessons_architecture_desc: "The dawn of the Renaissance had a marvelous impact in all manner of arts and culture in our society. Painting, sculpture and acting plays are but a few of the arts that have fundamentally changed. However, we must embrace and encourage the new architecture pioneers that have arisen amongst our population, giving a breath of new life in the architecture that embellish our domain." 
  lan_arte_di_calimala_title: "Arte di Calimala" 
  lan_arte_di_calimala_desc: "Surely our land is the home to many valuable goods. Despite the raw production of our home territories, it would be wise to found guilds in charge of increasing production and mastering new machinery and techniques in regards to cloth manufacturing." 
  lan_florin_lira_title: "Florin & Lira"
@@ -44,7 +45,7 @@
  lan_italic_league_title: "Italic League"
  lan_italic_league_desc: "The dawn of the 15th century brings troublesome wars, conflicts and diplomatic alliances across Italy and beyond. With the Italian territories slipping away from the grasp of the Emperor, uncertainty lays thick in the air. It's time we forge powerful alliances either with our fellow neighbors or the Emperor himself." 
  lan_fifth_campaign_title: "The Fifth Campaign"
- lan_fifth_campaign_desc: "Time and time again wehave tried to best the defenses of the city of Merchants. Perhaps we could lean towards a diplomatic approach, sire? " 
+ lan_fifth_campaign_desc: "Time and time again we have tried to best the defenses of the city of Merchants. Perhaps we could lean towards a diplomatic approach, sire? " 
  lan_grand_duchy_tuscany_title: "Grand Duchy of Tuscany"
  lan_grand_duchy_tuscany_desc: "Glory to Firenze, glory to the Grand Duchy of Tuscany! No longer must we squabble and fight over glory scraps, for now we are one of Italy's most powerful and wealthy nations." 
  lan_forza_italia_title: "Forza Italia!"

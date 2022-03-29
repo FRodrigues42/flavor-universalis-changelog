@@ -87,7 +87,7 @@ country_event = {
 		name = ME_So_Events2.EVTOPT2
 		
 		add_navy_tradition = 15
-		create_admiral = { tradition = 125 }
+		create_admiral = { tradition = 100 }
 	}
 	
 	option = {

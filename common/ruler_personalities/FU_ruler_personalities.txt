@@ -121,3 +121,28 @@ fu_legendary_entrepreneur_personality = {
 	global_trade_goods_size_modifier = 0.05
 	nation_designer_cost = 10
 }
+
+fu_maid_of_orleans_personality = {
+	
+	ruler_allow = {
+		allow = {
+			always = no 
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	land_morale = 0.1
+	global_missionary_strength = 0.02
+	nation_designer_cost = 50
+}

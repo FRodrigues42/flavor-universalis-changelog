@@ -484,4 +484,49 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/fu_giraffe_eventPicture.dds"
 		allwaystransparent = yes
 	}
+	spriteType = {  
+		name = "fu_konstantiniyye_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_konstantiniyye_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {  
+		name = "fu_jerusalem_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_jerusalem_eventPicture.dds"
+		allwaystransparent = yes
+	} 
+	spriteType = {  
+		name = "MOSQUE_HAGIA_SOPHIA_eventPicture" 
+		texturefile = "gfx/event_pictures/MOSQUE_HAGIA_SOPHIA_eventPicture.dds"
+		allwaystransparent = yes
+	} 
+	spriteType = {  
+		name = "fu_reign_women_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_reign_women_eventPicture.dds"
+		allwaystransparent = yes
+	} 
+	spriteType = {  
+		name = "fu_harem_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_harem_eventPicture.dds"
+		allwaystransparent = yes
+	} 
+	spriteType = {
+		name = "fu_barbarossa_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_barbarossa_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "fu_firenze_garden_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_firenze_garden_eventPicture.dds"
+		allwaystransparent = yes
+	} 
+	spriteType = {
+		name = "fu_crying_coomer_eventPicture" 
+		texturefile = "gfx/event_pictures/fu_crying_coomer_eventPicture.dds"
+		allwaystransparent = yes
+	} 
+	spriteType = {
+		name = "big_castle_eventPicture" 
+		texturefile = "gfx/event_pictures/big_castle_eventPicture.dds"
+		allwaystransparent = yes
+	} 
 }

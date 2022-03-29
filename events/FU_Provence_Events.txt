@@ -425,7 +425,7 @@ country_event = {
 		
 		add_prestige = 25 
 		change_mil = 1 
-		add_ruler_personality = personality_conqueror
+		add_ruler_personality = conqueror_personality
 	}
 }
 		

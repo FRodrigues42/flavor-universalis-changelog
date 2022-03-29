@@ -152,7 +152,7 @@
  hsa_northern_alliance_of_trade_cities4_modifier: "Northern Alliance of Trade Cities"
  hsa_northern_alliance_of_trade_cities3_modifier: "Northern Alliance of Trade Cities"
  hsa_northern_alliance_of_trade_cities2_modifier: "Northern Alliance of Trade Cities"
- hsa_northern_alliance_of_trade_cities1_modifier: "Northern Alliance of Trade Cities" 
+ hsa_northern_alliance_of_trade_cities1_modifier: "Northern Alliance of Trade Cities"
  
  #Events 
  FU_Lubeck_Events.1.t: "Novgorodian Kontor" 
@@ -187,7 +187,7 @@
  FU_Lubeck_Events.7.a: "May they stagger our enemies!"
  
  FU_Lubeck_Events.8.t: "Theory of Mercantilism"
- FU_Lubeck_Events.8.d: "Mercantilism is an economic theory that advocates government regulation of international trade to generate wealth and strengthen national power. Merchants and the government work together to reduce the trade deficit and create a surplus. Mercantilism, a form of economic nationalism, funds corporate, military, and national growth.﻿﻿ It advocates trade policies that protect domestic industries. In mercantilism, the government strengthens the private owners of the factors of production. \n\nThese four factors of production are  entrepreneurship, capital goods, natural resources, labor. Mercantilism establishes monopolies, grants tax free status, and grants pensions to favoured industries. It imposes tariffs on imports. It also prohibits the emigration of skilled labor, capital, and tools. It doesn't allow anything that could help foreign companies.﻿﻿ In return, businesses funnel the riches from foreign expansion back to their governments. Its taxes pay for increase national growth and political power."
+ FU_Lubeck_Events.8.d: "Mercantilism is an economic theory that advocates government regulation of international trade to generate wealth and strengthen national power. Merchants and the government work together to reduce the trade deficit and create a surplus. Mercantilism, a form of economic nationalism, funds corporate, military, and national growth. It advocates trade policies that protect domestic industries. In mercantilism, the government strengthens the private owners of the factors of production. \n\nThese four factors of production are  entrepreneurship, capital goods, natural resources, labor. Mercantilism establishes monopolies, grants tax free status, and grants pensions to favoured industries. It imposes tariffs on imports. It also prohibits the emigration of skilled labor, capital, and tools. It doesn't allow anything that could help foreign companies. In return, businesses funnel the riches from foreign expansion back to their governments. Its taxes pay for increase national growth and political power."
  FU_Lubeck_Events.8.a: "Money makes the world go round!"
  
  FU_Lubeck_Events.9.t: "The Hanseatic Cog"
@@ -282,6 +282,8 @@
  hsa_has_built_hansehalle_tt: "Has upgraded the §YHanseatic City Hall§! on tier §Y2§! or §Y3§!"
  hsa_diplomatic_upkeep_boost_tt: "§MWe will gain a boost to our Diplomatic Relations to cover part of the cost of maintaining our new vassals§!"
  hsa_either_trade_or_subject_all_100_tt: "One of the following must be true: \nAll members of our Trade League have at least §G100§! opinion of us \nAll our subjects have at least §G100§! opinion of us"
+ 
+ 
  
  #Advisor
  fu_accountant: "Accountant"

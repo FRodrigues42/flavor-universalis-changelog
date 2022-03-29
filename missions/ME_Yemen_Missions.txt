@@ -484,7 +484,7 @@ yem_missions_3 = {
 				NOT = {
 					any_country = {
 						capital_scope = {
-							continent = arabia
+							region = arabia_region
 						}
 						army_size = ROOT
 						total_development = ROOT

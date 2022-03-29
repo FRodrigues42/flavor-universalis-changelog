@@ -654,7 +654,7 @@ florentine_missions_3 = {
 			}
 			if = {
 				limit = { is_excommunicated = yes } 
-				excommunicate = no 
+				excommunicate = ROOT
 			}
 			custom_tooltip = lan_pious_or_1_dip_skill_tt 
 			hidden_effect = { 

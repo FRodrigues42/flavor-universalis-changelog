@@ -27,24 +27,39 @@ hagia_sophia = {
 
 	#can we build it?
 	build_trigger = {
-		OR = {		
-			AND = {
-				religion = orthodox
-				has_owner_religion = yes
+		custom_trigger_tooltip = {
+			tooltip = hagia_sophia_tt
+			OR = {
+				AND = {
+					OR = {
+						religion = orthodox
+						religion = coptic
+						religion = catholic
+						religion_group = muslim
+					}
+					has_owner_religion = yes
+				}
+				AND = {
+					owner = {
+						OR = {
+							secondary_religion = orthodox
+							secondary_religion = coptic
+							secondary_religion = catholic
+							secondary_religion = sunni
+							secondary_religion = shiite
+							secondary_religion = ibadi
+						}
+					}
+					OR = {
+						religion = orthodox
+						religion = coptic
+						religion = catholic
+						religion_group = muslim
+						has_owner_religion = yes
+					}
+				}
 			}
-			AND = {
-				religion = coptic
-				has_owner_religion = yes
-			}			
-			AND = {
-				religion_group = muslim
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = catholic
-				has_owner_religion = yes
-			}
-		}			
+		}
 	}
 
 	#what to do when it's built
@@ -68,46 +83,76 @@ hagia_sophia = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		OR = {		
-			AND = {
-				religion = orthodox
-				has_owner_religion = yes
+		custom_trigger_tooltip = {
+			tooltip = hagia_sophia_tt
+			OR = {
+				AND = {
+					OR = {
+						religion = orthodox
+						religion = coptic
+						religion = catholic
+						religion_group = muslim
+					}
+					has_owner_religion = yes
+				}
+				AND = {
+					owner = {
+						OR = {
+							secondary_religion = orthodox
+							secondary_religion = coptic
+							secondary_religion = catholic
+							secondary_religion = sunni
+							secondary_religion = shiite
+							secondary_religion = ibadi
+						}
+					}
+					OR = {
+						religion = orthodox
+						religion = coptic
+						religion = catholic
+						religion_group = muslim
+						has_owner_religion = yes
+					}
+				}
 			}
-			AND = {
-				religion = coptic
-				has_owner_religion = yes
-			}			
-			AND= {
-				religion_group = muslim
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = catholic
-				has_owner_religion = yes
-			}
-		}		
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		OR = {		
-			AND = {
-				religion = orthodox
-				has_owner_religion = yes
+		custom_trigger_tooltip = {
+			tooltip = hagia_sophia_tt
+			OR = {
+				AND = {
+					OR = {
+						religion = orthodox
+						religion = coptic
+						religion = catholic
+						religion_group = muslim
+					}
+					has_owner_religion = yes
+				}
+				AND = {
+					owner = {
+						OR = {
+							secondary_religion = orthodox
+							secondary_religion = coptic
+							secondary_religion = catholic
+							secondary_religion = sunni
+							secondary_religion = shiite
+							secondary_religion = ibadi
+						}
+					}
+					OR = {
+						religion = orthodox
+						religion = coptic
+						religion = catholic
+						religion_group = muslim
+						has_owner_religion = yes
+					}
+				}
 			}
-			AND = {
-				religion = coptic
-				has_owner_religion = yes
-			}			
-			AND= {
-				religion_group = muslim
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = catholic
-				has_owner_religion = yes
-			}
-		}		
+		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -166,6 +211,7 @@ hagia_sophia = {
 		country_modifiers = {
 			tolerance_own = 0.25
 			tolerance_heretic = 0.25
+			church_loyalty_modifier = 0.05
 		}
 
 		#what effects happen when this tier is achieved
@@ -196,10 +242,10 @@ hagia_sophia = {
 		country_modifiers = {
 			tolerance_own = 0.5
 			tolerance_heretic = 0.5
-			monthly_piety = 0.001
+			monthly_piety_accelerator = 0.001
 			yearly_patriarch_authority = 0.002
 			papal_influence = 0.5
-			church_loyalty_modifier = 0.05
+			church_loyalty_modifier = 0.1
 		}
 
 		#what effects happen when this tier is achieved
@@ -236,10 +282,10 @@ hagia_sophia = {
 		country_modifiers = {
 			tolerance_own = 1
 			tolerance_heretic = 1
-			monthly_piety = 0.002
+			monthly_piety_accelerator = 0.002
 			yearly_patriarch_authority = 0.005
 			papal_influence = 1
-			church_loyalty_modifier = 0.1
+			church_loyalty_modifier = 0.15
 		}
 
 		#what effects happen when this tier is achieved
@@ -284,16 +330,12 @@ stonehenge = {
 	#can we build it?
 	build_trigger = {
 		OR = {
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = pagan
-				has_owner_religion = yes
 			}
 			AND = {
 				culture = english
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}
 	}
@@ -311,16 +353,12 @@ stonehenge = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		OR = {
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = pagan
-				has_owner_religion = yes
 			}
 			AND = {
 				culture = english
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}	
 	}
@@ -328,16 +366,12 @@ stonehenge = {
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		OR = {
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = pagan
-				has_owner_religion = yes
 			}
 			AND = {
 				culture = english
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}
 	}
@@ -501,17 +535,11 @@ tower_of_london = {
 		OR = {
 			AND = {
 				culture = normand
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 			AND = {
 				culture_group = british
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}
 	}
@@ -531,17 +559,11 @@ tower_of_london = {
 		OR = {
 			AND = {
 				culture = normand
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 			AND = {
 				culture_group = british
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}
 	}
@@ -551,17 +573,11 @@ tower_of_london = {
 		OR = {
 			AND = {
 				culture = normand
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 			AND = {
 				culture_group = british
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}
 	}
@@ -903,23 +919,16 @@ parthenon = {
 	#can we build it?
 	build_trigger = {
 		OR = {
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = pagan
-				has_owner_religion = yes
 			}
 			AND = {
 				culture = greek
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 			AND = {
 				culture = athenian
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}	
 	}
@@ -946,23 +955,16 @@ parthenon = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		OR = {
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = pagan
-				has_owner_religion = yes
 			}
 			AND = {
 				culture = greek
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 			AND = {
 				culture = athenian
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}
 	}
@@ -970,23 +972,16 @@ parthenon = {
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		OR = {
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = pagan
-				has_owner_religion = yes
 			}
 			AND = {
 				culture = greek
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 			AND = {
 				culture = athenian
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}
 	}
@@ -1331,38 +1326,7 @@ angkor_wat = {
 
 	#can we build it?
 	build_trigger = {
-		OR = {		
-			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion_group = dharmic
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#what to do when it's built
@@ -1377,74 +1341,12 @@ angkor_wat = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		OR = {		
-			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion_group = dharmic
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		OR = {		
-			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion_group = dharmic
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -1615,17 +1517,11 @@ petra = {
 		OR = {
 			AND = {
 				culture = al_suryah_arabic
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 			AND = {
 				culture = bedouin_arabic
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}
 	}
@@ -1645,17 +1541,11 @@ petra = {
 		OR = {
 			AND = {
 				culture = al_suryah_arabic
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 			AND = {
 				culture = bedouin_arabic
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}
 	}
@@ -1665,17 +1555,11 @@ petra = {
 		OR = {
 			AND = {
 				culture = al_suryah_arabic
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 			AND = {
 				culture = bedouin_arabic
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}
 	}
@@ -1836,8 +1720,9 @@ cologne_cathedral = {
 
 	#can we build it?
 	build_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	#what to do when it's built
@@ -1852,14 +1737,16 @@ cologne_cathedral = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -2863,6 +2750,7 @@ moai = {
 		country_modifiers = {
 			religious_unity = 0.05
 			tolerance_own = 0.5
+			nobles_loyalty_modifier = 0.05					 
 		}
 
 		#what effects happen when this tier is achieved
@@ -2893,7 +2781,7 @@ moai = {
 		country_modifiers = {
 			religious_unity = 0.10
 			tolerance_own = 1
-			nobles_loyalty_modifier = 0.05
+			nobles_loyalty_modifier = 0.1
 		}
 
 		#what effects happen when this tier is achieved
@@ -2931,7 +2819,7 @@ moai = {
 			religious_unity = 0.25
 			tolerance_own = 1
 			tolerance_heretic = 1
-			nobles_loyalty_modifier = 0.1
+			nobles_loyalty_modifier = 0.15
 		}
 
 		#what effects happen when this tier is achieved
@@ -2969,8 +2857,15 @@ stpeters_cathedral = {
 
 	#can we build it?
 	build_trigger = {
-		religion = catholic
-		has_owner_religion = yes
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = catholic
+			}
+			custom_trigger_tooltip = { 
+				tooltip = tur_has_enabled_st_peters_basilica_tt
+				owner = { has_country_flag = enable_st_petes_basilica_flag } 
+			}
+		}
 	}
 
 	#what to do when it's built
@@ -2985,14 +2880,28 @@ stpeters_cathedral = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion = catholic
-		has_owner_religion = yes
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = catholic
+			}
+			custom_trigger_tooltip = { 
+				tooltip = tur_has_enabled_st_peters_basilica_tt
+				owner = { has_country_flag = enable_st_petes_basilica_flag } 
+			}
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion = catholic
-		has_owner_religion = yes
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = catholic
+			}
+			custom_trigger_tooltip = { 
+				tooltip = tur_has_enabled_st_peters_basilica_tt
+				owner = { has_country_flag = enable_st_petes_basilica_flag } 
+			}
+		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -3129,6 +3038,13 @@ stpeters_cathedral = {
 					estate = estate_church
 					loyalty = 20
 				}
+				if = { 
+					limit = { has_country_flag = enable_st_petes_basilica_flag } 
+					add_country_modifier = { 
+						name = tur_celebration_of_christian_traditions_modifier
+						duration = -1 
+					}
+				}
 			}
 		}
 	}
@@ -3163,16 +3079,53 @@ mount_fuji = {
 
 	#can we build it?
 	build_trigger = {
-		OR = {		
-			AND = {
-				religion = shinto
-				has_owner_religion = yes
+		custom_trigger_tooltip = {
+			tooltip = mount_fuji_tt
+			OR = {		
+				AND = {
+					religion = shinto
+					has_owner_religion = yes
+				}
+				AND = {
+					religion = mahayana
+					has_owner_religion = yes
+				}
+				AND = {
+					OR = {
+						religion = shinto
+						has_owner_religion = yes
+					}
+					owner = { has_harmonized_with = shinto }
+				}
+				AND = {
+					owner = {
+						religion = tengri_pagan_reformed
+						secondary_religion = shinto
+					}
+					OR = {
+						religion = shinto
+						has_owner_religion = yes
+					}
+				}
+				AND = {
+					OR = {
+						religion = mahayana
+						has_owner_religion = yes
+					}
+					owner = { has_harmonized_with = mahayana }
+				}
+				AND = {
+					owner = {
+						religion = tengri_pagan_reformed
+						secondary_religion = mahayana
+					}
+					OR = {
+						religion = mahayana
+						has_owner_religion = yes
+					}
+				}
 			}
-			AND = {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-		}	
+		}
 	}
 
 	#what to do when it's built
@@ -3187,30 +3140,104 @@ mount_fuji = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		OR = {		
-			AND = {
-				religion = shinto
-				has_owner_religion = yes
+		custom_trigger_tooltip = {
+			tooltip = mount_fuji_tt
+			OR = {		
+				AND = {
+					religion = shinto
+					has_owner_religion = yes
+				}
+				AND = {
+					religion = mahayana
+					has_owner_religion = yes
+				}
+				AND = {
+					OR = {
+						religion = shinto
+						has_owner_religion = yes
+					}
+					owner = { has_harmonized_with = shinto }
+				}
+				AND = {
+					owner = {
+						religion = tengri_pagan_reformed
+						secondary_religion = shinto
+					}
+					OR = {
+						religion = shinto
+						has_owner_religion = yes
+					}
+				}
+				AND = {
+					OR = {
+						religion = mahayana
+						has_owner_religion = yes
+					}
+					owner = { has_harmonized_with = mahayana }
+				}
+				AND = {
+					owner = {
+						religion = tengri_pagan_reformed
+						secondary_religion = mahayana
+					}
+					OR = {
+						religion = mahayana
+						has_owner_religion = yes
+					}
+				}
 			}
-			AND = {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-		}	
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		OR = {		
-			AND = {
-				religion = shinto
-				has_owner_religion = yes
+		custom_trigger_tooltip = {
+			tooltip = mount_fuji_tt
+			OR = {		
+				AND = {
+					religion = shinto
+					has_owner_religion = yes
+				}
+				AND = {
+					religion = mahayana
+					has_owner_religion = yes
+				}
+				AND = {
+					OR = {
+						religion = shinto
+						has_owner_religion = yes
+					}
+					owner = { has_harmonized_with = shinto }
+				}
+				AND = {
+					owner = {
+						religion = tengri_pagan_reformed
+						secondary_religion = shinto
+					}
+					OR = {
+						religion = shinto
+						has_owner_religion = yes
+					}
+				}
+				AND = {
+					OR = {
+						religion = mahayana
+						has_owner_religion = yes
+					}
+					owner = { has_harmonized_with = mahayana }
+				}
+				AND = {
+					owner = {
+						religion = tengri_pagan_reformed
+						secondary_religion = mahayana
+					}
+					OR = {
+						religion = mahayana
+						has_owner_religion = yes
+					}
+				}
 			}
-			AND = {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-		}	
+		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -3445,8 +3472,8 @@ tenochtitlan = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			allowed_num_of_buildings = 1
 			local_build_cost = -0.1
+			trade_goods_size_modifier = 0.25		 
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -3476,9 +3503,9 @@ tenochtitlan = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			allowed_num_of_buildings = 1
 			local_build_cost = -0.15
 			local_development_cost = -0.1
+			trade_goods_size_modifier = 0.33
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -3511,6 +3538,7 @@ tenochtitlan = {
 			allowed_num_of_buildings = 2
 			local_build_cost = -0.15
 			local_development_cost = -0.2
+			trade_goods_size_modifier = 0.5					  
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -3558,8 +3586,9 @@ notre_dame_cathedral = {
 
 	#can we build it?
 	build_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	#what to do when it's built
@@ -3574,14 +3603,16 @@ notre_dame_cathedral = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -3853,7 +3884,7 @@ shwedagon_pagoda = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			church_loyalty_modifier = 0.05
+			church_loyalty_modifier = 0.1
 			yearly_karma_decay = 0.05
 		}
 
@@ -3886,7 +3917,7 @@ shwedagon_pagoda = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			yearly_karma_decay = 0.1
-			church_loyalty_modifier = 0.1
+			church_loyalty_modifier = 0.15
 		}
 
 		#what effects happen when this tier is achieved
@@ -4002,12 +4033,12 @@ the_great_wall_of_china = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			garrison_growth = 0.1
+			garrison_growth = 0.33
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
 		area_modifier = {
-			local_defensiveness = 0.15
+			local_defensiveness = 0.25
 		}
 
 		#what modifiers are added to the country when we have this project here on this tier
@@ -4032,18 +4063,18 @@ the_great_wall_of_china = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			garrison_growth = 0.1
+			garrison_growth = 0.66
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
 		area_modifier = {
-			local_defensiveness = 0.2
+			local_defensiveness = 0.5
 		}
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			hostile_attrition = 1
-			garrison_size = 0.15			
+			garrison_size = 0.15		
 		}
 
 		#what effects happen when this tier is achieved
@@ -4064,12 +4095,12 @@ the_great_wall_of_china = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			garrison_growth = 0.1
+			garrison_growth = 1
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
 		area_modifier = {
-			local_defensiveness = 0.25
+			local_defensiveness = 0.75
 		}
 
 		#what modifiers are added to the country when we have this project here on this tier
@@ -4312,8 +4343,9 @@ mesa_verde = {
 
 	#can we build it?
 	build_trigger = {
-		religion = totemism
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = totemism
+		}
 	}
 
 	#what to do when it's built
@@ -4328,14 +4360,16 @@ mesa_verde = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion = totemism
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = totemism
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion = totemism
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = totemism
+		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -4493,8 +4527,9 @@ taj_mahal = {
 
 	#can we build it?
 	build_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	#what to do when it's built
@@ -4509,14 +4544,16 @@ taj_mahal = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -4574,7 +4611,7 @@ taj_mahal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			monthly_piety = 0.001
+			monthly_piety_accelerator = 0.001
 			prestige_decay = -0.005
 		}
 
@@ -4605,7 +4642,7 @@ taj_mahal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {	
-			monthly_piety = 0.002
+			monthly_piety_accelerator = 0.002
 			prestige_decay = -0.005
 			monthly_splendor = 1
 		}
@@ -4637,7 +4674,7 @@ taj_mahal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			monthly_piety = 0.003
+			monthly_piety_accelerator = 0.003
 			prestige_decay = -0.01
 			monthly_splendor = 2
 			power_projection_from_insults = 1
@@ -5393,8 +5430,9 @@ registan_square = {
 
 	#can we build it?
 	build_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	#what to do when it's built
@@ -5409,14 +5447,16 @@ registan_square = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -5473,7 +5513,7 @@ registan_square = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			monthly_piety = 0.001
+			monthly_piety_accelerator = 0.001
 			stability_cost_modifier = -0.1
 			enforce_religion_cost = -0.05
 		}
@@ -5504,7 +5544,7 @@ registan_square = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			monthly_piety = 0.002
+			monthly_piety_accelerator = 0.002
 			stability_cost_modifier = -0.15
 			enforce_religion_cost = -0.1
 		}
@@ -5535,7 +5575,7 @@ registan_square = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			monthly_piety = 0.003
+			monthly_piety_accelerator = 0.003
 			stability_cost_modifier = -0.25
 			enforce_religion_cost = -0.15
 		}
@@ -5575,8 +5615,9 @@ golden_temple = {
 
 	#can we build it?
 	build_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	#what to do when it's built
@@ -5591,14 +5632,16 @@ golden_temple = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -5836,6 +5879,7 @@ jokhang_temple = {
 		country_modifiers = {
 			religious_unity = 0.05
 			missionary_maintenance_cost = -0.1
+			yearly_karma_decay = 0.01				
 		}
 
 		#what effects happen when this tier is achieved
@@ -5867,6 +5911,7 @@ jokhang_temple = {
 			religious_unity = 0.10
 			global_missionary_strength = 0.01
 			missionary_maintenance_cost = -0.2
+			yearly_karma_decay = 0.025				 
 		}
 
 		#what effects happen when this tier is achieved
@@ -5898,6 +5943,7 @@ jokhang_temple = {
 			religious_unity = 0.25
 			global_missionary_strength = 0.02
 			missionary_maintenance_cost = -0.3
+			yearly_karma_decay = 0.05				
 		}
 
 		#what effects happen when this tier is achieved
@@ -5937,39 +5983,11 @@ borobudur_temple = {
 	build_trigger = {
 		OR = {
 			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND = {
 				culture_group = malay
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}		
+			province_is_buddhist_or_accepts_buddhism = yes
+		}
 	}
 
 	#what to do when it's built
@@ -5986,38 +6004,10 @@ borobudur_temple = {
 	can_use_modifiers_trigger = {
 		OR = {
 			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND = {
 				culture_group = malay
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
+			province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
@@ -6025,38 +6015,10 @@ borobudur_temple = {
 	can_upgrade_trigger = {
 		OR = {
 			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND = {
 				culture_group = malay
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
+			province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
@@ -6216,8 +6178,9 @@ temple_of_confucius = {
 
 	#can we build it?
 	build_trigger = {
-		religion = confucianism
-		has_owner_religion = yes		
+		province_is_or_accepts_religion = {
+			religion = confucianism
+		}	
 	}
 
 	#what to do when it's built
@@ -6232,14 +6195,16 @@ temple_of_confucius = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion = confucianism
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = confucianism
+		}	
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion = confucianism
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = confucianism
+		}	
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -6588,8 +6553,9 @@ pura_besakih = {
 
 	#can we build it?
 	build_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	#what to do when it's built
@@ -6604,14 +6570,16 @@ pura_besakih = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -6949,16 +6917,12 @@ pyramid_of_cheops = {
 	#can we build it?
 	build_trigger = {
 		OR = {
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = pagan
-				has_owner_religion = yes
 			}
 			AND = {
 				culture_group = turko_semitic
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}
 	}
@@ -6976,16 +6940,12 @@ pyramid_of_cheops = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		OR = {
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = pagan
-				has_owner_religion = yes
 			}
 			AND = {
 				culture_group = turko_semitic
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}
 	}
@@ -6993,16 +6953,12 @@ pyramid_of_cheops = {
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		OR = {
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = pagan
-				has_owner_religion = yes
 			}
 			AND = {
 				culture_group = turko_semitic
-				OR = {
-					has_owner_culture = yes
-					has_owner_accepted_culture = yes
-				}
+				province_is_or_accepts_culture = yes
 			}
 		}
 	}
@@ -7337,8 +7293,9 @@ prambanan_temple = {
 
 	#can we build it?
 	build_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}						
 	}
 
 	#what to do when it's built
@@ -7353,14 +7310,16 @@ prambanan_temple = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}								 
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -7691,11 +7650,9 @@ fire_temple_of_ateshgah = {
 	#can we build it?
 	build_trigger = {
 		OR = { 
-			AND = { 
+			province_is_or_accepts_religion = {
 				religion = zoroastrian
-				has_owner_religion = yes
 			}
-			mission_completed = qar_khalwati_order
 			custom_trigger_tooltip = {
 				tooltip = general_tt_baku_ateshgah
 				owner = { has_country_flag = qq_activate_baku_ateshgah_mission_reward_flag }
@@ -7716,28 +7673,26 @@ fire_temple_of_ateshgah = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		OR = { 
-			AND = { 
+			province_is_or_accepts_religion = {
 				religion = zoroastrian
-				has_owner_religion = yes
 			}
 			custom_trigger_tooltip = {
 				tooltip = general_tt_baku_ateshgah
 				owner = { has_country_flag = qq_activate_baku_ateshgah_mission_reward_flag }
-			}	
+			}
 		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		OR = { 
-			AND = { 
+			province_is_or_accepts_religion = {
 				religion = zoroastrian
-				has_owner_religion = yes
 			}
 			custom_trigger_tooltip = {
 				tooltip = general_tt_baku_ateshgah
 				owner = { has_country_flag = qq_activate_baku_ateshgah_mission_reward_flag }
-			}	
+			}
 		}
 	}
 
@@ -7897,8 +7852,9 @@ kiev_pechersk_lavra = {
 
 	#can we build it?
 	build_trigger = {
-		religion = orthodox
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = orthodox
+		}	  
 	}
 
 	#what to do when it's built
@@ -7913,14 +7869,16 @@ kiev_pechersk_lavra = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion = orthodox
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = orthodox
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion = orthodox
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = orthodox
+		}	 
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -8820,8 +8778,9 @@ heddal_stave_church = {
 
 	#can we build it?
 	build_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}	  
 	}
 
 	#what to do when it's built
@@ -8836,14 +8795,16 @@ heddal_stave_church = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}	 
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -9087,6 +9048,8 @@ versailles = {
 		country_modifiers = {
 			global_tax_modifier = 0.1
 			improve_relation_modifier = 0.1
+			nobles_loyalty_modifier = 0.05
+			nobles_influence_modifier = 0.05
 		}
 
 		#what effects happen when this tier is achieved
@@ -9115,11 +9078,11 @@ versailles = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			nobles_loyalty_modifier = 0.05
-			nobles_influence_modifier = 0.05
 			global_tax_modifier = 0.15
 			improve_relation_modifier = 0.1
 			vassal_income = 0.1
+			nobles_loyalty_modifier = 0.1
+			nobles_influence_modifier = 0.1		
 		}
 
 		#what effects happen when this tier is achieved
@@ -9148,11 +9111,11 @@ versailles = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			nobles_loyalty_modifier = 0.1
-			nobles_influence_modifier = 0.1
 			global_tax_modifier = 0.2
 			improve_relation_modifier = 0.15
 			vassal_income = 0.2
+			nobles_loyalty_modifier = 0.15
+			nobles_influence_modifier = 0.1
 		}
 
 		#what effects happen when this tier is achieved
@@ -9554,8 +9517,9 @@ kaaba = {
 
 	#can we build it?
 	build_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	#what to do when it's built
@@ -9570,14 +9534,16 @@ kaaba = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -9693,6 +9659,7 @@ kaaba = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
+			global_missionary_strength = 0.01
 			cb_on_religious_enemies = yes
 			manpower_in_true_faith_provinces = 0.15
 			tolerance_own = 1 
@@ -9740,17 +9707,14 @@ holy_city_jerusalem = {
 	#can we build it?
 	build_trigger = {
 		OR = {
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = muslim
-				has_owner_religion = yes
 			}
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = christian
-				has_owner_religion = yes
 			}
-			AND = {
+			province_is_or_accepts_religion = {
 				religion = jewish
-				has_owner_religion = yes
 			}
 		}
 	}
@@ -9768,17 +9732,14 @@ holy_city_jerusalem = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		OR = {
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = muslim
-				has_owner_religion = yes
 			}
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = christian
-				has_owner_religion = yes
 			}
-			AND = {
+			province_is_or_accepts_religion = {
 				religion = jewish
-				has_owner_religion = yes
 			}
 		}
 	}
@@ -9786,17 +9747,14 @@ holy_city_jerusalem = {
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		OR = {
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = muslim
-				has_owner_religion = yes
 			}
-			AND = {
+			province_is_or_accepts_religion_group = {
 				religion_group = christian
-				has_owner_religion = yes
 			}
-			AND = {
+			province_is_or_accepts_religion = {
 				religion = jewish
-				has_owner_religion = yes
 			}
 		}
 	}
@@ -9859,6 +9817,9 @@ holy_city_jerusalem = {
 		country_modifiers = {
 			prestige = 0.1
 			global_heretic_missionary_strength = 0.01
+			monthly_fervor_increase = 0.25
+			church_power_modifier = 0.05
+			papal_influence = 0.25		   
 		}
 
 		#what effects happen when this tier is achieved
@@ -9890,6 +9851,9 @@ holy_city_jerusalem = {
 		country_modifiers = {
 			prestige = 0.25
 			global_heretic_missionary_strength = 0.02
+			monthly_fervor_increase = 0.5
+			church_power_modifier = 0.1
+			papal_influence = 0.5			   
 		}
 
 		#what effects happen when this tier is achieved
@@ -9922,6 +9886,9 @@ holy_city_jerusalem = {
 			prestige = 0.5
 			global_heretic_missionary_strength = 0.03
 			missionaries = 1
+			monthly_fervor_increase = 1
+			church_power_modifier = 0.15
+			papal_influence = 0.1
 		}
 
 		#what effects happen when this tier is achieved
@@ -9959,8 +9926,9 @@ great_mosque_djenne = {
 
 	#can we build it?
 	build_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}	  
 	}
 
 	#what to do when it's built
@@ -9975,14 +9943,16 @@ great_mosque_djenne = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}					
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}							   
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -10150,37 +10120,7 @@ imperial_city_hue = {
 
 	#can we build it?
 	build_trigger = {
-		OR = {
-			AND = { 
-				religion = buddhism
-				has_owner_religion = yes 
-			}
-			AND = { 
-				religion = vajrayana
-				has_owner_religion = yes 
-			}
-			AND = { 
-				religion = mahayana
-				has_owner_religion = yes 
-			}
-			owner = {
-				religion = confucianism
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#what to do when it's built
@@ -10195,72 +10135,12 @@ imperial_city_hue = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		OR = {
-			AND = { 
-				religion = buddhism
-				has_owner_religion = yes 
-			}
-			AND = { 
-				religion = vajrayana
-				has_owner_religion = yes 
-			}
-			AND = { 
-				religion = mahayana
-				has_owner_religion = yes 
-			}
-			owner = {
-				religion = confucianism
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		OR = {
-			AND = { 
-				religion = buddhism
-				has_owner_religion = yes 
-			}
-			AND = { 
-				religion = vajrayana
-				has_owner_religion = yes 
-			}
-			AND = { 
-				religion = mahayana
-				has_owner_religion = yes 
-			}
-			owner = {
-				religion = confucianism
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -10407,8 +10287,9 @@ baiturrahman_grand_mosque = {
 	type = monument
 
 	build_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	on_built = {
@@ -10418,13 +10299,15 @@ baiturrahman_grand_mosque = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	keep_trigger = {
@@ -10626,6 +10509,11 @@ bara_katra = {
 	type = monument
 
 	build_trigger = {
+		OR = {
+			culture_group = eastern_aryan
+			culture_group = hindusthani
+		}
+		province_is_or_accepts_culture = yes
 	}
 
 	on_built = {
@@ -10635,9 +10523,19 @@ bara_katra = {
 	}
 
 	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = eastern_aryan
+			culture_group = hindusthani
+		}
+		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
+		OR = {
+			culture_group = eastern_aryan
+			culture_group = hindusthani
+		}
+		province_is_or_accepts_culture = yes
 	}
 
 	keep_trigger = {
@@ -10674,6 +10572,8 @@ bara_katra = {
 		country_modifiers = {
 			trade_steering = 0.05
 			global_ship_trade_power = 0.1
+			burghers_loyalty_modifier = 0.05
+			jains_loyalty_modifier = 0.05
 		}
 		on_upgraded = {
 		}
@@ -10693,7 +10593,8 @@ bara_katra = {
 		country_modifiers = {
 			trade_steering = 0.1
 			global_ship_trade_power = 0.1
-			burghers_loyalty_modifier = 0.05
+			burghers_loyalty_modifier = 0.1
+			jains_loyalty_modifier = 0.1
 		}
 		on_upgraded = {
 		}
@@ -10714,7 +10615,8 @@ bara_katra = {
 			trade_steering = 0.2
 			global_ship_trade_power = 0.3
 			merchants = 1
-			burghers_loyalty_modifier = 0.1
+			burghers_loyalty_modifier = 0.15
+			jains_loyalty_modifier = 0.15
 		}
 		on_upgraded = {
 		}
@@ -11104,8 +11006,9 @@ cahokia = {
 	type = monument
 
 	build_trigger = {
-		religion = totemism
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = totemism
+		}
 	}
 
 	on_built = {
@@ -11115,13 +11018,15 @@ cahokia = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion = totemism
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = totemism
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion = totemism
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = totemism
+		}
 	}
 
 	keep_trigger = {
@@ -11370,11 +11275,13 @@ chan_chan_citadel = {
 		}
 		province_modifiers = {
 			local_defensiveness = 0.15
+			garrison_growth = 0.33			 
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			diplomatic_upkeep = 1
+			yearly_authority = 0.1			 
 		}
 		on_upgraded = {
 		}
@@ -11389,12 +11296,15 @@ chan_chan_citadel = {
 		}
 		province_modifiers = {
 			local_development_cost = -0.1
+			garrison_growth = 0.66
+			local_defensiveness = 0.33	 
 		}
 		area_modifier = {
 			local_defensiveness = 0.15
 		}
 		country_modifiers = {
 			diplomatic_upkeep = 1
+			yearly_authority = 0.2
 		}
 		on_upgraded = {
 		}
@@ -11408,6 +11318,8 @@ chan_chan_citadel = {
 			factor = 5000
 		}
 		province_modifiers = {						
+			garrison_growth = 1
+			local_defensiveness = 0.5
 		}
 		area_modifier = {
 			local_defensiveness = 0.25
@@ -11415,6 +11327,7 @@ chan_chan_citadel = {
 		}
 		country_modifiers = {
 			diplomatic_upkeep = 2
+			yearly_authority = 0.3
 		}
 		on_upgraded = {
 		}
@@ -11537,8 +11450,9 @@ duomo_milano = {
 	type = monument
 
 	build_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	on_built = {
@@ -11548,13 +11462,15 @@ duomo_milano = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	keep_trigger = {
@@ -11585,14 +11501,17 @@ duomo_milano = {
 			factor = 1000
 		}
 		province_modifiers = {
+			local_tax_modifier = 0.25				
 		}
 		area_modifier = {
+			local_religious_conversion_resistance = 0.33								   
 		}
 		country_modifiers = {
 			papal_influence = 0.5
 			monthly_fervor_increase = 0.25
 			church_power_modifier = 0.05
 			global_religious_conversion_resistance = 0.15
+			church_loyalty_modifier = 0.05					 
 		}
 		on_upgraded = {
 		}
@@ -11606,8 +11525,10 @@ duomo_milano = {
 			factor = 2500
 		}
 		province_modifiers = {
+			local_tax_modifier = 0.5			   
 		}
 		area_modifier = {
+			local_religious_conversion_resistance = 0.66							   
 		}
 		country_modifiers = {
 			papal_influence = 1
@@ -11628,8 +11549,10 @@ duomo_milano = {
 			factor = 5000
 		}
 		province_modifiers = {
+			local_tax_modifier = 0.75			   
 		}
 		area_modifier = {
+			local_religious_conversion_resistance = 1							   
 		}
 		country_modifiers = {
 			papal_influence = 2
@@ -11654,7 +11577,11 @@ dutch_polders = {
 	type = monument
 
 	build_trigger = {
-		culture = dutch
+		OR = { 
+			culture = dutch
+			culture = flemish
+			culture = frisian
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -11665,12 +11592,20 @@ dutch_polders = {
 	}
 
 	can_use_modifiers_trigger = {
-		culture = dutch
+		OR = { 
+			culture = dutch
+			culture = flemish
+			culture = frisian
+		}
 		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
-		culture = dutch
+		OR = { 
+			culture = dutch
+			culture = flemish
+			culture = frisian
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -11729,7 +11664,7 @@ dutch_polders = {
 		}
 		country_modifiers = {
 			global_trade_goods_size_modifier = 0.05
-			burghers_loyalty_modifier = 0.05
+			burghers_loyalty_modifier = 0.1
 		}
 		on_upgraded = {
 		}
@@ -11750,7 +11685,7 @@ dutch_polders = {
 		}
 		country_modifiers = {
 			global_trade_goods_size_modifier = 0.1
-			burghers_loyalty_modifier = 0.1
+			burghers_loyalty_modifier = 0.15
 		}
 		on_upgraded = {
 		}
@@ -11768,31 +11703,7 @@ ellora_caves = {
 	type = monument
 
 	build_trigger = {
-		OR = {		
-			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion_group = dharmic
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	on_built = {
@@ -11802,73 +11713,11 @@ ellora_caves = {
 	}
 
 	can_use_modifiers_trigger = {
-		OR = {		
-			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND = {
-				religion_group = dharmic
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	can_upgrade_trigger = {
-		OR = {		
-			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion_group = dharmic
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	keep_trigger = {
@@ -11956,7 +11805,7 @@ ellora_caves = {
 }
 
 erdene_zuu = {
-	start = 2190 #Qaraqorum
+	start = 4678 #Qaraqorum
 	date = 1444.01.01	#1585.01.01
 	time = { months = 0	}
 	build_cost = 0
@@ -11966,38 +11815,7 @@ erdene_zuu = {
 	type = monument
 
 	build_trigger = {
-		OR = {		
-			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion_group = pagan
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	on_built = {
@@ -12007,73 +11825,11 @@ erdene_zuu = {
 	}
 
 	can_use_modifiers_trigger = {
-		OR = {		
-			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion_group = pagan
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	can_upgrade_trigger = {
-		OR = {		
-			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion_group = pagan
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	keep_trigger = {
@@ -12104,12 +11860,14 @@ erdene_zuu = {
 			factor = 1000
 		}
 		province_modifiers = {
+			local_development_cost = -0.05				 
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			religious_unity = 0.1
 			church_loyalty_modifier = 0.05
+			yearly_karma_decay = 0.01				
 		}
 		on_upgraded = {
 		}
@@ -12123,13 +11881,15 @@ erdene_zuu = {
 			factor = 2500
 		}
 		province_modifiers = {
+			local_development_cost = -0.1					
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			horde_unity = 0.5
 			religious_unity = 0.2
-			church_loyalty_modifier = 0.05
+			church_loyalty_modifier = 0.1
+			yearly_karma_decay = 0.025				 
 		}
 		on_upgraded = {
 		}
@@ -12143,13 +11903,15 @@ erdene_zuu = {
 			factor = 5000
 		}
 		province_modifiers = {
+			local_development_cost = -0.15					
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			horde_unity = 1
 			religious_unity = 0.3
-			church_loyalty_modifier = 0.1
+			church_loyalty_modifier = 0.15
+			yearly_karma_decay = 0.05			 
 		}
 		on_upgraded = {
 		}
@@ -12167,8 +11929,9 @@ etchimiadzin_cathedral = {
 	type = monument
 
 	build_trigger = {
-		religion = coptic
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = coptic
+		}
 	}
 
 	on_built = {
@@ -12178,13 +11941,15 @@ etchimiadzin_cathedral = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion = coptic
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = coptic
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion = coptic
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = coptic
+		}
 	}
 
 	keep_trigger = {
@@ -12272,7 +12037,7 @@ etchimiadzin_cathedral = {
 }
 
 fuerte_del_morro = {
-	start = 484 #Havana
+	start = 492 #Puerto Rico
 	date = 1444.01.01	#1589.01.01
 	time = { months = 0	}
 	build_cost = 0
@@ -12330,7 +12095,7 @@ fuerte_del_morro = {
 		}
 		country_modifiers = {
 			naval_forcelimit_modifier = 0.1
-			overlord_naval_forcelimit = 0.1
+			overlord_naval_forcelimit_modifier = 0.2
 		}
 		on_upgraded = {
 		}
@@ -12351,7 +12116,7 @@ fuerte_del_morro = {
 		}
 		country_modifiers = {
 			naval_forcelimit_modifier = 0.2
-			overlord_naval_forcelimit = 0.2
+			overlord_naval_forcelimit_modifier = 0.2
 		}
 		on_upgraded = {
 		}
@@ -12372,7 +12137,7 @@ fuerte_del_morro = {
 		}
 		country_modifiers = {
 			naval_forcelimit_modifier = 0.3
-			overlord_naval_forcelimit = 0.3
+			overlord_naval_forcelimit_modifier = 0.3
 		}
 		on_upgraded = {
 		}
@@ -12390,8 +12155,9 @@ gomateshwara_statue = {
 	type = monument
 
 	build_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	on_built = {
@@ -12401,13 +12167,15 @@ gomateshwara_statue = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	keep_trigger = {
@@ -12446,6 +12214,8 @@ gomateshwara_statue = {
 			tolerance_own = 0.25
 			tolerance_heretic = 0.25
 			tolerance_heathen = 0.25
+			tolerance_of_heretics_capacity = 0.25
+			tolerance_of_heathens_capacity = 0.25			
 			diplomatic_reputation = 1
 		}
 		on_upgraded = {
@@ -12468,6 +12238,8 @@ gomateshwara_statue = {
 			tolerance_own = 0.5
 			tolerance_heretic = 0.5
 			tolerance_heathen = 0.5
+			tolerance_of_heretics_capacity = 0.5
+			tolerance_of_heathens_capacity = 0.5				   
 			diplomatic_reputation = 1
 		}
 		on_upgraded = {
@@ -12490,6 +12262,8 @@ gomateshwara_statue = {
 			tolerance_own = 1
 			tolerance_heretic = 1
 			tolerance_heathen = 1
+			tolerance_of_heretics_capacity = 1
+			tolerance_of_heathens_capacity = 1				 
 			diplomatic_reputation = 2
 		}
 		on_upgraded = {
@@ -12508,8 +12282,9 @@ chola_temples = {
 	type = monument
 
 	build_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	on_built = {
@@ -12519,13 +12294,15 @@ chola_temples = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	keep_trigger = {
@@ -12581,7 +12358,7 @@ chola_temples = {
 		country_modifiers = {
 			global_missionary_strength = 0.01
 			culture_conversion_cost = -0.05
-			brahmins_hindu_loyalty_modifier = 0.05
+			brahmins_hindu_loyalty_modifier = 0.1
 		}
 		on_upgraded = {
 		}
@@ -12601,7 +12378,7 @@ chola_temples = {
 		country_modifiers = {
 			global_missionary_strength = 0.02
 			culture_conversion_cost = -0.1
-			brahmins_hindu_loyalty_modifier = 0.1
+			brahmins_hindu_loyalty_modifier = 0.15
 		}
 		on_upgraded = {
 		}
@@ -12619,8 +12396,14 @@ gyeongbok_palace = {
 	type = monument
 
 	build_trigger = {
-		culture = korean
+		OR = { 
+			culture = korean_new
+			culture = korean
+		}
 		province_is_or_accepts_culture = yes
+		province_is_or_accepts_religion = {
+			religion = confucianism
+		}
 	}
 
 	on_built = {
@@ -12630,13 +12413,25 @@ gyeongbok_palace = {
 	}
 
 	can_use_modifiers_trigger = {
-		culture = korean
+		OR = { 
+			culture = korean_new
+			culture = korean
+		}
 		province_is_or_accepts_culture = yes
+		province_is_or_accepts_religion = {
+			religion = confucianism
+		}
 	}
 
 	can_upgrade_trigger = {
-		culture = korean
+		OR = { 
+			culture = korean_new
+			culture = korean
+		}
 		province_is_or_accepts_culture = yes
+		province_is_or_accepts_religion = {
+			religion = confucianism
+		}
 	}
 
 	keep_trigger = {
@@ -12667,12 +12462,13 @@ gyeongbok_palace = {
 			factor = 1000
 		}
 		province_modifiers = {
+			local_development_cost = -0.05					 
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
-			legitimacy = 0.25
-			global_autonomy = -0.01	
+			advisor_cost = -0.05
+			global_autonomy = -0.025
 		}
 		on_upgraded = {
 		}
@@ -12686,13 +12482,15 @@ gyeongbok_palace = {
 			factor = 2500
 		}
 		province_modifiers = {
+			local_development_cost = -0.1
 		}
 		area_modifier = {
+			local_development_cost = -0.05
 		}
 		country_modifiers = {
-			legitimacy = 0.5
-			technology_cost = -0.05
-			global_autonomy = -0.025
+			advisor_cost = -0.1
+			monarch_admin_power = 1
+			global_autonomy = -0.05
 		}
 		on_upgraded = {
 		}
@@ -12706,13 +12504,15 @@ gyeongbok_palace = {
 			factor = 5000
 		}
 		province_modifiers = {
+			local_development_cost = -0.15
 		}
 		area_modifier = {
+			local_development_cost = -0.1
 		}
 		country_modifiers = {
-			legitimacy = 1
-			technology_cost = -0.1
-			global_autonomy = -0.05	
+			advisor_cost = -0.2
+			monarch_admin_power = 2
+			global_autonomy = -0.1	
 		}
 		on_upgraded = {
 		}
@@ -12730,38 +12530,7 @@ hampi = {
 	type = monument
 
 	build_trigger = {
-		OR = {		
-			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion_group = dharmic
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	on_built = {
@@ -12771,73 +12540,11 @@ hampi = {
 	}
 
 	can_use_modifiers_trigger = {
-		OR = {		
-			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion_group = dharmic
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	can_upgrade_trigger = {
-		OR = {		
-			AND = {
-				religion = buddhism
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = vajrayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion = mahayana
-				has_owner_religion = yes
-			}
-			AND= {
-				religion_group = dharmic
-				has_owner_religion = yes
-			}
-			AND = {
-				religion = hinduism
-				has_owner_religion = yes
-				owner = {
-					has_personal_deity = buddha	
-				}						
-			}
-			AND = {
-				religion = shamanism
-				has_owner_religion = yes
-				owner = {
-					has_unlocked_cult = buddhism_cult	
-				}				
-			}
-		}
+		province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	keep_trigger = {
@@ -12895,7 +12602,7 @@ hampi = {
 		country_modifiers = {
 			prestige = 0.5
 			religious_unity = 0.25
-			all_estate_loyalty_equilibrium = 0.05
+			all_estate_loyalty_equilibrium = 0.1
 		}
 		on_upgraded = {
 		}
@@ -12916,7 +12623,7 @@ hampi = {
 		country_modifiers = {
 			prestige = 1
 			religious_unity = 0.25
-			all_estate_loyalty_equilibrium = 0.1
+			all_estate_loyalty_equilibrium = 0.15
 		}
 		on_upgraded = {
 		}
@@ -12934,8 +12641,9 @@ prague = {
 	type = monument
 
 	build_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	on_built = {
@@ -12945,13 +12653,15 @@ prague = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = christian
-		has_owner_religion = yes 
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	keep_trigger = {
@@ -13052,8 +12762,9 @@ holy_city_kairouan = {
 	type = monument
 
 	build_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	on_built = {
@@ -13063,13 +12774,15 @@ holy_city_kairouan = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	keep_trigger = {
@@ -13104,7 +12817,7 @@ holy_city_kairouan = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			monthly_piety = -0.001
+			monthly_piety_accelerator = 0.001
 			institution_spread_from_true_faith = 0.2
 		}
 		on_upgraded = {
@@ -13123,7 +12836,7 @@ holy_city_kairouan = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			monthly_piety = -0.002
+			monthly_piety_accelerator = 0.002
 			tolerance_own = 0.5
 			institution_spread_from_true_faith = 0.33
 		}
@@ -13143,7 +12856,7 @@ holy_city_kairouan = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			monthly_piety = -0.003
+			monthly_piety_accelerator = 0.003
 			tolerance_own = 1
 			institution_spread_from_true_faith = 0.5
 		}
@@ -13163,8 +12876,9 @@ imam_hussein_al-abbas = {
 	type = monument
 
 	build_trigger = {
-		religion = shiite
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = shiite
+		}
 	}
 
 	on_built = {
@@ -13174,13 +12888,15 @@ imam_hussein_al-abbas = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion = shiite
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = shiite
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion = shiite
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = shiite
+		}
 	}
 
 	keep_trigger = {
@@ -13215,8 +12931,9 @@ imam_hussein_al-abbas = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			monthly_piety = -0.001
+			monthly_piety_accelerator = 0.001
 			global_heretic_missionary_strength = 0.01
+			church_loyalty_modifier = 0.05					 
 		}
 		on_upgraded = {
 		}
@@ -13234,9 +12951,9 @@ imam_hussein_al-abbas = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			monthly_piety = -0.002
+			monthly_piety_accelerator = 0.002
 			global_heretic_missionary_strength = 0.02
-			church_loyalty_modifier = 0.05
+			church_loyalty_modifier = 0.1
 		}
 		on_upgraded = {
 		}
@@ -13254,9 +12971,9 @@ imam_hussein_al-abbas = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			monthly_piety = -0.003
+			monthly_piety_accelerator = 0.003
 			global_heretic_missionary_strength = 0.03
-			church_loyalty_modifier = 0.1
+			church_loyalty_modifier = 0.15
 		}
 		on_upgraded = {
 		}
@@ -13274,8 +12991,9 @@ kashi_vishwanath = {
 	type = monument
 
 	build_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	on_built = {
@@ -13285,13 +13003,15 @@ kashi_vishwanath = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes   
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	keep_trigger = {
@@ -13327,6 +13047,7 @@ kashi_vishwanath = {
 		}
 		country_modifiers = {
 			core_creation = -0.05
+			brahmins_hindu_loyalty_modifier = 0.05							 
 		}
 		on_upgraded = {
 		}
@@ -13344,9 +13065,9 @@ kashi_vishwanath = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			core_creation = -0.1
+			core_creation = -0.075
 			ae_impact = -0.05
-			brahmins_hindu_loyalty_modifier = 0.05
+			brahmins_hindu_loyalty_modifier = 0.1
 		}
 		on_upgraded = {			
 		}
@@ -13364,7 +13085,7 @@ kashi_vishwanath = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			core_creation = -0.15
+			core_creation = -0.1
 			ae_impact = -0.1
 			brahmins_hindu_loyalty_modifier = 0.15
 		}
@@ -13384,8 +13105,9 @@ khajuraho = {
 	type = monument
 
 	build_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	on_built = {
@@ -13395,13 +13117,15 @@ khajuraho = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	keep_trigger = {
@@ -13495,8 +13219,9 @@ kilwa_city = {
 	type = monument
 
 	build_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	on_built = {
@@ -13506,13 +13231,15 @@ kilwa_city = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	keep_trigger = {
@@ -13711,8 +13438,9 @@ maidan-e_naqsh-e_jahan = {
 	type = monument
 
 	build_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	on_built = {
@@ -13722,13 +13450,15 @@ maidan-e_naqsh-e_jahan = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	keep_trigger = {
@@ -14260,7 +13990,10 @@ porcelain_tower_nanjing = {
 	build_trigger = {
 		owner = {
 			OR = {
-				culture_group = east_asian 
+				AND = { 
+					culture_group = east_asian
+					province_is_or_accepts_culture = yes
+				}
 				religion_group = eastern
 				full_idea_group = innovativeness_ideas
 			}
@@ -14268,13 +14001,19 @@ porcelain_tower_nanjing = {
 	}
 	
 	can_use_modifiers_trigger = {
-		
+		AND = { 
+			culture_group = east_asian
+			province_is_or_accepts_culture = yes
+		}			
 	}
 
 	can_upgrade_trigger = {
 		owner = {
 			OR = {
-				culture_group = east_asian 
+				AND = { 
+					culture_group = east_asian
+					province_is_or_accepts_culture = yes
+				}
 				religion_group = eastern
 				full_idea_group = innovativeness_ideas
 			}
@@ -14400,7 +14139,11 @@ qhapaq_nam = {
 	type = monument
 
 	build_trigger = {
-		culture_group = andean_group
+		OR = { 
+			culture_group = andean_group
+			culture = cara
+			culture = chachapoyan
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -14411,12 +14154,20 @@ qhapaq_nam = {
 	}
 
 	can_use_modifiers_trigger = {
-		culture_group = andean_group
+		OR = { 
+			culture_group = andean_group
+			culture = cara
+			culture = chachapoyan
+		}
 		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
-		culture_group = andean_group
+		OR = { 
+			culture_group = andean_group
+			culture = cara
+			culture = chachapoyan
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -14450,6 +14201,8 @@ qhapaq_nam = {
 		province_modifiers = {
 		}
 		area_modifier = {
+			local_friendly_movement_speed = 0.15
+			regiment_recruit_speed = -0.25
 		}
 		country_modifiers = {
 			yearly_authority = 0.1
@@ -14470,6 +14223,8 @@ qhapaq_nam = {
 		province_modifiers = {
 		}
 		area_modifier = {
+			local_friendly_movement_speed = 0.33
+			regiment_recruit_speed = -0.5
 		}
 		country_modifiers = {
 			yearly_authority = 0.2
@@ -14490,6 +14245,8 @@ qhapaq_nam = {
 		province_modifiers = {
 		}
 		area_modifier = {
+			local_friendly_movement_speed = 0.5
+			regiment_recruit_speed = -0.75
 		}
 		country_modifiers = {
 			yearly_authority = 0.3
@@ -14512,8 +14269,9 @@ rila_monasteries = {
 	type = monument
 
 	build_trigger = {
-		religion = orthodox
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = orthodox
+		}
 	}
 
 	on_built = {
@@ -14523,13 +14281,15 @@ rila_monasteries = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion = orthodox
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = orthodox
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion = orthodox
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = orthodox
+		}
 	}
 
 	keep_trigger = {
@@ -14566,6 +14326,7 @@ rila_monasteries = {
 		country_modifiers = {
 			stability_cost_modifier = -0.1
 			religious_unity = 0.1
+			church_loyalty_modifier = 0.05
 		}
 		on_upgraded = {
 		}
@@ -14585,7 +14346,7 @@ rila_monasteries = {
 		country_modifiers = {
 			stability_cost_modifier = -0.2
 			religious_unity = 0.1
-			church_loyalty_modifier = 0.05
+			church_loyalty_modifier = 0.1
 		}
 		on_upgraded = {
 		}
@@ -14605,7 +14366,7 @@ rila_monasteries = {
 		country_modifiers = {
 			stability_cost_modifier = -0.3
 			religious_unity = 0.25
-			church_loyalty_modifier = 0.1
+			church_loyalty_modifier = 0.15
 		}
 		on_upgraded = {
 		}
@@ -14623,8 +14384,9 @@ churches_lalibela = {
 	type = monument
 
 	build_trigger = {
-		religion = coptic
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = coptic
+		}
 	}
 
 	on_built = {
@@ -14634,13 +14396,15 @@ churches_lalibela = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion = coptic
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = coptic
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion = coptic
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = coptic
+		}
 	}
 
 	keep_trigger = {
@@ -14839,8 +14603,9 @@ san_antonio_missions = {
 	type = monument
 
 	build_trigger = {
-		religion = catholic
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = catholic
+		}
 	}
 
 	on_built = {
@@ -14850,13 +14615,15 @@ san_antonio_missions = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion = catholic
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = catholic
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion = catholic
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = catholic
+		}
 	}
 
 	keep_trigger = {
@@ -14907,6 +14674,7 @@ san_antonio_missions = {
 			factor = 2500
 		}
 		province_modifiers = {
+			local_tax_modifier = 0.1			   
 		}
 		area_modifier = {
 			local_unrest = -1
@@ -14928,6 +14696,7 @@ san_antonio_missions = {
 			factor = 5000
 		}
 		province_modifiers = {
+			local_tax_modifier = 0.15				
 		}
 		area_modifier = {
 			local_unrest = -2
@@ -14936,6 +14705,7 @@ san_antonio_missions = {
 		country_modifiers = {
 			global_heathen_missionary_strength = 0.03
 			institution_spread_from_true_faith = 0.3
+			missionaries = 1 	   
 		}
 		on_upgraded = {
 		}
@@ -15040,7 +14810,7 @@ sankore_madrasah = {
 		country_modifiers = {
 			global_institution_spread = 0.5
 			technology_cost = -0.1
-			church_loyalty_modifier = 0.1
+			church_loyalty_modifier = 0.15
 		}
 		on_upgraded = {
 		}
@@ -15058,8 +14828,9 @@ santa_maria_del_fiore = {
 	type = monument
 
 	build_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	on_built = {
@@ -15069,13 +14840,15 @@ santa_maria_del_fiore = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
 	}
 
 	keep_trigger = {
@@ -15216,8 +14989,9 @@ spiral_minaret_samarra = {
 	type = monument
 
 	build_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	on_built = {
@@ -15227,13 +15001,15 @@ spiral_minaret_samarra = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	keep_trigger = {
@@ -15310,7 +15086,7 @@ spiral_minaret_samarra = {
 		country_modifiers = {
 			global_missionary_strength = 0.03
 			prestige = 1
-			church_loyalty_modifier = 0.2
+			church_loyalty_modifier = 0.15
 		}
 		on_upgraded = {
 		}
@@ -15328,8 +15104,9 @@ sultan_ahmed_mosque = {
 	type = monument
 
 	build_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	on_built = {
@@ -15339,13 +15116,15 @@ sultan_ahmed_mosque = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = muslim
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
 	}
 
 	keep_trigger = {
@@ -15440,8 +15219,9 @@ sun_temple_konarak = {
 	type = monument
 
 	build_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	on_built = {
@@ -15451,13 +15231,15 @@ sun_temple_konarak = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = dharmic
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = dharmic
+		}
 	}
 
 	keep_trigger = {
@@ -15596,7 +15378,7 @@ swayambhunath = {
 			factor = 1000
 		}
 		province_modifiers = {
-			local_tax_modifier = 0.2
+			local_tax_modifier = 0.25
 		}
 		area_modifier = {
 		}
@@ -15616,7 +15398,7 @@ swayambhunath = {
 			factor = 2500
 		}
 		province_modifiers = {
-			local_tax_modifier = 0.3
+			local_tax_modifier = 0.5
 		}
 		area_modifier = {
 		}
@@ -15624,6 +15406,7 @@ swayambhunath = {
 			yearly_karma_decay = 0.05
 			church_loyalty_modifier = 0.1
 			brahmins_hindu_loyalty_modifier = 0.1
+			global_heretic_missionary_strength = 0.01								
 		}
 		on_upgraded = {
 		}
@@ -15639,12 +15422,13 @@ swayambhunath = {
 		province_modifiers = {
 		}
 		area_modifier = {
-			local_tax_modifier = 0.3
+			local_tax_modifier = 0.75
 		}
 		country_modifiers = {
 			yearly_karma_decay = 0.1
 			church_loyalty_modifier = 0.15
 			brahmins_hindu_loyalty_modifier = 0.15
+			global_heretic_missionary_strength = 0.02								
 		}
 		on_upgraded = {
 		}
@@ -15930,8 +15714,9 @@ tiwanaku = {
 	type = monument
 
 	build_trigger = {
-		religion = inti
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = inti
+		}
 	}
 
 	on_built = {
@@ -15941,13 +15726,15 @@ tiwanaku = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion = inti
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = inti
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion = inti
-		has_owner_religion = yes
+		province_is_or_accepts_religion = {
+			religion = inti
+		}
 	}
 
 	keep_trigger = {
@@ -16084,12 +15871,13 @@ tortuga_island = {
 		}
 		province_modifiers = {
 			local_defensiveness = 0.15
+			blockade_force_required = 0.5
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			privateer_efficiency = 0.2
-			blockade_force_required = 0.5
+			capture_ship_chance = 0.1
 		}
 		on_upgraded = {
 		}
@@ -16106,11 +15894,13 @@ tortuga_island = {
 			local_defensiveness = 0.25
 		}
 		area_modifier = {
+			blockade_force_required = 1
 		}
 		country_modifiers = {
 			privateer_efficiency = 0.33
-			blockade_force_required = 1
+							  
 			power_projection_from_insults = 0.5
+			capture_ship_chance = 0.2
 		}
 		on_upgraded = {
 		}
@@ -16127,11 +15917,13 @@ tortuga_island = {
 			local_defensiveness = 0.5
 		}
 		area_modifier = {
+			blockade_force_required = 1
 		}
 		country_modifiers = {
 			privateer_efficiency = 0.5
-			blockade_force_required = 1
+							  
 			power_projection_from_insults = 1
+			capture_ship_chance = 0.3
 		}
 		on_upgraded = {
 		}
@@ -16244,7 +16036,7 @@ ulm_minster_great_project = {
 			free_city_imperial_authority = 0.2
 			prestige = 1
 			tolerance_own = 1
-			church_loyalty_modifier = 0.1
+			church_loyalty_modifier = 0.15
 		}
 		on_upgraded = {
 		}
@@ -16262,8 +16054,9 @@ walls_benin = {
 	type = monument
 
 	build_trigger = {
-		religion_group = pagan
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = pagan
+		}
 	}
 
 	on_built = {
@@ -16273,13 +16066,15 @@ walls_benin = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = pagan
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = pagan
+		}
 	}
 
 	can_upgrade_trigger = {
-		religion_group = pagan
-		has_owner_religion = yes
+		province_is_or_accepts_religion_group = {
+			religion_group = pagan
+		}
 	}
 
 	keep_trigger = {
@@ -16385,6 +16180,8 @@ winter_palace = {
 	type = monument
 
 	build_trigger = {
+		culture_group = east_slavic
+		province_is_or_accepts_culture = yes			  
 	}
 
 	on_built = {
@@ -16394,9 +16191,13 @@ winter_palace = {
 	}
 
 	can_use_modifiers_trigger = {
+		culture_group = east_slavic
+		province_is_or_accepts_culture = yes			  
 	}
 
 	can_upgrade_trigger = {
+		culture_group = east_slavic
+		province_is_or_accepts_culture = yes		  
 	}
 
 	keep_trigger = {
@@ -17660,7 +17461,11 @@ fu_warsaw_palace = {
 			OR = {
 				tag = POL 
 				tag = LIT 
-				tag = PLC 
+				tag = PLC
+				custom_trigger_tooltip = {
+					tooltip = general_tooltip_special_reward_tt
+					has_country_flag = enable_access_royal_castle_warsaw_flag
+				}
 			}
 		}
 	}
@@ -17676,6 +17481,10 @@ fu_warsaw_palace = {
 				tag = POL 
 				tag = LIT 
 				tag = PLC 
+				custom_trigger_tooltip = {
+					tooltip = general_tooltip_special_reward_tt
+					has_country_flag = enable_access_royal_castle_warsaw_flag
+				}
 			}
 		}
 	}
@@ -22165,5 +21974,245 @@ fu_admiralty_amsterdam = {
 				}
 			}
 		}
+	}
+}
+
+fu_topkapi_palace = {
+	start = 151
+	
+	date = 1444.01.01 #1460ish
+	
+	time = {
+		months = 60
+	}
+	
+	build_cost = 750
+	
+	can_be_moved = no
+	
+	move_days_per_unit_distance = 2
+	
+	starting_tier = 0
+	
+	type = monument
+
+	build_trigger = {
+		OR = {
+			tag = TUR 
+			tag = RUM 
+			religion_group = muslim 
+		}
+	}
+	
+	can_use_modifiers_trigger = {
+		
+	}
+
+	can_upgrade_trigger = {
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 60
+		}
+
+		cost_to_upgrade = {
+			factor = 750
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			all_estate_loyalty_equilibrium = 0.05
+			yearly_corruption = -0.025
+			monthly_favor_modifier = 0.1
+		}
+		
+		on_upgraded = { owner = { change_government_reform_progress = 10 } }					
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 60
+		}
+
+		cost_to_upgrade = {
+			factor = 2000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			
+		}
+
+		country_modifiers = {
+			all_estate_loyalty_equilibrium = 0.075
+			yearly_corruption = -0.03
+			monthly_favor_modifier = 0.15
+		}
+		
+		on_upgraded = { owner = { change_government_reform_progress = 20 } }
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			all_estate_loyalty_equilibrium = 0.1
+			yearly_corruption = -0.05
+			monthly_favor_modifier = 0.25
+		}
+		
+		on_upgraded = { owner = { change_government_reform_progress = 50 } }
+	}
+}
+
+fu_bosphorus_toll = {
+	start = 151
+	
+	date = 1444.01.01 #Has been there for a few centuries
+	
+	time = {
+		months = 60
+	}
+	
+	build_cost = 750
+	
+	can_be_moved = no
+	
+	move_days_per_unit_distance = 2
+	
+	starting_tier = 1
+	
+	type = monument
+
+	build_trigger = { }
+	
+	can_use_modifiers_trigger = { }
+
+	can_upgrade_trigger = { }
+
+	keep_trigger = { }
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 48
+		}
+
+		cost_to_upgrade = {
+			factor = 250
+		}
+
+		province_modifiers = { 
+			province_trade_power_value = 5 
+			trade_value = 1
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}				
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 90
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = { 
+			province_trade_power_value = 15 
+			trade_value = 3
+		}
+
+		area_modifier = {
+			
+		}
+
+		country_modifiers = { mercantilism_cost = -0.1 } 
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 3000
+		}
+
+		province_modifiers = { 
+			province_trade_power_value = 20 
+			trade_value = 5 
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = { mercantilism_cost = -0.15 } 
 	}
 }

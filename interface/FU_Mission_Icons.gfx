@@ -444,4 +444,116 @@ spriteTypes = {
 		name = "fu_golden_arts"
 		texturefile = "gfx//interface//missions//flavor_universalis//Kapsalon//fu_golden_arts.dds"
 	}
+	spriteType = {  
+		name = "fu_tur_coat_arms"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_tur_coat_arms.dds"
+	}
+	spriteType = {  
+		name = "fu_topkapi"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_topkapi.dds"
+	}
+	spriteType = {  
+		name = "fu_caliphate"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_caliphate.dds"
+	}
+	spriteType = {  
+		name = "fu_untitled"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_untitled.dds"
+	}
+	spriteType = {  
+		name = "fu_khan"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_khan.dds"
+	}
+	spriteType = {  
+		name = "fu_doge"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_doge.dds"
+	}
+	spriteType = {  
+		name = "fu_albanians"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_albanians.dds"
+	}
+	spriteType = {  
+		name = "fu_storm_europe"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_storm_europe.dds"
+	}
+	spriteType = {  
+		name = "fu_vlad"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_vlad.dds"
+	}
+	spriteType = {  
+		name = "fu_kill_hre"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_kill_hre.dds"
+	}
+	spriteType = {  
+		name = "fu_push_balkans"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_push_balkans.dds"
+	}
+	spriteType = {  
+		name = "fu_sobieski"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_sobieski.dds"
+	}
+	spriteType = {  
+		name = "fu_beys"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_beys.dds"
+	}
+	spriteType = {  
+		name = "fu_hagia_sophia_mosque"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_hagia_sophia_mosque.dds"
+	}
+	spriteType = {  
+		name = "fu_sultan_ahmed_mosque"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_sultan_ahmed_mosque.dds"
+	}
+	spriteType = {  
+		name = "fu_bektashi_order"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_bektashi_order.dds"
+	}
+	spriteType = {  
+		name = "fu_marshal_ortas"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_marshal_ortas.dds"
+	}
+	spriteType = {  
+		name = "fu_tulip"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_tulip.dds"
+	}
+	spriteType = {  
+		name = "fu_turkish_revolution"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_turkish_revolution.dds"
+	}
+	spriteType = {  
+		name = "fu_piri_reis"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_piri_reis.dds"
+	}
+	spriteType = {  
+		name = "fu_kaaba_mission"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_kaaba_mission.dds"
+	}
+	spriteType = {  
+		name = "fu_vermeers_hat"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_vermeers_hat.dds"
+	}
+	spriteType = {  
+		name = "fu_murder_icon"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_murder_icon.dds"
+	}
+	spriteType = {  
+		name = "fu_ghost_mehmed"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_ghost_mehmed.dds"
+	}
+	spriteType = {  
+		name = "fu_parmelion_eagle"
+		texturefile = "gfx//interface//missions//flavor_universalis//Ottomans//fu_parmelion_eagle.dds"
+	}
+	spriteType = {  
+		name = "fu_paris"
+		texturefile = "gfx//interface//missions//flavor_universalis//France//fu_paris.dds"
+	}
+	spriteType = {  
+		name = "fu_joan_orleans"
+		texturefile = "gfx//interface//missions//flavor_universalis//France//fu_joan_orleans.dds"
+	}
+	spriteType = {  
+		name = "fu_maid_orleans_2"
+		texturefile = "gfx//interface//missions//flavor_universalis//France//fu_maid_orleans_2.dds"
+	}
 }

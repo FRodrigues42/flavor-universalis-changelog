@@ -2,3 +2,7 @@ music = {
 	name = "The Rising Phoenix"
 	file = "The-Rising-Phoenix.ogg"
 }
+music = {
+	name = "Flavor Universalis Theme - The World"
+	file = "One-World.ogg"
+}

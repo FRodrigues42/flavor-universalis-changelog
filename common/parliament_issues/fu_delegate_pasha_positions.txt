@@ -1,0 +1,42 @@
+fu_delegate_pasha_positions = {
+	category = 5 		# same category = 90% less likely
+
+	allow = {
+		has_country_flag = tur_unlock_new_parliament_issues_flag
+		OR  = { 
+			has_reform = fu_ottoman_government
+			has_reform = ottoman_government
+		}
+	}
+	
+	effect = {
+		custom_tooltip = tur_every_pasha_province_gains_tt
+		tooltip = { 
+			add_province_modifier = { 
+				name = tur_effective_pasha_modifier
+				duration = 3650
+			}
+		}
+		hidden_effect = { 
+			every_owned_province = { 
+				limit = { has_pasha = yes } 
+				add_province_modifier = { 
+					name = tur_effective_pasha_modifier 
+					duration = 3650 
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		state_maintenance_modifier = -0.25
+	}
+	
+	chance = {
+		factor = 1.25
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}

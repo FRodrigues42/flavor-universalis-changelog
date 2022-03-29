@@ -362,8 +362,10 @@ novgorod_missions_2 = { #Made by Big Boss for Flavor Universalis
 				}
 				add_dip_power = 100 
 				custom_tooltip = nov_demand_vyborg_tt 
-				30 = { 
-					country_event = { id = FU_Novgorod_Events.2 }
+				30 = {
+					owner = { 
+						country_event = { id = FU_Novgorod_Events.2 }
+					}
 				}
 			}
 			else = {

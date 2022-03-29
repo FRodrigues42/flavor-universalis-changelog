@@ -3417,7 +3417,7 @@ noppbyzantine_missions_4 = {
 						}
 					}
 				}
-				create_admiral = { tradition = 125 }
+				create_admiral = { tradition = 100 }
 			}
 		}
 	}

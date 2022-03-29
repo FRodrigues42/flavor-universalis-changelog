@@ -153,3 +153,22 @@ fu_spymaster_assassin = {
 		factor = 1
 	}
 }
+
+fu_head_of_patriarchate = {
+	monarch_power = ADM
+	
+	# Bonus
+	tolerance_of_heathens_capacity = 1
+
+	skill_scaled_modifier = { 
+		dhimmi_loyalty_modifier = 0.025
+	}
+
+	chance = {
+		factor = 0
+	}
+	
+	ai_will_do = {
+		factor = 10
+	}
+}

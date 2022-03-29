@@ -1,0 +1,602 @@
+orleans_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = ORL
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+	
+	orl_holy_cross_cathedral = {
+		icon = a_strong_government
+		required_missions = { } 
+		position = 1 
+		provinces_to_highlight = { 
+			province_id = 184  
+			has_tax_building_trigger = no 
+		}
+		trigger = { 
+			184 = { 
+				has_tax_building_trigger = yes 
+				owned_by = ROOT 
+			} 
+			OR = { 
+				num_of_cardinals = 1 
+				papal_influence = 25
+			}
+		}
+		effect = { 
+			custom_tooltip = orl_enable_holy_cross_cathedral_tt
+			set_country_flag = orl_enable_holy_cross_cathedral_flag
+			add_adm_power = 100 
+			hidden_effect = { 
+				184 = { 
+					add_great_project = {
+						type = fu_holy_cross_cathedral
+						instant = no 
+					}
+				}
+			}
+		}
+	}
+	
+	orl_tourelles_fort = { 
+		icon = fortress_switzerland
+		required_missions = { orl_holy_cross_cathedral } 
+		position = 2
+		trigger = { 
+			184 = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+					has_building = ramparts
+				}
+				has_trade_building_trigger = yes
+				owned_by = ROOT 
+			}
+			if = { 
+				limit = { has_global_flag = advisors_expanded_mod_active } 
+				OR = { 
+					fortification_expert = 1 
+					monthly_mil = 10 
+					tactician = 1 
+					combat_engineer = 1
+					mil = 5 
+				}
+			}
+			else = { 
+				OR = { 
+					fortification_expert = 1 
+					monthly_mil = 10
+					mil = 5
+				}
+			}
+		}
+		effect = {
+			if = { 
+				limit = { has_dlc = "Mandate of Heaven" }
+				184 = { add_prosperity = 100 }
+			}
+			else = { 
+				184 = { add_base_production = 2 } 
+			}
+			184 = { 
+				add_province_modifier = {
+					name = orl_defensive_bridge_modifier
+					duration = -1 
+				}
+				add_base_manpower = 3 
+			}
+		}
+	}		
+	
+	orl_along_the_loire = { 
+		icon = develop_the_po_valley 
+		required_missions = { orl_tourelles_fort }
+		position = 3 
+		provinces_to_highlight = { 
+			area = loire_area
+			OR = { 
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { num_of_times_improved = 3 }
+			}
+		}
+		trigger = { 
+			loire_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+				num_of_times_improved = 3 
+				NOT = { devastation = 1 }
+			}
+			if = { 
+				limit = { has_dlc = "Mandate of Heaven" }
+				splendor = 600
+			}
+			else = { adm = 400 } 
+		}
+		effect = {
+			country_event = { id = FU_Orleans_Events.1 } 
+		}
+	}
+}
+
+orleans_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ORL
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes	
+	
+	orl_essence_renaissance = { 
+		icon = promote_urbanization
+		required_missions = { orl_tourelles_fort orl_march_paris } 
+		position = 3 
+		trigger = { 
+			capital_scope = { 
+				num_of_times_improved = 4
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+			}
+			OR = { 
+				has_estate_privilege = estate_burghers_patronage_of_the_arts
+				estate_loyalty = { 
+					estate = estate_burghers 
+					loyalty = 60 
+				}
+			}
+			184 = { owned_by = ROOT } 
+		}
+		effect = {
+			tooltip = {
+				capital_scope = { add_building = university }  
+			}
+			custom_tooltip = orl_if_havent_embraced_renaissance_tt
+			tooltip = { 
+				capital_scope = { add_next_institution_embracement = 100 }
+				add_country_modifier = {
+					name = orl_renaissance_in_the_west_modifier
+					duration = 7300 
+				}
+			}
+			custom_tooltip = orl_if_we_have_embraced_renaissance_tt
+			tooltip = { 
+				add_country_modifier = { 
+					name = orl_blossoming_orleanaise_arts_modifier
+					duration = 9125
+				}
+			}
+			hidden_effect = { 
+				if = { 
+					limit = { 
+						NOT = { has_institution = renaissance }
+					}
+					capital_scope = { add_next_institution_embracement = 100 }
+					add_country_modifier = {
+						name = orl_renaissance_in_the_west_modifier
+						duration = 7300 
+					}
+				}
+				else = { 
+					add_country_modifier = { 
+						name = orl_blossoming_orleanaise_arts_modifier
+						duration = 9125
+					}
+				}
+				capital_scope = { add_building = university } 
+			}
+		}
+	}
+	
+	orl_university_orleans = { 
+		icon = mission_early_modern_university
+		required_missions = { orl_along_the_loire orl_essence_renaissance }
+		position = 4 
+		trigger = {
+			184 = { development = 30 }
+			is_ahead_of_time_in_specific_tech = { type = adm }
+			is_ahead_of_time_in_specific_tech = { type = dip }
+			is_ahead_of_time_in_specific_tech = { type = mil }
+			has_institution = renaissance 
+		}
+		effect = { 
+			define_advisor = { 
+				type = theologian 
+				name = "Guillaume Bude"
+				skill = 3 
+				cost_multiplier = 0.25
+			}
+			if = { 
+				limit = { has_dlc = "Rule Britannia" }
+				change_innovativeness = 5 
+			}
+			else = { 
+				add_adm_power = 50 
+				add_dip_power = 50 
+				add_mil_power = 50 
+			}
+		}
+	}
+}
+
+orleans_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ORL
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+	
+	orl_march_paris = { 
+		icon = fu_paris
+		required_missions = { orl_pursue_independence }
+		position = 2 
+		provinces_to_highlight = { 
+			area = ile_de_france_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ile_de_france_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = { 
+			add_country_modifier = {
+				name = orl_new_power_rising_modifier
+				duration = 7300 
+			}
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}
+		}
+	}
+}
+
+orleans_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ORL
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+
+	orl_pursue_independence = { 
+		icon = moravian_arms 
+		required_missions = { }
+		position = 1 
+		trigger = {
+			OR = { 
+				war_with = FRA 
+				AND = { 
+					is_subject = no 
+					is_at_war = no 
+				}
+			}
+			army_size_percentage = 1 
+		}
+		effect = { 	
+			france_region = { 
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}
+			custom_tooltip = orl_at_peace_tt
+			tooltip = { 
+				add_stability_or_adm_power = yes 
+				add_country_modifier = { 
+					name = orl_serene_independence_modifier
+					duration = 7300 
+				}
+			}
+			custom_tooltip = orl_while_at_war_tt
+			tooltip = {
+				add_mil_power = 100 
+				add_manpower = 3 
+				add_country_modifier = { 
+					name = orl_great_struggle_modifier
+					duration = 5475
+				}
+			}
+			hidden_effect = {
+				if = { 
+					limit = { is_at_war = no } 
+					add_stability_or_adm_power = yes 
+					add_country_modifier = { 
+						name = orl_serene_independence_modifier
+						duration = 7300 
+					}
+					define_ruler = { 
+						dynasty = ROOT 
+						male = yes 
+						change_adm = 2 
+						change_dip = 2 
+						change_mil = 2 
+						claim = 95
+					}
+				}
+				else = { 
+					add_mil_power = 100 
+					add_manpower = 3 
+					add_country_modifier = { 
+						name = orl_great_struggle_modifier
+						duration = 5475
+					}
+				}
+				france_region = { 
+					limit = { 
+						NOT = { owned_by = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT 
+				}
+			}
+		}
+	}
+
+	orl_unite_provinces = { 
+		icon = unite_the_realm 
+		required_missions = {orl_pursue_independence }
+		position = 2 
+		provinces_to_highlight = { 
+			OR = { 	
+				area = poitou_area 
+				area = ile_de_france_area
+				area = orleans_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = {
+			poitou_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			ile_de_france_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			orleans_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = {
+			if = { 
+				limit = { 
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2 
+			}
+			else = { add_prestige = 50 } 
+			change_estate_land_share = { 
+				estate = all 
+				share = -10 
+			}
+			add_country_modifier = { 
+				name = orl_orleans_resurgent_modifier
+				duration = 9125
+			}
+		}
+	}	
+
+	orl_maid_orleans = { 
+		icon = fu_maid_orleans_2
+		required_missions = { orl_unite_provinces } 
+		position = 3
+		provinces_to_highlight = { 
+			area = normandy_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			normandy_area = { 
+				type = all 
+				country_or_non_sovereign_subject_holds  = ROOT 
+			}
+			OR = { 
+				custom_trigger_tooltip = {
+					tooltip = maid_of_orleans_tt
+					has_global_flag = maid_of_orleans
+				}
+				papal_influence = 50 
+			}
+			OR = { 
+				PAP = { 
+					has_opinion = { 
+						who = ROOT 
+						value = 100
+					}
+				}
+				total_development = 200
+			}
+		}
+		effect = { 
+			custom_tooltip = orl_if_enacted_decision_retrial_of_joan_of_arc_tt
+			tooltip = {
+				country_event = { id = FU_Orleans_Events.3 } 
+				swap_non_generic_missions = yes 
+			}
+			custom_tooltip = orl_alternatively_tt
+			tooltip = {
+				add_papal_influence = 100 
+				add_country_modifier = { 
+					name = orl_joans_absolution_modifier 
+					duration = -1 
+				}
+				country_event = { id = FU_Orleans_Events.4 } 
+			}
+			hidden_effect = { 	
+				if = { 
+					limit = { has_global_flag = retrial_of_joan_of_arc } 
+					country_event = { id = FU_Orleans_Events.3 }
+					set_country_flag = fu_maid_of_orleans
+					swap_non_generic_missions = yes 
+				}
+				else = { 
+					add_papal_influence = 100 
+					add_country_modifier = { 
+						name = orl_joans_absolution_modifier 
+						duration = -1 
+					}
+					country_event = { id = FU_Orleans_Events.4 } 
+				}
+			}
+		}
+	}
+	
+	orl_french_crown = { 
+		icon = king_of_france
+		required_missions = { orl_university_orleans orl_maid_orleans orl_growth_economy }
+		position = 5
+		trigger = {
+			total_development = 400 
+			FRA = { exists = no } 
+			is_at_war = no 
+		}
+		effect = { 
+			set_government_rank = 3 
+			change_tag = FRA 
+			swap_non_generic_missions = yes 
+			add_country_modifier = {
+				name = orl_united_france_modifier
+				duration = 9125
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+		}
+	}
+}
+
+orleans_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = ORL
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+	
+	orl_expand_orleans = { 
+		icon = dominant_economy 
+		required_missions = { orl_pursue_independence }
+		position = 2 
+		trigger = { 
+			grown_by_development = 100 
+		}
+		effect = { 
+			country_event = { id = FU_Orleans_Events.5 } 
+		}
+	}
+	
+	orl_growth_economy = {
+		icon = mission_high_income
+		required_missions = { orl_expand_orleans }
+		position = 4 
+		trigger = { 
+			share_of_starting_income = 4 
+			has_adm_advisor = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = "growing_economy"
+				duration = 9125 #25 years
+			}
+			set_country_flag = 20_percent_chance_for_extra_dev
+			custom_tooltip = chance_to_gain_supplemental_dev_20_percent_tt
+			custom_tooltip = orl_clear_upon_forming_fra_tt
+		}
+	}
+}
+
+orleans_missions_3b = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ORL
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+		has_country_flag = fu_maid_of_orleans
+	}
+	has_country_shield = yes	
+	
+	orl_order_of_st_joan = {
+		icon = fu_joan_orleans
+		required_missions = { orl_maid_orleans } 
+		position = 4
+		trigger = { 
+			stability = 3 
+			OR = { 	
+				custom_trigger_tooltip = { 
+					tooltip = orl_unlocked_order_of_saint_joan_mercs_tt
+					has_country_flag = militant_order_of_saint_joan 
+				}
+				AND = { 
+					custom_trigger_tooltip = { 
+						tooltip = orl_order_of_saint_joan_taken_over_tt
+						has_country_modifier = orl_sisters_takeover_modifier
+					}
+					has_regency = no 
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = orl_if_allow_sisterhood_takeover_tt
+			tooltip = { 
+				country_event = { id = FU_Orleans_Events.2 } 
+			}
+			custom_tooltip = orl_alternatively 
+			tooltip = { 
+				add_country_modifier = {
+					name = orl_faithful_mercenaries_modifier
+					duration = -1 
+				}
+			}
+			hidden_effect = { 
+				if = { 
+					limit = { has_country_flag = militant_order_of_saint_joan }
+					clr_country_flag = militant_order_of_saint_joan 
+					set_country_flag = fu_militant_order_of_saint_joan_flag
+					add_country_modifier = {
+						name = orl_faithful_mercenaries_modifier
+						duration = -1 
+					} 
+				}
+				else = { 
+					country_event = { id = FU_Orleans_Events.2 }
+				}
+			}
+		}
+	}
+}

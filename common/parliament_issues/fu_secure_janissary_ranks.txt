@@ -1,0 +1,27 @@
+fu_secure_janissary_ranks = {
+	category = 2		# same category = 90% less likely
+
+	allow = {
+		has_country_flag = tur_unlock_new_parliament_issues_flag
+		has_estate = estate_janissaries 
+	}
+	
+	effect = {
+		add_estate_loyalty = { 
+			estate = estate_janissaries
+			loyalty = 20 
+		}
+	}
+	
+	modifier = {
+		land_maintenance_modifier = -0.1
+	}
+	
+	chance = {
+		factor = 1.25
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}

@@ -164,7 +164,7 @@ country_event = { #Imperial Themata of Byzantium
 				is_capital = no 
 				OR = {
 					has_building = barracks 
-					has_building = training_field
+					has_building = training_fields
 				}
 				OR = {
 					trade_goods = grain 

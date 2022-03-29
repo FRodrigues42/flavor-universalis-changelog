@@ -1,0 +1,74 @@
+country_decisions = {
+	fu_tur_rum_mehmed_pasha_mosque = {
+		major = no 
+		potential = {
+			tag = TUR 
+			NOT = { has_country_flag = tur_taken_decision_to_build_mehmed_pasha_mosque_flag }
+		}
+		allow = {
+			treasury = 1000 
+			adm_power = 150 
+			is_at_war = no 
+			151 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_treasury = -1000 
+			add_adm_power = -150  
+			if = { 
+				limit = { has_dlc = "Leviathan" } 
+				custom_tooltip = tur_allow_construction_of_mehmed_pasha_mosque_tt
+			}
+			else = { 
+				add_country_modifier = { 
+					name = tur_mehmed_pasha_mosque_modifier
+					duration = -1 
+				}
+			}
+			set_country_flag = tur_taken_decision_to_build_mehmed_pasha_mosque_flag
+		}
+	}
+	
+	fu_rum_integrate_mam_admin_decision = {
+		major = yes 
+		potential = {
+			has_country_flag = rum_vassalized_mam
+			tag = RUM
+			
+		}
+		allow = {
+			OR = { 
+				MAM = { 
+					is_subject_of = ROOT 
+					NOT = { liberty_desire = 5 } 
+				}
+				egypt_region = { 
+					type = all 
+					owned_by = ROOT 
+				}
+			}
+			adm_tech = 15
+			total_development = 1500 
+			MAM = { has_truce = no }
+			dip_power = 500 
+			361 = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				num_of_times_improved = 10 
+			}
+			military_strength = {
+				who = MAM
+				value = 2
+			}
+		}
+		effect = { 
+			add_dip_power = -500
+			inherit = MAM 
+			add_government_reform = fu_sultanate_of_rum_and_cairo
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+	}
+}

@@ -30,3 +30,12 @@ song = {
 		}
 	}
 }
+
+song = {
+	name = "Flavor Universalis Theme - The World"
+	chance = {
+		modifier = {
+			factor = 1.1
+		}
+	}
+}

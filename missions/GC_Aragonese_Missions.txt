@@ -896,7 +896,7 @@ aragon_missions_4 = { #Made by Big Boss for Flavor Universalis
 				}
 				custom_tooltip = ara_employ_skanderbeg_expertise
 				hidden_effect = {
-					create_general = { tradition = 100 }
+					create_general = { tradition = 95 }
 				}
 				add_army_tradition = 15 
 			}

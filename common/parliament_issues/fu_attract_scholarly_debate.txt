@@ -1,0 +1,23 @@
+fu_attract_scholarly_debate = {
+	category = 1		# same category = 90% less likely
+
+	allow = {
+		has_country_flag = tur_unlock_new_parliament_issues_flag
+	}
+	
+	effect = {
+		change_innovativeness = 2
+	}
+	
+	modifier = {
+		technology_cost = -0.05
+	}
+	
+	chance = {
+		factor = 3
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}

@@ -294,7 +294,86 @@ VOC_ideas = {
 	}
 }	
 	
+FU5_ideas = {
+	start = {
+		defensiveness = 0.25
+		land_forcelimit_modifier = 0.2
+	}
 	
+	trigger = {
+		tag = FU5
+	}
+	free = yes
+	
+	bonus = {
+		army_tradition = 1 
+	}		
+	
+	FU5_1 = {
+		all_estate_loyalty_equilibrium = 0.1
+	}
+	FU5_2 = {
+		production_efficiency = 0.15
+		build_cost = -0.05
+	}
+	FU5_3 = {
+		merchants = 1 
+	}
+	FU5_4 = {
+		tolerance_of_heretics_capacity = 1
+		tolerance_heretic = 1
+	}
+	FU5_5 = {
+		mercenary_discipline = 0.05
+	}
+	FU5_6 = {
+		global_manpower_modifier = 0.2
+	}
+	FU5_7 = {
+		ae_impact = -0.15 
+	}
+}		
+
+RM1_ideas = {
+	start = {
+		core_creation = -0.20
+		manpower_recovery_speed = 0.2
+	}
+	
+	trigger = {
+		tag = RUM
+		has_country_flag = rum_vassalized_mam
+	}
+	free = yes
+	
+	bonus = {
+		land_forcelimit_modifier = 0.25 
+	}		
+	
+	rum_sultan_of_rum = {
+		tolerance_heathen = 3
+	}
+	karamanid_architecture = {
+		development_cost = -0.1
+	}
+	rum_sultan_al_muazzam = {
+		build_cost = -0.15
+	}
+	imperial_school_of_naval_engineering = {
+		global_ship_cost = -0.1
+	}
+	rum_protector_of_dar_al_islam = {
+		global_heretic_missionary_strength = 0.03
+	}
+	mam_monopoly_ports = {
+		trade_efficiency = 0.10
+	}
+	anatolian_center_of_learning = {
+		advisor_cost = -0.1
+		advisor_pool = 1
+	}
+}		
+
 	
 	
 	

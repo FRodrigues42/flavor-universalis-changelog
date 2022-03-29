@@ -1,0 +1,44 @@
+# usage:
+## has_flavor_universalis_advisor = { adm = yes skill = 3 }
+has_flavor_universalis_advisor = {
+	[[adm]
+		if = {
+			limit = {
+				always = $adm$
+			}
+			# ADM
+			OR = {
+				julius_archbishop = $skill$
+				fu_accountant = $skill$
+				fu_royal_imam = $skill$
+				fu_city_planner = $skill$
+				fu_cartographer = $skill$
+				fu_head_of_patriarchate = $skill$
+			}
+		}
+	]
+	[[dip]
+		if = {
+			limit = {
+				always = $dip$
+			}
+			# DIP
+			OR = {
+				composer = $skill$
+				poet = $skill$
+				fu_spymaster_assassin = $skill$
+			}
+		}
+	]
+	[[mil]
+		if = {
+			limit = {
+				always = $mil$
+			}
+			# MIL
+			OR = {
+				fu_aristocrat = $skill$
+			}
+		}
+	]
+}

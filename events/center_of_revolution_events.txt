@@ -356,7 +356,7 @@ province_event = {
 			is_year = 1800
 		}
 		modifier = { #Dith Reward 
-			factor = 0.5  
+			factor = 0.1  
 			has_country_flag = dtt_unite_masses_flag
 		}
 	}

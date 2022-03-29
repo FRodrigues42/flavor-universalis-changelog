@@ -1,0 +1,707 @@
+achievement_fu_prevent_collapse = {
+	id = 500
+	localization = FU_PREVENT_COLLAPSE_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		mission_completed = ppbyz_prevent_collapse
+		total_development = TUR 
+	}
+}
+
+achievement_fu_great_kebabini = {
+	id = 501
+	localization = FU_GREAT_KEBABINI_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		mission_completed = tur_sail_india
+		mission_completed = tur_oust_europeans
+		mission_completed = tur_blanket_scheme
+		mission_completed = tur_tulip_period
+		mission_completed = tur_nouveau_literacy
+		mission_completed = tur_northern_capitals
+		mission_completed = tur_victory_europe
+		mission_completed = tur_found_hormuz_toll
+		mission_completed = tur_fabrics_trade
+		mission_completed = tur_pax_ottomana
+	}
+}
+
+achievement_fu_any_more_bright_ideas = {
+	id = 502
+	localization = FU_ANY_MORE_BRIGHT_IDEAS_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		OR = { 	
+			tag = TUS 
+			tag = LAN 
+		}
+		is_ahead_of_time_in_specific_tech = { type = adm }
+		is_ahead_of_time_in_specific_tech = { type = dip }
+		is_ahead_of_time_in_specific_tech = { type = mil }
+		innovativeness = 100 
+		NOT = { is_year = 1480 } 
+		is_lacking_institutions = no 
+	}
+}
+
+achievement_fu_taking_it_in_the_chin = {
+	id = 503
+	localization = FU_TAKING_IT_IN_THE_CHIN_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		tag = TUR 
+		OR = {
+			is_emperor = yes 
+			NOT = { hre_size = 1 }
+		}
+		mission_completed = tur_siege_vienna
+	}
+}
+
+achievement_fu_will_ye_no_come_back = {
+	id = 504
+	localization = FU_WILL_YE_NO_COME_BACK_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		OR = { 
+			tag = LAN 
+			tag = TUS 
+		}
+		249 = { 
+			owned_by = ROOT 
+			culture = tuscan
+		}
+	}
+}
+
+achievement_fu_breadbasket_za_warudo = {
+	id = 505
+	localization = FU_BREADBASKET_ZA_WARUDO_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		362 = { owned_by = ROOT has_manufactory_trigger = yes }
+		363 = { owned_by = ROOT has_manufactory_trigger = yes }
+		2316 = { owned_by = ROOT has_manufactory_trigger = yes }
+		4316 = { owned_by = ROOT has_manufactory_trigger = yes }
+		trading_bonus = {
+			trade_goods = grain
+			value = yes
+		}
+	}
+}
+
+achievement_fu_something_of_a_collector_myself = {
+	id = 506
+	localization = FU_SOMETHING_OF_A_COLLECTOR_MYSELF_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+		has_dlc = "Leviathan"
+	}
+	happened = {
+		151 = { 
+			has_great_project = {
+				type = fu_topkapi_palace
+				tier = 3
+			}
+			has_great_project = {
+				type = fu_bosphorus_toll
+				tier = 3
+			}
+			has_great_project = {
+				type = hagia_sophia
+				tier = 3
+			}
+			has_great_project = {
+				type = fu_mehmed_pasha_mosque
+				tier = 3
+			}
+			has_great_project = {
+				type = sultan_ahmed_mosque
+				tier = 3
+			}
+			has_great_project = {
+				type = fu_acemi_oglan
+				tier = 3
+			}
+			has_great_project = {
+				type = fu_theodosian_walls
+				tier = 3
+			}
+		}
+	}
+}
+
+achievement_fu_fenix_rising = {
+	id = 507
+	localization = FU_FENIX_RISING_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+		has_dlc = "Purple Phoenix"
+	}
+	happened = {
+		mission_completed = ppbyz_latin_basileus
+		mission_completed = ppbyz_phoenix_rises
+		mission_completed = ppbyz_presbyter_johannes
+		mission_completed = ppbyz_sands_arabia
+		mission_completed = ppbyz_roma_invicta_aeterna
+		mission_completed = ppbyz_restore_pentarchy
+		mission_completed = ppbyz_rose_chamber_reformation
+		mission_completed = ppbyz_nile_breadbasket
+		mission_completed = ppbyz_reform_judicial_code
+		mission_completed = ppbyz_promote_byzantine_goods
+	}
+}
+
+achievement_fu_fenix_rising_no_pp = {
+	id = 508
+	localization = FU_FENIX_RISING_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+		NOT = { has_dlc = "Purple Phoenix" }
+	}
+	happened = {
+		mission_completed = byz_latin_basileus
+		mission_completed = byz_phoenix_rises
+		mission_completed = byz_presbyter_johannes
+		mission_completed = byz_sands_arabia
+		mission_completed = byz_roma_invicta_aeterna
+		mission_completed = byz_restore_pentarchy
+		mission_completed = byz_rose_chamber_reformation
+		mission_completed = byz_nile_breadbasket
+		mission_completed = byz_reform_judicial_code
+		mission_completed = byz_promote_byzantine_goods
+	}
+}
+
+achievement_fu_turkish_pizza = {
+	id = 509
+	localization = FU_TURKISH_PIZZA_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		tag = TUR 
+		italy_region = { 
+			type = all 
+			owned_by = ROOT 
+		}
+	}
+}
+
+achievement_fu_canzoni_preferite = {
+	id = 510
+	localization = FU_CANZONI_PREFERITE_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		mission_completed = mlo_deploy_the_swiss_guard
+		mission_completed = mlo_control_the_holy_see
+		mission_completed = mlo_guard_the_alps
+		mission_completed = mlo_secure_schwarze_mine
+		mission_completed =	mlo_imperial_aspirations
+		mission_completed = mlo_leta_doro
+		mission_completed = mlo_scala_teatro
+	}
+}
+
+achievement_fu_janitors_assistant = {
+	id = 511
+	localization = FU_JANITORS_ASSISTANT_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		tag = BOH 
+		OR = { 
+			POL = { 
+				junior_union_with = BOH 
+				total_development = 1000
+			}
+			PLC = { 
+				junior_union_with = BOH 
+				total_development = 1000 
+			}
+		}
+	}
+}
+
+achievement_fu_canoe_with_allah = {
+	id = 512
+	localization = FU_CANOE_WITH_ALLAH_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		tag = TUR 
+		custom_trigger_tooltip = { 
+			tooltip = has_4_tolerance_heathens_tt
+			has_global_modifier_value = {
+				which = tolerance_heathen 
+				value = 4 
+			}
+		}
+		custom_trigger_tooltip = { 
+			tooltip = has_4_tolerance_heathens_tt
+			has_global_modifier_value = {
+				which = tolerance_heretic 
+				value = 3
+			}
+		}
+		num_accepted_cultures = 12
+	}
+}
+
+achievement_fu_dr_zhivago = {
+	id = 513
+	localization = FU_DR_ZHIVAGO_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		was_tag = FU5 
+		is_subject = no 
+		tag = HUN 
+		total_development = TUR
+	}
+}
+
+achievement_fu_lessons_of_design = {
+	id = 514
+	localization = FU_LESSONS_OF_DESIGN_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+		has_dlc = "Leviathan" 
+	}
+	happened = {
+		tag = NED
+		97 = { 
+			has_great_project = {
+				type = dutch_polders
+				tier = 3 
+			}
+			development = 50 
+		}
+		monthly_adm = 12
+		90 = {
+			custom_trigger_tooltip = {
+				tooltip = ned_dike_any_level 
+				OR = {
+					has_great_project = {
+						type = fu_brugge_dike
+						tier = 1 
+					}
+					has_great_project = {
+						type = fu_brugge_dike
+						tier = 2 
+					}
+					has_great_project = {
+						type = fu_brugge_dike
+						tier = 3 
+					}
+				}
+			}
+			development = 25 
+		}
+		96 = {
+			custom_trigger_tooltip = {
+				tooltip = ned_dike_any_level 
+				OR = {
+					has_great_project = {
+						type = fu_zeeland_dike
+						tier = 1 
+					}
+					has_great_project = {
+						type = fu_zeeland_dike
+						tier = 2 
+					}
+					has_great_project = {
+						type = fu_zeeland_dike
+						tier = 3 
+					}
+				}
+			}
+			development = 25 
+		}
+		4383 = {
+			custom_trigger_tooltip = {
+				tooltip = ned_dike_any_level 
+				OR = {
+					has_great_project = {
+						type = fu_den_haag_dike
+						tier = 1 
+					}
+					has_great_project = {
+						type = fu_den_haag_dike
+						tier = 2 
+					}
+					has_great_project = {
+						type = fu_den_haag_dike
+						tier = 3 
+					}
+				}
+			}
+			development = 25 
+		}
+		97 = {
+			custom_trigger_tooltip = {
+				tooltip = ned_dike_any_level 
+				OR = {
+					has_great_project = {
+						type = fu_amsterdam_dike
+						tier = 1 
+					}
+					has_great_project = {
+						type = fu_amsterdam_dike
+						tier = 2 
+					}
+					has_great_project = {
+						type = fu_amsterdam_dike
+						tier = 3 
+					}
+				}
+			}
+			development = 25 
+		}
+		1744 = {
+			custom_trigger_tooltip = {
+				tooltip = ned_dike_any_level 
+				OR = {
+					has_great_project = {
+						type = fu_antwerp_dike
+						tier = 1 
+					}
+					has_great_project = {
+						type = fu_antwerp_dike
+						tier = 2 
+					}
+					has_great_project = {
+						type = fu_antwerp_dike
+						tier = 3 
+					}
+				}
+			}
+			development = 25 
+		}
+	}
+}
+
+achievement_fu_nikola_in_the_purple = {
+	id = 515
+	localization = FU_NIKOLA_IN_THE_PURPLE_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		tag = BYZ 
+		heir_adm = 5 
+		heir_dip = 5 
+		heir_mil = 5 
+		heir_claim = 95
+	}
+}
+
+achievement_fu_never_tell_me_the_odds = {
+	id = 516
+	localization = FU_NEVER_TELL_ME_THE_ODDS_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		tag = TUR 
+		technology_group = western 
+	}
+}
+
+achievement_achievement_fu_balancing_cope_seethe = {
+	id = 517
+	localization = FU_BALANCING_COPE_SEETHE_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		was_tag = QAR 
+		AKK = { is_subject_of = ROOT } 
+		has_global_modifier_value = {
+			which = discipline 
+			value = 0.35
+		}
+		has_global_modifier_value = {
+			which = cavalry_power 
+			value = 0.5
+		}
+	}
+}
+
+achievement_fu_we_can_do_it_by_1550 = {
+	id = 518
+	localization = FU_CAN_WE_DO_IT_BY_1550_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+		has_dlc = "Emperor"
+	}
+	happened = {
+		tag = TUR 
+		is_hegemon = yes 
+		NOT = { is_year = 1550 }
+	}
+}
+
+achievement_fu_not_all_doom_and_gloom = {
+	id = 519
+	localization = FU_IT_AINT_THAT_BAD_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+		has_dlc = "Dharma" 
+	}
+	happened = {
+		tag = TUR 
+		has_reform = fu_janissary_autocracy
+		stability = 3 
+	}
+}
+
+achievement_fu_girls_do_get_it_done = {
+	id = 520
+	localization = FU_GIRLS_GET_IT_DONE_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+		has_dlc = "Dharma" 
+	}
+	happened = {
+		tag = TUR 
+		has_country_modifier = tur_reign_of_women_modifier
+		employed_advisor = { 
+			category = adm 
+			is_male = no 
+		}
+		employed_advisor = {
+			category = dip 
+			is_male = no 
+		}
+		employed_advisor = {
+			category = mil 
+			is_male = no 
+		}
+		stability = 3 
+	}
+}
+
+achievement_fu_limonen = {
+	id = 521
+	localization = FU_LIMONEN_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		trading_bonus = {
+			trade_goods = tea
+			value = yes
+		} 
+		num_of_owned_provinces_with = {
+			trade_goods = tea 
+			has_manufactory_trigger = yes 
+			value = 10
+		}
+	}
+}
+
+achievement_fu_negus_in_paris = {
+	id = 522
+	localization = FU_NEGUS_IN_PARIS_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		OR = { 
+			tag = AKS 
+			tag = ETH 
+		}
+		owns = 183 
+	}
+}
+
+achievement_fu_le_french_canal = {
+	id = 523
+	localization = FU_LE_FRENCH_CANAL_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+	}
+	happened = {
+		was_tag = PRO 
+		tag = FRA 
+		1269 = { 
+			trade_share = { 
+				country = FRA 
+				share = 90 
+			}
+		}
+	}
+}
+
+achievement_fu_master_of_melody = {
+	id = 524
+	localization = FU_MASTER_OF_MELODY_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+		has_dlc = "Leviathan" 
+	}
+	happened = {
+		any_owned_province = { 
+			has_great_project = {
+				type = fu_la_scala
+				tier = 3 
+			}
+		}
+		composer = 3 
+	}
+}
+
+achievement_fu_nizaris = {
+	id = 525
+	localization = FU_NIZARIS_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+		has_dlc = "Cradle of Civilization"
+	}
+	happened = {
+		tag = PER 
+		egypt_region = { 
+			type = all 
+			owned_by = PER
+			religion = shiite 
+		}
+		has_country_modifier = ismaili_scholar_modifier
+	}
+}
+
+achievement_fu_yaas_queen = {
+	id = 526
+	localization = FU_YAAS_QUEEN_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+		has_dlc = "Cradle of Civilization"
+	}
+	happened = {
+		tag = ORL
+		KOJ = { is_subject_of = ORL }
+		ENG = { exists = no } 
+		GBR = { exists = no } 
+	}
+}
+
+achievement_fu_chewy_through_the_pain = {
+	id = 527
+	localization = FU_CHEWY_THROUGH_THE_PAIN_LOC
+	
+	possible = {
+		normal_or_historical_nations = yes
+		ironman = no
+		start_date = 1444.11.11
+		
+	}
+	happened = {
+		OR = { 
+			tag = MLO 
+			tag = LAN 
+		}
+		italy_region = { 
+			type = all 
+			country_or_non_sovereign_subject_holds = ROOT 
+		}
+		NOT = { is_year = 1465 }
+	}
+}

@@ -4,3 +4,4 @@
 
 FU1 = "countries/LatinEmpireFU.txt"
 VOC = "countries/EastIndiesFU.txt"
+FU5 = "countries/KraliyetMacaristanFU.txt"

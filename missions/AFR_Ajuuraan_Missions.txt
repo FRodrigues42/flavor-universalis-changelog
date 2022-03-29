@@ -465,7 +465,7 @@ aju_missions_4 = {
 			else_if = {
 				limit = {
 					estate_loyalty = {
-						estate = nobles 
+						estate = estate_nobles  
 						loyalty = 60 
 					}
 				}	

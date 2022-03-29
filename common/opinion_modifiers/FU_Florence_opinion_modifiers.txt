@@ -1,6 +1,6 @@
 lan_italian_trusted_funds_modifier = {
 	opinion = 25
-	yearly_decay = -2.5
+	yearly_decay = 2.5
 }
 lan_treaty_eight_saints_modifier = { 
 	opinion = 50
@@ -8,5 +8,5 @@ lan_treaty_eight_saints_modifier = {
 }
 lan_florentine_giraffe_opinion_modifier = {
 	opinion = 50
-	yearly_decay = -5
+	yearly_decay = 5
 }

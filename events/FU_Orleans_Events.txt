@@ -1,0 +1,235 @@
+namespace = FU_Orleans_Events
+
+country_event = { #The Beauty of the Loire
+	id = FU_Orleans_Events.1
+	title = FU_Orleans_Events.1.t 
+	desc = FU_Orleans_Events.1.d 
+	picture = CITY_VIEW_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = FU_Orleans_Events.1.a 
+		
+		if = { 
+			limit = { has_dlc = "Mandate of Heaven" }
+			add_country_modifier = {
+				name = orl_loire_travels_modifier
+				duration = -1 
+			}
+		}
+		else = { add_dip_power = 150 } 
+		loire_area = { 
+			add_base_tax = 2 
+			add_prosperity = 100
+		} 
+	}
+}
+
+country_event = { #The Second Coming of the Maid of Orleans
+	id = FU_Orleans_Events.2
+	title = FU_Orleans_Events.2.t 
+	desc = FU_Orleans_Events.2.d 
+	picture = wihgfx_FEMALE_GENERAL_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = FU_Orleans_Events.2.a
+		
+		ai_chance = { factor = 100 } 
+		define_ruler = { 
+			name = "Jeanne"
+			dynasty = "d' Arc" 
+			change_adm = 3 
+			change_dip = 3 
+			change_mil = 4 
+			female = yes 
+			age = 18 
+			hide_skills = yes 
+		}
+		if = { 
+			limit = { has_dlc = "Rights of Man" } 
+			add_ruler_personality = immortal_personality
+			add_ruler_personality = fu_maid_of_orleans_personality
+		}
+		set_defender_of_the_faith = { who = ROOT } 
+	}
+	
+	option = { 
+		name = FU_Orleans_Events.2.b 
+		
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 50
+		}
+		change_adm = 2 
+	}
+}
+
+country_event = { 
+	id = FU_Orleans_Events.3
+	title = flavor_orl.10.t
+	desc = flavor_orl.10.d
+	picture = POPE_PREACHING_eventPicture
+	is_triggered_only = yes 
+
+	# Saint Joan, pray for us
+	option = {
+		name = flavor_orl.10.o.a
+		add_country_modifier = {
+			name = "joan_of_arc_beatified"
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_country_flag = had_maid_of_orleans
+			}
+			hidden_effect = {
+				country_event = { id = FU_Orleans_Events.6 days = 30 }
+			}
+		}
+	}
+} 
+
+country_event = { 
+	id = FU_Orleans_Events.4
+	title = flavor_orl.4.t
+	desc = flavor_orl.4.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = flavor_orl.4.o.a
+		add_prestige = 10
+		add_legitimacy = 10
+		if = {
+			limit = {
+				exists = ORL
+			}
+			ORL = { set_country_flag = had_maid_of_orleans }
+		}
+		set_global_flag = maid_of_orleans
+	}
+}
+
+country_event = {
+	id = FU_Orleans_Events.5
+	title = FU_Orleans_Events.5.t 
+	desc = FU_Orleans_Events.5.d 
+	picture = GREAT_BUILDING_eventPicture 
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Orleans_Events.5.a 
+		
+		trigger = { 
+			183 = { owned_by = ROOT } 
+		}
+		set_capital = 183  
+		183 = { 
+			add_base_tax = 2 
+			add_base_production = 2
+			add_base_manpower = 2 
+		}
+	}
+	option = { 
+		name = FU_Orleans_Events.5.b 
+		
+		184 = { 
+			add_base_tax = 2 
+			add_base_production = 2
+			add_base_manpower = 2 
+		}
+	}
+	option = { 
+		name = FU_Orleans_Events.5.c 
+		
+		add_country_modifier = {
+			name = orl_itenerary_capital_modifier
+			duration = 7300 
+		}
+		if = { 
+			limit = { adm = 6 } 
+			add_adm_power = 50 
+		}
+		else = { change_adm = 1 } 
+	}
+}
+
+country_event = { 
+	id = FU_Orleans_Events.6
+	title = flavor_orl.11.t
+	desc = flavor_orl.11.d
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	# Accept their service
+	option = {
+		name = flavor_orl.11.o.a
+		custom_tooltip = flavor_orl.11.o.a.t
+		set_country_flag = militant_order_of_saint_joan
+	}
+
+	# Have them take over
+	option = {
+		name = flavor_orl.11.o.b
+
+		add_country_modifier = {
+			name = orl_sisters_takeover_modifier
+			duration = -1
+		}
+		if = {
+			limit = {
+				NOT = { government = theocracy }
+			}
+			change_government = theocracy
+		}
+
+		if = {
+			limit = {
+				is_female = no
+			}
+			define_ruler = {
+				name = "Jeanne"
+				change_mil = 3
+				female = yes
+			}
+		}
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			remove_heir = {}
+		}
+		add_government_reform = fu_order_of_saint_joan_reform
+	}
+}
+
+country_event = { #Event to correct Orleans stuff
+	id = FU_Orleans_Events.7
+	title = FU_Orleans_Events.7.t
+	desc = FU_Orleans_Events.7.d 
+	picture = GREAT_BUILDING_eventPicture
+	hidden = yes 
+	fire_only_once = yes 
+	
+	trigger = { 
+		tag = ORL 
+		has_country_modifier = sisters_takeover
+		has_reform = holy_state_reform
+	}
+	
+	immediate = { 
+		
+	}
+	
+	option = { 
+		name = FU_Orleans_Events.7.a 
+		
+		add_government_reform = fu_order_of_saint_joan_reform
+		remove_country_modifier = sisters_takeover
+		add_country_modifier = orl_sisters_takeover_modifier
+	}
+}

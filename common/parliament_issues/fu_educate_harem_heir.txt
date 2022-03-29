@@ -1,0 +1,32 @@
+fu_educate_harem_heir = {
+	category = 2		# same category = 90% less likely
+
+	allow = {
+		has_country_flag = tur_unlock_new_parliament_issues_flag
+		has_heir = yes 
+		OR = { 
+			has_reform = ottoman_government
+			has_reform = fu_ottoman_government
+		}
+	}
+	
+	effect = {
+		random_list = { 
+			33 = { change_heir_adm = 1 } 
+			33 = { change_heir_dip = 1 }
+			33 = { change_heir_mil = 1 } 
+		}
+	}
+	
+	modifier = {
+		advisor_cost = -0.1
+	}
+	
+	chance = {
+		factor = 1.25
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}

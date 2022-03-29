@@ -1,7 +1,4 @@
 superiority_dithmarschen_break_chains = {
-	badboy_factor = 0.75
-	prestige_factor = 1.5
-	peace_cost_factor = 0.75
 	
 	type = superiority
 	
@@ -34,6 +31,7 @@ superiority_dithmarschen_break_chains = {
 		
 		peace_options = {
 			po_change_government
+			po_demand_provinces
 		}
 		
 		country_desc = ALL_MONARCHIES

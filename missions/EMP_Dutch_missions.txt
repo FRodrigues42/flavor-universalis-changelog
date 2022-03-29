@@ -30,7 +30,7 @@ fu_netherlands_missions_1 = {
 				limit = { has_dlc = "Dharma" }
 				87 = {
 					OR = { 
-						has_province_modifier = staple_port 
+						has_province_modifier = the_staple_port 
 						province_has_center_of_trade_of_level = 2 
 					}
 				}
@@ -38,7 +38,7 @@ fu_netherlands_missions_1 = {
 			else = {
 				87 = {
 					OR = { 
-						has_province_modifier = staple_port 
+						has_province_modifier = the_staple_port 
 						has_trade_building_trigger = yes 
 					}
 				}
@@ -61,7 +61,7 @@ fu_netherlands_missions_1 = {
 			}
 			if = {
 				limit = {
-					87 = { has_province_modifier = staple_port }
+					87 = { has_province_modifier = the_staple_port }
 				}
 				add_mercantilism = 2 
 			}

@@ -290,7 +290,6 @@ fu_qara_qoyunlu_missions_2 = {
 		}
 		effect = {
 			custom_tooltip = qar_upgrade_monument_without_requirements_tt
-			set_country_flag = qq_activate_baku_ateshgah_mission_reward_flag
 			4299 = {
 				if = {
 					limit = { 
@@ -313,7 +312,7 @@ fu_qara_qoyunlu_missions_2 = {
 				}
 			}
 			hidden_effect = { 
-				country_event = { id = FU_QQ_Events.6 } 
+				set_country_flag = qq_activate_baku_ateshgah_mission_reward_flag
 			}
 		}
 	}

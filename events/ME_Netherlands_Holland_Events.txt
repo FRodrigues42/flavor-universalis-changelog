@@ -393,7 +393,7 @@ country_event = {
 		
 		change_variable = { naval_professionalism_var = 10 }
 		create_admiral = {
-			tradition = 125
+			tradition = 100
 		}
 		hidden_effect = {
 			if = {
