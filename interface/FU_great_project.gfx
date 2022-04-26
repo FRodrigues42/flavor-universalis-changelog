@@ -220,4 +220,8 @@ spriteTypes = {
 		name = "GFX_great_project_fu_holy_cross_cathedral"	
 		texturefile = "gfx//interface//FU_great_projects//great_project_fu_holy_cross_cathedral.dds"
 	}
+	spriteType = { 
+		name = "GFX_great_project_fu_port_havana"	
+		texturefile = "gfx//interface//FU_great_projects//great_project_fu_port_havana.dds"
+	}
 }

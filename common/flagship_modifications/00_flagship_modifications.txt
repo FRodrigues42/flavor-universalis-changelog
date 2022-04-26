@@ -519,4 +519,96 @@ nov_novgorodian_oak = {
     }
 }
 
+empowered_spare_jolly_roger = {
+	trigger = { has_country_flag = nss_new_modifications_flag }
+    modifier = {
+        privateering_efficiency_in_fleet_modifier = 0.5
+        naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+	    factor = 1
+        modifier = {
+            factor = 10
+            has_reform = pirate_republic_reform
+        }
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            has_reform = pirate_republic_reform
+        }
+    }
+}
+
+steel_grappling_hooks = {
+	trigger = { has_country_flag = nss_new_modifications_flag }
+    modifier = {
+        capture_ship_chance = 0.25
+		number_of_cannons_flagship_modifier = 0.1
+		naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+	    factor = 1
+        modifier = {
+            factor = 10
+            has_reform = pirate_republic_reform
+        }
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            has_reform = pirate_republic_reform
+        }
+    }
+}
+
+tropic_wood_hulls = {
+	trigger = { has_country_flag = nss_new_modifications_flag }
+    modifier = {
+        naval_attrition_in_fleet_modifier = -0.25
+		flagship_durability = 0.5
+		naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+	    factor = 1
+        modifier = {
+            factor = 10
+            has_reform = pirate_republic_reform
+        }
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            has_reform = pirate_republic_reform
+        }
+    }
+}
+
+flying_gang_flag = {
+	trigger = { has_country_flag = nss_flying_gang_flag }
+    modifier = {
+		morale_in_fleet_modifier = 0.1
+		flagship_durability = 1
+		number_of_cannons_flagship_modifier = 0.5
+		naval_maintenance_flagship_modifier = 0.25
+    }
+    ai_trade_score = {
+	    factor = 1
+        modifier = {
+            factor = 10
+            has_reform = pirate_republic_reform
+        }
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            has_reform = pirate_republic_reform
+        }
+    }
+}
+
 

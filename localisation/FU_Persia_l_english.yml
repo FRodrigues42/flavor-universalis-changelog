@@ -560,7 +560,8 @@
  FU_improved_silk_road_desc: "A system of upgrades to roads and bridges, a system of guards to protect the roads (for a small tax) and a chain of Caravanserai to provide rest stops. All help the merchants as they traverse the silk road and also provide increased revenues for the state."
  
  
- 
- 
+ #Government Reforms
+ fu_indian_sultanate_reform: "Empowered Indian Sultanate"
+ fu_indian_sultanate_reform_desc: "Ruled by a Muslim minority the Sultanates of India have had to evolve and expand the traditional Muslim ideas of Kingship. While they remain Islamic states the role of the Dhimmi, traditionally encompassing Jews and Christians, have been extended to the Dharmic religions."
  
  

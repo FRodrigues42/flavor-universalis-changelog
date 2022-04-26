@@ -146,3 +146,28 @@ fu_maid_of_orleans_personality = {
 	global_missionary_strength = 0.02
 	nation_designer_cost = 50
 }
+
+fu_legendary_privateer_personality = {
+	
+	ruler_allow = {
+		allow = {
+			always = no 
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			always = no 
+		}
+	}
+	
+	privateer_efficiency = 0.5
+	naval_morale = 0.1
+	nation_designer_cost = 50
+}

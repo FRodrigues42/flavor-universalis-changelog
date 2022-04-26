@@ -172,3 +172,60 @@ fu_head_of_patriarchate = {
 		factor = 10
 	}
 }
+
+fu_naval_supply_master = {
+	monarch_power = DIP
+	
+	# Bonus
+	naval_attrition = -0.25
+
+	skill_scaled_modifier = { 
+		sailor_maintenance_modifer = -0.05
+	}
+
+	chance = {
+		factor = 0
+	}
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+fu_right_hand_captain = {
+	monarch_power = ADM
+	
+	# Bonus
+	republican_tradition = 0.25
+
+	skill_scaled_modifier = { 
+		available_province_loot = 0.1
+	}
+
+	chance = {
+		factor = 0
+	}
+	
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+fu_legendary_buccaneer = {
+	monarch_power = MIL
+	
+	# Bonus
+	heavy_ship_power = 0.1
+
+	skill_scaled_modifier = { 
+		navy_tradition = 0.25
+	}
+
+	chance = {
+		factor = 0
+	}
+	
+	ai_will_do = {
+		factor = 10
+	}
+}

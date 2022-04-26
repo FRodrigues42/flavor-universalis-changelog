@@ -99,7 +99,8 @@ tur_iberian_wars_modifier = {
 }
 tur_fall_of_cairo_modifier2 = { 
 	min_local_autonomy = 50
-	trade_value_modifier = -1
+	trade_value_modifier = -0.75
+	local_governing_cost = -0.25
 }
 tur_developing_mamluk_communities_modifier = { 
 	local_development_cost = -0.15 

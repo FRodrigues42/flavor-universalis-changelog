@@ -77,6 +77,22 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_advisor_fu_right_hand_captain_female"
+		texturefile = "gfx//interface//advisors//fu_right_hand_captain.dds"
+		noOfFrames = 1
+
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_fu_legendary_buccaneer_female"
+		texturefile = "gfx//interface//advisors//fu_legendary_buccaneer.dds"
+		noOfFrames = 1
+
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
 }
 
 

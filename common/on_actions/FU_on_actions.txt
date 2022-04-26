@@ -114,3 +114,21 @@ on_extend_regency = {
 		}
 	}
 }
+
+on_raid_coast = {
+	if = {
+		limit = {
+			has_faction = pr_buccaneers
+		}
+		add_faction_influence = {
+			faction = pr_buccaneers
+			influence = 1
+		}
+	}
+	if = { 
+		limit = { has_country_flag = nss_raid_for_pp_flag } 
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 1
+		}
+}

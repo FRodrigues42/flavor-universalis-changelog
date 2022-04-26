@@ -112,6 +112,7 @@ l_english:
  tur_has_enabled_st_peters_basilica_tt: "Has enabled the §YSaint Peter's Basilica§! via a mission or event reward" 
  be_number_one_gp_tt: "Is the §YStrongest Great Power§!"
  gen_tt_5_crownland_tt: "Gain §Y5% Estate Land§! for the §YCrown§!"
+ make_puppet_cb_wargoal_desc: "Install a puppet Government"
  
  
  #Absolutely Not Achievements

@@ -1,0 +1,548 @@
+namespace = FU_New_Providence_Events
+
+country_event = { #Sodom of the New World
+	id = FU_New_Providence_Events.1 
+	title = FU_New_Providence_Events.1.t 
+	desc = FU_New_Providence_Events.1.d 
+	picture = CARIBBEAN_PIRATE_FORT_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = FU_New_Providence_Events.1.a 
+		
+		487 = { 
+			remove_core = ROOT 
+			add_core = PRY 
+			cede_province = PRY 
+		}
+		release = PRY 
+		PRY = { 
+			add_government_reform = pirate_republic_reform 
+			define_ruler = {
+				name = "Henry Morgan"
+				adm = 3 
+				dip = 5 
+				mil = 6
+			}
+			add_treasury = 250 
+			add_adm_power = 100 
+			add_dip_power = 100
+			add_mil_power = 100
+		}
+		create_march = PRY 
+		
+		define_admiral = {
+			name = "Henry Morgan"
+			fire = 4 
+			shock = 5 
+			manuever = 4 
+			siege = 3 
+		}
+		random_owned_province = { 
+			limit = { has_port = yes } 
+			create_flagship = {
+				name = "Fancy"
+				type = heavy_ship
+			}
+		}
+	}
+	
+	option = { 	
+		name = FU_New_Providence_Events.1.b 
+		
+		487 = { 
+			add_center_of_trade_level = 1 
+			add_building = grand_shipyard 
+			add_base_production = 2 
+			add_base_manpower = 2 
+		}
+	}
+}
+
+country_event = { #Trading with the Old World
+	id = FU_New_Providence_Events.2
+	title = FU_New_Providence_Events.2.t 
+	desc = FU_New_Providence_Events.2.d 
+	picture = TRADEGOODS_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = FU_New_Providence_Events.2.a 
+		
+		add_country_modifier = {
+			name = nss_taxing_foreign_merchants_modifier
+			duration = 5475
+		}
+		change_dip = 1 
+	}
+	
+	option = {
+		name = FU_New_Providence_Events.2.b 
+		
+		change_mil = 1 
+		add_mercantilism = 3 
+	}
+}
+
+country_event = { #Greatness from Small Beginnings...
+	id = FU_New_Providence_Events.3
+	title = FU_New_Providence_Events.3.t 
+	desc = FU_New_Providence_Events.3.d 
+	picture = SMUGGLERS_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = FU_New_Providence_Events.3.a 
+		
+		add_country_modifier = {
+			name = nss_new_beginnings_modifier
+			duration = 7300
+		}
+		add_sailors = 500 
+	}
+}
+
+country_event = { #Edward Thatch 
+	id = FU_New_Providence_Events.4
+	title = FU_New_Providence_Events.4.t 
+	desc = FU_New_Providence_Events.4.d 
+	picture = PIRATE_CAPTAINS_eventPicture
+	is_triggered_only = yes 
+	
+	option = {	
+		name = FU_New_Providence_Events.4.a 
+		
+		define_admiral = {
+			name = "Edward 'Black Beard' Thatch"
+			fire = 4 
+			shock = 7
+			manuever = 2 
+			siege = 1 
+		}
+		random_owned_province = { 
+			limit = { has_port = yes } 
+			create_flagship = {
+				name = "Queen Anne's Revenge" 
+				type = heavy_ship 
+			}
+		}
+	}
+}
+
+country_event = { #Capture of the Exceeding Treasure
+	id = FU_New_Providence_Events.5
+	title = FU_New_Providence_Events.5.t 
+	desc = FU_New_Providence_Events.5.d 
+	picture = BARBARY_PIRATES_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = FU_New_Providence_Events.5.a 
+		
+		1248 = { 
+			create_flagship = {
+				name = "Ganj-i-Sawai"
+				type = light_ship 
+			}
+		}
+		add_treasury = 1000
+		add_republican_tradition = 5 
+	}
+}
+
+country_event = { #Barriers against the Rich and Powerful
+	id = FU_New_Providence_Events.6
+	title = FU_New_Providence_Events.6.t 
+	desc = FU_New_Providence_Events.6.d 
+	picture = FLAGSHIP_CAPTURED_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = FU_New_Providence_Events.6.a 
+		
+		custom_tooltip = nss_lose_madagascar_except_1193_tt
+		hidden_effect = { 
+			betsimasaraka_area = { 
+				remove_core = ROOT 
+				add_core = LIB 
+				cede_province = LIB 
+			}
+			sakalava_area = { 
+				limit = {
+					NOT = { province_id = 1193 }
+				}
+				remove_core = ROOT 
+				add_core = LIB 
+				cede_province = LIB 
+			}
+			madagascar_highlands_area = { 
+				remove_core = ROOT 
+				add_core = LIB 
+				cede_province = LIB 
+			}
+			southern_madagascar = { 
+				remove_core = ROOT 
+				add_core = LIB 
+				cede_province = LIB 
+			}
+		}
+		release = LIB 
+		LIB = { 
+			add_government_reform = pirate_republic_reform 
+			define_ruler = {
+				name = "James Misson"
+				adm = 4 
+				dip = 4 
+				mil = 4
+			}
+			add_republican_tradition = 50
+			add_treasury = 250 
+			add_adm_power = 100 
+			add_dip_power = 100
+			add_mil_power = 100
+			add_country_modifier = {
+				name = nss_rise_libertatia_modifier
+				duration = -1 
+			}
+		}
+		create_march = LIB 
+		add_country_modifier = {
+			name = nss_rise_libertatia_modifier
+			duration = -1 
+		}
+	}
+	
+	option = {
+		name = FU_New_Providence_Events.6.b 
+		
+		custom_tooltip = nss_dev_in_madagascar_tt
+		hidden_effect = { 
+			betsimasaraka_area = { add_base_tax = 1 } 
+			sakalava_area = { add_base_production = 1 } 
+			madagascar_highlands_area = { add_base_manpower = 1 } 
+			southern_madagascar = { add_base_production = 1 } 
+		}
+	}
+}
+	
+country_event = { 
+	id = FU_New_Providence_Events.7
+	title = FU_New_Providence_Events.7.t 
+	desc = FU_New_Providence_Events.7.d 
+	picture = FLAGSHIP_CAPTURED_eventPicture
+	hidden = yes 
+	is_triggered_only = yes 
+	
+	immediate = { 
+		add_ruler_personality = fu_legendary_privateer_personality 
+	}
+	
+	
+	option = { 
+		name = FU_New_Providence_Events.7.a 
+		
+		
+	}
+}
+
+country_event = { #Pirate Empress of China
+	id = FU_New_Providence_Events.8
+	title = FU_New_Providence_Events.8.t 
+	desc = FU_New_Providence_Events.8.d 
+	picture = fu_pirate_empress_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = FU_New_Providence_Events.8.a 
+		
+		add_government_reform = fu_declare_pirate_empire_reform
+		define_admiral = {
+			name = "Zheng Yi Sao" 
+			female = yes 
+			fire = 5 
+			shock = 5
+			manuever = 6 
+			siege = 4 
+		}
+		738 = { 
+			create_flagship = {
+				name = "Red Flag" 
+				type = heavy_ship 
+			}
+		}
+	}
+}
+
+country_event = { #The Slaves of West Africa 
+	id = FU_New_Providence_Events.9
+	title = FU_New_Providence_Events.9.t 
+	desc = FU_New_Providence_Events.9.d 
+	picture = AFRICAN_EUROPEAN_TRADE_eventPicture
+	is_triggered_only = yes 
+	
+	option = { 
+		name = FU_New_Providence_Events.9.a 
+		
+		abolish_slavery_effect = yes 
+		define_admiral = {
+			name = "Black Caesar"
+			fire = 3 
+			shock = 4 
+			manuever = 4 
+			siege = 2
+		}
+		add_country_modifier = {
+			name = nss_no_shackles_modifier
+			duration = 9125
+		}
+	}
+	
+	option = { 
+		name = FU_New_Providence_Events.9.b 
+		
+		add_treasury = 500
+		add_country_modifier = {
+			name = nss_slave_crews_modifier
+			duration = 9125
+		}
+	}
+}
+
+country_event = { #Anne Bonny and Mary Read
+	id = FU_New_Providence_Events.10
+	title = FU_New_Providence_Events.10.t 
+	desc = FU_New_Providence_Events.10.d 
+	picture = fu_anne_bonny_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		OR = { 
+			tag = NSS 
+			was_tag = NSS 
+		}
+		has_reform = pirate_republic_reform
+		num_of_heavy_ship = 20 
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+	}
+	
+	option = {
+		name = FU_New_Providence_Events.10.a 
+		
+		define_advisor = {
+			name = "Anne Bonny"
+			type = fu_right_hand_captain
+			cost_multiplier = 0.1
+			female = yes 
+		}
+		custom_tooltip = fu_every_level_looting_amount_tt
+		add_years_of_income = -1
+	}
+	
+	option = { 
+		name = FU_New_Providence_Events.10.b 
+		
+		define_advisor = {
+			name = "Mary Read" 
+			type = fu_legendary_buccaneer
+			cost_multiplier = 0.1
+			female = yes 
+		}
+		custom_tooltip = fu_every_level_navy_tradition_tt
+		add_years_of_income = -1 
+	}
+	
+	option = { 
+		name = FU_New_Providence_Events.10.c 
+		
+		define_advisor = {
+			name = "Anne Bonny"
+			type = fu_right_hand_captain
+			cost_multiplier = 0.1
+			female = yes 
+		}
+		custom_tooltip = fu_every_level_looting_amount_tt
+		define_advisor = {
+			name = "Mary Read" 
+			type = fu_legendary_buccaneer
+			cost_multiplier = 0.1
+			female = yes 
+		}
+		custom_tooltip = fu_every_level_navy_tradition_tt
+		add_years_of_income = -2.5
+	}
+	
+	option = {
+		name = FU_New_Providence_Events.10.e
+		
+		add_prestige = 5
+	}
+}
+
+country_event = { #Robin Hood of the Sea
+	id = FU_New_Providence_Events.11
+	title = FU_New_Providence_Events.11.t 
+	desc = FU_New_Providence_Events.11.d 
+	picture = PIRATE_CAPTAINS_eventPicture
+	fire_only_once = yes 
+	
+	trigger = {
+		OR = { 
+			tag = NSS 
+			was_tag = NSS 
+		}
+		has_reform = pirate_republic_reform
+		num_of_heavy_ship = 20 
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	option = { 
+		name = FU_New_Providence_Events.11.a
+		
+		add_country_modifier = {
+			name = nss_employing_black_sam_bellamy_modifier
+			duration = 9125
+		}
+		define_admiral = {
+			name = "Black Sam Bellamy"
+			fire = 3 
+			shock = 4 
+			manuever = 5
+			siege = 2
+		}
+	}
+}	
+	
+country_event = { #William Kidd
+	id = FU_New_Providence_Events.12
+	title = FU_New_Providence_Events.12.t 
+	desc = FU_New_Providence_Events.12.d 
+	picture = PIRATE_CAPTAINS_eventPicture
+	
+	trigger = {
+		OR = { 
+			tag = NSS 
+			was_tag = NSS 
+		}
+		has_reform = pirate_republic_reform
+		num_of_heavy_ship = 20 
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	option = { 
+		name = FU_New_Providence_Events.12.a 
+		
+		define_admiral = {
+			name = "William Kidd" 
+			fire = 4 
+			shock = 3 
+			manuever = 6 
+			siege = 2
+		}
+		random_owned_province = { 
+			limit = { has_port = yes }
+			create_flagship = {
+				name = "Quedagh" 
+				type = heavy_ship 
+			}
+		}
+		add_years_of_income = -0.5
+	}
+	
+	option = { 
+		name = FU_New_Providence_Events.12.b 
+		
+		define_ruler = { 
+			name = "William Kidd" 
+			adm = 3 
+			dip = 5 
+			mil = 6 
+		}
+		random_owned_province = { 
+			limit = { has_port = yes }
+			create_flagship = {
+				name = "Quedagh" 
+				type = heavy_ship 
+			}
+		}
+		add_years_of_income = -1
+	}
+	
+	option = {
+		name = FU_New_Providence_Events.12.c 
+		
+		add_prestige = 10 
+	}
+}
+
+
+country_event = { #Jack Sparrow
+	id = FU_New_Providence_Events.13
+	title = FU_New_Providence_Events.13.t 
+	desc = FU_New_Providence_Events.13.d 
+	picture = {
+	   trigger = { navy_tradition = 60 }
+	   picture = fu_jack1_eventPicture
+	}
+	picture = {
+		trigger = { 
+			NOT = { navy_tradition = 60 } 
+		}
+	   picture = fu_jack2_eventPicture
+	}
+	
+	trigger = {
+		OR = { 
+			tag = NSS 
+			was_tag = NSS 
+		}
+		has_reform = pirate_republic_reform
+		num_of_heavy_ship = 20 
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+
+	option = { 
+		name = FU_New_Providence_Events.13.a 
+		
+		define_admiral = {
+			name = "Jack Sparrow" 
+			fire = 6
+			shock = 6
+			manuever = 5 
+			siege = 2 
+		}
+		random_owned_province = {
+			limit = { has_port = yes } 
+			create_flagship = {
+				name = "Black Pearl" 
+				type = heavy_ship 
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

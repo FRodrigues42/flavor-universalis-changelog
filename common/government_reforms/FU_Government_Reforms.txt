@@ -205,3 +205,72 @@ fu_sultanate_of_rum_and_cairo = {
 		factor = 100
 	}
 }
+
+fu_indian_sultanate_reform = {
+	icon = "indian_sultanate"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			capital_scope = {
+				superregion = india_superregion
+			}
+			has_reform = fu_indian_sultanate_reform
+		}
+		OR = { 
+			religion_group = muslim
+			religion_group = zoroastrian_group
+		}
+	}
+	valid_for_nation_designer = no
+	legacy_equivalent = indian_sultanate_legacy
+
+	modifiers = {
+		tolerance_heathen = 3
+		max_absolutism = 5
+		monthly_reform_progress = 0.25
+	}
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+}
+
+fu_declare_pirate_empire_reform = {
+	icon = "crown_highlighted"
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			have_had_reform = fu_declare_pirate_empire_reform 
+			mission_completed = nss_contact_far_east_pirates
+		}
+	}
+	valid_for_nation_designer = no
+
+	modifiers = {
+		max_absolutism = 25
+		free_policy = 1 
+		state_governing_cost = -0.25
+	}
+}
+
+fu_fleet_with_a_state_reform = {
+	icon = "crown_highlighted"
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			have_had_reform = fu_fleet_with_a_state_reform 
+			mission_completed = nss_strong_republican_foundations
+		}
+	}
+	valid_for_nation_designer = no
+
+	modifiers = {
+		free_navy_leader_pool = 2
+		allowed_marine_fraction = 0.1 
+		republican_tradition = 0.5
+		pr_captains_influence = 0.1
+	}
+}

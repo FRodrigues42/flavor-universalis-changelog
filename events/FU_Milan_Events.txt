@@ -162,6 +162,30 @@ country_event = {
 		add_legitimacy = 10 
 		add_republican_tradition = 10
 	}
+	
+	option = {
+		name = FU_Milan_Events.6.c
+		trigger = { 
+			NOT = { government = monarchy } 
+		}
+		highlight = yes 
+		
+		if = {
+			limit = {
+				OR = {
+					is_part_of_hre = no 
+					is_elector = yes 
+				}
+			}
+			set_government_rank = 3 
+		}
+		hidden_effect = { set_country_flag = mlo_formed_lom }
+		change_government_reform_progress = 100
+		add_republican_tradition = 3 
+		add_devotion = 10
+		override_country_name = LOB
+		country_event = { id = ideagroups.1 }
+	}
 }
 
 country_event = {

@@ -1,0 +1,1351 @@
+nss_missions_1 = { 
+	slot = 1 
+	generic = no
+	ai = yes
+	potential = {
+		tag = NSS
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+	
+	nss_secure_north_carribean = { #oh my god i cant spell carribean i always spell it with double 'b'
+		icon = mission_caribbean_cn
+		required_missions = { nss_sic_parvis_magna } 
+		position = 2
+		provinces_to_highlight = { 
+			OR = { 
+				area = cuba_area
+				area = east_cuba_area 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			cuba_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_cuba_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			if = { 
+				limit = { has_dlc = "Leviathan" }
+				484 = { 
+					OR = { 
+						has_great_project = {
+							type = fu_port_havana
+							tier = 2 
+						}
+						has_great_project = {
+							type = fu_port_havana
+							tier = 3 
+						}
+					}
+				}
+			}
+			else = { 
+				484 = { development = 20 } 
+			}
+			484 = {
+				OR = {	
+					has_building = coastal_defence
+					has_building = naval_battery 
+				}
+			}
+		}
+		effect = {
+			add_treasury = 500
+			custom_tooltip = nss_if_bucc_power_tt
+			tooltip = {
+				cuba_area = { 
+					add_province_modifier = {
+						name = nss_influx_of_settlers_modifier
+						duration = 7300
+					}
+					add_base_tax = 1 
+				}
+				east_cuba_area = { 
+					add_province_modifier = {
+						name = nss_influx_of_settlers_modifier
+						duration = 7300
+					}
+					add_base_tax = 1 
+				}
+			}
+			custom_tooltip = nss_if_smugg_power_tt
+			tooltip = { 
+				484 = { 
+					add_center_of_trade_level = 1 
+					add_base_production = 3 
+				}
+			}
+			custom_tooltip = nss_if_captains_power_tt
+			tooltip = {
+				change_dip = 1 
+				change_mil = 1 
+				add_navy_tradition = 15
+			}
+			hidden_effect = { 
+				if = { 	
+					limit = { faction_in_power = pr_buccaneers }
+					cuba_area = { 
+						add_province_modifier = {
+							name = nss_influx_of_settlers_modifier
+							duration = 7300
+						}
+						add_base_tax = 1 
+					}
+					east_cuba_area = { 
+						add_province_modifier = {
+							name = nss_influx_of_settlers_modifier
+							duration = 7300
+						}
+						add_base_tax = 1 
+					}
+				}
+				else_if = { 
+					limit = { faction_in_power = pr_smugglers }
+					484 = { 
+						add_center_of_trade_level = 1 
+						add_base_production = 3 
+					}
+				}
+				else = { 
+					change_dip = 1 
+					change_mil = 1 
+					add_navy_tradition = 15
+				}
+			}
+		}
+	}
+	
+	nss_port_royal = {
+		icon = mission_control_the_barbary_coast
+		required_missions = { nss_secure_north_carribean nss_pearl_antilles }
+		position = 3
+		provinces_to_highlight = {
+			province_id = 487 
+			NOT = { owned_by = ROOT } 
+		}
+		trigger = {
+			487 = { owned_by = ROOT } 
+			487 = { num_of_times_improved = 5 }
+		}
+		effect = { 
+			if = { 
+				limit = { 
+					PRY = { exists = no } 
+				}
+				country_event = { id = FU_New_Providence_Events.1 }
+			}
+			else = { 
+				487 = { 
+					add_center_of_trade_level = 1 
+					add_building = grand_shipyard 
+					add_base_production = 2 
+					add_base_manpower = 2 
+				}
+			}
+		}
+	}
+	
+	nss_reshape_sea_routes = {
+		icon = fu_le_panama_canal
+		required_missions = { nss_port_royal }
+		position = 4
+		provinces_to_highlight = { province_id = 835 } 
+		trigger = {
+			835 = { owned_by = ROOT } 
+			835 = { num_of_times_improved = 15 }
+			835 = { has_production_building_trigger = yes } 
+			if = { 
+				limit = { has_dlc = "Dharma" }
+				835 = { province_has_center_of_trade_of_level = 2 }
+			}
+			else = { 
+				835 = { base_production = 8 }
+			}
+		}
+		effect = { 
+			set_country_flag = fu_enable_panama_canal
+			hidden_effect = { 
+				add_treasury = 30000
+			}
+			835 = { 
+				add_great_project = {
+					type = panama_canal
+					instant = yes
+				}
+			}
+			hidden_effect = { 
+				add_treasury = -30000
+			}
+			if = { 
+				limit = { 
+					2002 = { is_empty = yes } 
+				}
+				create_colony_mission_reward = { province = 2002 }
+			}
+			835 = {
+				add_province_modifier = {
+					name = nss_panama_port_modifier 
+					duration = -1 
+				}
+			}
+		}
+	}
+	
+	nss_caribbean_queen = {
+		icon = fu_caribbean_queen
+		required_missions = { } 
+		position = 5
+		trigger = {
+			1516 = { is_strongest_trade_power = ROOT } 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				has_trade_building_trigger = yes 
+				value = 2
+			}
+			num_of_light_ship = 10 
+		}
+		effect = {
+			country_event = { id = FU_New_Providence_Events.2 }
+		}
+	}
+	
+	
+	nss_dominate_overseas_trade = {
+		icon = mission_the_triangle_trade
+		required_missions = { nss_caribbean_queen nss_gulf_aden }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1269
+				province_id = 1466
+				province_id = 1293
+			}
+			NOT = { 
+				privateer_power = {
+					country = ROOT 
+					share = 50 
+				}
+			}
+		}
+		trigger = {
+			1269 = {
+				privateer_power = {
+					country = ROOT 
+					share = 50 
+				}
+			}
+			1466 = {
+				privateer_power = {
+					country = ROOT 
+					share = 50 
+				}
+			}
+			1293 = {
+				privateer_power = {
+					country = ROOT 
+					share = 50 
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = nss_largest_fleet_tt
+				NOT = {
+					any_country = { navy_size = ROOT }
+				}
+			}
+		}
+		effect = {
+			if = { 
+				limit = { 
+					has_dlc = "Emperor" 
+					has_dlc = "Mandate of Heaven"
+					is_hegemon = no 
+					is_subject = no 
+				}
+				custom_tooltip = nss_naval_hegemon_tt
+				set_country_flag = nss_naval_hegemon_flag
+				add_navy_tradition = 25
+			}
+			else = { 
+				add_country_modifier = {
+					name = nss_naval_hegemon_modifier
+					duration = -1 
+				}
+			}
+			custom_tooltip = tur_every_european_inflation_based_on_trade_tt
+			hidden_effect = { 
+				every_country = {
+					limit = {
+						capital_scope = {
+							continent = europe
+						}
+						NOT = { alliance_with = ROOT }         ####Imagine player NSS literally selling alliance slots for 10k ducats each so players in Europe do not suffer inflation####
+						#ai = yes                              ####Players must also suffer#### 
+						#was_player = no                       ####You brought this on yourselves####
+						#OR = {                                ####Inflation reaps all####
+						#	is_free_or_tributary_trigger = yes 
+						#	overlord = {
+						#		ai = yes
+						#		was_player = no
+						#	}
+						#}
+					}
+					add_inflation_scaled_to_trade = {
+						inflation = 1.5                       ####I am become inflation, the destroyer of worlds####
+					}
+				}
+			}
+		}
+	}
+}
+	
+nss_missions_2 = { 
+	slot = 2 
+	generic = no
+	ai = yes
+	potential = {
+		tag = NSS
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes	
+	
+	nss_sic_parvis_magna = {
+		icon = fu_sic_parvis_magna
+		required_missions = { }
+		position = 1 
+		trigger = {
+			navy_size_percentage = 0.75 
+			OR = { 
+				faction_influence = {
+					faction = pr_buccaneers 
+					influence = 50 
+				}
+				faction_influence = {
+					faction = pr_smugglers 
+					influence = 50 
+				}
+				faction_influence = {
+					faction = pr_captains 
+					influence = 50 
+				}
+			}
+			stability = 1 
+		}
+		effect = { 
+			country_event = { id = FU_New_Providence_Events.3 }
+			if = {
+				limit = { 
+					NOT = { has_idea_group = exploration_ideas }
+				}
+				custom_tooltip = nss_gain_access_to_exploration_ideas_tt 
+				hidden_effect = { 
+					add_idea_group = exploration_ideas
+					add_idea = quest_for_the_new_world
+					add_idea = colonial_ventures
+					add_idea = overseas_exploration
+					add_idea = land_of_opportunity
+				}
+			}
+			else = { 
+				add_country_modifier = {
+					name = nss_pirate_expeditions_modifier
+					duration = 7300
+				}
+			}
+			custom_tooltip = nss_new_modifications_tt
+			set_country_flag = nss_new_modifications_flag
+			carribeans_region = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}
+		}
+	}
+	
+	nss_pearl_antilles = {
+		icon = mission_claim_the_canaries
+		required_missions = { nss_sic_parvis_magna }
+		position = 2 
+		provinces_to_highlight = {
+			OR = {	
+				area  = dominica_area 
+				area = hispaniola_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			dominica_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			hispaniola_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			490 = { 
+				has_shipyard_building_trigger = yes 
+				has_dock_building_trigger = yes 
+			}
+			490 = { num_of_times_improved = 4 }
+		}
+		effect = { 
+			490 = { 
+				add_province_modifier = {
+					name = nss_center_of_piracy_modifier
+					duration = -1 
+				}
+				add_center_of_trade_level = 1 
+			}
+			if = { 
+				limit = { has_global_flag = trade_goods_expanded_mod_active } 
+				set_country_flag = nss_enable_extra_mission_flag
+				swap_non_generic_missions = yes 
+			}
+			else = { add_prestige = 15 } 
+		}
+	}
+}
+	
+nss_missions_2_b = { 
+	slot = 2 
+	generic = no
+	ai = yes
+	potential = {
+		tag = NSS
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+		has_country_flag = nss_enable_extra_mission_flag
+	}
+	has_country_shield = yes
+	
+	nss_develop_cigar_production = {
+		icon = fu_cigar_factory
+		required_missions = { nss_pearl_antilles }
+		position = 3
+		provinces_to_highlight = { 
+			OR = { 
+				province_id = 4624
+				province_id = 484 
+			}
+			NOT = { 
+				base_production = 8 
+				has_production_building_trigger = yes 
+			} 
+		}
+		trigger = {
+			4624 = { 
+				base_production = 8 
+				has_production_building_trigger = yes 
+			}
+			484 = { 
+				base_production = 10
+				has_production_building_trigger = yes 
+			}
+			any_owned_province = {
+				NOT = { 	
+					OR = { 	
+						province_id = 4624 
+						province_id = 484 
+					}
+				}
+				base_production = 6
+				trade_goods = tobacco 
+				has_manufactory_trigger = yes 
+			}
+		}
+		effect = { 
+			random_owned_province = {
+				limit = { 
+					NOT = { 	
+						OR = { 	
+							province_id = 4624 
+							province_id = 484 
+						}
+					}
+					base_production = 6
+					trade_goods = tobacco 
+					has_manufactory_trigger = yes 
+				}
+				add_base_production = 4
+			}
+			484 = { 
+				change_trade_goods = cigars 
+				add_building = cigars_factory
+			}
+			4624 = { 
+				change_trade_goods = cigars 
+				add_building = cigars_factory
+			}
+			if = { 
+				limit = { 
+					NOT = { tag = CUB }
+				}
+				custom_tooltip = nss_if_cuba_tt
+				tooltip = {
+					484 = { 
+						add_country_modifier = {
+							name = nss_cuban_cigars_modifier
+							duration = -1 
+						}
+					}
+					4624 = {
+						add_country_modifier = {
+							name = nss_cuban_cigars_modifier
+							duration = -1 
+						}
+					}
+				}
+			}
+			else = {
+				484 = { 
+					add_country_modifier = {
+						name = nss_cuban_cigars_modifier
+						duration = -1 
+					}
+				}
+				4624 = {
+					add_country_modifier = {
+						name = nss_cuban_cigars_modifier
+						duration = -1 
+					}
+				}
+			}
+		}
+	}
+}		
+
+nss_missions_2_c = { 
+	slot = 2 
+	generic = no
+	ai = yes
+	potential = {
+		tag = NSS
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes	
+	
+	nss_gulf_aden = {
+		icon = mission_conquer_andhra_bah
+		required_missions = { nss_establish_libertatia }
+		position = 6
+		provinces_to_highlight = {
+			province_id = 1099
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			4346 = { 
+				privateer_power = {
+					country = ROOT 
+					share = 50 
+				}
+			}
+			1099 = { country_or_non_sovereign_subject_holds = ROOT } 
+			custom_trigger_tooltip = {
+				tooltip = nss_has_raided_387_tt
+				387 = { has_province_modifier = slaves_raid }
+			}
+			any_owned_province = {
+				base_production =  10 
+				NOT = { is_capital_of = ROOT }
+			}
+		}
+		effect = {
+			country_event = { id = FU_New_Providence_Events.4 } 
+			lanka_area = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT 
+			}
+			south_lanka_area = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT 
+			}
+			if = { 
+				limit = { 
+					387 = { 
+						has_province_modifier = coffea_arabica_modifier
+						NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+						owner = { 
+							NOT = { alliance_with = ROOT } 
+							OR = {
+								is_subject = no
+								overlord = {
+									NOT = { alliance_with = ROOT }
+								}
+							}
+						}
+					}
+				}
+				custom_tooltip = nss_raids_387_steal_coffee_tt
+				hidden_effect = { 	
+					387 = { remove_province_modifier = coffea_arabica_modifier }
+					random_owned_province = {
+						limit = { base_production = 8 }
+						change_trade_goods = coffee
+						add_province_modifier = {
+							name = coffea_arabica_modifier
+							duration = -1 
+						}
+					}
+				}
+			}
+		}
+	}	
+
+	nss_hunt_ganj_i_sawai = {
+		icon = mission_launch_a_flagship
+		required_missions = { nss_gulf_aden }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = lanka_area				
+				area = south_lanka_area
+				province_id = 1248 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			1248 = { country_or_non_sovereign_subject_holds = ROOT }
+			lanka_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			south_lanka_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			1340 = {
+				privateer_power = {
+					country = ROOT 
+					share = 70 
+				}
+			}
+		}
+		effect = {
+			country_event = { id = FU_New_Providence_Events.5 }
+		}
+	}
+}			
+	
+nss_missions_3 = { 
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = NSS
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes	
+	
+	nss_people_of_the_islands = {
+		icon = mission_retake_ceuta
+		position = 1 
+		provinces_to_highlight = {
+			area = lucayan_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = {
+			lucayan_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			army_size_percentage = 0.75
+		}
+		effect = {
+			add_country_modifier = {
+				name = nss_place_call_home_modifier
+				duration = 9125
+			}
+			add_adm_power = 100 
+			add_dip_power = 100
+			add_mil_power = 100 
+			windward_islands_area = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}
+			leeward_islands_area = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}
+			betsimasaraka_area = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}
+			sakalava_area = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}
+			madagascar_highlands_area = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}
+			southern_madagascar = {
+				limit = { 
+					NOT = { owned_by = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}
+		}
+	}
+	
+	nss_windward_leeward = {
+		icon = mission_portuguese_interference
+		position = 3
+		required_missions = { nss_people_of_the_islands nss_pearl_antilles }
+		provinces_to_highlight = {
+			OR = { 
+				area = leeward_islands_area
+				area = windward_islands_area 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = {
+			leeward_islands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			windward_islands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = {
+			leeward_islands_area = { add_base_tax = 1 } 
+			windward_islands_area = { add_base_tax = 1 }
+			add_country_modifier = {
+				name = nss_influx_timber_modifier
+				duration = 7300
+			}
+		}
+	}
+	
+	nss_establish_libertatia = {
+		icon = mission_portuguese_malacca
+		position = 5
+		required_missions = { } 
+		provinces_to_highlight = {
+			OR = {
+				area = betsimasaraka_area
+				area = sakalava_area 
+				area = madagascar_highlands_area 
+				area = southern_madagascar
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = {
+			betsimasaraka_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			sakalava_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			madagascar_highlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			southern_madagascar = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = {
+			if = { 
+				limit = { 
+					LIB = { exists = no } 
+				}
+				country_event = { id = FU_New_Providence_Events.6 }
+			}
+			else = { 
+				custom_tooltip = nss_dev_in_madagascar_tt
+				hidden_effect = { 
+					betsimasaraka_area = { add_base_tax = 1 } 
+					sakalava_area = { add_base_production = 1 } 
+					madagascar_highlands_area = { add_base_manpower = 1 } 
+					southern_madagascar = { add_base_production = 1 } 
+				}
+			}
+			1099 = { add_permanent_claim = ROOT } 
+		}
+	}
+	
+	nss_raid_zanzibar = {
+		icon = fu_raid_zanzibar
+		required_missions = { nss_establish_libertatia nss_voyage_west_africa }
+		position = 7
+		provinces_to_highlight = {
+			province_id = 1196 
+		}
+		trigger = {
+			1448 = { 
+				privateer_power = {
+					country = ROOT 
+					share = 65
+				}
+			}
+			num_of_light_ship = 50 
+			1201 = { 
+				OR = { 
+					has_province_modifier = slaves_raid 
+					country_or_non_sovereign_subject_holds = ROOT 
+				}
+			}
+		}
+		effect = {
+			if = { 
+				limit = { has_dlc = "Rights of Man" }
+				custom_tooltip = nss_legendary_privateer_trait_if_possible_tt
+				hidden_effect = { 
+					country_event = { id = FU_New_Providence_Events.7 } 
+				}
+			}
+			else = { change_mil = 2 } 
+			taiwan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}
+			4651 = { add_permanent_claim = ROOT } 
+			2741 = { add_permanent_claim = ROOT } 
+			custom_tooltip = nss_every_raid_power_projection_tt
+			set_country_flag = nss_raid_for_pp_flag
+			add_navy_tradition = 15
+		}
+	}
+	
+	nss_contact_far_east_pirates = {
+		icon = mission_junk_boat
+		required_missions = { nss_hunt_ganj_i_sawai nss_raid_zanzibar }
+		position = 8
+		provinces_to_highlight = { 
+			OR = {
+				province_id = 4651
+				province_id = 2741
+				area = taiwan_area 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			taiwan_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			4651 = { country_or_non_sovereign_subject_holds = ROOT }
+			2741 = { country_or_non_sovereign_subject_holds = ROOT }
+			government_rank = 3 
+			reform_level = 10
+		}
+		effect = { 
+			country_event = { id = FU_New_Providence_Events.8 }
+			japan_region = {
+				limit = { 
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}
+		}
+	}
+}	
+
+nss_missions_4 = { 
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = NSS
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes	
+	
+	nss_strong_republican_foundations = {
+		icon = mission_rb_monopolize_the_channel 
+		required_missions = { nss_safe_haven }
+		position = 2 
+		trigger = {
+			stability = 3 
+			republican_tradition = 80 
+			NOT = { average_autonomy_above_min = 10 }
+			capital_scope = { has_courthouse_building_trigger = yes }
+			reform_level = 2 
+			navy_size = 40
+		}
+		effect = { 
+			capital_scope = { 
+				add_province_modifier = {
+					name = nss_first_piratical_judicial_court_modifier
+					duration = -1 
+				}
+			}
+			add_government_reform = fu_fleet_with_a_state_reform
+		}
+	}
+	
+	nss_establish_tortuga = {
+		icon = end_genoese_competition 
+		required_missions = { nss_strong_republican_foundations }
+		position = 3
+		trigger = {
+			489 = { owned_by = ROOT }
+			if = { 
+				limit = { has_dlc = "Leviathan" }
+				489 = { 
+					OR = { 
+						has_great_project = {
+							type = tortuga_island
+							tier = 1
+						}
+						has_great_project = {
+							type = tortuga_island
+							tier = 2
+						}
+						has_great_project = {
+							type = tortuga_island
+							tier = 3
+						}
+					}
+				}
+			}
+			489 = { development = 20 }
+		}
+		effect = { 
+			if = {
+				limit = { has_dlc = "Leviathan" } 
+				custom_tooltip = nss_if_tortuga_not_3_tt
+				tooltip = {
+					489 = { 
+						add_great_project_tier = {
+							type = tortuga_island 
+							tier = 1
+						}
+					}
+					add_republican_tradition = 5 
+				}
+				custom_tooltip = nss_alternatively_tt
+				tooltip = {
+					489 = { 
+						create_flagship = {
+							name = "Royal Fortune" 
+							type = heavy_ship 
+						}
+						create_flagship = {
+							name = "Whydah"
+							type = galley 
+						}
+					}
+					define_admiral = { 
+						name = "Bartholomew Roberts" 
+						fire = 5 
+						shock = 5 
+						manuever = 5
+						siege = 3 
+					}
+				}
+			}
+			else = { 
+				489 = { 
+					create_flagship = {
+						name = "Royal Fortune" 
+						type = heavy_ship 
+					}
+					create_flagship = {
+						name = "Whydah"
+						type = galley 
+					}
+				}
+				define_admiral = { 
+					name = "Bartholomew Roberts" 
+					fire = 5 
+					shock = 5 
+					manuever = 5
+					siege = 3 
+				}
+			}
+			hidden_effect = { 
+				if = { 
+					limit = { 
+						489 = { 
+							has_great_project = {
+								type = tortuga_island 
+								tier = 3 
+							}
+						}
+					}
+					489 = { 
+						create_flagship = {
+							name = "Royal Fortune" 
+							type = heavy_ship 
+						}
+						create_flagship = {
+							name = "Whydah"
+							type = galley 
+						}
+					}
+					define_admiral = { 
+						name = "Bartholomew Roberts" 
+						fire = 5 
+						shock = 5 
+						manuever = 5
+						siege = 3 
+					}
+				}
+				else = { 
+					489 = { 
+						add_great_project_tier = {
+							type = tortuga_island 
+							tier = 1
+						}
+					}
+					add_republican_tradition = 5 
+				}
+			}
+		}
+	}
+
+	nss_voyage_west_africa = {
+		icon = mission_west_african_ports
+		required_missions = { nss_beyond_horizon }
+		position = 6
+		provinces_to_highlight = {
+			OR = { 
+				province_id = 1306 
+				province_id = 1098 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			1306 = { country_or_non_sovereign_subject_holds = ROOT }
+			1098 = { country_or_non_sovereign_subject_holds = ROOT } 
+			1466 = { 
+				privateer_power = {
+					country = ROOT 
+					share = 65 
+				}
+			}
+		}
+		effect = { 
+			country_event = { id = FU_New_Providence_Events.9 } 
+		}
+	}
+}
+
+nss_missions_5 = { 
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = NSS
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes	
+	
+	nss_safe_haven = {
+		icon = mission_trade_with_cathay 
+		required_missions = { }
+		position = 1 
+		trigger = {
+			capital_scope = { 
+				has_dock_building_trigger = yes 
+				has_shipyard_building_trigger = yes 
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_base_tax = 2 
+				add_base_production = 2 
+				add_base_manpower = 2 
+				add_province_modifier = {
+					name = nss_center_of_piracy_modifier 
+					duration = -1 
+				}
+			}
+			if = {	
+				limit = { has_global_flag = trade_goods_expanded_mod_active }
+				capital_scope = { change_trade_goods = rum }
+			}
+			custom_tooltip = nss_less_stress_is_good_for_you_tt
+			hidden_effect = { 	
+				add_country_modifier = {
+					name = nss_idylic_bahamas_modifier
+					duration = -1
+					hidden = yes 
+				}
+			}
+		}
+	}
+	
+	nss_careening_stations = {
+		icon = mission_galleys_in_port
+		required_missions = { nss_safe_haven } 
+		position = 2
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				has_shipyard_building_trigger = yes 
+				value = 8
+			}
+		}
+		effect = {
+			custom_tooltip = nss_every_province_with_shipyard_gains_1_base_production_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = { has_shipyard_building_trigger = yes } 
+					add_base_production = 1 
+				}
+			}
+			add_republican_tradition = 5
+		}
+	}
+	
+	nss_terror_high_seas = {
+		icon = mission_rb_grow_the_channel
+		required_missions = { nss_windward_leeward nss_careening_stations }
+		position = 4
+		trigger = {
+			mission_completed = nss_secure_north_carribean 
+			num_of_heavy_ship = 30
+			if = {
+				limit = { has_global_flag = idea_groups_expanded_mod_active }
+				OR = {
+					has_idea_group = piracy_idea_groups_expanded
+					has_idea_group = maritime_ideas
+					has_idea_group = naval_ideas 
+				}
+			}
+			else = {
+				OR = {
+					has_idea_group = maritime_ideas
+					has_idea_group = naval_ideas 
+				}
+			}
+			OR = { 
+				is_great_power = yes 
+				grown_by_development = 250 
+			}
+			if = {	
+				limit = { has_dlc = "Mandate of Heaven" }
+				OR = {
+					total_development = 600
+					in_golden_age = yes 
+					has_had_golden_age = yes 
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = nss_second_golden_age_piracy
+				duration = -1 
+			}
+			add_country_modifier = {
+				name = nss_pirate_king_modifier
+				duration = -1 
+			}
+			custom_tooltip = nss_kenway_tt
+			hidden_effect = {
+				random_owned_province = { 
+					limit = { has_port = yes } 
+					create_flagship = { 
+						name = "Jackdaw" 
+						type = heavy_ship 
+					}
+				}
+				define_admiral = {
+					name = "Edward Kenway" 
+					fire = 4 
+					shock = 4
+					manuever = 6 
+					siege = 0
+				}
+			}
+		}
+	}
+	
+	nss_beyond_horizon = {
+		icon = imperial_navy 
+		required_missions = { } 
+		position = 5
+		trigger = { 
+			num_of_heavy_ship = 12
+			num_of_light_ship = 15
+			num_of_explorers = 1
+		}
+		effect = {
+			custom_tooltip = nss_embark_voyage_tt
+			add_country_modifier = {
+				name = nss_preparations_for_the_great_voyage_modifier
+				duration = 7300
+			}
+			add_navy_tradition = 10
+			if = { 
+				limit = {
+					1098 = { 
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						is_empty = no 
+					}
+				}
+				1098 = { add_permanent_claim = ROOT } 
+			}
+			if = { 
+				limit = {
+					1306 = { 
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						is_empty = no 
+					}
+				}
+				1306 = { add_permanent_claim = ROOT } 
+			}
+		}
+	}
+	
+	nss_supply_ports = {
+		icon = capture_adriatic_ports
+		required_missions = { nss_beyond_horizon }
+		position = 6
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				has_dock_building_trigger = yes 
+				value = 8 
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				base_production = 8 
+				has_dock_building_trigger = yes 
+				value = 3 
+			}
+		}
+		effect = { 	
+			define_advisor = {
+				type = fu_naval_supply_master
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = nss_every_level_sm_tt
+			custom_tooltip = nss_every_dock_with_8_turn_into_dockyard_tt
+			hidden_effect = { 
+				every_province = {
+					limit = { 
+						has_building = dock
+						country_or_non_sovereign_subject_holds = ROOT 
+					}
+					add_building = drydock
+				}
+			}
+		}
+	}
+	
+	nss_rival_west = {
+		icon = mission_sea_battles 
+		required_missions = { nss_supply_ports nss_voyage_west_africa }
+		position = 7
+		trigger = {
+			num_of_heavy_ship = 100 
+			power_projection = 75
+			calc_true_if = {
+				all_country = {
+					is_great_power = yes 
+					OR = {
+						has_opinion_modifier = {
+							modifier = insulted
+							who = ROOT 
+						}
+						has_opinion_modifier = {
+							modifier = scornfully_insulted
+							who = ROOT 
+						}
+					}
+					capital_scope = { continent = europe }
+				}
+				amount = 3 
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = nss_crossing_the_atlantic_modifier
+				duration = 7300
+			}
+			british_isles_region = {
+				limit = { 
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT } 
+				}
+				add_permanent_claim = ROOT 
+			}
+			custom_tooltip = nss_reform_gbr_tt
+			set_country_flag = nss_gbr_flag
+		}
+	}
+	
+	nss_sunset_invasion = {
+		icon = mission_rb_mediterranean_authority
+		required_missions = { nss_rival_west }
+		position = 8
+		provinces_to_highlight = {
+			region = british_isles_region 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = {
+			british_isles_region = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			army_size = 250
+		}
+		effect = {
+			change_technology_group = high_american
+			change_unit_type = high_american
+			add_country_modifier = {
+				name = nss_descent_to_europe_modifier
+				duration = 9125
+			}
+			europe_superregion = { add_permanent_claim = ROOT }
+		}
+	}
+}
+	
+	
+	

@@ -528,6 +528,7 @@ country_event = { #Collapse of the Mamluk Sultanate
 	option = { 
 		name = FU_Ottoman_Events.12.a 
 		
+		trigger = { ai = no }
 		ai_chance = { factor = 0 } 
 		set_country_flag = tur_chose_annexation_flag
 		custom_tooltip = tur_every_mam_prov_will_become_terr_core_and_gain
@@ -2237,7 +2238,7 @@ country_event = { #Clear Bonuses
 		has_country_modifier = tur_efficient_privateering_in_west_med_modifier
 		NOT = { 
 			has_leader_with = {
-				manuever = 6 
+				siege = 6 
 				admiral = yes 
 			}
 		}
@@ -2820,6 +2821,7 @@ country_event = { #Janissary Defections
 	option = { 
 		name = FU_Ottoman_Events.53.b 
 		
+		set_country_flag = tur_rebellion_3_flag
 		if = { 
 			limit = { ai = no } 
 			add_years_of_income = -4 
@@ -4118,19 +4120,6 @@ country_event = { #Help me Step-Boss I am stuck
 	
 	option = { 
 		name = FU_Ottoman_Events.76.a 
-		
-	}
-}
-
-country_event = { #copypasta
-	id = FU_Ottoman_Events.77
-	title = FU_Ottoman_Events.77.t 
-	desc = FU_Ottoman_Events.77.d 
-	picture = fu_crying_coomer_eventPicture
-	is_triggered_only = yes 
-	
-	option = { 
-		name = FU_Ottoman_Events.77.a 
 		
 	}
 }

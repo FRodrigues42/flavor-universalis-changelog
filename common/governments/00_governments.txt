@@ -41,6 +41,7 @@ monarchy = {
 				fu_janissary_autocracy
 				fu_ottoman_government
 				fu_sultanate_of_rum_and_cairo
+				fu_indian_sultanate_reform
 			}
 		}
 		hereditary_vs_nobility = {
@@ -293,6 +294,8 @@ republic = {
 				liberte_reform
 				egalite_reform
 				fraternite_reform
+				#FU Reforms
+				fu_fleet_with_a_state_reform
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = {
@@ -374,6 +377,8 @@ republic = {
 				president_for_life_reform
 				government_for_people_reform
 				become_rev_empire_reform
+				#FU Reforms
+				fu_declare_pirate_empire_reform
 			}
 		}
 	}

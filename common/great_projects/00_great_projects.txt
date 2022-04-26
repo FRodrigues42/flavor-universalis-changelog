@@ -388,9 +388,20 @@ panama_canal = {
 	#can we build it?
 	build_trigger = {
 		FROM = {
-			owns_or_vassal_of = 835
-			is_subject = no
-			adm_tech = 22
+			OR = { 
+				AND = {
+					owns_or_vassal_of = 835
+					is_subject = no
+					adm_tech = 22
+				}
+				AND = { 
+					custom_trigger_tooltip = {
+						tooltip = nss_enable_construction_of_panama_tt
+						has_country_flag = fu_enable_panama_canal
+					}
+					owns_or_vassal_of = 835
+				}
+			}
 		}
 	}
 

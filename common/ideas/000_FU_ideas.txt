@@ -372,9 +372,95 @@ RM1_ideas = {
 		advisor_cost = -0.1
 		advisor_pool = 1
 	}
-}		
+}
 
+GBR1_ideas = {
+	start = {
+		naval_morale = 0.2
+		free_leader_pool = 2
+	}
+
+	bonus = {
+		navy_tradition_decay = -0.01
+	}
 	
+	trigger = {
+		tag = GBR
+		has_country_flag = nss_gbr_flag
+	}
+	free = yes
+
+	pirates_religious_apathy = {
+		no_religion_penalty = yes
+	}	
+	city_upon_a_hill = {
+		global_colonial_growth = 20
+	}
+	pirates_sail_in_consort = {
+		global_naval_engagement_modifier = 0.2
+	}
+	gbr_the_royal_society = {
+		technology_cost = -0.05
+	}
+	pirate_bays = {
+		own_coast_naval_combat_bonus = 1
+	}
+	fu_codify_piratical_code = {
+		republican_tradition = 0.3
+		global_unrest = -1 
+	}
+	fu_black_flag_rules_the_waves = {
+		leader_naval_manuever = 1
+		allowed_marine_fraction = 0.1
+	}
+}	
+
+NSS_ideas = { #New Provindence
+	start = {
+		navy_tradition = 1
+		global_sailors_modifier = 0.2
+	}
+	bonus = {
+		privateer_efficiency = 0.25
+	}
+	trigger = {
+		OR = { 
+			tag = NSS 
+			AND = { 
+				was_tag = NSS 
+				has_reform = pirate_republic_reform
+				NOT = { tag = GBR } 
+			}
+		}
+	}
+	free = yes
+	
+	pirates_religious_apathy = {
+		no_religion_penalty = yes
+	}	
+	fu_pirates_plunder = {
+		global_ship_cost = -0.05
+		war_taxes_cost_modifier = -1
+	}
+	fu_pirates_bucanneers_ideas = {	
+		allowed_marine_fraction = 0.1 
+		development_cost = -0.1
+	}
+	pirates_sail_in_consort = {
+		global_naval_engagement_modifier = 0.2
+	}
+	pirates_elected_quartermasters = {
+		global_unrest = -2
+		naval_morale = 0.1
+	}
+	pirate_bays = {
+		own_coast_naval_combat_bonus = 1
+	}
+	fu_map_our_seas = {
+		movement_speed_in_fleet_modifier = 1 
+		leader_naval_manuever = 1 
+	}
+}	
 	
 	
 	

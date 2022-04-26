@@ -146,9 +146,8 @@ ned_modernized_the_flemish_navy_modifier = {
 	naval_forcelimit_modifier = 0.1
 }
 ned_marine_corps_modifier = {
-	allowed_marine_fraction = 0.1
-	disengagement_chance = 0.05
-	infantry_power = 0.05
+	infantry_power = 0.1
+	is_marine_modifier = yes 
 }
 ned_dutch_shipbuilding_company_modifier = {
 	global_ship_cost = -0.01

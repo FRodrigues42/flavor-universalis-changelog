@@ -20710,7 +20710,8 @@ fu_ali_qapu = {
 				religion_group = muslim
 				has_owner_religion = yes
 			}
-			owner = { tag = PER } 
+			owner = { tag = PER }
+			owner = { tag = MUG }
 		}
 	}
 	
@@ -20722,7 +20723,8 @@ fu_ali_qapu = {
 				religion_group = muslim
 				has_owner_religion = yes
 			}
-			owner = { tag = PER }  
+			owner = { tag = PER } 
+			owner = { tag = MUG }
 		}
 	}
 
@@ -22214,5 +22216,122 @@ fu_bosphorus_toll = {
 		}
 
 		country_modifiers = { mercantilism_cost = -0.15 } 
+	}
+}
+
+fu_port_havana = {
+	start = 484
+	
+	date = 1444.01.01 #Has been there for some time 
+	
+	time = {
+		months = 24
+	}
+	
+	build_cost = 150
+	
+	can_be_moved = no
+	
+	move_days_per_unit_distance = 2
+	
+	starting_tier = 0
+	
+	type = monument
+
+	build_trigger = { }
+	
+	can_use_modifiers_trigger = { }
+
+	can_upgrade_trigger = { }
+
+	keep_trigger = { }
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 24
+		}
+
+		cost_to_upgrade = {
+			factor = 150
+		}
+
+		province_modifiers = { 
+			local_development_cost = -0.1 
+			local_ship_cost = -0.1
+			local_sailors_modifier = 0.2
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}				
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 48
+		}
+
+		cost_to_upgrade = {
+			factor = 300
+		}
+
+		province_modifiers = { 
+			local_development_cost = -0.15 
+			local_ship_cost = -0.1
+			local_sailors_modifier = 0.5
+			statewide_governing_cost = -0.25
+		}
+
+		area_modifier = {
+			
+		}
+
+		country_modifiers = { admiral_skill_gain_modifier = 0.005 } 
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 60
+		}
+
+		cost_to_upgrade = {
+			factor = 500
+		}
+
+		province_modifiers = { 
+			local_ship_cost = -0.1
+			local_sailors_modifier = 1
+			statewide_governing_cost = -0.5
+		}
+
+		area_modifier = {
+			local_development_cost = -0.15
+		}
+
+		country_modifiers = { 
+			admiral_skill_gain_modifier = 0.01 
+			naval_maintenance_modifier = -0.1
+		} 
 	}
 }

@@ -17,6 +17,7 @@ pirate_1 = {
 		NOT = { map_setup = map_setup_random }
 		NOT = { tag = SOO }
 		NOT = { tag = JAP }
+		NOT = { tag = NSS }
 	}
 
 	has_country_shield = yes
@@ -180,6 +181,7 @@ pirate_2 = {
 		}
 		NOT = { tag = SOO }
 		NOT = { tag = JAP }
+		NOT = { tag = NSS }
 	}
 
 	has_country_shield = yes
@@ -374,6 +376,7 @@ pirate_3 = {
 		has_reform = pirate_republic_reform
 		NOT = { tag = SOO }
 		NOT = { tag = JAP }
+		NOT = { tag = NSS }
 	}
 
 	has_country_shield = yes
@@ -490,6 +493,7 @@ pirate_5 = {
 		has_reform = pirate_republic_reform
 		NOT = { tag = SOO }
 		NOT = { tag = JAP }
+		NOT = { tag = NSS }
 	}
 
 	has_country_shield = yes

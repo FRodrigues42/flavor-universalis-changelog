@@ -1,0 +1,12 @@
+bookmark = {
+	name = "FU_THIEFS_END"
+	desc = "FU_THIEFS_END_DESC"
+	date = 1444.11.11
+	
+	center = 236
+	default = yes
+	
+	country = POR
+	country = ENG 
+	country = CAS
+}
