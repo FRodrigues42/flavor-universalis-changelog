@@ -19,7 +19,10 @@ estate_dhimmi = {
 		OR = {
 			AND = { 
 				has_dlc = "The Cossacks"
-				NOT = { has_estate = estate_brahmins }
+				OR = {
+					NOT = { has_estate = estate_brahmins }
+					has_country_flag = gained_dhimmi_estate
+				}
 				NOT = { has_government_attribute = is_merchant_republic }
 				NOT = { has_reform = trading_city }
 				NOT = { is_revolutionary_republic_trigger = yes }
@@ -136,6 +139,7 @@ estate_dhimmi = {
 		estate_dhimmi_guarantee_of_traditions	
 		estate_dhimmi_jewish_community
 		estate_dhimmi_millet_system
+		estate_dhimmi_grant_liberties
 	}
 
 	agendas = {
