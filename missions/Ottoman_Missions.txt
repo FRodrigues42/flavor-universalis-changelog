@@ -3824,9 +3824,11 @@ ottoman_missions_4c = {
 						share = 40
 					}
 				}
-				any_ally = { 
-					technology_group = chinese 
-					technology_group = indian 
+				any_ally = {
+					OR = { 
+						technology_group = chinese 
+						technology_group = indian
+					}
 					has_opinion = { 
 						who = ROOT 
 						value = 150 

@@ -239,7 +239,7 @@ fu_indian_sultanate_reform = {
 }
 
 fu_declare_pirate_empire_reform = {
-	icon = "crown_highlighted"
+	icon = "government_reform_become_rev_empire_reform"
 	allow_normal_conversion = no
 	potential = {
 		OR = { 
@@ -257,7 +257,7 @@ fu_declare_pirate_empire_reform = {
 }
 
 fu_fleet_with_a_state_reform = {
-	icon = "crown_highlighted"
+	icon = "government_reform_commander_king_reform"
 	allow_normal_conversion = no
 	potential = {
 		OR = { 
